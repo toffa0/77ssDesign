@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: "Rotunda";
-  src: url(ROTUNDA/ROTUNDA/Rotunda-Regular.ttf);
+  src: url(public/ROTUNDA/ROTUNDA/Rotunda-Regular.ttf);
 }
 @font-face {
   font-family:"Rotunda-bold";
@@ -15,11 +15,11 @@
 }
 @font-face {
   font-family:"Rotunda-thin";
-  src: url(ROTUNDA/ROTUNDA/Rotunda-thin.ttf);
+  src: url(public/ROTUNDA/ROTUNDA/Rotunda-thin.ttf);
 }
 @font-face {
   font-family:"Rotunda-medium";
-  src: url(ROTUNDA/ROTUNDA/Rotunda-medium.ttf);
+  src: url(public/ROTUNDA/ROTUNDA/Rotunda-medium.ttf);
 }
 html,
 body {
