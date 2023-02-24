@@ -172,8 +172,8 @@ const SignUp = () => {
       </div>
       <div className=" fl-gap99 sm-btn bottom-row2">
 
-        <button><div className="fl-sm"><Image src="/google.svg" alt=""/><p>Sign Up with Google</p></div></button>
-        <button><div className="fl-sm"><Image src="/facebook.svg" id="fb-btn" alt=""/> <p>Sign Up with Facebook</p></div> </button>
+        <button><div className="fl-sm"><Image src="google.svg" alt=""/><p>Sign Up with Google</p></div></button>
+        <button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt=""/> <p>Sign Up with Facebook</p></div> </button>
       </div>
       <div className="fl fl-gap99">
           <input type="text" placeholder="First Name" />

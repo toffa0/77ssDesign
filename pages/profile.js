@@ -21,7 +21,7 @@ function ProfilePage() {
 
         <div className='pos-prof fl fl-gap2'>
             <div>
-            <Image src='/profileicon.png'  className='prof-img' alt=""/>
+            <Image src='profileicon.png'  className='prof-img' alt=""/>
 
             </div>
            

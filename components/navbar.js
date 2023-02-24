@@ -98,11 +98,11 @@ const Navbar = () => {
       <div className='fl fl-gap5'>
 
      
-      <Link href="/"><Image src="/env.svg" className="navicon" alt='' width={25} height={25}/></Link>
-      <Link href="/"><Image src="/bell.svg" className="navicon" alt='' width={25} height={25}/></Link>
+      <Link href="/"><Image src="env.svg" className="navicon" alt='' width={25} height={25}/></Link>
+      <Link href="/"><Image src="bell.svg" className="navicon" alt='' width={25} height={25}/></Link>
       {csrfToken?
     <div className='action'>
-    <i  className="icon" id='icon-menu'><Image src="/PI.svg" className="navicon" alt='' width={29} height={30} /></i>
+    <i  className="icon" id='icon-menu'><Image src="PI.svg" className="navicon" alt='' width={29} height={30} /></i>
     {/* onClick={handleClick} */}
     {!showMenu && (
       <ul className="menu">

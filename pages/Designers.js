@@ -20,15 +20,15 @@ const Designers = ()=>{
 
             <div className="mainscr fl">
             <div className="fl-all4">
-            <Image src="/component1.png" alt=""/>
-            <Image src="/component2.png" alt=""/>
+            <Image src="component1.png" alt=""/>
+            <Image src="component2.png" alt=""/>
 
             <div class="dropdown">
-                <Image src="/component3.png" alt=""/>
+                <Image src="component3.png" alt=""/>
                 <div class="dropdown-content">
                     <a href="#">Link 1</a>
                     <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="#">Link 33333</a>
                 </div>
             </div>
 
@@ -36,11 +36,11 @@ const Designers = ()=>{
 
           
          
-            <Image src="/component4.png" alt=""/>
-            <Image src="/component5.png" alt=""/>
+            <Image src="component4.png" alt=""/>
+            <Image src="component5.png" alt=""/>
             </div>
             <div>
-                <Image src="/ex2.png" alt=""/>
+                <Image src="ex2.png" alt=""/>
             </div>
             </div>
         </div>

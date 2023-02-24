@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="mainscr bg-db" >
     <div style={styles.footerContainer} >
       <div style={styles.footerLinks}>
-      <Image src="logo2.svg" style={styles.footerLogo} alt="" width={184} height={33}/> 
+      <Image src="logo2.svg"  alt="" width={184} height={33}/> 
       <span style={styles.footerSeparator}>|</span>
         <a href="#" style={styles.footerLink}>
           Terms
@@ -39,9 +39,7 @@ const styles = {
     padding: "4% 0",
     color: "#fff"
   },
-  footerLogo: {
-    width: "150px"
-  },
+ 
   footerLinks: {
     display: "flex",
     alignItems: "center"
