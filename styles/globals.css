@@ -7,19 +7,20 @@
 }
 @font-face {
   font-family: "Rotunda";
-  src: url(/ROTUNDA/ROTUNDA/Rotunda-Regular.ttf);
+  src: url(ROTUNDA/Rotunda-Regular.ttf);
+  
 }
 @font-face {
   font-family:"Rotunda-bold";
-  src: url(/ROTUNDA/Rotunda-Bold.ttf);
+  src: url(ROTUNDA/Rotunda-Bold.ttf);
 }
 @font-face {
   font-family:"Rotunda-thin";
-  src: url(/ROTUNDA/ROTUNDA/Rotunda-thin.ttf);
+  src: url(ROTUNDA/Rotunda-thin.ttf);
 }
 @font-face {
   font-family:"Rotunda-medium";
-  src: url(/ROTUNDA/ROTUNDA/Rotunda-medium.ttf);
+  src: url(ROTUNDA/Rotunda-medium.ttf);
 }
 html,
 body {
