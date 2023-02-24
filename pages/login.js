@@ -227,7 +227,7 @@ const LoginSignUp = () => {
             <div className="img-part">
               <Link href="/" > <Image src="logo1.svg" className="logimg" alt=""/></Link>
            
-            <Image src="login.png" alt="" />
+            <Image src="login.png" alt="" width={362} height={811} />
             </div>
             <div className="form-part">
             <div className="switch-container">
