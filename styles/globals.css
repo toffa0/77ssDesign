@@ -143,11 +143,11 @@ a {
   display: flex;
   align-items: flex-end;
 }
-/* .home_img .image {
+.home_img .image {
   width: 100%;
   height: 100%;
   object-fit: contain;
-} */
+}
 .home_text_st{
   font-size:58px; 
   letter-spacing: -0.036px; 
