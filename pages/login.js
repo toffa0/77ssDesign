@@ -166,14 +166,14 @@ const SignUp = () => {
         </div>
         <div className="fl fl-gap99">
         <input type="radio" id="remember2" name="accounttype" />
-        <label htmlFor="remember">Designer</label>
+        <label htmlFor="remember2">Designer</label>
         </div>
     
       </div>
       <div className=" fl-gap99 sm-btn bottom-row2">
 
-        <button><div className="fl-sm"><Image src="google.svg" alt=""/><p>Sign Up with Google</p></div></button>
-        <button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt=""/> <p>Sign Up with Facebook</p></div> </button>
+        <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign Up with Google</p></div></button>
+        <button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign Up with Facebook</p></div> </button>
       </div>
       <div className="fl fl-gap99">
           <input type="text" placeholder="First Name" />
@@ -225,9 +225,19 @@ const LoginSignUp = () => {
         <div className="page-container">
       
             <div className="img-part">
-              <Link href="/" > <Image src="logo1.svg" className="logimg" alt=""/></Link>
-           
-            <Image src="login.png" alt="" width={362} height={811} />
+              
+              <Link href="/" id="lg" > <Image src="logo1.svg" className="logimg" alt="" width={149} height={40}/></Link>
+            <div className="img-part2">
+                
+            <Image src="loginbulb.svg" alt="" width={105.34} height={167.75} />
+            <h1>Discover</h1>
+            <h3>the world’s best</h3>
+            <h3>community of </h3>
+            <h1>Talented</h1>
+            <h3>and</h3>
+            <h3>business owners</h3>
+              </div>
+            
             </div>
             <div className="form-part">
             <div className="switch-container">

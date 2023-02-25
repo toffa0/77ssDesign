@@ -84,7 +84,7 @@ const [cards, setCards] = useState(cardsData);
   </div>
   <div className="right-column">
   <div className="tab-buttons">
-  <button className="edit-button">Edit</button>
+  <button className="edit-button nav-btn ">Edit</button>
      
     </div>
     <div className="text-area-cont">

@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Footer2 from "@/components/footer2";
 import Image from 'next/image';
+import Catmenu from "@/components/cat-menu";
 
 
 const Pricing = () => {
@@ -25,49 +26,11 @@ const Pricing = () => {
                 <input type="text" name='' placeholder="Logo, Brand identity, Backaging..." />
                 <input type="submit" name=''  value=" " /> 
             </form>
-            <div className='fl-all'> 
-        <div>
-            <div>
-            <h3>Logo & identity</h3>
-            <ul>
-          {listItems.map((item) => (
-            <li key={item.id}><a href='#'>{item.text}</a></li>
-          ))}
-        </ul>
-            </div>
-        </div>
-        <div>
-            <div>
-            <h3>Logo & identity</h3>
-            <ul>
-          {listItems.map((item) => (
-            <li key={item.id}><a href='#'>{item.text}</a></li>
-          ))}
-        </ul>
-            </div>
-        </div>
-        <div>
-            <div>
-            <h3>Logo & identity</h3>
-            <ul>
-          {listItems.map((item) => (
-            <li key={item.id}><a href='#'>{item.text}</a></li>
-          ))}
-        </ul>
-            </div>
-        </div>
-        <div>
-            <div>
-            <h3>Logo & identity</h3>
-            <ul>
-          {listItems.map((item) => (
-            <li key={item.id}><a href='#'>{item.text}</a></li>
-          ))}
-        </ul>
-            </div>
-        </div>
+         
+            <div className='cat-menu-bg' >
+            <Catmenu/>
     
-        </div>
+            </div>
             </div>
             <div className="mainscr p-t20">
                 <div className="fl-all2">
@@ -107,14 +70,14 @@ const Pricing = () => {
                         <p>100% guarante </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="s7"  src="s72.png" id="s7"/>
+                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="s7"  src="s72.png" id="s7"/>
+                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="s72.png" id="s7"/>
+                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -122,14 +85,14 @@ const Pricing = () => {
                         <p>Full intellectual property right  </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="s7"  src="s7.png" id="s7"/>
+                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="s7"  src="s7.png" id="s7"/>
+                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="s7.png" id="s7"/>
+                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -137,14 +100,14 @@ const Pricing = () => {
                         <p>Pro & Adv. Level designers only    </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="minus"  src="minus2.png"/>
+                            <Image alt="minus"  src="/minus2.svg" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="s7"  src="s72.png" id="s7" />
+                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="minus"  src="minus2.png"/>
+                            <Image alt="minus"  src="/minus2.svg" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -152,14 +115,14 @@ const Pricing = () => {
                         <p>Adv. Level designers only   </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="minus"  src="minus.png"/>
+                            <Image alt="minus"  src="/minus.svg" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="minus"  src="minus.png"/>
+                            <Image alt="minus"  src="/minus.svg" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="s7.png" id="s7"/>
+                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -167,14 +130,14 @@ const Pricing = () => {
                         <p>Dedicated manager</p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="minus"  src="minus2.png"/>
+                            <Image alt="minus"  src="/minus2.svg" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="s7"  src="s72.png" id="s7"/>
+                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="s72.png" id="s7"/>
+                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -182,14 +145,14 @@ const Pricing = () => {
                         <p>Prioritized support </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="minus"  src="minus.png"/>
+                            <Image alt="minus"  src="/minus.svg" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="minus"  src="minus.png"/>
+                            <Image alt="minus"  src="/minus.svg" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="s7.png" id="s7"/>
+                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>

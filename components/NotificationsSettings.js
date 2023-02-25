@@ -38,10 +38,7 @@ const Notifications = () => {
         </ul>
       </div>
       <div className="profile__submit-button">
-        <button>Submit</button>
-      </div>
-      <div>
-      
+        <button>Continue</button>
       </div>
     </div>
   );

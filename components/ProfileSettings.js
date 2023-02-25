@@ -11,12 +11,13 @@ const Profile = () => {
     <div className="form-group-sett w00">
       <div className="form-group1 ">
         <div className="profile__img-upload">
-            <div className='img-up'>
+            <div className='img-up jst'>
                 <span>Avatar</span>
+                <span>200x200</span>
             <input type='file' onChange={handleFileUpload} id="imgup" />
             </div>
         </div>
-        <div className="form-group jst">
+        <div className="form-group  w-70">
         <label htmlFor="last-name">Username</label>
           <input type="text" id="Username" />
           <label htmlFor="last-name">Languages</label>
@@ -27,12 +28,17 @@ const Profile = () => {
       <label htmlFor="last-name">Biography</label>
         <textarea id="Biography"></textarea>
       </div>
+      <div className='p-33'>
+      <h1>Change Password:</h1>
+      </div>
       <div className='form-group1'> 
-          <div className="form-group">
+
+      
+          <div className="form-group w-40">
                 <label htmlFor="first-name">Current Password</label>
                 <input type="password" className="form-control" id="passwordold" />
             </div>
-            <div className="form-group">
+            <div className="form-group w-40">
                 <label htmlFor="last-name">New Password</label>
                 <input type="password" className="form-control" id="passwordnew" />
             </div>

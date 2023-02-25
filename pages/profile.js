@@ -21,16 +21,16 @@ function ProfilePage() {
 
         <div className='pos-prof fl fl-gap2'>
             <div>
-            <Image src='profileicon.png'  className='prof-img' alt=""/>
+            <Image src='/profileicon.png'  className='prof-img' alt="" width={86} height={88}/>
 
             </div>
            
         
         <div className='prof-nav'>
 
-        <div className='fl fl-gap2'> 
-        <p>Full Name</p>
-        <span>online 15 minutes ago</span>
+        <div className='fl fl-gap2 pp'> 
+          <p>Full Name</p>
+          <span>online 15 minutes ago</span>
         </div>
        
         <button>Pro Level</button>
