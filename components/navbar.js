@@ -72,7 +72,7 @@ const Navbar = () => {
   return (
   <nav className="navbar">
     <div className="right">
-      <Link href="/index.js">
+      <Link href="/">
       <Image src="logo1.svg" alt="Logo" className="logo" width={148} height={40} />
       </Link>
       <div className='fl fl-gap5'>

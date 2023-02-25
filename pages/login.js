@@ -69,7 +69,7 @@ const Login = () => {
       
       const formData = { email,password  };
       
-      fetch('https://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/login/', {
+      fetch('http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
