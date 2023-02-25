@@ -1015,7 +1015,7 @@ ul{
 padding: 100px 0;
 }
 .w-100{
-  /* margin: 100px 0; */
+  
   padding: 55px 0;
   width: 100%;
   height: fit-content;
@@ -1023,6 +1023,12 @@ padding: 100px 0;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: space-between;
+}
+.m-100{
+  margin: 100px 0;
+}
+.m-101{
+  margin:0 100px ;
 }
 .box{
   width: 320px;

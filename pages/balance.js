@@ -17,13 +17,13 @@ function balance() {
         </div>
        
         <div className='mainscr  fl'>
-        <div className='home_section w-100'>
+        <div className='home_section w-100 m-100'>
             <div className='box'> 
                 <h3>Payment Accounts</h3>
                 <button>Paypal Connected</button>
                 <button>Payoneer Connected</button>
             </div>
-            <div className='box'> 
+            <div className='box m-101'> 
                 <div className='wh-box'>
                 <p>Balance</p>
                 <span>0.00$</span>
