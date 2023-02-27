@@ -50,18 +50,12 @@ const  Categories = () => {
             <Image src='cat4.svg' alt="" width={96} height={51}/>
             <span>web - app design</span>
         </div>
-        <div className='cat-card'>
-          <Image src='cat5.svg' alt="" width={96} height={51}/>
-           <span>Custom Logo</span>
-        </div>
+ 
         <div className='cat-card'>
           <Image src='cat6.svg' alt="" width={96} height={51}/>
-           <span>Label-packaging</span>
+           <span>Clothing -Merchandise</span>
           </div>
-        <div className='cat-card'>
-          <Image src='cat7.svg' alt="" width={96} height={51}/>
-           <span>Illustration-graphics</span>
-        </div>
+
         <div className={`cat-card drop-down-menu ${isOpen ? "open" : ""}`} onClick={() => setOpen(!isOpen)}>
             {/* <Image source={require('./cat8.png') }alt="" width={96} height={51}/> */}
             <Image src='cat8.svg' alt="" width={36} height={73} id="cat8"/>
