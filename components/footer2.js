@@ -1,5 +1,6 @@
 import React from "react";
 import Link from 'next/link'
+import Image from "next/image";
 const Footer2 = () => {
   return (
     <section className="bg-b   mainscr">
@@ -32,12 +33,12 @@ const Footer2 = () => {
     <div>
     
     <ul>
-      <li><Link href="#" icon="check" text="Link 1" />Find Work</li>
-      <li><Link href="#" icon="check" text="Link 2" />Pricing</li>
-      <li><Link href="#" icon="check" text="Link 3" />Join to 77S design</li>
-      <li><Link href="#" icon="check" text="Link 4" />Help</li>
-      <li><Link href="#" icon="check" text="Link 5" />About</li>
-      <li><Link href="#" icon="check" text="Link 6" />Contact</li>
+      <li><Link href="#" icon="check" text="Link 1" ><Image src="footerSearch.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp;Find Work</Link></li>
+      <li><Link href="/pricing" icon="check" text="Link 2" ><Image src="footerPricing.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp; Pricing</Link></li>
+      <li><Link href="#" icon="check" text="Link 3" ><Image src="footerEnv.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp; Join to 77S design</Link></li>
+      <li><Link href="#" icon="check" text="Link 4" ><Image src="footerHelp.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp; Help</Link></li>
+      <li><Link href="#" icon="check" text="Link 5" ><Image src="footerAbout.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp; About</Link></li>
+      <li><Link href="#" icon="check" text="Link 6" ><Image src="footerContact.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp; Contact</Link></li>
     </ul>
     </div>
     

@@ -5,6 +5,7 @@ import Card from "@/components/profcard"
 import Image from 'next/image';
 import Footer2 from '@/components/footer2';
 import Catmenu from '@/components/cat-menu';
+import { Link } from 'react-router-dom';
 
 
 
@@ -63,7 +64,7 @@ const  Categories = () => {
         </div>
         <div className={`cat-card drop-down-menu ${isOpen ? "open" : ""}`} onClick={() => setOpen(!isOpen)}>
             {/* <Image source={require('./cat8.png') }alt="" width={96} height={51}/> */}
-            <Image src='cat8.svg' alt="" width={96} height={51}/>
+            <Image src='cat8.svg' alt="" width={36} height={73} id="cat8"/>
             <span>All Categories</span>
         </div>
         
@@ -81,7 +82,7 @@ const  Categories = () => {
     </div>
       }
     <div className='cat-btn'>
-        <button>Get Started</button>
+        <a href="/categories2">Get Started</a>
     </div>
        
       </div>

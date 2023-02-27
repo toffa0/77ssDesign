@@ -977,9 +977,9 @@ ul{
   display: flex;
   justify-content: center;
 }
-.cat-btn button{
+.cat-btn a{
   width: 383px;
-  height: 64px;
+  padding: 16px 0;
   background-color: #4747C7;
   border-radius: 8px;
   border: none;
@@ -991,6 +991,8 @@ ul{
   text-transform: uppercase;
   color: #FFFFFF;
   cursor: pointer;
+  text-align: center;
+  text-justify: center;
 }
 .cat-header{
   padding-top: 80px;
@@ -1190,7 +1192,10 @@ padding: 100px 0;
   max-width: 100px;
   height: 90px;
 }
-
+.cat-card:hover{
+  transition: transform .2s ease-out;
+  transform:scale(1.1);
+}
 .fl-all{
   display: flex;
   justify-content: space-between;
@@ -1817,6 +1822,18 @@ cursor: pointer;
   margin-top: 8px;
   font-size: 10px;
 }
+
+#cat8{
+  width: 20%;
+}
+
+
+
+
+
+
+
+
 /* text media */
 @media (min-width: 1600px) {
   .home-h1{
