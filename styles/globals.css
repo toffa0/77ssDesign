@@ -7,20 +7,20 @@
 }
 @font-face {
   font-family: "Rotunda";
-  src: url(/fonts/Rotunda-Regular.ttf);
+  src: url(../public/fonts/Rotunda-Regular.ttf);
   
 }
 @font-face {
   font-family:"Rotunda-bold";
-  src: url(/fonts/Rotunda-Bold.ttf);
+  src: url(../public/fonts/Rotunda-Bold.ttf);
 }
 @font-face {
   font-family:"Rotunda-thin";
-  src: url(/fonts/Rotunda-thin.ttf);
+  src: url(../public/fonts/Rotunda-thin.ttf);
 }
 @font-face {
   font-family:"Rotunda-medium";
-  src: url(/fonts/Rotunda-medium.ttf);
+  src: url(../public/fonts/Rotunda-medium.ttf);
 }
 html,
 body {
@@ -1320,7 +1320,7 @@ border-radius:  7px 0 0 7px ;
   position: relative;
   width: 22%;
   height: 100%;
-  background-image: url('/search.png');
+  background-image: url('../public/search.png');
   background-repeat: no-repeat;
   background-position: center;
   object-fit: cover;
