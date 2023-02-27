@@ -3,11 +3,15 @@ import React from "react";
 const Notifications = () => {
   return (
     <div className="form-group-sett1 ">
+      <div>
+
+      
       <p>Desktop and mobile<br/> Get browser notifications on your device, even when 77S design is closed.</p>
       <label className="switch">
           <input type="checkbox" />
           <span className="slider round"> Enable browser notifications on your device</span>
         </label>
+      </div>
       <div className="notification-type">
         <p>Email notifications</p>
         <ul>

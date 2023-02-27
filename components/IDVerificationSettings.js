@@ -19,8 +19,7 @@ const IDVerification = () => {
       </div>
       <div className='idimg'>
         <div className='idimg2'>
-        
-        <Image src={file} alt='ID Document Preview' />
+        <Image src={file} alt='ID Document Preview' width={235} height={180} />
         <input type='file' onChange={handleFileUpload} id="imgup" />
         </div>
     

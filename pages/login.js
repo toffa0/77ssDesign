@@ -182,12 +182,16 @@ const SignUp = () => {
       
       <input type="email" placeholder="Email" id="email" />
       <input type="password" placeholder="Password" id="password" />
-      <span>By signing up, you agree to our Terms and Privacy</span>
-      <button type="submit">Submit</button>
+      <div className="lldiv">
+      <p id="ll">Use 8 or more characters with a mix of letters, numbers and symbols</p>
+      <p id="ll2">By signing up, you agree to our Terms and Privacy</p>
+      </div>
+
+      <button type="submit">Sign Up</button>
 <div className="bottom-row1">
       <p>
         Already have an account?{" "}
-        <Link href="#" onClick={() => setIsLogin(!isLogin)}>
+        <Link href="/login" >
           Login
         </Link>
         </p>

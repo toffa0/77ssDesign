@@ -17,7 +17,7 @@ const Profile = () => {
             <input type='file' onChange={handleFileUpload} id="imgup" />
             </div>
         </div>
-        <div className="form-group  w-70">
+        <div className="form-group  w-100">
         <label htmlFor="last-name">Username</label>
           <input type="text" id="Username" />
           <label htmlFor="last-name">Languages</label>
@@ -29,11 +29,11 @@ const Profile = () => {
         <textarea id="Biography"></textarea>
       </div>
       <div className='p-33'>
-      <h1>Change Password:</h1>
-      </div>
-      <div className='form-group1'> 
 
       
+      <h1 id='nn'>Change Password:</h1>
+      
+      <div className='form-group1'> 
           <div className="form-group w-40">
                 <label htmlFor="first-name">Current Password</label>
                 <input type="password" className="form-control" id="passwordold" />
@@ -42,6 +42,7 @@ const Profile = () => {
                 <label htmlFor="last-name">New Password</label>
                 <input type="password" className="form-control" id="passwordnew" />
             </div>
+        </div>
         </div>
       <div className="profile__submit-button">
         <button>Submit</button>

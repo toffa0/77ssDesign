@@ -14,7 +14,7 @@ const Categories2 = ()=>{
         <Navbar/>
         
             
-        <div className="p-100">
+        <div className="p-50">
         <div className="p-33">
             <h1 >Categories</h1>
         </div>

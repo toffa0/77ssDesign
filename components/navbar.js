@@ -95,10 +95,10 @@ const Navbar = () => {
       <Link href="/My-work">
       My Work
       </Link>
-      <div className='fl fl-gap5'>
+      
 
       {csrfToken?
-      <div>
+      <div className='fl fl-gap5'>
 
       <Link href="/"><Image src="env.svg" className="navicon" alt='' width={25} height={25}/></Link>
       <Link href="/"><Image src="bell.svg" className="navicon" alt='' width={25} height={25}/></Link>
@@ -139,7 +139,6 @@ const Navbar = () => {
     </div>
       
       
-    </div>
   </nav>
   );
 };
