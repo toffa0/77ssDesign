@@ -20,7 +20,8 @@
 }
 @font-face {
   font-family:"Rotunda-medium";
-  src: url(../public/fonts/Rotunda-medium.ttf);
+  src: url(../public/fonts/Rotunda-Medium.ttf);
+  
 }
 html,
 body {
