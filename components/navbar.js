@@ -97,10 +97,12 @@ const Navbar = () => {
       </Link>
       <div className='fl fl-gap5'>
 
-     
+      {csrfToken?
+      <div>
+
       <Link href="/"><Image src="env.svg" className="navicon" alt='' width={25} height={25}/></Link>
       <Link href="/"><Image src="bell.svg" className="navicon" alt='' width={25} height={25}/></Link>
-      {csrfToken?
+      
     <div className='action'>
     <i  className="icon" id='icon-menu'><Image src="PI.svg" className="navicon" alt='' width={29} height={30} /></i>
     {/* onClick={handleClick} */}
@@ -124,6 +126,7 @@ const Navbar = () => {
         </div>
       </ul>
     )}
+    </div>
      </div>
       :
       <div>
