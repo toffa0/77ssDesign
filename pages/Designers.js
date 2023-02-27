@@ -39,7 +39,7 @@ const Designers = ()=>{
                 
             <div className="fl-all4 w-30 fl-gap58 pos">
             <div class="dropdown">
-                <Image src="/catlogo1.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo1.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems.map((item) => (
@@ -49,7 +49,7 @@ const Designers = ()=>{
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="/catlogo2.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo2.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems2.map((item) => (
@@ -59,7 +59,7 @@ const Designers = ()=>{
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="/catlogo3.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo3.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems3.map((item) => (
@@ -69,7 +69,7 @@ const Designers = ()=>{
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="/catlogo4.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo4.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems4.map((item) => (
@@ -79,7 +79,7 @@ const Designers = ()=>{
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="/catlogo5.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo5.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems5.map((item) => (

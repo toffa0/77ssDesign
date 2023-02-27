@@ -6,7 +6,7 @@ const Designerswork = () => {
     <div className="fl designersworkcont">
                 
                     <div className="fl designersworkicon">
-                        <Image src="/ppicon.svg" width={64} height={64} />
+                        <Image src="ppicon.svg" width={64} height={64} />
                     </div>
                     <div className="fl designersworkinfo">
                         
@@ -16,7 +16,7 @@ const Designerswork = () => {
                             <span className="bord2 blackkkk">Top Level</span>
                         </div>
                         <div className="fl jst1">
-                            <button className="nobg"><Image src="/heart.svg" width={30} height={30} /> </button>
+                            <button className="nobg"><Image src="heart.svg" width={30} height={30} /> </button>
                             <button>Invite</button>
                         </div>
                         <div  className="fl fl-gap2">
@@ -30,9 +30,9 @@ const Designerswork = () => {
                         </div>
                     </div>
                     <div className="fl designerswork">
-                        <Image src="/lifes.svg" width={180} height={180} />
-                        <Image src="/lifes.svg" width={180} height={180} />
-                        <Image src="/lifes.svg" width={180} height={180} />
+                        <Image src="lifes.svg" width={180} height={180} />
+                        <Image src="lifes.svg" width={180} height={180} />
+                        <Image src="lifes.svg" width={180} height={180} />
                     </div>
     </div>
   )
