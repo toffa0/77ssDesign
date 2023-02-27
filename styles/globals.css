@@ -1864,8 +1864,9 @@ cursor: pointer;
   color: #545457;
   padding: 20px 0;
 }
-
-
+#footerlogo{
+  object-fit: contain;
+}
 
 
 /* text media */

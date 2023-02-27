@@ -11,8 +11,8 @@ const Footer2 = () => {
       <li><Link href="#" icon="check" text="Link 1" />Design Services</li>
       <li><Link href="#" icon="check" text="Link 2" />Design Contest</li>
       <li><Link href="#" icon="check" text="Link 3" />Hiring (1 to1)</li>
-      <li><Link href="#" icon="check" text="Link 4" />Agencies 36077S</li>
-      <li><Link href="#" icon="check" text="Link 5" />design Studio</li>
+      <li><Link href="#" icon="check" text="Link 4" />Agencies 360</li>
+      <li><Link href="#" icon="check" text="Link 5" />77S design Studio</li>
       <li><Link href="#" icon="check" text="Link 6" />Find a Designer</li>
       <li><Link href="#" icon="check" text="Link 7" />Discover Designs</li>
     </ul>
