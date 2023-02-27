@@ -34,7 +34,7 @@ const  Categories = () => {
 
           
         <div className='cat-card'>
-           <Image src='/images/cat1.png' alt="" width={96} height={51}/>
+           <Image src='/../public/cat1.png' alt="" width={96} height={51}/>
             <span>Custom Logo</span>
         </div>
         <div className='cat-card'>
@@ -46,19 +46,19 @@ const  Categories = () => {
             <span>Illustration-graphics</span>
         </div>
         <div className='cat-card'>
-            <Image src='/cat4.png' alt="" width={96} height={51}/>
+            <Image src='/../public/cat4.png' alt="" width={96} height={51}/>
             <span>web - app design</span>
         </div>
         <div className='cat-card'>
-          <Image src='/cat5.png' alt="" width={96} height={51}/>
+          <Image src='/../public/cat5.png' alt="" width={96} height={51}/>
            <span>Custom Logo</span>
         </div>
         <div className='cat-card'>
-          <Image src='/cat6.png' alt="" width={96} height={51}/>
+          <Image src='/../public/cat6.png' alt="" width={96} height={51}/>
            <span>Label-packaging</span>
           </div>
         <div className='cat-card'>
-          <Image src='/cat7.png' alt="" width={96} height={51}/>
+          <Image src='/../public/cat7.png' alt="" width={96} height={51}/>
            <span>Illustration-graphics</span>
         </div>
         <div className={`cat-card drop-down-menu ${isOpen ? "open" : ""}`} onClick={() => setOpen(!isOpen)}>
