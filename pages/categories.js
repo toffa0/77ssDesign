@@ -38,7 +38,7 @@ const  Categories = () => {
             <span>Custom Logo</span>
         </div>
         <div className='cat-card'>
-           <Image src='cat2.png' alt="" width={96} height={51}/>
+           <Image src='/public/cat2.png' alt="" width={96} height={51}/>
             <span>Label-packaging</span>
         </div>
         <div className='cat-card'>
