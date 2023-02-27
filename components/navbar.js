@@ -97,7 +97,7 @@ const Navbar = () => {
       </Link>
       
 
-      {csrfToken?
+      {/* {csrfToken? */}
       <div className='fl fl-gap5'>
 
       <Link href="/"><Image src="env.svg" className="navicon" alt='' width={25} height={25}/></Link>
@@ -128,10 +128,10 @@ const Navbar = () => {
     )}
     </div>
      </div>
-      :
+      {/* :
       <div>
         <Link href='/login'>Login/SignUp</Link>
-      </div>}
+      </div>} */}
       
       
 
