@@ -211,7 +211,7 @@ border-radius: 10px;
   
 }
 .home-su::after{
-  content: url('/../public/Path20.svg')url('/../public/Path20.svg');
+  content: url('../public/Path20.svg')url('../public/Path20.svg');
   width: 17px;
   height: 24px;
   margin-inline: 5px;
