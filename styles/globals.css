@@ -203,7 +203,7 @@ border-radius: 10px;
 }
 
 .home-su::before{
-  content: url('/Path21.svg')url('/Path21.svg');
+  content: url('../public/Path21.svg')url('/../public/Path21.svg');
   width: 15px;
   height: 15px;
   margin-inline: 5px;
@@ -211,7 +211,7 @@ border-radius: 10px;
   
 }
 .home-su::after{
-  content: url('/Path20.svg')url('/Path20.svg');
+  content: url('/../public/Path20.svg')url('/../public/Path20.svg');
   width: 17px;
   height: 24px;
   margin-inline: 5px;
