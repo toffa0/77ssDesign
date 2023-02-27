@@ -5,7 +5,7 @@ import Card from "@/components/profcard"
 import Image from 'next/image';
 import Footer2 from '@/components/footer2';
 import Catmenu from '@/components/cat-menu';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 
 
