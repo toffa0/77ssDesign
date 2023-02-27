@@ -34,7 +34,7 @@ const Categories2 = ()=>{
                 
             <div className="fl-all4 w-30 fl-gap58 pos">
             <div class="dropdown">
-                <Image src="/catlogo1.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo1.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems.map((item) => (
@@ -44,7 +44,7 @@ const Categories2 = ()=>{
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="/catlogo2.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo2.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems2.map((item) => (
@@ -54,7 +54,7 @@ const Categories2 = ()=>{
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="/catlogo3.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo3.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems3.map((item) => (
@@ -64,7 +64,7 @@ const Categories2 = ()=>{
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="/catlogo4.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo4.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems4.map((item) => (
@@ -74,7 +74,7 @@ const Categories2 = ()=>{
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="/catlogo5.svg" alt="" width={238} height={212}/>
+                <Image src="catlogo5.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
                     <ul>
                         {listItems5.map((item) => (
@@ -87,14 +87,14 @@ const Categories2 = ()=>{
             <button id="catbtn">Others</button>
             <div className="cat2-chatbox">
             <a href="#"> 
-            <Image src="/chatbox.svg" alt="" width={106} height={106} />
+            <Image src="chatbox.svg" alt="" width={106} height={106} />
             </a>
 
             </div>
          
             </div>
             <div className="fl-all4 w-70 jst">
-                <Image src="/cat2.svg" alt="" width={678} height={1470}/>
+                <Image src="cat2.svg" alt="" width={678} height={1470}/>
             </div>
             </div>
             <div className="cat2-btns">
