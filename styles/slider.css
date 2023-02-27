@@ -51,12 +51,12 @@
 .slick-prev:before {
   font-size: 40px;
  
-  content: url("/arrowleft.svg");
+  content: url("../public/arrowleft.svg");
 }
 .slick-next{
   right:-30px;
   top: 120px;
 }
 .slick-next:before {
-  content: url("/arrowright.svg");
+  content: url("../public/arrowright.svg");
 }
