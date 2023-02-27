@@ -87,7 +87,7 @@ const Categories2 = ()=>{
             <button id="catbtn">Others</button>
             <div className="cat2-chatbox">
             <a href="#"> 
-            <Image src="/chatbox.svg" width={106} height={106} />
+            <Image src="/chatbox.svg" alt="" width={106} height={106} />
             </a>
 
             </div>
