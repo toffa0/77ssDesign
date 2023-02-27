@@ -34,7 +34,7 @@ const  Categories = () => {
 
           
         <div className='cat-card'>
-           <Image src='/../public/cat1.svg' alt="" width={96} height={51}/>
+           <Image src='cat1.svg' alt="" width={96} height={51}/>
             <span>Custom Logo</span>
         </div>
         <div className='cat-card'>
