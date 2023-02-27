@@ -82,7 +82,7 @@ const  Categories = () => {
     </div>
       }
     <div className='cat-btn'>
-        <a href="/categories2">Get Started</a>
+        <Link href="/categories2">Get Started</Link>
     </div>
        
       </div>
