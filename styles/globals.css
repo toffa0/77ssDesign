@@ -203,7 +203,7 @@ border-radius: 10px;
 }
 
 .home-su::before{
-  content: url('../public/Path21.svg')url('/../public/Path21.svg');
+  content: url('../public/Path21.svg')url('../public/Path21.svg');
   width: 15px;
   height: 15px;
   margin-inline: 5px;
