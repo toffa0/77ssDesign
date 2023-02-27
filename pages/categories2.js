@@ -94,7 +94,7 @@ const Categories2 = ()=>{
          
             </div>
             <div className="fl-all4 w-70 jst">
-                <Image src="cat2.svg" alt="" width={678} height={1470}/>
+                <Image src="cat2img.svg" alt="" width={678} height={1470}/>
             </div>
             </div>
             <div className="cat2-btns">
