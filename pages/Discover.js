@@ -9,13 +9,13 @@ import Footer2 from '@/components/footer2';
 const Discover = ()=>{
     const [isOpen, setOpen] = useState(false);
     const [listItems, setListItems] = useState([
-        { id: 1, name: "bayuRip" ,pp:'/profileicon.png' , img:"/DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'/profileicon.png' , img:"/DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'/profileicon.png' , img:"/DesignThinking.jpg"},        
-        { id: 1, name: "bayuRip" ,pp:'/profileicon.png' , img:"/DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'/profileicon.png' , img:"/DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'/profileicon.png' , img:"/DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'/profileicon.png' , img:"/DesignThinking.jpg"},
+        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
+        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
+        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},        
+        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
+        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
+        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
+        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
       ]);
 
   return (

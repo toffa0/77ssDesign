@@ -70,14 +70,14 @@ const Pricing = () => {
                         <p>100% guarante </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -85,14 +85,14 @@ const Pricing = () => {
                         <p>Full intellectual property right  </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -100,14 +100,14 @@ const Pricing = () => {
                         <p>Pro & Adv. Level designers only    </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="minus"  src="/minus2.svg" width={34} height={25}/>
+                            <Image alt="minus"  src="minus2.svg" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="minus"  src="/minus2.svg" width={34} height={25}/>
+                            <Image alt="minus"  src="minus2.svg" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -115,14 +115,14 @@ const Pricing = () => {
                         <p>Adv. Level designers only   </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="minus"  src="/minus.svg" width={34} height={25}/>
+                            <Image alt="minus"  src="minus.svg" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="minus"  src="/minus.svg" width={34} height={25}/>
+                            <Image alt="minus"  src="minus.svg" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -130,14 +130,14 @@ const Pricing = () => {
                         <p>Dedicated manager</p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="minus"  src="/minus2.svg" width={34} height={25}/>
+                            <Image alt="minus"  src="minus2.svg" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="/s72.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s72.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>
@@ -145,14 +145,14 @@ const Pricing = () => {
                         <p>Prioritized support </p> 
                         <div className="pr-details-span">
                             <aside>
-                            <Image alt="minus"  src="/minus.svg" width={34} height={25}/>
+                            <Image alt="minus"  src="minus.svg" width={34} height={25}/>
                             </aside>
                         
                             <aside>
-                            <Image alt="minus"  src="/minus.svg" width={34} height={25}/>
+                            <Image alt="minus"  src="minus.svg" width={34} height={25}/>
                             </aside>
                             <aside>
-                            <Image alt="s7"  src="/s7.svg" id="s7" width={34} height={25}/>
+                            <Image alt="s7"  src="s7.svg" id="s7" width={34} height={25}/>
                             </aside>
                         </div>
                     </div>

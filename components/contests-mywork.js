@@ -43,10 +43,10 @@ const Contests = ()=>{
 
 
 <div className="mywork-ex">
-     <Image src="/ex1.png" alt=""/>
+     <Image src="ex1.png" alt=""/>
      <div className="work-cont">
       <div className="work-w2">
-      <Image src="/ex12.png" alt=""/>
+      <Image src="ex12.png" alt=""/>
       </div>
      
      <div className="work-w work-text">
