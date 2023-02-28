@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   font-family: "Rotunda";
-  color: #3D3D3F;
 }
 @font-face {
   font-family: "Rotunda";
@@ -353,7 +352,7 @@ margin-right: 20px;
   height: 500px;
   border-bottom:2px solid white;
 }
-.foot-links ul{
+.foot-links li{
   list-style: none;
   color: white;
   line-height: 3;
