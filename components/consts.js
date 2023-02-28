@@ -72,9 +72,10 @@ export const listItems5 =[
     { id: 3, text: "Within 7 days" },
   ];
   export const designerLevel =[
-    { id: 1, text: "Advance Level" },
-    { id: 2, text: "Pro Level" },
-    { id: 3, text: "Entry Level" },
+    
+    { id: 1, text: "Entry Level"  },
+    { id: 2, text: "Mid Level" },
+    { id: 3, text: "Advance Level" },
   ];
   export const Languages =[
     { id: 1, text: "Arabic" },

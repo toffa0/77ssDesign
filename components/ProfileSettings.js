@@ -14,7 +14,7 @@ const Profile = () => {
             <div className='img-up jst'>
                 <span>Avatar</span>
                 <span>200x200</span>
-            <input type='file' onChange={handleFileUpload} id="imgup" />
+            {/* <input type='file' onChange={handleFileUpload} id="imgup" /> */}
             </div>
         </div>
         <div className="form-group  w-100">
@@ -44,6 +44,9 @@ const Profile = () => {
             </div>
         </div>
         </div>
+        <div className="profile__About-button">
+        <button id='profile__About-button'>About</button>
+      </div>
       <div className="profile__submit-button">
         <button>Submit</button>
       </div>

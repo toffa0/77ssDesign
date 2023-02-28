@@ -14,7 +14,7 @@ const Membership = () => {
         </div>
         
         
-        <div> 
+        <div className="profile__submit-button2">
         <button>Subscribe</button>
       </div>
     </div>

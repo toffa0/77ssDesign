@@ -18,7 +18,7 @@
 
 .slick-slider {
   margin: 20px auto;
-  max-width: 1599.47px;
+  max-width: 1299.47px;
   height: 340px;
   -webkit-tap-highlight-color:transparent;
 }
@@ -47,16 +47,32 @@
 .slick-prev{
   left: -30px;
   top: 120px;
+  transform:rotate(45deg);
 }
 .slick-prev:before {
   font-size: 40px;
- 
-  content: url("../public/arrowleft.svg");
+  border-top: 4px;
+  border-left: 4px;
+  border-width:0 0 4px 4px;
+  border-style:  solid;
+  border-color: #FF5F6B;
+  Width:42.8px;
+  Height:25.15px;
+  /* content: url("../public/arrowleft.svg"); */
 }
 .slick-next{
   right:-30px;
   top: 120px;
+  transform:rotate(45deg);
 }
 .slick-next:before {
-  content: url("../public/arrowright.svg");
+  font-size: 40px;
+  border-top: 4px;
+  border-left: 4px;
+  border-width:4px 4px 0 0;
+  border-style:  solid;
+  border-color: #FF5F6B;
+  Width:42.8px;
+  Height:25.15px;
+  /* content: url("../public/arrowright.svg"); */
 }

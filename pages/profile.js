@@ -21,7 +21,7 @@ function ProfilePage() {
 
         <div className='pos-prof fl fl-gap2'>
             <div>
-            <Image src='profileicon.png'  className='prof-img' alt="" width={86} height={88}/>
+            <Image src='/profileicon.png'  className='prof-img' alt="" width={86} height={88}/>
 
             </div>
            
@@ -33,7 +33,7 @@ function ProfilePage() {
           <span>online 15 minutes ago</span>
         </div>
        
-        <button>Pro Level</button>
+        <button>Adv. Level</button>
         </div>
         </div>
         </div>

@@ -85,12 +85,16 @@ const [cards, setCards] = useState(cardsData);
   <div className="right-column">
   <div className="tab-buttons">
   <button className="edit-button nav-btn ">Edit</button>
-     
+   
     </div>
     <div className="text-area-cont">
     <textarea className="text-area"/>
     </div>
-    
+    <div className="tab-buttons">
+    <select>
+      <option>All Categories</option>
+    </select>
+    </div>
     <div className="card-container">
   {cards.map((card, index) => (
     <Card key={index} card={card} />

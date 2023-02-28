@@ -22,17 +22,17 @@ export default function Home() {
       <main className=''>
         <div className='home_section mainscr'>
        
-        <Navbar></Navbar>
+       
         <section className="section">
 
-
+        <Navbar></Navbar>
     <div className="home_text">
       <div>
       <h2 className='home_text_st'>Access creative <br/>and original designs from talented worldwide</h2>
 
       </div>
       <div> 
-      <form className="sr-div2">
+      <form className="sr-div2 fl jst">
                 <input type="text" name='' placeholder="Logo, Brand identity, Backaging..." />
                 <select name="test">
                   <option value="CONTESTPROJECT">CONTEST </option>
@@ -61,8 +61,8 @@ export default function Home() {
      
         </div>
         
-        <section className=' mainscr'>
-        <h1 className='next_text_st'>Popular Categories:</h1>
+        <section className=' mainscr section'>
+        <h1 className='next_text_st'>Categories:</h1>
         <ImageSlider></ImageSlider>
         <div className='part'>
         <button className='btn1'>Get Started</button>
@@ -70,7 +70,7 @@ export default function Home() {
         </section>
         <section className=' mainscr'>
           <div className='part2'>
-          <h1 className='home-h1 fs50'>How it works & Experience</h1>
+          <h1 className='home-h1 fs50' id='fs'>How it works & Experience</h1>
           </div>
           <section className="section">
       <div className='w-50'>
@@ -133,10 +133,11 @@ export default function Home() {
       </div> 
       </div>
       </section>
-   
-      <Footer2/>
+      
+        <Footer2/>
     
-      <Footer></Footer>
+        <Footer/>
+    
       </main>
     </>
   )

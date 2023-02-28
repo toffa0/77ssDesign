@@ -17,7 +17,7 @@ const AccountSettings = () => {
 
         <div className="home_section mainscr">
         <Navbar/>
-        
+        <h3 id="title">Account Settings</h3>
       <div className="settings-nav">
         <button
           className={` ${activeComponent === "General" ? "active nav-btn" : "nav-btn"}`}

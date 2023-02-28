@@ -13,15 +13,23 @@ const IDVerification = () => {
   return (
     <div className="form-group-sett">
       <div className='idtxt'>
-        <p>77S-design is a professional marketplace and it’s important for us to confirm the identities of our users in order to maintain a trusted environment.</p>
+        <p>77S design is a professional marketplace and it’s important for us to confirm the identities of our users in order to maintain a trusted environment.</p>
         <p>Verifying your ID helps to secure your accounts and payments.At certain moments you will be required to verify your ID to progress to the next step.</p>
         <p>Once you started the verification process, you can check your status here.</p>
       </div>
       <div className='idimg'>
+        <div className="form-group w-40 jend">
+                <label htmlFor="last-name">ID number </label>
+                <input type="password" className="form-control" id="passwordnew" />
+        </div>
+        <div className='submitID'>
         <div className='idimg2'>
         <Image src={file} alt='ID Document Preview' width={235} height={180} />
         <input type='file' onChange={handleFileUpload} id="imgup" />
         </div>
+        <p>Submit your ID</p>
+        </div>
+    
     
         {file!="idver.svg" && (
           <div>
@@ -32,7 +40,7 @@ const IDVerification = () => {
           </div>
         )}
       </div>
-      <div> 
+      <div className="profile__submit-button"> 
         <button>Submit</button>
       </div>
     </div>

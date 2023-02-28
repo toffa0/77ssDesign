@@ -104,7 +104,7 @@ const Designers = ()=>{
             {/*//////////////////////   1 filter box end //////////////////////////////  */}
             {/* 2 filter box               */}
             <div className="filter-box">
-                <h3>industries</h3>
+                <h3>Last activity</h3>
                 <ul>
                               
                     {lastActivity.map((item) => (
@@ -118,7 +118,7 @@ const Designers = ()=>{
             {/*/////////////////////// 2 filter box end //////////////////////////////  */}
             {/* 3 filter box               */}
             <div className="filter-box">
-                <h3>industries</h3>
+                <h3>Designer level</h3>
                 <ul>
                               
                     {designerLevel.map((item) => (
@@ -132,7 +132,7 @@ const Designers = ()=>{
             {/*///////////////////////// 3 filter box end ////////////////////////////  */}
             {/* 4 filter box               */}
             <div className="filter-box">
-                <h3>industries</h3>
+                <h3>Languages</h3>
                 <ul>
                               
                     {Languages.map((item) => (
@@ -146,7 +146,7 @@ const Designers = ()=>{
             {/*///////////////////////// 4 filter box end ////////////////////////////  */}      
             {/* 5 filter box               */}
             <div className="filter-box">
-                <h3>industries</h3>
+                <h3>Contacts</h3>
                 <ul>
                               
                     {Contacts.map((item) => (

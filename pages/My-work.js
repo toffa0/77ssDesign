@@ -17,10 +17,10 @@ const Mywork = () => {
 
         <div className="home_section mainscr">
         <Navbar/>
-        <div>
+        <div className="my-workkk">
             <h1>My Work</h1>
         </div>
-      <div className="settings-nav" id="work-nav">
+      <div className="settings-nav mtop30" id="work-nav">
         <button
           className={` ${activeComponent === "contests" ? "active nav-btn" : "nav-btn"}`}
           onClick={() => setActiveComponent("contests")}
