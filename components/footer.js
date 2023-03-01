@@ -37,7 +37,9 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "4% 0",
-    color: "#fff"
+    color: "#fff",
+    maxWidth:"1300px",
+    margin:"auto",
   },
  
   footerLinks: {
