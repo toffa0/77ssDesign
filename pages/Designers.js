@@ -23,7 +23,7 @@ const Designers = ()=>{
         <Navbar/>
         
             
-        <div className="p-40-20">
+        <div className="p-40-20 max">
         <div className="p-33">
             <h1 >Designers</h1>
         </div>
@@ -34,7 +34,7 @@ const Designers = ()=>{
         </div>
         </div>
             <div className="mainscr ">
-                <div className="fl p-33">
+                <div className="fl p-33 max">
                     
                 
             <div className="fl-all4 w-30 fl-gap58 pos">

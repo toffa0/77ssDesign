@@ -22,19 +22,19 @@ const Notifications = () => {
         </label>
             </li>
             <li>
-            <label className="switch">
+            <label className="switch ">
           <input type="checkbox" />
           <span className="slider round"> New designs received</span>
         </label>
             </li>
             <li>
-            <label className="switch">
+            <label className="switch ">
           <input type="checkbox" />
           <span className="slider round"> Comments and messages</span>
         </label>
             </li>
             <li>
-            <label className="switch">
+            <label className="switch ">
           <input type="checkbox" />
           <span className="slider round">   Remind deadlines to complete projects</span>
         </label>

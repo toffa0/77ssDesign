@@ -14,7 +14,7 @@ const Categories2 = ()=>{
         <Navbar/>
         
             
-        <div className="p-50">
+        <div className="p-50 max">
         <div className="p-33">
             <h1 >Categories</h1>
         </div>
@@ -29,7 +29,7 @@ const Categories2 = ()=>{
         </div>
         </div>
             <div className="mainscr   cat2-bg">
-                <div className="fl">
+                <div className="fl max">
                     
                 
             <div className="fl-all4 w-30 fl-gap58 pos">

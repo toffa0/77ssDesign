@@ -17,9 +17,12 @@ function ProfilePage() {
         <div className='mainscr'>
         <Navbar/>
         </div>
-        <div className='mainscr prof fl fl-gap'>
+        <div className=' prof fl fl-gap'>
+        
 
-        <div className='pos-prof fl fl-gap2'>
+        <div className='max'>
+        <div className='pos-prof fl fl-gap2 '>
+        
             <div>
             <Image src='/profileicon.png'  className='prof-img' alt="" width={86} height={88}/>
 
@@ -37,8 +40,9 @@ function ProfilePage() {
         </div>
         </div>
         </div>
+        </div>
         <div className='mainscr'>
-        <div className="fl fl-gap50 ">
+        <div className="fl fl-gap50 max ">
         <button
           className={` ${activeComponent === "Portfolio" ? "active nav-btn2" : "nav-btn2"}`}
           onClick={() => setActiveComponent("Portfolio")}
@@ -55,9 +59,11 @@ function ProfilePage() {
         </div>
         </div>
    
-       
+       <div className='max'>
        {activeComponent === "Portfolio" && <Portfolio />}
        {activeComponent === "Reviews" && <Reviews />}
+       </div>
+ 
       <Footer/>
     </div>
   );

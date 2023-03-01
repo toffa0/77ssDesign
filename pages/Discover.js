@@ -26,7 +26,7 @@ const Discover = ()=>{
         </div>
        
         <div className='mainscr  '>
-        <div className=' w-100'>
+        <div className=' w-100 max'>
 
 
    

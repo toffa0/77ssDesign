@@ -559,6 +559,7 @@ margin-right: 20px;
   height: 100%;
 }
 .max{
+  width: 100%;
   max-width: 1300px;
   margin: auto;
 }
@@ -624,7 +625,19 @@ margin-right: 20px;
 .active{
   border-bottom:4px solid  #ff5f6b;
 }
-
+.switch input{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.switch span{
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #3D3D3F;
+}
 h-60v{
   height: 60vh;
 }
@@ -633,7 +646,6 @@ h-60v{
   margin: 50px 0;
   width:100% ;
   height: 100%;
-  box-shadow: 7px 7px 17px #4747C72B;
   padding: 25px;
   max-width: 1300px;
   margin: auto;
@@ -661,8 +673,13 @@ list-style-type: none;
 line-height: 70px;
 }
 .form-group-sett1 p{
-  font-size: 20px;
   margin: 20px 0;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 29px;
+  color: #3D3D3F;
   }
 .form-group{
   display: flex;
@@ -696,6 +713,8 @@ line-height: 70px;
   border-radius: 7px;
   margin-top:15px ;
   margin-bottom:20px ;
+  font-size: 20px;
+  
 }
 .my-workkk{
   margin: 50px 0 0 0;
@@ -1630,16 +1649,25 @@ color: white;
   font-size: 16px;
   border-left: 1px solid #737373;
   color: #737373;
-  padding:  0 20px ;
+  /* padding:  0 20px ; */
   /* text-align: center; */
   
 }
 select {
-  /* -webkit-appearance: none; */
-  /* -moz-appearance: none; */
-  /* appearance: none; */
-  /* background: url('../public/droparrow.svg') white no-repeat 96% !important; */
-  /* padding: 10px; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  padding: 10px;
+  background: url('../public/droparrow.svg') white no-repeat 96% !important;
+
+}
+select::after{
+  position: absolute;
+  content: "";
+  right: 0;
+  width: 10px;
+  height: 10px;
 }
 
 select::-ms-expand { display: none; }

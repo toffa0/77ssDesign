@@ -12,11 +12,14 @@ const Mywork = () => {
 
 
   return (
-    <div className="settings-container ">
+    <div className="settings-container  ">
         
 
-        <div className="home_section mainscr">
+        <div className="home_section mainscr ">
         <Navbar/>
+      <div className="max">
+
+  
         <div className="my-workkk">
             <h1>My Work</h1>
         </div>
@@ -53,11 +56,12 @@ const Mywork = () => {
           NDAs
         </button>
       </div>
+      </div>
       </div>    
 
       <div className=" ">
        
-      <div className="mywork-content">
+      <div className="mywork-conten max">
         {activeComponent === "contests" && <Contests />}
         {activeComponent === "Project" && <Projects />}
         {activeComponent === "Designer" && <Designer />}

@@ -50,7 +50,7 @@ const Portfolio = () => {
 
 const [cards, setCards] = useState(cardsData);
 
-  return ( <div className='mainscr  fl'>
+  return ( <div className='  fl'>
 
 
   <div className="left-column">
