@@ -27,7 +27,7 @@ const Designers = ()=>{
         <div className="p-33">
             <h1 >Designers</h1>
         </div>
-        <form className="sr-div">
+        <form className="sr-div" id="w-40">
                 <input type="text" name='' placeholder="Search keywords " id="desginform" />
                 <input type="submit" name=''  value=" " /> 
         </form>

@@ -63,6 +63,9 @@ a {
 .w-40{
   width: 40%;
 }
+#w-40{
+  width: 40%;
+}
 .section {
   display: flex;
   flex-wrap: wrap;
