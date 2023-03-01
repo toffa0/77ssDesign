@@ -30,9 +30,9 @@ const Designerswork = () => {
                         </div>
                     </div>
                     <div className="fl designerswork">
-                        <Image src="lifes.svg" width={180} height={180} />
-                        <Image src="lifes.svg" width={180} height={180} />
-                        <Image src="lifes.svg" width={180} height={180} />
+                        <Image src="lifes.svg" width={180} height={180} alt="" />
+                        <Image src="lifes.svg" width={180} height={180} alt=""/>
+                        <Image src="lifes.svg" width={180} height={180} alt="" />
                     </div>
     </div>
   )
