@@ -144,14 +144,14 @@ const BrowseProjects = ()=>{
             
             
           {listItems.map((item) => (
-            <Link href='#'>
+            
                 
-            <div key={item.id} className='disc-card-Proj'>
+            <div key={item.id} className='disc-card-Proj'><Link href='#'>
 
             <Image src="ex5.svg" alt='' width={783} height={147}  />
-            
-            </div>
             </Link>
+            </div>
+           
           ))}
         
             </div>
