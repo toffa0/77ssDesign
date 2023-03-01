@@ -23,7 +23,7 @@ const Designers = ()=>{
         <Navbar/>
         
             
-        <div className="p-100">
+        <div className="p-40-20">
         <div className="p-33">
             <h1 >Designers</h1>
         </div>
