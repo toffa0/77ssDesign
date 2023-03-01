@@ -67,7 +67,7 @@ const AccountSettings = () => {
       </div>    
 
       <div className=" mainscr h-60v ">
-      <div className="settings-content max">
+      <div className="settings-content ">
         {activeComponent === "General" && <GeneralSettings />}
         {activeComponent === "Profile" && <ProfileSettings />}
         {activeComponent === "Notifications" && <NotificationsSettings />}
