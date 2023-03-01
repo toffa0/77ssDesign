@@ -18,7 +18,7 @@ const Categories2 = ()=>{
         <div className="p-33">
             <h1 >Categories</h1>
         </div>
-        <form className="sr-div2">
+        <form className="sr-div2 fl jst" id='cat-search'>
                 <input type="text" name='' placeholder="Logo, Brand identity, Backaging..." />
                 <select name="test">
                   <option value="CONTESTPROJECT">CONTEST </option>

@@ -76,7 +76,7 @@ const Navbar = () => {
       <Image src="logo1.svg" alt="Logo" className="logo" width={148} height={40} />
       </Link>
       <div className='fl fl-gap5'>
-      <Link href="/categories">
+      <Link href="/categories2">
         Categories
       </Link>
       <Link href="/Discover">

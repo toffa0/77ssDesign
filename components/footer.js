@@ -20,7 +20,7 @@ const Footer = () => {
         <FaBehance style={styles.footerIcon} />
         <FaFacebook style={styles.footerIcon} />
         <FaInstagram style={styles.footerIcon} />
-        <FaTwitter style={styles.footerIcon} />
+        <FaTwitter  style={styles.footerIcon} id="color-w"/>
         
         
       </div>
@@ -53,7 +53,8 @@ const styles = {
   },
   footerIcons: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    color:"#fff",
   },
   footerIcon: {
     marginRight: "10px",
