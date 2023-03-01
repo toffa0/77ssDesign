@@ -2321,9 +2321,16 @@ width: 98px;
     .home-h1{
      font-size: 30px; 
     }
+   
+  }
+  
+}
+@media (max-width: 1304px) {
+  .home-h1{
+   font-size: 28px; 
   }
 }
-/* text media end */
+
 
 /* text media */
 @media (max-width: 1535px) {

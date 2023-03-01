@@ -8,26 +8,26 @@ const Footer2 = () => {
     <div>
     
     <ul>
-      <li><Link href="#" icon="check" text="Link 1" />Design Services</li>
-      <li><Link href="#" icon="check" text="Link 2" />Design Contest</li>
-      <li><Link href="#" icon="check" text="Link 3" />Hiring (1 to1)</li>
-      <li><Link href="#" icon="check" text="Link 4" />Agencies 360</li>
-      <li><Link href="#" icon="check" text="Link 5" />77S design Studio</li>
-      <li><Link href="#" icon="check" text="Link 6" />Find a Designer</li>
-      <li><Link href="#" icon="check" text="Link 7" />Discover Designs</li>
+      <li><Link href="#" icon="check" text="Link 1" >Design Services</Link></li>
+      <li><Link href="#" icon="check" text="Link 2" >Design Contest</Link></li>
+      <li><Link href="#" icon="check" text="Link 3" >Hiring (1 to1)</Link></li>
+      <li><Link href="#" icon="check" text="Link 4" >Agencies 360</Link></li>
+      <li><Link href="/categories" icon="check" text="Link 5" >77S design Studio</Link></li>
+      <li><Link href="#" icon="check" text="Link 6" >Find a Designer</Link></li>
+      <li><Link href="#" icon="check" text="Link 7" >Discover Designs</Link></li>
     </ul>
     </div>
     <div>
     
     <ul>
-      <li><Link href="#" icon="check" text="Link 1" />Category</li>
-      <li><Link href="#" icon="check" text="Link 2" />Logo / brand identity</li>
-      <li><Link href="#" icon="check" text="Link 3" />T-shirt</li>
-      <li><Link href="#" icon="check" text="Link 4" />Label - packaging</li>
-      <li><Link href="#" icon="check" text="Link 5" />Book - Magazine </li>
-      <li><Link href="#" icon="check" text="Link 6" />Illustration - graphics</li>
-      <li><Link href="#" icon="check" text="Link 7" />Web - App design</li>
-      <li><Link href="#" icon="check" text="Link 7" />All categories</li>
+      <li><Link href="#" icon="check" text="Link 1" >Category</Link></li>
+      <li><Link href="#" icon="check" text="Link 2" >Logo / brand identity</Link></li>
+      <li><Link href="#" icon="check" text="Link 3" >T-shirt</Link></li>
+      <li><Link href="#" icon="check" text="Link 4" >Label - packaging</Link></li>
+      <li><Link href="#" icon="check" text="Link 5" >Book - Magazine </Link></li>
+      <li><Link href="#" icon="check" text="Link 6" >Illustration - graphics</Link></li>
+      <li><Link href="#" icon="check" text="Link 7" >Web - App design</Link></li>
+      <li><Link href="#" icon="check" text="Link 7" >All categories</Link></li>
     </ul>
     </div>
     <div>
