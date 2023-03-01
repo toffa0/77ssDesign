@@ -588,6 +588,20 @@ margin-right: 20px;
   line-height: 34px;
   color: #5D5D5F;
 }
+.nav-btn2 {
+  display: block;
+  padding: 10px 2px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #3D3D3F;
+}
 .edit-button{
   border-bottom:1px solid  #3D3D3F;
   color: #3D3D3F;
@@ -1247,6 +1261,9 @@ padding: 100px 0;
 }
 .fl-gap25{
   gap:25px;
+}
+.fl-gap50{
+  gap:50px;
 }
 .fl-gap99{
   gap:15px;

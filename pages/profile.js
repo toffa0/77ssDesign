@@ -38,16 +38,16 @@ function ProfilePage() {
         </div>
         </div>
         <div className='mainscr'>
-        <div className="fl fl-gap2 ">
+        <div className="fl fl-gap50 ">
         <button
-          className={` ${activeComponent === "Portfolio" ? "active nav-btn" : "nav-btn"}`}
+          className={` ${activeComponent === "Portfolio" ? "active nav-btn2" : "nav-btn2"}`}
           onClick={() => setActiveComponent("Portfolio")}
         >
           Portfolio
         </button>
         
         <button
-          className={` ${activeComponent === "Reviews" ? "active nav-btn" : "nav-btn"}`}
+          className={` ${activeComponent === "Reviews" ? "active nav-btn2" : "nav-btn2"}`}
           onClick={() => setActiveComponent("Reviews")}
         >
           Reviews
