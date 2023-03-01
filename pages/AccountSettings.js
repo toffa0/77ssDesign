@@ -17,7 +17,10 @@ const AccountSettings = () => {
 
         <div className="home_section mainscr">
         <Navbar/>
+        <div className="max">
         <h3 id="title">Account Settings</h3>
+        </div>
+      
       <div className="settings-nav">
         <button
           className={` ${activeComponent === "General" ? "active nav-btn" : "nav-btn"}`}
@@ -64,7 +67,7 @@ const AccountSettings = () => {
       </div>    
 
       <div className=" mainscr h-60v ">
-      <div className="settings-content">
+      <div className="settings-content max">
         {activeComponent === "General" && <GeneralSettings />}
         {activeComponent === "Profile" && <ProfileSettings />}
         {activeComponent === "Notifications" && <NotificationsSettings />}
