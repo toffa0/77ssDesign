@@ -8,7 +8,7 @@ const Footer2 = () => {
     <div>
     
     <ul>
-      <li><Link href="#" icon="check" text="Link 1" >Design Services</Link></li>
+      <li><h2 id="footercatTitle">Design Services</h2></li>
       <li><Link href="#" icon="check" text="Link 2" >Design Contest</Link></li>
       <li><Link href="#" icon="check" text="Link 3" >Hiring (1 to1)</Link></li>
       <li><Link href="#" icon="check" text="Link 4" >Agencies 360</Link></li>
@@ -20,7 +20,7 @@ const Footer2 = () => {
     <div>
     
     <ul>
-      <li><Link href="#" icon="check" text="Link 1" >Category</Link></li>
+      <li><h2 id="footercatTitle">Category</h2></li>
       <li><Link href="#" icon="check" text="Link 2" >Logo / brand identity</Link></li>
       <li><Link href="#" icon="check" text="Link 3" >T-shirt</Link></li>
       <li><Link href="#" icon="check" text="Link 4" >Label - packaging</Link></li>

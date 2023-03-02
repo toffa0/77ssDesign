@@ -7,12 +7,12 @@ const Footer = () => {
     <div style={styles.footerContainer} >
       <div style={styles.footerLinks}>
       <Image src="logo3.svg"  alt="" width={148.745} height={39.653} id="footerlogo" /> 
-      <span style={styles.footerSeparator}>|</span>
-        <a href="#" style={styles.footerLink}>
+      <span style={styles.footerSeparator}></span>
+        <a href="#" style={styles.footerLink} className="slash">
           Terms
         </a>
-        <span style={styles.footerSeparator}>|</span>
-        <a href="#" style={styles.footerLink}>
+        <span style={styles.footerSeparator}></span>
+        <a href="#" style={styles.footerLink} className="slash">
           Privacy
         </a>
       </div>
@@ -36,7 +36,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "4% 0",
+    height: "130px",
     color: "#fff",
     maxWidth:"1300px",
     margin:"auto",
@@ -51,6 +51,7 @@ const styles = {
     color: "#fff"
   },
   footerSeparator: {
+    height:"20px",
     margin: "0 10px"
   },
   footerIcons: {

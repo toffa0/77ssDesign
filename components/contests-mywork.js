@@ -6,7 +6,7 @@ import Image from 'next/image'
 const Contests = ()=>{
     const [activeside, setActiveside] = useState("Active");
     return(
-        <div className="mainscr h-60v fl">
+        <div className="h-60v fl jst-SB">
 
 <div className="fl-all4 work-sidefilter fl-gap3">
      

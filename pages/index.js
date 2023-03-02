@@ -55,7 +55,7 @@ export default function Home() {
    
     
      <div className='home-h'>
-  <h1 className='home-h1 home-su'>IP PROTECTION FOR YOUR DESIGNS - 100% GUARANTEE</h1>
+  <h1 className='home-h1 home-su' id='fontbold'>IP PROTECTION FOR YOUR DESIGNS - 100% GUARANTEE</h1>
   </div>
   </section>
      
@@ -83,8 +83,11 @@ export default function Home() {
           <li>Pick up the finalists for the final round</li>
           <li>Select the winner design</li>
           <li>File handover</li>
+          <div className='lh-34'>
           <p>(copy transfer agreement -</p>
           <p>File review - Payment release)</p>
+          </div>
+
         </ol>
       </div>
       <div className="w-50 prel">
@@ -117,7 +120,7 @@ export default function Home() {
             <h2 className='ref-h2'>Refer new Clients and you both get a cashback code $50 promotion free.</h2>
       <div>
       <label className='ref-lab'>Please invite new client</label>
-      <div>
+      <div className='fl jst-SB'>
       <input className='ref-inp'></input>
       <button className='ref-btn' >COPY LINK</button>
       </div>
@@ -125,7 +128,7 @@ export default function Home() {
 
       <div>   
       <label className='ref-lab'>Add Email addresses</label>            
-      <div>
+      <div className='fl jst-SB'>
       <input className='ref-inp'></input>
       <button className='ref-btn'>INVITE CLIENT</button>
       </div>
