@@ -4,7 +4,7 @@ import Image from 'next/image'
 const IDVerification = () => {
   const [file, setFile] = useState("idver.svg")
   
-  const [file2, setFile2] = useState("idver2.png")
+  const [file2, setFile2] = useState("idver2.svg")
   const [status, setStatus] = useState('Pending Verification')
   const [result, setResult] = useState(null)
 
@@ -20,16 +20,21 @@ const IDVerification = () => {
         <p>Once you started the verification process, you can check your status here.</p>
       </div>
       <div className='idimg fl-all3'>
+      <div className='submitID'>
         <div className='idimg2'>
-        
-        <Image src={file} alt='ID Document Preview' />
+        <Image src={file} alt='ID Document Preview' width={235} height={180} />
         <input type='file' onChange={handleFileUpload} id="imgup" />
         </div>
+        <p>Submit your ID</p>
+        </div>
+        <div className='submitID'>
         <div className='idimg2'>
-        
-        <Image src={file2} alt='ID Document Preview' />
+        <Image src={file2} alt='ID Document Preview' width={235} height={180} />
         <input type='file' onChange={handleFileUpload} id="imgup" />
         </div>
+        <p>Submit selfie</p>
+        </div>
+
         {file!="idver.svg" && (
           <div>
             
@@ -39,7 +44,11 @@ const IDVerification = () => {
           </div>
         )}
       </div>
-      <div> 
+      <div className="form-group w-40 jend">
+                <label htmlFor="last-name">ID number </label>
+                <input type="password" className="form-control" id="passwordnew" />
+        </div>
+      <div className="profile__submit-button"> 
         <button>Submit</button>
       </div>
     </div>

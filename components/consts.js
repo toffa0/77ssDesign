@@ -90,3 +90,12 @@ export const listItems5 =[
     { id: 2, text: "Contacts only" },
     { id: 3, text: "Hide contacts" },
   ];
+
+  export const CatExp =[
+    { id: 1, img: "expLogo1.svg" ,text:"Logo & brand identity" },
+    { id: 2, img: "expLogo2.svg" ,text:"Business -Advertising "},
+    { id: 3, img: "expLogo3.svg" ,text:"Web - App design"},
+    { id: 4, img: "expLogo4.svg" ,text:"Clothing - Merchandise"},
+    { id: 5, img: "expLogo5.svg" ,text:"Illustration - Graphics "},
+ 
+  ];

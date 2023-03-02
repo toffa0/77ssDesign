@@ -321,7 +321,7 @@ margin-bottom:50px;
 }
 .ref-cont{
   width:100%;
-  background-color: #EE6A6F;
+  background-color: #FF5F6B;
   max-width: 640px;
   height: 288px;
   border-radius: 7px;
@@ -764,6 +764,19 @@ color: #3D3D3F;
   font-weight: 100;
   
 }
+.button1{
+  color: white;
+  font-size: 24px;
+  background-color: #00C7C7;
+  width: 300px;
+  height: 64px;
+  border-radius: 7px;
+  border: none;
+  margin: 50px 0  50px 0; 
+  font-weight: 100;
+  
+}
+
 .submitID{
   text-align: center;
 }
@@ -1341,6 +1354,9 @@ padding: 100px 0;
 }
 .fl-gap58{
   gap: 58px;
+}
+.gap2{
+  gap:2%
 }
 .fl-col{
   display: flex;
@@ -2398,6 +2414,88 @@ font-style: normal;
 font-size: 16px;
 line-height: 33px;
 
+color: #FFFFFF;
+}
+.exp{
+  align-items: center;
+}
+.exp button{
+  width: 160px;
+  height: 64px;
+  background: #CACAD1;
+  border-radius: 7px;
+  border: none;
+}
+.grycir{
+  width: 40px;
+  height: 40px;
+  background: #CACAD1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exp-ex-cont{
+  display: none;
+  margin: 25px 0;
+  position: relative;
+}
+.exp-ex{
+  height: 160px;
+  width: 160px;
+  background-color: #CACAD1;
+  
+}
+#flex{
+  display: flex;
+}
+.pnew{
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FF5F6B;
+  position: relative;
+}
+.pnew2{
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  color: #707070;
+}
+.pnew3{
+  font-family: 'Rotunda-medium';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 34px;
+margin-left: 30px;
+margin-top: 20px;
+color: #707070;
+}
+.outofbox{
+  position: absolute;
+  right: 48%;
+  top: -120px;
+}
+.expLogo-cont{
+  background: #707070;
+  border: 2px solid #FF5F6B;
+  width: 158.81px;
+  height: 141.06px;
+  text-align: center;
+
+}
+.expLogo-cont p{
+  font-family: 'Rotunda';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
 color: #FFFFFF;
 }
 /* text media */

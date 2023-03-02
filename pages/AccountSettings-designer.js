@@ -7,6 +7,7 @@ import MembershipSettings from "@/components/MembershipSettings";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import GeneralSettings2 from "@/components/GeneralSettings2";
+import ExperSettings from "@/components/exp-settings";
 const AccountSettings = () => {
   const [activeComponent, setActiveComponent] = useState("General");
   
@@ -36,6 +37,17 @@ const AccountSettings = () => {
         }}
         >
           Profile
+        </button>
+        <button
+          className={`nav-btn ${activeComponent === "Experience" ? "active" : ""}`}
+          onClick={() => {
+            setActiveComponent("Experience");
+            console.log(activeComponent)
+                
+        
+        }}
+        >
+          Experience
         </button>
         <button
           className={`nav-btn ${
@@ -68,6 +80,7 @@ const AccountSettings = () => {
       <div className="settings-content">
         {activeComponent === "General" && <GeneralSettings2 />}
         {activeComponent === "Profile" && <ProfileSettings />}
+        {activeComponent === "Experience" && <ExperSettings />}
         {activeComponent === "Notifications" && <NotificationsSettings />}
         {activeComponent === "ID Verification" && <IDVerificationSettings2 />}
         {activeComponent === "Membership" && <MembershipSettings />}
