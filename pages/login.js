@@ -95,8 +95,17 @@ const Login = () => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="form-container" id="myForm2">
-      
+    <form onSubmit={handleSubmit} className="form-container jst" id="myForm2">
+            <div className=" fl-gap99 sm-btn bottom-row2">
+
+  <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign Up with Google</p></div></button>
+<button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign Up with Facebook</p></div> </button>
+</div>
+<div>
+{/* <div className="fl nntr"><p>or Login with email</p></div> */}
+
+</div>
+
       <input type="text" placeholder="Username" id="email1"/>
       <input type="password" placeholder="Password" id="password1"/>
       <button type="submit">Submit</button>
@@ -157,15 +166,15 @@ const SignUp = () => {
 
 
   return (
-    <form className="form-container" id="myForm" onSubmit={handleSignup}>
+    <form className="form-container jst-SB" id="myForm" onSubmit={handleSignup}>
       
       <div className="bottom-row2"> 
-        <div className="fl fl-gap99 ">
-        <input type="radio" id="remember" name="accounttype"/>
+        <div className="fl fl-gap99 ali">
+        <input type="radio" id="remember" name="accounttype" className="radioinp"/>
         <label htmlFor="remember">Need design</label>
         </div>
-        <div className="fl fl-gap99">
-        <input type="radio" id="remember2" name="accounttype" />
+        <div className="fl fl-gap99 ali">
+        <input type="radio" id="remember2" name="accounttype" className="radioinp" />
         <label htmlFor="remember2">Designer</label>
         </div>
     
@@ -175,6 +184,7 @@ const SignUp = () => {
         <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign Up with Google</p></div></button>
         <button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign Up with Facebook</p></div> </button>
       </div>
+      <div className="fl nntr"><p>Or, Create an account with email.</p></div>
       <div className="fl fl-gap99">
           <input type="text" placeholder="First Name" />
           <input type="text" placeholder="Last Name" />
@@ -188,7 +198,7 @@ const SignUp = () => {
       </div>
 
       <button type="submit">Sign Up</button>
-<div className="bottom-row1">
+<div className="bottom-row12">
       <p>
         Already have an account?{" "}
         <Link href="/login" >
