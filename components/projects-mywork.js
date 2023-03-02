@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Projects = ()=>{
     const [activeside, setActiveside] = useState("Active");
     return(
-        <div className="mainscr h-60v fl">
+        <div className=" h-60v fl">
 
 <div className="fl-all4 work-sidefilter fl-gap3">
      

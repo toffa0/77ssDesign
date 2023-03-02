@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const Designer = ()=>{
     const [activeside, setActiveside] = useState("favorite");
     return(
-        <div className="mainscr h-60v fl">
+        <div className=" h-60v fl">
 
 <div className="fl-all4 work-sidefilter fl-gap3">
      
