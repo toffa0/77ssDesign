@@ -50,7 +50,7 @@ const Portfolio = () => {
 
 const [cards, setCards] = useState(cardsData);
 
-  return ( <div className='  fl'>
+  return ( <div className='  fl jst-SB'>
 
 
   <div className="left-column">
@@ -60,7 +60,7 @@ const [cards, setCards] = useState(cardsData);
     
     <div className="tab-content">
         <p>Member since: March 14, 2021</p>
-      <div className="stat-box">
+      <div className="stat-box stat-boxpad">
         <div className="stat-num">32</div>
         <div className="stat-text">Contests Won</div>
       </div>
@@ -70,14 +70,14 @@ const [cards, setCards] = useState(cardsData);
       </div>
       <div className="stat-box">
         <div className="stat-num">12</div>
-        <div className="stat-text">Repeat Clients</div>
+        <div className="stat-text">client/s repeated</div>
       </div>
       <div className="stat-box2">
         <div className="stat-text2">Languages</div>
         <div className="stat-text">German - English</div>
       </div>
       <div className="stat-box3">
-        <div className="stat-text">Local Time 12:00 am</div>
+        <div className="stat-text3">Local Time 12:00 am</div>
       </div>
     </div>
     </div>

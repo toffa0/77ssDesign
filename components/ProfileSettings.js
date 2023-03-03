@@ -8,7 +8,7 @@ const Profile = () => {
       }
 
   return (
-    <div className="form-group-sett ">
+    <div className="form-group-sett mb-172">
       <div className="form-group1 ">
         <div className="profile__img-upload">
             <div className='img-up jst'>
@@ -18,10 +18,15 @@ const Profile = () => {
             </div>
         </div>
         <div className="form-group  w-100">
-        <label htmlFor="last-name">Username</label>
-          <input type="text" id="Username" />
-          <label htmlFor="last-name">Languages</label>
-          <input type="text" id="Languages" />
+          <div>
+            <label htmlFor="last-name">Username</label>
+            <input type="text" id="Username" />
+          </div>
+          <div>
+            <label htmlFor="last-name">Languages</label>
+            <input type="text" id="Languages" />
+          </div>
+
         </div>
       </div>
       <div className="form-group">

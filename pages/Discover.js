@@ -38,21 +38,21 @@ const Discover = ()=>{
 
             <div className='pd-1 disc-fil'>
                 <div>
-                <select className="filter" id="filter" placeholder='All categories'>
+                <select className="filter filter-contin" id="filter" placeholder='All categories'>
                     <option value="volvo" >All Categories</option>
                     <option value="volvo">2</option>
                     <option value="saab">3</option>
                     <option value="opel">4</option>
                     <option value="audi">5</option>
                 </select>
-                <select className="filter" id="filter2">
+                <select className="filter filter-contin" id="filter2">
                 <option value="volvo" >All Subcategories</option>
                     <option value="volvo">3</option>
                     <option value="saab">4</option>
                     <option value="opel">5</option>
                     <option value="audi">67</option>
                 </select>
-                <select className="filter" id="filter3">
+                <select className="filter filter-contin" id="filter3">
                 <option value="volvo" >All industries</option>
                     <option value="volvo">1</option>
                     <option value="saab">2</option>
@@ -60,7 +60,7 @@ const Discover = ()=>{
                     <option value="audi">4</option>
                 </select>
                 </div>
-                <div>  <select className="filter" id="filter4">
+                <div>  <select className="filter filter-contin filter-txtcent" id="filter4">
                 <option value="volvo" >Search</option>
                     <option value="volvo">1</option>
                     <option value="saab">2</option>
@@ -78,10 +78,10 @@ const Discover = ()=>{
           {listItems.map((item) => (
             <div key={item.id} className='disc-card'><a href='#'>
                 
-               <Image src={item.img} id='ds-img' alt="" width={400} height={400}/>
+               {/* <Image src={item.img} id='ds-img' alt="" width={400} height={400}/> */}
                 <div className='ds-text'>
                   <div className='fl-all5'>
-                  <Image src={item.pp} alt="" width={40} height={40}/>
+                  {/* <Image src={item.pp} alt="" width={40} height={40}/> */}
                    <span>{item.name}</span>
                   </div>
                    

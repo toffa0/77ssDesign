@@ -35,24 +35,24 @@ const  Categories = () => {
 
           
         <div className='cat-card'>
-           <Image src='cat1.svg' alt="" width={96} height={51}/>
+           <Image src='expLogo1.svg' alt="" width={96} height={51}/>
             <span>Custom Logo</span>
         </div>
         <div className='cat-card'>
-           <Image src='cat2.svg' alt="" width={96} height={51}/>
+           <Image src='expLogo2.svg' alt="" width={96} height={51}/>
             <span>Label-packaging</span>
         </div>
         <div className='cat-card'>
-           <Image src='cat3.svg' alt="" width={96} height={51}/>
+           <Image src='expLogo5.svg' alt="" width={96} height={51}/>
             <span>Illustration-graphics</span>
         </div>
         <div className='cat-card'>
-            <Image src='cat4.svg' alt="" width={96} height={51}/>
+            <Image src='expLogo3.svg' alt="" width={96} height={51}/>
             <span>web - app design</span>
         </div>
  
         <div className='cat-card'>
-          <Image src='cat6.svg' alt="" width={96} height={51}/>
+          <Image src='expLogo4.svg' alt="" width={96} height={51}/>
            <span>Clothing -Merchandise</span>
           </div>
 

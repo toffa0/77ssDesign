@@ -17,7 +17,7 @@ const AccountSettings = () => {
 
         <div className="home_section mainscr">
         <Navbar/>
-        <div className="max">
+        <div className="max mt-142 mb-60">
         <h3 id="title">Account Settings</h3>
         </div>
       

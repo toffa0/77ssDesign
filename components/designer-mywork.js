@@ -7,7 +7,7 @@ const Designer = ()=>{
     return(
         <div className=" h-60v fl">
 
-<div className="fl-all4 work-sidefilter fl-gap3">
+<div className="fl-all4 work-sidefilter fl-gap3 mb-190">
      
      <button id={`${
      activeside === "favorite" ? "sideActive" : ""

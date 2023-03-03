@@ -1,10 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Membership = () => {
   return (
-    <div className="form-group-sett">
+    <div className="form-group-sett mb-492">
         <div className="form-group">
-        <p>It gives you the ability to switch from a client to a designer and vice versa with the same account after submitted your experience</p>
+        <p>It gives you the ability to switch from a client to a designer and vice versa with the same account after submitted <Link className='uniqlink' href="#">your experience</Link></p>
         </div>
         <div className="form-group">
       <p>It gives you an annual retainer feature that gives you all contest features for free for any number of contests during the subscription period </p>    

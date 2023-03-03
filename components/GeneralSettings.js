@@ -3,7 +3,7 @@ import React from 'react';
 const GeneralSettings = () => {
   return (
     <div>
-      <form className="form-group-sett">
+      <form className="form-group-sett mb-318">
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input type="email" className="form-control" id="name" />
@@ -281,7 +281,7 @@ const GeneralSettings = () => {
                 <input type="text" className="form-control" id="City" />
             </div>
         </div>
-        <div className='form-group1'> 
+        <div className='form-group1 mb-200'> 
           <div className="form-group w-30">
                 <label htmlFor="State">State(opt.)</label>
                 <input type="text" className="form-control" id="State" />
@@ -290,7 +290,7 @@ const GeneralSettings = () => {
                 <label htmlFor="Zip">Zip(opt.)</label>
                 <input type="text" className="form-control" id="Zip" />
             </div>
-            <div className="form-group w-30">
+            <div className="form-group w-30 ">
                 <label htmlFor="Phone-Number">Phone Number</label>
                 <input type="text" className="form-control" id="Phone-Number" />
             </div>

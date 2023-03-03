@@ -96,10 +96,10 @@ const Login = () => {
 
   return (
     <form onSubmit={handleSubmit} className="form-container jst" id="myForm2">
-            <div className=" fl-gap99 sm-btn bottom-row2">
+            <div className=" fl-gap99 sm-btn bottom-row2 row2-mb">
 
-  <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign Up with Google</p></div></button>
-<button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign Up with Facebook</p></div> </button>
+  <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign in with Google</p></div></button>
+<button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign in with Facebook</p></div> </button>
 </div>
 <div>
 {/* <div className="fl nntr"><p>or Login with email</p></div> */}
@@ -168,7 +168,7 @@ const SignUp = () => {
   return (
     <form className="form-container jst-SB" id="myForm" onSubmit={handleSignup}>
       
-      <div className="bottom-row2"> 
+      <div className="bottom-row2 row2-mtb gap15"> 
         <div className="fl fl-gap99 ali">
         <input type="radio" id="remember" name="accounttype" className="radioinp"/>
         <label htmlFor="remember">Need design</label>
@@ -179,11 +179,15 @@ const SignUp = () => {
         </div>
     
       </div>
-      <div className=" fl-gap99 sm-btn bottom-row2">
+      
+
+ 
+      <div className=" fl-gap31 sm-btn bottom-row2 row2-mb">
 
         <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign Up with Google</p></div></button>
         <button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign Up with Facebook</p></div> </button>
       </div>
+      <div>
       <div className="fl nntr"><p>Or, Create an account with email.</p></div>
       <div className="fl fl-gap99">
           <input type="text" placeholder="First Name" />
@@ -192,19 +196,23 @@ const SignUp = () => {
       
       <input type="email" placeholder="Email" id="email" />
       <input type="password" placeholder="Password" id="password" />
+     
       <div className="lldiv">
-      <p id="ll">Use 8 or more characters with a mix of letters, numbers and symbols</p>
-      <p id="ll2">By signing up, you agree to our Terms and Privacy</p>
+      <p id="ll" className="mb-11">Use 8 or more characters with a mix of letters, numbers and symbols</p>
+      <p id="ll2" className="mb-61">By signing up, you agree to our Terms and Privacy</p>
       </div>
-
+      </div>
+      <div>
       <button type="submit">Sign Up</button>
-<div className="bottom-row12">
+{/* <div className="bottom-row12">
       <p>
         Already have an account?{" "}
         <Link href="/login" >
           Login
         </Link>
+
         </p>
+        </div> */}
         </div>
         {/* <div className="social-group mdl">
         <p>Or SignUp with</p>

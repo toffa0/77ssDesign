@@ -2,7 +2,7 @@ import React from "react";
 
 const Notifications = () => {
   return (
-    <div className="form-group-sett1 m-40">
+    <div className="form-group-sett1 m-40 mb-172">
       <div>
 
       

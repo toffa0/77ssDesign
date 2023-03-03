@@ -3,7 +3,7 @@ import React from 'react';
 const GeneralSettings2 = () => {
   return (
     <div>
-      <form className="form-group-sett">
+      <form className="form-group-sett mb-172">
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input type="email" className="form-control" id="name" />

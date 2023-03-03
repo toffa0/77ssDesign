@@ -15,29 +15,28 @@ function ProfilePage() {
   return (
     <div className="ProfilePage">
         <div className='mainscr'>
-        <Navbar/>
+        <Navbar />
         </div>
-        <div className=' prof fl fl-gap'>
+        <div className=' prof fl-col fl-gap'>
         
 
         <div className='max'>
-        <div className='pos-prof fl fl-gap2 '>
+        <div className='pos-prof fl fl-gap31 '>
         
-            <div>
+          <div>
             <Image src='/profileicon.png'  className='prof-img' alt="" width={86} height={88}/>
 
-            </div>
+          </div>
            
         
         <div className='prof-nav'>
 
-        <div className='fl fl-gap2 pp'> 
+        <div className='fl fl-gapp16 pp'> 
           <p>Full Name</p>
           <span>online 15 minutes ago</span>
         </div>
        
         <button>Adv. Level</button>
-        </div>
         </div>
         </div>
         </div>
@@ -58,6 +57,8 @@ function ProfilePage() {
         </button>
         </div>
         </div>
+        </div>
+
    
        <div className='max'>
        {activeComponent === "Portfolio" && <Portfolio />}

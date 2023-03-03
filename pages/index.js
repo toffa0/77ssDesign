@@ -23,7 +23,7 @@ export default function Home() {
         <div className='home_section mainscr'>
        
        
-        <section className="section">
+        <section className="section ">
 
         <Navbar></Navbar>
     <div className="home_text">
@@ -61,7 +61,7 @@ export default function Home() {
      
         </div>
         
-        <section className=' mainscr section'>
+        <section className=' mainscr section '>
         <h1 className='next_text_st'>Categories:</h1>
         <ImageSlider></ImageSlider>
         <div className='part'>
@@ -72,7 +72,7 @@ export default function Home() {
           <div className='part2'>
           <h1 className='home-h1 fs50' id='fs'>How it works & Experience</h1>
           </div>
-          <section className="section">
+          <section className="section m-tb-auto">
       <div className='w-50'>
         <h1 className="home2">Contest Steps</h1>
         <ol className='ol-home'>
@@ -95,7 +95,9 @@ export default function Home() {
         <Image src="home22.svg" alt="your-image" className='home33-img' width={578} height={490} />
       </div>
     </section>
-    <section className="section">
+
+    
+    <section className="section m-tb-auto">
     <div className="w-50 prel">
         <Image src="home3.svg" alt="your-image" className='home3-img' width={578} height={490} />
         <Image src="home33.svg" alt="your-image" className='home33-img' width={578} height={490} />

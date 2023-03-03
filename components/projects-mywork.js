@@ -5,9 +5,9 @@ import Image from 'next/image';
 const Projects = ()=>{
     const [activeside, setActiveside] = useState("Active");
     return(
-        <div className=" h-60v fl">
+        <div className=" h-60v fl jst-SB">
 
-<div className="fl-all4 work-sidefilter fl-gap3">
+<div className="fl-all4 work-sidefilter fl-gap3 mb-190">
      
      <button id={`${
      activeside === "Active" ? "sideActive" : ""
@@ -33,7 +33,7 @@ const Projects = ()=>{
 
 
 <div className="mywork-ex">
-     <Image src="/ex1.png" alt="" />
+<Image src="/ex1.png" alt="" width={669} height={125}/>
  </div>
 
  </div>
