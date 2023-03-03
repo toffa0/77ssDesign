@@ -20,7 +20,7 @@ const Mywork = () => {
       <div className="max">
 
   
-        <div className="my-workkk mt-142 mb-60">
+        <div className="my-workkk mt-125 mb-60">
             <h1>My Work</h1>
         </div>
       <div className="settings-nav mtop30" id="work-nav">

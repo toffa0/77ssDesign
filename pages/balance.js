@@ -11,12 +11,13 @@ function balance() {
     <div className="ProfilePage">
         <div className='mainscr home_section'>
         <Navbar/>
-        <div className='pd-1'>
+        <div className='pd-1 mt-125 max'>
         <h1>Your Credits</h1>
         </div>
         </div>
-       
-        <div className='mainscr  fl'>
+        <div className='max '>
+        <div className=' fl '>
+          
         <div className='home_section w-100 m-100'>
             <div className='box'> 
                 <h3>Payment Accounts</h3>
@@ -36,8 +37,8 @@ function balance() {
       </div>
 
       {/* dynamic */}
-      <div className=' mainscr'>
-      <div className='bl-jps '>
+      <div className=''>
+      <div className='bl-jps mb-244'>
             <div className='bor1'>
                 <p> 0.00$</p>
             </div>
@@ -47,6 +48,7 @@ function balance() {
                 <button>Cancel</button>
             </div>
         </div>
+      </div>
       </div>
    {/* dynamic */}
       <Footer/>
