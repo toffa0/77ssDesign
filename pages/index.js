@@ -43,13 +43,16 @@ export default function Home() {
             </div>
     </div>
     <div className='home_img'>
-    <Image
+      <div>
+      <Image
       src="home1.svg"
       alt="Imageeee"
       className="image"
-      width={424}
+      width={1024}
       height={580}
       />
+      </div>
+
      
     </div>
    

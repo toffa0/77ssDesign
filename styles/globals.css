@@ -51,21 +51,7 @@ a {
 .prel{
   position: relative;
 }
-.w-70{
-  width: 70%;
-}
-.w-50{
-  width: 48%;
-}
-.w-30{
-  width: 30%;
-}
-.w-40{
-  width: 40%;
-}
-#w-40{
-  width: 40%;
-}
+
 
 .section {
   display: flex;
@@ -166,7 +152,7 @@ a {
   width: 50%;
   height: 580px;
   display: flex;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 .home_img .image {
   width: 100%;
@@ -472,6 +458,8 @@ margin-right: 20px;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  height: 24%;
+  padding: 10px 0;
 }
 .switch-container button {
   width: 31%;
@@ -1423,6 +1411,9 @@ padding: 100px 0;
 .fl-gap31{
   gap: 31px;
 }
+.fl-gap32{
+  gap: 32px;
+}
 .fl-gap52{
   gap:52px;
   gap: 35%;
@@ -1924,15 +1915,7 @@ margin-right: 10px;
   width:33.72px;
 }
 
-.white{
-  color: white;
-}
-.red{
-  color: #FF5F6B;
-}
-#cyan{
-  background-color: #00C7C7;
-}
+
 .pr-sec button{
   background-color: #4747C7;
   width: 380px;
@@ -2623,7 +2606,7 @@ color: #FFFFFF;
 .nntr p{
   font-family: 'Rotunda';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 20px;
   line-height: 24px;
   color: #3D3D3F;
@@ -2660,8 +2643,54 @@ color: #FFFFFF;
   margin-top: 125px;
 }
 
+.w-70{
+  width: 70%;
+}
+.w-50{
+  width: 48%;
+}
+.w-30{
+  width: 30%;
+}
+.w-40{
+  width: 40%;
+}
+#w-40{
+  width: 40%;
+}
 
 
+.signupbtn{
+  height: 64px;
+  max-width:224px;
+  background: #CACAD1;
+  border-radius: 7px;
+  border: none;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  color: #545457;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.pdleft8{
+  padding-left: 8px
+}
+.bg-wh{
+  background-color: white;
+  border: 1px solid #545457;
+}
+.white{
+  color: white;
+}
+.red{
+  color: #FF5F6B;
+}
+#cyan{
+  background-color: #00C7C7;
+}
 .navpadding{
   padding-bottom: 22px;
   padding-top: 42px;
@@ -2675,7 +2704,7 @@ color: #FFFFFF;
 /* text media */
 @media (min-width: 1600px) {
   .home-h1{
-   font-size: 42px; 
+   font-size: 43px; 
   }
   #fs{
     font-size: 50px;

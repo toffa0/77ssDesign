@@ -96,27 +96,38 @@ const Login = () => {
 
   return (
     <form onSubmit={handleSubmit} className="form-container jst" id="myForm2">
-            <div className=" fl-gap99 sm-btn bottom-row2 row2-mb">
+            <div className=" fl-gap31 sm-btn bottom-row2 row2-mb">
 
   <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign in with Google</p></div></button>
 <button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign in with Facebook</p></div> </button>
 </div>
 <div>
-{/* <div className="fl nntr"><p>or Login with email</p></div> */}
+  <div>
+
+  </div>
+
 
 </div>
-
+<div className="bottom-row2 fl-gap32">
+<div className="fl nntr">
+  <p>or Login with your 77sdesign account</p>
+</div>
+<div  className="bottom-row2">
       <input type="text" placeholder="Username" id="email1"/>
       <input type="password" placeholder="Password" id="password1"/>
+      </div>
+
       <button type="submit">Submit</button>
+</div>
+
       <div className="bottom-row">
         <div>
         <input type="checkbox" id="remember" />
-        <label htmlFor="remember">Remember Me</label>
+        <label htmlFor="remember" className="pdleft8">Remember Me</label>
         </div>
         <Link href="#">Forgot Password?</Link>
       </div>
-      <div className="social-group ">
+      {/* <div className="social-group ">
         <p>Or login with</p>
         <div>
         <FaFacebook style={styles.footerIcon} />
@@ -124,7 +135,7 @@ const Login = () => {
         <FaInstagram style={styles.footerIcon} />
         <FaLinkedin style={styles.footerIcon} />
         </div>
-      </div>
+      </div> */}
 
       
       
@@ -202,8 +213,9 @@ const SignUp = () => {
       <p id="ll2" className="mb-61">By signing up, you agree to our Terms and Privacy</p>
       </div>
       </div>
-      <div>
-      <button type="submit">Sign Up</button>
+      <div className="fl jst-SB">
+      <button className="w-40 signupbtn">Sign Up</button>
+      <button className="w-40 signupbtn bg-wh">Log in</button>
 {/* <div className="bottom-row12">
       <p>
         Already have an account?{" "}
