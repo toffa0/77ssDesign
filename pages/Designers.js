@@ -19,25 +19,26 @@ const Designers = ()=>{
     ]
     return(
         <div>
-               <div className="home_section mainscr">
+               <div className="home_section mainscr pb-64">
         <Navbar/>
         
             
-        <div className="p-40-20 max">
-        <div className="p-33">
+        <div className="mt-175 max">
+        <div className="mb-50">
             <h1 >Designers</h1>
         </div>
-        <form className="sr-div" id="w-40">
+        <form className="sr-div mb-0" id="w-40">
                 <input type="text" name='' placeholder="Search keywords " id="desginform" />
                 <input type="submit" name=''  value=" " /> 
         </form>
         </div>
         </div>
             <div className="mainscr ">
-                <div className="fl p-33 max">
+                <div className="fl  pt-64 max">
                     
                 
-            <div className="fl-all4 w-30 fl-gap58 pos">
+            <div className="fl-all4 w-30 gap60 pos">
+            <div className="fl-col gap19">
             <div class="dropdown">
                 <Image src="catlogo1.svg" alt="" width={238} height={212}/>
                 <div class="dropdown-content">
@@ -88,6 +89,7 @@ const Designers = ()=>{
                 </ul>
                 </div>
             </div>
+            </div>
             {/* 1 filter box               */}
             <div className="filter-box">
                 <h3>industries</h3>
@@ -101,6 +103,7 @@ const Designers = ()=>{
                     ))}
                 </ul> 
             </div>
+            
             {/*//////////////////////   1 filter box end //////////////////////////////  */}
             {/* 2 filter box               */}
             <div className="filter-box">

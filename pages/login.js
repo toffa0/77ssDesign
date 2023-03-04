@@ -95,7 +95,7 @@ const Login = () => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="form-container jst" id="myForm2">
+    <form onSubmit={handleSubmit} className="form-container jst " id="myForm2">
             <div className=" fl-gap31 sm-btn bottom-row2 row2-mb">
 
   <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign in with Google</p></div></button>
@@ -256,7 +256,7 @@ const LoginSignUp = () => {
   return (
     <div className="page1">
    
-        <div className="page-container">
+        <div className="page-container max2">
       
             <div className="img-part">
               
@@ -282,7 +282,7 @@ const LoginSignUp = () => {
         <button onClick={() => {
           setShowLogin(false);
           setActiveComponent("signup")}
-        } className='btn-switch' id={`${activeComponent==="signup"? "logactive":""}`}>Sign Up</button>
+        } className='btn-switch' id={`${activeComponent==="signup"? "logactive2":""}`}>Sign Up</button>
 
 
      

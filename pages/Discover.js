@@ -9,13 +9,13 @@ import Footer2 from '@/components/footer2';
 const Discover = ()=>{
     const [isOpen, setOpen] = useState(false);
     const [listItems, setListItems] = useState([
-        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},        
-        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
-        { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
+        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},        
+        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
       ]);
 
   return (
@@ -26,12 +26,12 @@ const Discover = ()=>{
         </div>
        
         <div className='mainscr  '>
-        <div className=' w-100 max'>
+        <div className=' w-105 max mt-175'>
 
 
    
         { 
-        <div className=' '>
+        <div className='w-101 '>
             <div className='pd-1 disc-head'>
              <h1>Discover design ideas & inspiration</h1>
             </div>
@@ -70,7 +70,7 @@ const Discover = ()=>{
                
             </div>
 
-        <div className='fl-all2 p-t20 pd-t21'> 
+        <div className='fl-all2  '> 
         <div>
             <div className='disc-card-cont'>
             
@@ -78,10 +78,10 @@ const Discover = ()=>{
           {listItems.map((item) => (
             <div key={item.id} className='disc-card'><a href='#'>
                 
-               {/* <Image src={item.img} id='ds-img' alt="" width={400} height={400}/> */}
+               <Image src={item.img} id='ds-img' alt="" width={400} height={400}/>
                 <div className='ds-text'>
                   <div className='fl-all5'>
-                  {/* <Image src={item.pp} alt="" width={40} height={40}/> */}
+                  <Image src={item.pp} alt="" width={40} height={40}/>
                    <span>{item.name}</span>
                   </div>
                    

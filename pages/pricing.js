@@ -21,9 +21,9 @@ const Pricing = () => {
         <div>
             <div className="bg-gr mainscr">
             <Navbar/>
-            <h1>Pricing</h1>
+            <h1 className="mt-133">Pricing</h1>
             <form className="sr-div">
-                <input type="text" name='' placeholder="Logo, Brand identity, Backaging..." />
+                <input type="text" name='' placeholder="Logo, Brand identity, Packaging..." />
                 <input type="submit" name=''  value=" " /> 
             </form>
          
@@ -32,18 +32,19 @@ const Pricing = () => {
     
             </div>
             </div>
-            <div className="mainscr p-t20">
-                <div className="fl-all2">
+            <div className="mainscr p-t54 p-b220">
+                <div className="fl-all2 mb-79">
                     <h1>Contest packages</h1>
                     <div className="pricing">
                      <span>Currency</span>
                      <select>
-                        <option>LE. EGP</option>
+                        <option>EGP</option>
+                        <option>$</option>
                      </select>
                     </div>
               
                 </div>
-                <div className="fl-right">
+                <div className="fl-right mb-8">
                     <div className="pr-box bg-silver">
                         <h3>SILVER</h3>
                         <span>2999</span>
@@ -58,17 +59,17 @@ const Pricing = () => {
                     </div>
                 </div>
                 <div className="pr-details">
-                    <div className="fl-all2 ppp bg-gray white">
-                        <p>Design concepts (approx.)</p> 
+                    <div className="fl-all2 ppp bg-gray  h100">
+                        <p className="white">Design concepts (approx.)</p> 
                         <div className="pr-details-span">
                         <span>50</span>
                         <span>80</span>
                         <span>70</span>
                         </div>
                     </div>
-                    <div className="fl-all2 ppp ">
+                    <div className="fl-all2 ppp h100 ">
                         <p>100% guarante </p> 
-                        <div className="pr-details-span">
+                        <div className="pr-details-span ">
                             <aside>
                             <Image alt="s7"  src="s72.svg" id="s7" width={34} height={25}/>
                             </aside>
@@ -81,8 +82,8 @@ const Pricing = () => {
                             </aside>
                         </div>
                     </div>
-                    <div className="fl-all2 ppp bg-gray white">
-                        <p>Full intellectual property right  </p> 
+                    <div className="fl-all2 ppp bg-gray  h100">
+                        <p className="white">Full intellectual property right  </p> 
                         <div className="pr-details-span">
                             <aside>
                             <Image alt="s7"  src="s7.svg" id="s7" width={34} height={25}/>
@@ -96,7 +97,7 @@ const Pricing = () => {
                             </aside>
                         </div>
                     </div>
-                    <div className="fl-all2 ppp ">
+                    <div className="fl-all2 ppp h100">
                         <p>Pro & Adv. Level designers only    </p> 
                         <div className="pr-details-span">
                             <aside>
@@ -111,8 +112,8 @@ const Pricing = () => {
                             </aside>
                         </div>
                     </div>
-                    <div className="fl-all2 ppp bg-gray white">
-                        <p>Adv. Level designers only   </p> 
+                    <div className="fl-all2 ppp bg-gray  h100">
+                        <p className="white">Adv. Level designers only   </p> 
                         <div className="pr-details-span">
                             <aside>
                             <Image alt="minus"  src="minus.svg" width={34} height={25}/>
@@ -126,9 +127,9 @@ const Pricing = () => {
                             </aside>
                         </div>
                     </div>
-                    <div className="fl-all2 ppp">
+                    <div className="fl-all2 ppp h100">
                         <p>Dedicated manager</p> 
-                        <div className="pr-details-span">
+                        <div className="pr-details-span ">
                             <aside>
                             <Image alt="minus"  src="minus2.svg" width={34} height={25}/>
                             </aside>
@@ -141,8 +142,8 @@ const Pricing = () => {
                             </aside>
                         </div>
                     </div>
-                    <div className="fl-all2 ppp bg-gray white">
-                        <p>Prioritized support </p> 
+                    <div className="fl-all2 ppp bg-gray  h100">
+                        <p className="white">Prioritized support </p> 
                         <div className="pr-details-span">
                             <aside>
                             <Image alt="minus"  src="minus.svg" width={34} height={25}/>
@@ -159,8 +160,8 @@ const Pricing = () => {
 
                 </div>
                 <div className="p-t20 red">
-                    <p>*Explore creative concept from multiple designer </p>
-                    <p>*Fixed price with set timeline</p>
+                    <p className="red rdtxt">*Explore creative concept from multiple designer </p>
+                    <p className="red rdtxt">*Fixed price with set timeline</p>
                 </div>
                 <div className="pd-50 pr-sec">
                     <button>Start contest</button>
@@ -183,9 +184,9 @@ const Pricing = () => {
                        
                     </div>
                 </div>
-                <div className="p-t20 red">
-                    <p>*Explore creative concept from multiple designer </p>
-                    <p>*Fixed price with set timeline</p>
+                <div className="p-t20 ">
+                    <p className="red rdtxt">Explore creative concept from multiple designer </p>
+                    <p className="red rdtxt">Fixed price with set timeline</p>
                 </div>
                 <div className="pd-50 pr-sec pb-50">
                     <button id="cyan">Hiring 1 to 1</button>

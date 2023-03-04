@@ -28,7 +28,7 @@ const Categories2 = ()=>{
             </form>
         </div>
         </div>
-            <div className="mainscr   cat2-bg">
+            <div className="mainscr cat2-bg">
                 <div className="fl max">
                     
                 
@@ -97,7 +97,7 @@ const Categories2 = ()=>{
                 <Image src="cat2img.svg" alt="" width={678} height={1470}/>
             </div>
             </div>
-            <div className="cat2-btns">
+            <div className="cat2-btns max">
                 <button>Start contest</button>
                 <button id="cyan">Hiring (1 to1)</button>
             </div>

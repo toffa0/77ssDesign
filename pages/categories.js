@@ -16,7 +16,7 @@ const  Categories = () => {
     <div className="ProfilePage">
         <div className='mainscr home_section'>
         <Navbar/>
-        <div className='pd-1 cat-fl'>
+        <div className='pd-1 cat-fl max'>
           <Image src='cat-img.svg' alt="" width={715} height={127} />
           <form className="sr-div2" id='cat-search'>
                 <input type="text" name='' placeholder="Logo, Brand identity, Backaging..." />
@@ -25,13 +25,16 @@ const  Categories = () => {
           </form>
         </div>
         </div>
-       
-        <div className='mainscr  '>
-          <div className='cat-header'>
+
+        <div className='max'>
+        
+        <div className='cat-header'>
           <h1>All Categories</h1>
           </div>
+        <div className='  '>
+      
         
-        <div className=' w-100'>
+        <div className=' w-105 mb-32'>
 
           
         <div className='cat-card'>
@@ -80,7 +83,7 @@ const  Categories = () => {
     </div>
        
       </div>
-
+      </div>
       <Footer2/>
       <Footer/>
     </div>
