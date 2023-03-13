@@ -25,23 +25,34 @@ const Navbar = () => {
         } else{
           setShowMenu(true)
         }
-      }  
+      }
+      if(document.getElementById('actions')){
+        if (document.getElementById('actions').contains(e.target)){
+          handleWorkClick();
+        } else{
+          setShowWorkMenu(true)
+        }
+      }   
       
-    });
+    }
+    
+    
+    );
   }
 
-  // function handleClicks(e) {
-  //   console.log("Click event happened!");
-  //  handleAUTO();
-  // }
   function removeCookie(name) {
     document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   }
  
     const [showMenu, setShowMenu] = useState(true);
-  
+    const [showWorkMenu, setShowWorkMenu] = useState(true);
+    
     const handleClick = () => {
       setShowMenu(!showMenu);
+  
+    }; 
+    const handleWorkClick = () => {
+      setShowWorkMenu(!showWorkMenu);
   
     }; 
   
@@ -66,7 +77,6 @@ const Navbar = () => {
     }
 
 
-    // document.addEventListener("click", handleClicks);
 
   
   return (
@@ -92,9 +102,27 @@ const Navbar = () => {
       <Link href="/login">
         Help
       </Link>
-      <Link href="/My-work">
-      My Work
-      </Link>
+      <div className='action' >
+    <button className='navworkbtn' id='actions'>Work</button>
+    {!showWorkMenu && (
+      <ul className="menu">
+        <div className='p-t20'>
+
+        
+        <li className="menu-item">
+          <Link href="/BrowseContest" >Browse contests</Link>
+        </li>
+        <li className="menu-item">
+          <Link href="/BrowseProjects" >Browse Projects</Link>
+        </li>
+        <li className="menu-item">
+          <Link href="/My-work">My Work</Link>
+        </li>
+
+        </div>
+      </ul>
+    )}
+    </div>
       
 
       {/* {csrfToken? */}
@@ -112,7 +140,7 @@ const Navbar = () => {
 
         
         <li className="menu-item">
-          <Link href="/AccountSettings" >Account Settings</Link>
+          <Link href="/AccountSettings-designer" >Account Settings</Link>
         </li>
         <li className="menu-item">
           <Link href="/profile" >Profile</Link>
@@ -127,6 +155,7 @@ const Navbar = () => {
       </ul>
     )}
     </div>
+
      </div>
       {/* :
       <div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from 'next/image'
 import Aboutbusiness from "@/components/1to1breif/Aboutbusiness";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 
 const Oneto1breif = ()=>{
@@ -10,11 +11,12 @@ const Oneto1breif = ()=>{
 
 <div>
     
-         <div className="home_section">
+         <div className="home_section p-15">
             <div className="max">
                 <Navbar/>
-                <div className="my-workkk mt-125 mb-60 ">
-                    <h1>My Work</h1>
+                <div className="my-workkk mt-125">
+                    <h2>1 to 1</h2>
+                    <h1>Brief details</h1>
                 </div>
             </div>
       
@@ -23,7 +25,7 @@ const Oneto1breif = ()=>{
         <div className="mywork-conten max">
         <div className="h-60v fl jst-SB">
 
-<div className="fl-all4 work-sidefilter fl-gap3 mb-190">
+<div className="fl-all4 work-sidefilter fl-gap3 mb-190 ">
      
      <button id={`${
      activeside === "About" ? "sideActive" : ""
@@ -63,7 +65,7 @@ const Oneto1breif = ()=>{
 
  </div>
 
-       
+ <Footer/>
  </div>     
  
     )
