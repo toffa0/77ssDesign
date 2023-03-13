@@ -99,3 +99,32 @@ export const listItems5 =[
     { id: 5, img: "expLogo5.svg" ,text:"Illustration - Graphics "},
  
   ];
+
+  export const data =[
+    { id: 1, text: "Arabic" },
+    { id: 2, text: "Chinese" },
+    { id: 3, text: "English" },
+    { id: 4, text: "French" },
+    { id: 5, text: "German" },
+    { id: 6, text: "Spanish" },
+    { id: 1, text: "Arabic2" },
+    { id: 2, text: "Chinese2" },
+    { id: 3, text: "English2" },
+    { id: 4, text: "French" },
+    { id: 5, text: "German" },
+    { id: 6, text: "Spanish" },
+  ];
+export const cardData2=[
+  { id: 1, img:"greyrect.svg"},
+  { id: 2, img:"greyrect.svg"},
+  { id: 3, img:"greyrect.svg"},        
+  { id: 4, img:"greyrect.svg"},
+  { id: 5, img:"greyrect.svg"},
+  { id: 6, img:"greyrect.svg"},
+  { id: 7, img:"greyrect.svg"},
+  { id: 8, img:"greyrect.svg"},
+  { id: 9, img:"greyrect.svg"},
+  { id: 10, img:"greyrect.svg"},
+  { id: 11, img:"greyrect.svg"},
+  { id: 12, img:"greyrect.svg"},
+];

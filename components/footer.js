@@ -47,7 +47,7 @@ const styles = {
     alignItems: "center"
   },
   footerLink: {
-    marginRight: "20px",
+    // marginRight: "20px",
     color: "#fff"
   },
   footerSeparator: {

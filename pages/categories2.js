@@ -10,11 +10,11 @@ const Categories2 = ()=>{
 
     return(
         <div>
-               <div className="home_section mainscr">
-        <Navbar/>
+               <div className="home_section ">
+        <div className=" max">
+               <Navbar/>
+        <div className="p-50 ">
         
-            
-        <div className="p-50 max">
         <div className="p-33">
             <h1 >Categories</h1>
         </div>
@@ -28,7 +28,8 @@ const Categories2 = ()=>{
             </form>
         </div>
         </div>
-            <div className="mainscr cat2-bg">
+        </div>
+            <div className=" cat2-bg">
                 <div className="fl max">
                     
                 

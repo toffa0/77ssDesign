@@ -32,7 +32,7 @@ const  ExperSettings = () => {
       
 
 <div className=" "> 
-<div className="fl p-33 max">
+<div className="fl  max">
     
 
 <div className="fl-all4 fl-gap50 w-101  pos">
@@ -45,10 +45,14 @@ const  ExperSettings = () => {
                 <p>{item.text}</p>
             </div>
        
-        <button onClick={()=>handleClick(item.id)}> Add design +</button>
+        <button > Add design +</button>
+       
         <div className='grycir'>
+        <button onClick={()=>handleClick(item.id)} id="kkkkkk">
             <Image src="droparrow2.svg" alt='' width={20} height={11.5} />
+            </button>
         </div>
+        
         </div>
         <div className='fl gap2 exp-ex-cont' id={`${isOpen===item.id? "flex":''}`}>
 

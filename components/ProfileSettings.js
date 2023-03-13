@@ -8,7 +8,7 @@ const Profile = () => {
       }
 
   return (
-    <div className="form-group-sett mb-172">
+    <div className="form-group-sett mb-172 mt-100">
       <div className="form-group1 ">
         <div className="profile__img-upload">
             <div className='img-up jst'>
@@ -30,7 +30,7 @@ const Profile = () => {
         </div>
       </div>
       <div className="form-group">
-      <label htmlFor="last-name">Biography</label>
+      <label htmlFor="last-name" className='mb-8'>Biography</label>
         <textarea id="Biography"></textarea>
       </div>
       <div className='p-33'>

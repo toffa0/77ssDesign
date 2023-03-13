@@ -13,15 +13,15 @@ const IDVerification = () => {
   }
 
   return (
-    <div className="form-group-sett mb-172">
+    <div className="form-group-sett mb-172 mt-60">
       <div className='idtxt'>
         <p>77S-design is a professional marketplace and it’s important for us to confirm the identities of our users in order to maintain a trusted environment.</p>
         <p>Verifying your ID helps to secure your accounts and payments.At certain moments you will be required to verify your ID to progress to the next step.</p>
         <p>Once you started the verification process, you can check your status here.</p>
       </div>
-      <div className='idimg fl-all3'>
+      <div className='idimg fl-all3 mt-100 mb-45'>
       <div className='submitID'>
-        <div className='idimg2'>
+        <div className='idimg2 ' >
         <Image src={file} alt='ID Document Preview' width={235} height={180} />
         <input type='file' onChange={handleFileUpload} id="imgup" />
         </div>

@@ -11,7 +11,7 @@ const IDVerification = () => {
   }
 
   return (
-    <div className="form-group-sett mb-172">
+    <div className="form-group-sett mb-172 mt-22">
       <div className='idtxt'>
         <p>77S design is a professional marketplace and it’s important for us to confirm the identities of our users in order to maintain a trusted environment.</p>
         <p>Verifying your ID helps to secure your accounts and payments.At certain moments you will be required to verify your ID to progress to the next step.</p>

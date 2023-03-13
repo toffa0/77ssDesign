@@ -7,7 +7,7 @@ import { FaThumbsUp } from "react-icons/fa";
 import Footer2 from '@/components/footer2';
 import Link from 'next/link';
 
-const BrowseProjects = ()=>{
+const BrowseContest = ()=>{
     const [isOpen, setOpen] = useState(false);
     const [listItems, setListItems] = useState([
         { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
@@ -34,15 +34,15 @@ const BrowseProjects = ()=>{
         
         <div className=' '>
             <div>
-            <div className='disc-head2'>
-             <h1>Browse Projects</h1>
+            <div className='disc-head2 ' id='blue'>
+             <h1>Browse contests</h1>
             </div>
             <div className='bgf5 fl'>
             <div className='header-w60'>
             <div className='pd-20 disc-fil2 firstline'>
                 <div className='head-w'>
                 <select className="filter2" id="filter" placeholder='All categories'>
-                    <option value="volvo" >All Categories</option>
+                    <option value="AllCategories" >All Categories</option>
                     <option value="volvo">2</option>
                     <option value="saab">3</option>
                     <option value="opel">4</option>
@@ -63,19 +63,16 @@ const BrowseProjects = ()=>{
                     <option value="audi">4</option>
                 </select>
                 </div>
-                {/* <div>  <select className="filter2" id="filter4">
-                <option value="volvo" >Search</option>
-                    <option value="volvo">1</option>
-                    <option value="saab">2</option>
-                    <option value="opel">3</option>
-                    <option value="audi">4</option>
-                </select></div> */}
+
                
             </div>
-            <div className='secline fl fl-gap99 head-w'>
-              <div>
-                <p className='PL-p'>Project level</p>
-                <div  className="fl fl-gap52 ">
+            <div className='fl'>
+
+          
+            <div className='secline fl fl-gap99 head-w2 BC'>
+              <div className=''>
+                <p className='cont-p2'>Contest level</p>
+                <div  className="fl-col">
                     <div className="fl fl-gap98 ">
                         <input type="radio" id="remember" name="accounttype"/>
                         <label htmlFor="remember">Entry</label>
@@ -90,53 +87,98 @@ const BrowseProjects = ()=>{
                     </div>
                 </div>
               </div>  
-              <div>
-                <p className='PL-p'>Price</p>
-                <div  className="fl fl-gap99 prInp">
+    
+            </div>
+            <div className='ml-8'>
+                <p className='cont-p '>
+                Contest types
+                </p>
+            
+            <div className='cont-types fl jst-SB p22'>
+             
+                    <div className="fl-col fl-gap99  jst">
+                        <div className='fl fl-gap99 jst'>
+                            <input type="checkbox" id="Blind" name="accounttype" />
+                            <Image htmlFor="Blind" src="blind.svg" width={28} height={28} alt=""  /> 
+                        </div>
+                 
+                        <label htmlFor="Blind">Blind</label>
+                    </div>
+
+                    <div className="fl-col fl-gap99  jst">
+                        <div className='fl fl-gap99 jst'>
+                            <input type="checkbox" id="Guaranteed" name="accounttype" />
+                            <Image src="dollar.svg" width={28} height={28} alt=""  /> 
+                        </div>
+                 
+                        <label htmlFor="Guaranteed">Guaranteed</label>
+                    </div>
+                    <div className="fl-col fl-gap99 jst">
+                        <div className='fl fl-gap99 jst'>
+                        <input type="checkbox" id="Urgent" name="accounttype" />
+                        <Image src="clock.svg" width={28} height={28} alt=""  />
+                        </div>
+                   
+                    <label htmlFor="Urgent"> Urgent</label>
+                    </div>
+                    <div className="fl-col fl-gap99 jst">
+                        <div className='fl fl-gap99 jst'>
+                            <input type="checkbox" id="NDA" name="accounttype"/>
+                            <Image src="vector2.svg" width={28} height={28} alt=""  />
+                        </div>
+                    
+                        <label htmlFor="NDA"> NDA</label>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            <div className='header-w40 fl-col jst-SB gap15 ali-cen'>
+                
+
+                <div className='bc-header-rigth'>
+                    <span>Days left</span>
+                    <button>&#60; 1</button>
+                    <button>1-2</button>
+                    <button>2-3</button>
+                    <button>3+</button>
+                </div>
+                
+                <div className='w192'><p className='PL-p'>Price</p>
+                <div  className="fl jst-SB prInp">
                     <div className="fl fl-gap98 ">
-                        <input type="text" id="remember" name="accounttype" placeholder='Start from'/>
+                        <input type="text" id="remember" name="accounttype" placeholder='Min'/>
                         
                     </div>
                     <div className="fl fl-gap98">
                         <input type="text" id="remember2" name="accounttype" placeholder='Max' />
-                    </div>
-                  
-                </div>
-              </div> 
+                    </div>  </div></div>
+                <div className='BC-search'>  
+                <input placeholder='Search' />
+                </div>                 
+                
+             
+
+
+
             </div>
             </div>
-            <div className='header-w40 fl jst-SA'>
-                <div className='headcol'>
-                    <div className="fl fl-gap99 ">
-                    <input type="checkbox" id="remember" name="accounttype"/>
-                    <label htmlFor="remember"><Image src="vector2.svg" width={17.97} height={20} alt=""  /> NDA</label>
-                    </div>
-                    <div className="fl fl-gap99">
-                    <input type="checkbox" id="remember2" name="accounttype" />
-                    <label htmlFor="remember2"><Image src="vector.svg" width={17.97} height={20} alt=""  /> Guaranteed</label>
-                    </div>
-                    <div className="fl fl-gap99">
-                    <input type="checkbox" id="remember3" name="accounttype" />
-                    <label htmlFor="remember3"><Image src="vector.svg" width={17.97} height={20} alt=""  /> Urgent</label>
-                    </div>
+            </div>
+            <div className='fl jst-SB status'>
+                <div className='fl-col'>
+                <p>Contest status</p>
+                <div className='fl'>
+                    <button>Open</button>
+                    <button>Finished</button>
                 </div>
-                <div className='headcol p-15'>
-                    <div className="fl fl-gap99 ">
-                    <input type="text" id="proj-search" name="accounttype" placeholder='Search' className='filter2'/>
-                    </div>
-                    <select className="filter2" id="newestfilter">
-                <option value="Newestfirst" >Newest first</option>
-                    <option value="volvo">1</option>
-                    <option value="saab">2</option>
-                    <option value="opel">3</option>
-                    <option value="audi">4</option>
+                </div>
+                <div>
+                <select>
+                    <option>Newest first</option>
+                    <option>oldest first</option>
                 </select>
-               
                 </div>
             </div>
-            </div>
-            </div>
-            
 
         <div className=' p-t20 '> 
         <div>
@@ -180,7 +222,7 @@ const BrowseProjects = ()=>{
   );
 }
 
-export default BrowseProjects;
+export default BrowseContest;
 
 
 

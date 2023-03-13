@@ -31,7 +31,7 @@ const  Categories = () => {
         <div className='cat-header'>
           <h1>All Categories</h1>
           </div>
-        <div className='  '>
+        <div className='mainscr'>
       
         
         <div className=' w-105 mb-32'>
