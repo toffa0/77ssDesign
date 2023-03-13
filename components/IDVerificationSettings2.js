@@ -48,7 +48,7 @@ const IDVerification = () => {
                 <label htmlFor="last-name">ID number </label>
                 <input type="password" className="form-control" id="passwordnew" />
         </div>
-      <div className="profile__submit-button"> 
+      <div className="profile__submit-button mt-60"> 
         <button>Submit</button>
       </div>
     </div>

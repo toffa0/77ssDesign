@@ -40,7 +40,7 @@ const IDVerification = () => {
           </div>
         )}
       </div>
-      <div className="profile__submit-button"> 
+      <div className="profile__submit-button mt-80"> 
         <button>Submit</button>
       </div>
     </div>
