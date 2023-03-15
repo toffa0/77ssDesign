@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Aboutbusiness from "@/components/1to1breif/Aboutbusiness";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Time from "@/components/1to1breif/Time";
 
 
 const Oneto1breif = ()=>{
@@ -33,8 +34,8 @@ const Oneto1breif = ()=>{
 
 
       <button id={`${
-     activeside === "Locked" ? "sideActive" : ""
-   }`} onClick={()=> setActiveside('Locked')}>Time & budget</button>
+     activeside === "Time" ? "sideActive" : ""
+   }`} onClick={()=> setActiveside('Time')}>Time & budget</button>
 
    
      <button id={`${
@@ -58,7 +59,7 @@ const Oneto1breif = ()=>{
 
 <div className="mywork-ex">
    {activeside === "About" && <Aboutbusiness/>}
-     
+   {activeside === "Time" && <Time/>}
  </div>
 
  </div>

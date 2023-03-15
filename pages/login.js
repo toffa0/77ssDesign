@@ -95,8 +95,8 @@ const Login = () => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="form-container jst " id="myForm2">
-            <div className=" fl-gap31 sm-btn bottom-row2 row2-mb">
+    <form onSubmit={handleSubmit} className="form-container jst-SB " id="myForm2">
+            <div className=" gap64 sm-btn bottom-row3 row2-mb mt-159">
 
   <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign in with Google</p></div></button>
 <button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign in with Facebook</p></div> </button>
@@ -108,25 +108,25 @@ const Login = () => {
 
 
 </div>
-<div className="bottom-row2 fl-gap32">
+<div className="bottom-row3 fl-gap32">
 <div className="fl nntr">
   <p>or Login with your 77sdesign account</p>
 </div>
-<div  className="bottom-row2">
+<div  className="bottom-row3 ">
       <input type="text" placeholder="Username" id="email1"/>
       <input type="password" placeholder="Password" id="password1"/>
       </div>
-
-      <button type="submit">Submit</button>
-</div>
-
-      <div className="bottom-row">
+      <div className="bottom-row4">
         <div>
         <input type="checkbox" id="remember" />
         <label htmlFor="remember" className="pdleft8">Remember Me</label>
         </div>
         <Link href="#">Forgot Password?</Link>
       </div>
+      <button type="submit">Log in</button>
+</div>
+
+
       {/* <div className="social-group ">
         <p>Or login with</p>
         <div>

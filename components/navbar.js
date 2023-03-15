@@ -81,7 +81,7 @@ const Navbar = () => {
   
   return (
   <nav className="navbar">
-    <div className="right">
+    <div className="right2">
       <Link href="/">
       <Image src="logo1.svg" alt="Logo" className="logo" width={148} height={40} />
       </Link>
@@ -98,7 +98,7 @@ const Navbar = () => {
       </div>
    
     </div>
-    <div className="right">
+    <div className="right2">
       <Link href="/login">
         Help
       </Link>
@@ -106,7 +106,7 @@ const Navbar = () => {
     <button className='navworkbtn' id='actions'>Work</button>
     {!showWorkMenu && (
       <ul className="menu">
-        <div className='p-t20'>
+        <div className='p-t20 fl-col fl-gap23'>
 
         
         <li className="menu-item">
@@ -136,7 +136,7 @@ const Navbar = () => {
     {/* onClick={handleClick} */}
     {!showMenu && (
       <ul className="menu">
-        <div className='p-t20'>
+        <div className='p-t20 fl-col fl-gap23'>
 
         
         <li className="menu-item">
