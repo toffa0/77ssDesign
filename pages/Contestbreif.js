@@ -3,14 +3,14 @@ import Image from 'next/image'
 import Aboutbusiness from "@/components/1to1breif/Aboutbusiness";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import Time from "@/components/1to1breif/Time";
-import Size from "@/components/1to1breif/size";
-import Brand from "@/components/1to1breif/Brand";
-import Colors from "@/components/1to1breif/Colors";
-import Checkout from "@/components/1to1breif/Checkout";
+import Time from "@/components/Contestbreif/TypeofDesign";
+import Size from "@/components/Contestbreif/size";
+import Brand from "@/components/Contestbreif/Brand";
+import Colors from "@/components/Contestbreif/Colors";
+import Checkout from "@/components/Contestbreif/Checkout";
 
 
-const Oneto1breif = ()=>{
+const Contestbreif = ()=>{
     const [activeside, setActiveside] = useState("About");
     return(
 
@@ -20,7 +20,7 @@ const Oneto1breif = ()=>{
             <div className="max">
                 <Navbar/>
                 <div className="my-workkk mt-125">
-                    <h2>1 to 1</h2>
+                    <h2>Contest</h2>
                     <h1>Brief details</h1>
                 </div>
             </div>
@@ -37,9 +37,7 @@ const Oneto1breif = ()=>{
    }`} onClick={()=> setActiveside('About')}>About business & brand</button>
 
 
-      <button id={`${
-     activeside === "Time" ? "sideActive" : ""
-   }`} onClick={()=> setActiveside('Time')}>Time & budget</button>
+
 
    
      <button id={`${
@@ -53,6 +51,10 @@ const Oneto1breif = ()=>{
         <button id={`${
      activeside === "Colors" ? "sideActive" : ""
    }`} onClick={()=> setActiveside('Colors')}>Preferred colors</button>
+
+        <button id={`${
+     activeside === "Time" ? "sideActive" : ""
+   }`} onClick={()=> setActiveside('Time')}>The type of design pack you are interested in</button>
 
         <button id={`${
      activeside === "Checkout" ? "sideActive" : ""
@@ -79,4 +81,4 @@ const Oneto1breif = ()=>{
  
     )
 }
-export default Oneto1breif;
+export default Contestbreif;

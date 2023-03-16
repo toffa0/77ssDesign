@@ -2,7 +2,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import React, { useState } from "react";
 import Image from 'next/image'
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 import Footer2 from "@/components/footer2";
 import {listItems,listItems2,listItems3,listItems4,listItems5} from "../components/consts"
 
@@ -99,8 +99,8 @@ const Categories2 = ()=>{
             </div>
             </div>
             <div className="cat2-btns max">
-                <button>Start contest</button>
-                <button id="cyan">Hiring (1 to1)</button>
+                <Link href="1to1breif">Start contest</Link>
+                <Link href="Contestbreif" id="cyan">Hiring (1 to1)</Link>
             </div>
             </div>
             <Footer2/>
