@@ -78,14 +78,14 @@ const TypeofDesign= ()=>{
                 <div className="fl jst-SB">
                     <div className="fl gap15">
                         <input type='checkbox'/>
-                        <label>Blind contest: The designers can not see each other's designs</label>
+                        <label>Blind contest: The designers can not see each other&apos;s designs</label>
                     </div>
                     <label>FREE</label>
                 </div>
                 <div className="fl jst-SB">
                     <div className="fl gap15">
                         <input type='checkbox'/>
-                        <label> Private project: The contest won’t be visible in google and the<br/>
+                        <label> Private project: The contest won&apos;t be visible in google and the<br/>
                             <span>search result requires designers to sign a confidentiality 
                             agreement NDA</span>
                         </label>

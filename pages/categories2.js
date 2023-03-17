@@ -125,8 +125,8 @@ const Categories2 = ()=>{
             </div>
             </div>
             <div className="cat2-btns max">
-                <Link href="1to1breif">Start contest</Link>
-                <Link href="Contestbreif" id="cyan">Hiring (1 to1)</Link>
+                <Link href="Contestbreif" >Start contest</Link>
+                <Link href="1to1breif" id="cyan">Hiring (1 to1)</Link>
             </div>
             </div>
             <Footer2/>
