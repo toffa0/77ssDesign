@@ -1,12 +1,38 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer2 from "@/components/footer2";
+import { BASE_URL ,API_VERSION } from '@/config';
 import {listItems,listItems2,listItems3,listItems4,listItems5} from "../components/consts"
 
 const Categories2 = ()=>{
+
+    const [ChooseCat, SetChooseCat] = useState("");
+
+
+    useEffect(()=>{
+        fetch(`${BASE_URL}/${API_VERSION}/core/categories/`, {
+          
+       
+        })
+        .then(response => {
+          if(response.ok){
+            console.log(response);
+          } else {
+            throw new Error('Something went wrong');
+          }
+        })
+
+        .catch(error => console.error(error));
+        
+    },[])
+
+
+    function handleclick(){
+        
+    }
 
     return(
         <div>
@@ -39,7 +65,7 @@ const Categories2 = ()=>{
                 <div class="dropdown-content">
                     <ul>
                         {listItems.map((item) => (
-                            <li key={item.id} className="cat-menu-links"><a href='#'>{item.text}</a></li>
+                            <li key={item.id} className="cat-menu-links"><a href='#' onClick={()=>{SetChooseCat(item.text);console.log(ChooseCat)}} >{item.text}</a></li>
                         ))}
                 </ul>
                 </div>

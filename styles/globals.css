@@ -4158,7 +4158,7 @@ align-items: center;
 }
 .e8thheader{
   position: absolute;
-  left: -500px;
+  left: -420px;
   top: -50px;
 }
 .checkout-8thpart h1{
@@ -4363,9 +4363,29 @@ align-items: center;
   color: #FFFFFF;
   
 }
-
-
-
+.logoabout img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.logoabout{
+  width: 190px;
+  height: 190px;
+  border: 1px solid #707070;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1px;
+}
+#skipbtn{
+  height: 64px;
+  width: 128px;
+  background: #CACAD1;
+  color: #545457;
+}
 #bodernone{
   border: none;
 }

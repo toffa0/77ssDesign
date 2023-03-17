@@ -10,69 +10,23 @@ const Checkout= ()=>{
                     <option>  $</option>
                 </select>
             </div>
-            <div className="checkout-firstpart">
-                <h4>Review your brief</h4>
-                <p>Name your project</p>
-                <p>————</p>
-                <p>type of design you need</p>
-                <p>————</p>
-                <p>Describe your project</p>
-                <p>————</p>
-                <p>Design will be used</p>
-                <p>————</p>
-                <p>Your time & budget</p>
-                <p>————</p>
-                <p>Size</p>
-                <p>—cm x —cm</p>
+            <div className="checkout-firstpart ">
+                <h4>Summary</h4>
+                <div className='fl fl-gap23 mt-22'>
+                    <label>Cash Back code</label>
+                    <input/>
+                </div>
             </div>
-            <div className="checkout-secpart">
+            <div className="checkout-secpart mb-200">
                 <p>T-shirt design (Project)</p>
                 <div className="fl jst-SB chk">
                     <span>Total </span>
                     <span> $00.00</span>
                 </div>
             </div>
-            <div className="checkout-thirdpart">
-                <h2>Project Features</h2>
-                <div className="fl jst-SB">
-                    <div className="fl gap15">
-                        <input type='checkbox'/>
-                        <label>Promote your project: Push your contest to the top of the list</label>
-                    </div>
-                    <label>$39</label>
-                </div>
-                <div className="fl jst-SB">
-                    <div className="fl gap15">
-                        <input type='checkbox'/>
-                        <label> Private project: The contest won’t be visible in google and the
-                            search result requires designers to sign a confidentiality 
-                            agreement NDA 
-                        </label>
-                    </div>
-                    <label>$39</label>
-                </div>
 
-            </div>
-            <div className="checkout-fourthpart">
-                <p><span>Note: You can end or extend the contest any time</span> if you want that ($49 for an additional 1 day)
-                          
-                </p>
-            </div>
+     
 
-            <div className="checkout-fifthpart mb-92">
-                <div className='fl fl-gap10 mb-14'>
-                    <input type="checkbox" />
-                    <label>Guaranteed</label>
-                </div>
-                <p>You will have more designers participating and receive <span>50% more proposal around your budget </span></p>
-                <div className='fl fl-gap10 mt-11 mb-32'>
-                    <Image src="Line357.svg" alt='' width={29} height={21} />
-                    <p><span>If not guaranteed.</span> The minimum payment is $20 for publishing your project as a website fee <span>(Not active now)</span> </p>
-                </div>
-                <div>
-                    <p>JUST REMEMBER…NO REFUND</p>
-                </div>
-            </div>
             <div>
                 <div className="checkout-sixthpart mb-64">
                     <div className='fl jst-SB'>
