@@ -3897,7 +3897,7 @@ border-radius: 50%;
 .checkout-cont select{
   width: 130px;
   border: 1px solid #545457;
-  background: url(../public/droparrow2.svg) #F5F7FA no-repeat 96% !important;
+  background: url(../public/droparrow2.svg) #F5F7FA no-repeat 90% !important;
   font-style: normal;
   font-size: 20px;
   border-radius: 10px;
