@@ -858,6 +858,8 @@ line-height: 70px;
     border-radius: 7px;
     margin-top:15px ;
     margin-bottom:20px ;
+    font-size: 20px;
+    padding: 10px;
 }
 .form-group1 .form-group input{
   width: 100%;

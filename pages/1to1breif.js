@@ -64,6 +64,8 @@ const Oneto1breif = ()=>{
 
     const handleDataCheckout= (e)=>{
       e.preventDefault();
+      const formData = { ...callback  };
+      console.log(formData);
       fetch(`${BASE_URL}/${API_VERSION}/project/client/`, {
         method: 'POST',
         headers: {
@@ -71,7 +73,7 @@ const Oneto1breif = ()=>{
           
         },
         
-        body: JSON.stringify(callback)
+        body: JSON.stringify(formData)
       })
       .then(response => response.json())
       .then(data => console.log(data))

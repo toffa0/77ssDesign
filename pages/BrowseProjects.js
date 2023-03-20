@@ -6,7 +6,8 @@ import Image from 'next/image'
 import { FaThumbsUp } from "react-icons/fa";
 import Footer2 from '@/components/footer2';
 import Link from 'next/link';
-
+import { useEffect } from 'react';
+import { BASE_URL ,API_VERSION } from '@/config';
 const BrowseProjects = ()=>{
     const [isOpen, setOpen] = useState(false);
     const [listItems, setListItems] = useState([
@@ -18,6 +19,23 @@ const BrowseProjects = ()=>{
         { id: 6, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
         { id: 7, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
       ]);
+
+      
+    useEffect(()=>{
+        fetch(`${BASE_URL}/${API_VERSION}/project/`, {
+        })
+        .then(response => {
+          if(response.ok){
+            console.log(response);
+          } else {
+            throw new Error('Something went wrong');
+          }
+        })
+
+        .catch(error => console.error(error));
+        
+    },[])
+
 
   return (
     <div className="ProfilePage">
