@@ -16,7 +16,7 @@ return(
                 <p>Aquas </p>
             </div>
             <div>
-                <Image src="greens.svg" alt="" width={188} height={188} />
+                <Image src="Greens.svg" alt="" width={188} height={188} />
                 <p>Greens</p>
             </div>
             <div>
