@@ -8,10 +8,78 @@ import Size from "@/components/1to1breif/size";
 import Brand from "@/components/1to1breif/Brand";
 import Colors from "@/components/1to1breif/Colors";
 import Checkout from "@/components/1to1breif/Checkout";
-
+import { BASE_URL ,API_VERSION } from '@/config';
 
 const Oneto1breif = ()=>{
     const [activeside, setActiveside] = useState("About");
+
+    /////////////////////////////////////////
+    const [name, setName] = useState("name"); 
+    const [languages, setLanguages] = useState("languages"); 
+    const [industry, setIndustry] = useState(0);  
+    const [description, setDescription] = useState("description"); 
+    const [url, setUrl] = useState("url"); 
+    const [reference, setReference] = useState("reference"); 
+    const [logo, setLogo] = useState("logo"); 
+
+    const [budget_from, setBudget_from] = useState(4075);  
+    const [budget_to, setBudget_to] = useState(9946639.61); 
+    const [timeline, setTimeline] = useState("timeline");
+    const [portfolio_allowed, setPortfolio_allowed] = useState(true); 
+
+    const [size, setSize] = useState("size"); 
+    const [feature_text , setFeature_text] = useState("feature_text"); 
+
+    const [guarentee, setGuarentee] = useState(true); 
+    const [deadline, setDeadline] = useState("2023-03-20"); 
+    const [category, setCategory] = useState(0); 
+    
+    const [color_palette, setColor_palette] = useState(0); 
+
+    const callback = {
+      name: name,
+      languages: languages,
+      industry: industry,
+      description: description,
+      url: url,
+      reference: reference,
+      logo: logo,
+      budget_from: budget_from,
+      budget_to: budget_to,
+      portfolio_allowed: portfolio_allowed,
+      logo: logo,
+      size: size,
+      feature_text: feature_text,
+      guarentee: guarentee,
+      deadline: deadline,
+      category: category,
+      color_palette: color_palette,
+    }
+    function cosn() {
+      console.log(name,languages,industry,description,url,reference,logo,portfolio_allowed);
+      console.log("yes");
+      console.log(callback);
+    } 
+ 
+
+    const handleDataCheckout= (e)=>{
+      e.preventDefault();
+      fetch(`${BASE_URL}/${API_VERSION}/project/client/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          
+        },
+        
+        body: JSON.stringify(callback)
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+    };
+
+
+
     return(
 
 <div>
@@ -62,14 +130,15 @@ const Oneto1breif = ()=>{
 
 
 <div className="mywork-ex">
-   {activeside === "About" && <Aboutbusiness/>}
-   {activeside === "Time" && <Time/>}
-   {activeside === "Size" && <Size/>}
+   {activeside === "About" && <Aboutbusiness setName={setName} setLanguages={setLanguages} setIndustry={setIndustry} setDescription={setDescription} setUrl={setUrl} setReference={setReference} setLogo={setLogo}  cosn={cosn}  />}
+   {activeside === "Time" && <Time  setBudget_from={setBudget_from} setBudget_to={setBudget_to} setTimeline={setTimeline} setPortfolio_allowed={setPortfolio_allowed} cosn={cosn}/>}
+   {activeside === "Size" && <Size setFeature_text={setFeature_text} setSize={setSize}/>}
+    
    {activeside === "Brand" && <Brand/>}
    {activeside === "Colors" && <Colors/>}
-   {activeside === "Checkout" && <Checkout/>}
+   {activeside === "Checkout" && <Checkout handleDataCheckout={handleDataCheckout}/>}
  </div>
-
+ 
  </div>
 
  </div>

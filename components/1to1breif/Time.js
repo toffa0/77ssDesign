@@ -1,12 +1,25 @@
 import Image from "next/image";
 
-const Time= ()=>{
+const Time= ({cosn,setBudget_from,setBudget_to,setTimeline,setPortfolio_allowed})=>{
+    function Budget_fromOnchange(e){
+        setBudget_from(e)
+        setBudget_to(e)
+    }
+    function TimelineOnchange(e){
+        setTimeline(e)
+    }
+   
 
+    const Portfolio_allowedOnchange = event => {
+        console.log(event.target.value);
+        console.log(Boolean(event.target.value));
+        setPortfolio_allowed(Boolean(event.target.value));
+      };
     return(
         <div className="oneto1 fl-col gap fl-gap32 ">
             <div className="fl fl-gap47">
                 <label>Your timeline:</label>
-                <select>
+                <select onChange={e => TimelineOnchange(e.target.value)}>
                     <option>48 hours</option>
                     <option>1 week</option>
                     <option>2 weeks</option>
@@ -16,7 +29,7 @@ const Time= ()=>{
             <div className="fl fl-gap47">
                 <label>Your budget:</label>
                 <div className="fl-col">
-                <input placeholder="Guide: $199 - $799 " />
+                <input placeholder="Guide: $199 - $799 " onChange={e => TimelineOnchange(e.target.value)} />
                 <span>Designer will provide a quote</span>
                 </div>
             </div>
@@ -28,12 +41,12 @@ const Time= ()=>{
                 </p>
                 <div className="fl gap60 ali-end">
                     <div className="fl fl-gap10">
-                        <input type="radio" id="inptabout" />
-                        <span id="timespan">Yes</span>
+                        <input type="radio"  name="Portfolio_allowed" value={true} id="yes" onChange={Portfolio_allowedOnchange} />
+                        <span htmlFor="yes" id="timespan">Yes</span>
                     </div>
                     <div className="fl fl-gap10">
-                        <input type="radio" id="inptabout" />
-                        <span id="timespan">No</span>
+                        <input type="radio" name="Portfolio_allowed" id="no" value={null} onChange={Portfolio_allowedOnchange} />
+                        <span htmlFor="no" id="timespan">No</span>
                     </div>
                 </div>
             </div>
@@ -42,7 +55,7 @@ const Time= ()=>{
 
 
             <div className="mt-159 mb-350">
-                <button>Continue</button>
+                <button onClick={cosn} >Continue</button>
             </div>
         </div>
     )

@@ -1,39 +1,39 @@
 import Image from "next/image";
 
-const Aboutbusiness= ()=>{
+const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUrl, setReference,setLogo})=>{
 
     return(
         <div className="oneto1 fl-col gap fl-gap32">
             <div className="fl fl-gap47">
                 <label>Languages:</label>
-                <input />
+                <input onChange={setName}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Name in the logo:</label>
-                <input />
+                <input  onChange={setName}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Slogan:</label>
-                <input />
+                <input onChange={setName}/>
             </div>
             <div className="fl fl-gap47">
                 <label>About your organization and target audience: </label>
-                <textarea />
+                <textarea onChange={setName}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Industry:</label>
-                <input />
+                <input onChange={setName}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Other requirements:</label>
-                <textarea />
+                <textarea onChange={setName}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Reference and/or sketch: </label>
                 <div className="fl-col fl-gap32">
 
                 
-                <input />
+                <input onChange={setName}/>
                 <div className="fl fl-gap10">
 
                 

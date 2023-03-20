@@ -4,7 +4,10 @@ import Image from 'next/image'
 const TypeofDesign= ()=>{
     return(
         <div className="checkout-cont">
-            <div className="fl jstfe">
+            <div className="fl jstfe fl-gap10">
+                <div className='fl jst'>
+                    <label>Currency</label>
+                </div>
                 <select>
                     <option>  Egp</option>
                     <option>  $</option>
@@ -30,13 +33,14 @@ const TypeofDesign= ()=>{
                 </div>
                 <div className='seccol'>
                     <div className='typesec-part1'>
-                        <h3>SILVER</h3>
-                        <h4>$ 299</h4>
+                        <h3>GOLD</h3>
+                        <h4>$ 599</h4>
                     </div>
                     <div className='typesec-part2'>
-                        <p>+ 80 designs expected</p>
-                        <p>+ Available for all designers</p>
-                        <p>+ Larger prize</p>
+                        <p>+ 60 designs expected</p>
+                        <p>+ Pro. and Adv. level </p>
+                        <p>designers only</p>
+                        <p>+ Dedicated director</p>
                         <p>+ %100 guarantee</p>
                         <div className='fl jst'>
                             <button>Select</button>    
@@ -46,13 +50,15 @@ const TypeofDesign= ()=>{
                 </div>
                 <div className='thirdcol'>
                     <div className='typesec-part1'>
-                        <h3>SILVER</h3>
-                        <h4>$ 299</h4>
+                        <h3>PLATINUM</h3>
+                        <h4>$ 999</h4>
                     </div>
                     <div className='typesec-part2'>
-                        <p>+ 80 designs expected</p>
-                        <p>+ Available for all designers</p>
-                        <p>+ Larger prize</p>
+                        <p>+ 40 designs expected</p>
+                        <p>+ Advanceleve </p>
+                        <p>designers only</p>
+                        <p>+ Priority support</p>
+                        <p>+ Dedicated director</p>
                         <p>+ %100 guarantee</p>
                         <div className='fl jst'>
                             <button>Select</button>    
@@ -116,8 +122,7 @@ const TypeofDesign= ()=>{
                 </div>
                 <p>You will have more designers participating and receive <span>50% more proposal around your budget </span></p>
                 <div className='fl fl-gap10 mt-11 mb-32'>
-                    <Image src="Line357.svg" alt='' width={29} height={21} />
-                    <p><span>If not guaranteed.</span> The minimum payment is $20 for publishing your project as a website fee <span>(Not active now)</span> </p>
+                    <p><span>If not guaranteed.</span> 77S design charges administration fee of $20 to process the refund (this will be deducted from the receivable). </p>
                 </div>
                 <div>
                     <p>JUST REMEMBER…NO REFUND</p>

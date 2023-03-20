@@ -1,24 +1,41 @@
 import Image from "next/image";
 
-const Aboutbusiness= ()=>{
-
+const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUrl, setReference,setLogo, cosn})=>{
+    function languagesonchange(e){
+        setLanguages(e)
+    }
+    function industryOnchange(e){
+        setIndustry(e)
+    }
+    function UrlOnchange(e){
+        setUrl(e)
+    }
+    function nameOnchange(e){
+        setName(e)
+    }
+    function DescribeOnchange(e){
+        setDescription(e)
+    }
+    function ReferenceOnchange(e){
+        setReference(e)
+    }
     return(
         <div className="oneto1 fl-col gap fl-gap32">
             <div className="fl fl-gap47">
                 <label>Languages:</label>
-                <input />
+                <input type="text" onChange={e => languagesonchange(e.target.value)}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Your industry:</label>
-                <input />
+                <input onChange={e => industryOnchange(e.target.value)}/>
             </div>
             <div className="fl fl-gap47">
-                <label>Your website and/or social media:</label>
-                <input />
+                <label>Your website <br/>and/or social media:</label>
+                <input onChange={e => UrlOnchange(e.target.value)}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Project name:</label>
-                <input />
+                <input onChange={e => nameOnchange(e.target.value)}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Type of design:</label>
@@ -26,7 +43,7 @@ const Aboutbusiness= ()=>{
             </div>
             <div className="fl fl-gap47">
                 <label>Describe your project:</label>
-                <textarea />
+                <textarea onChange={e => DescribeOnchange(e.target.value)}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Design will be used:</label>
@@ -38,7 +55,7 @@ const Aboutbusiness= ()=>{
             </div>
             <div className="fl fl-gap47">
                 <label>Link of Reference and/or sketch: </label>
-                <input />
+                <input onChange={e => ReferenceOnchange(e.target.value)}/>
             </div>
             <div className="fl fl-gap47 ">
                 <label>Attach your logo</label>
@@ -59,7 +76,7 @@ const Aboutbusiness= ()=>{
             </div>
             <div className="fl fl-gapp16">
                 <div className="fl fl-gap10 ">
-                    <input type="checkbox" id="inptabout" />
+                    <input type="checkbox" id="yes" />
                     <label>No logo</label>
                 </div>
                 <div>
@@ -67,7 +84,7 @@ const Aboutbusiness= ()=>{
                 </div>
             </div>
             <div className="mt-159 mb-350">
-                <button>Continue</button>
+                <button onClick={cosn}>Continue</button>
             </div>
             
         </div>

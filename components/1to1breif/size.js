@@ -1,16 +1,21 @@
 import Image from "next/image";
 
-const Size= ()=>{
-
+const Size= ({setFeature_text, setSize,})=>{
+    function FeaturesOnchange(e){
+        setFeature_text(e)
+    }
+    function SizeOnchange(e){
+        setSize(e)
+    }
     return(
         <div className="oneto1 fl-col gap fl-gap32">
             <div className="fl fl-gap47">
                 <label>Size of the product</label>
-                <input placeholder="Optional (according to the product)" />
+                <input placeholder="Optional (according to the product)"  onChange={e => SizeOnchange(e.target.value)}/>
             </div>
             <div className="fl fl-gap47">
                 <label>Text you would like to feature on the product</label>
-                <textarea placeholder="Optional (according to the product)"/>
+                <textarea placeholder="Optional (according to the product)"  onChange={e => FeaturesOnchange(e.target.value)} />
             </div>
             <div className="fl fl-gap47 ">
                 <label>upload text file:</label>

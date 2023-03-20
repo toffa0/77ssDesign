@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 
-const Checkout= ()=>{
+const Checkout= ({handleDataCheckout})=>{
     return(
         <div className="checkout-cont">
             <div className="fl jstfe">
@@ -178,7 +178,7 @@ const Checkout= ()=>{
                     
                         <button>Continue</button>
                     </div>
-                    
+                    <button onClick={handleDataCheckout}>add</button>
                 </div>
             </div>
         </div>

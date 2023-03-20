@@ -5,6 +5,9 @@ const TypeofDesign= ()=>{
     return(
         <div className="checkout-cont">
             <div className="fl jstfe">
+                <div className='fl jst'>
+                    <label>Currency</label>
+                </div>
                 <select>
                     <option>  Egp</option>
                     <option>  $</option>
