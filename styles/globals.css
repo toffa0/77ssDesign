@@ -3902,7 +3902,7 @@ border-radius: 50%;
   cursor: pointer;
   color: #5A5A64;
   text-align: center;
-  padding: 15px;
+  padding: 15 px;
 }
 .checkout-cont select:focus{
   outline: none;
@@ -4109,7 +4109,8 @@ align-items: center;
   border: none;
   border-right: 1px solid black;
   border-radius: 0;
-  background: url(/_next/static/media/droparrow.1bc15f80.svg) #fff no-repeat 90% !important;
+  background: url(../public/droparrow2.svg) #fff no-repeat 96% !important;
+  padding: 0;
 }
 .checkout-seventhpart{
   background: #9E9EA3;
