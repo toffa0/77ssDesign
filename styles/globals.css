@@ -4210,7 +4210,8 @@ align-items: center;
   height: 64px;
   border: 1px solid #3D3D3F;
   border-radius: 7px;
-
+  padding: 20px;
+  font-size: 20px;
 }
 .checkout-8thpart select{
   width: 100%;
