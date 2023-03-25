@@ -7,7 +7,7 @@ import { FaThumbsUp } from "react-icons/fa";
 import Footer2 from '@/components/footer2';
 import Link from 'next/link';
 import {cardData2} from "../components/consts"
-import Browse from '../useless/browse';
+import Browse from './browse';
 import ProjectsMessage3comp from '@/components/ProjectsMessage3comp';
 import Nameinfo from '@/components/contest/Nameinfo';
 import OtherNote from '@/components/contest/OtherNote';
