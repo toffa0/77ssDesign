@@ -64,24 +64,24 @@ const Discover = ()=>{
                   }
                   {ActiveCat==="Business-Advertising"&&
                   Businessadvertising.map((item) => (
-                    <option>{item.text}</option>
+                    <option key={item.id}>{item.text}</option>
                   ))
 
                   }
                   {ActiveCat==="Web-App"&&
                   Webdesign.map((item) => (
-                    <option>{item.text}</option>
+                    <option key={item.id}>{item.text}</option>
                   ))
 
                   }
                   {ActiveCat==="Clothing"&&
                   ClothingMerchandise.map((item) => (
-                    <option>{item.text}</option>
+                    <option key={item.id}>{item.text}</option>
                   ))
                   }
                   {ActiveCat==="Illustration" &&
                   ArtIllustration.map((item) => (
-                    <option>{item.text}</option>
+                    <option key={item.id}>{item.text}</option>
                   ))
                   }
                 </select>
@@ -89,7 +89,7 @@ const Discover = ()=>{
                 <option value="volvo" >All industries</option>
                 {
                   industriesMenu.map((item) => (
-                    <option>{item.text}</option>
+                    <option key={item.id}>{item.text}</option>
                   ))
                   }
                 </select>
