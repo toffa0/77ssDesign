@@ -56,7 +56,7 @@ const Discover = ()=>{
                 :<option value="Subcategories" disabled >All Subcategories</option>}
                   {ActiveCat==="Logo-brand"&&
                   Logoidentity.map((item) => (
-                    <option>{item.text}</option>
+                    <option key={item.id}>{item.text}</option>
                   ))
                   
                   
