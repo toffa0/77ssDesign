@@ -7,8 +7,8 @@ import { FaThumbsUp } from "react-icons/fa";
 import Footer2 from '@/components/footer2';
 import Link from 'next/link';
 import {cardData2} from "../components/consts"
-import Browse from './browse';
-import ProjectsMessage3comp from '@/components/ProjectsMessage3comp';
+// import Browse from './browse';
+// import ProjectsMessage3comp from '@/components/ProjectsMessage3comp';
 const ProjectsMessage3 = ()=>{
     const [isOpen, setOpen] = useState(false);
     const [activeComponent, setActiveComponent] = useState("Brief");
