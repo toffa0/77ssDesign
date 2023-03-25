@@ -1483,6 +1483,7 @@ ul{
   line-height: 40px;
   color: #545457;
   cursor: pointer;
+  margin-left: 5px;
 }
 .p-30{
   padding: 30px;
