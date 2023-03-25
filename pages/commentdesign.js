@@ -17,17 +17,17 @@ const Submitdesgin = ()=>{
         });
     }
     function drawPoint(x, y) {
-        // const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        // svg.setAttribute("width", "100%");
-        // svg.setAttribute("height", "100%");
+        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svg.setAttribute("width", "30px");
+        svg.setAttribute("height", "30px");
 
       
         const circle = document.createElement("circle");
         circle.setAttribute("position", "absolute");
-        circle.setAttribute("cx", x);
-        circle.setAttribute("cy", y);
+        circle.setAttribute("top", x);
+        circle.setAttribute("left", y);
         circle.setAttribute("r", 10);
-        circle.setAttribute("fill", "red");
+        circle.setAttribute("background", "red");
       
         svg.appendChild(circle);
         document.body.appendChild(svg);

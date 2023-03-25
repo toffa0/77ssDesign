@@ -15,7 +15,7 @@ const DetailedView = ({cardData})=>{
       console.log(data)
     };
     fetchData();
-  }, []);
+  });
 
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
