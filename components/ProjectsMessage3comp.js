@@ -35,7 +35,7 @@ const ProjectsMessage3comp = ({cardData})=>{
         <button>Eliminate</button>
         </div>
             
-            <Image src="greycircle.svg" width={78.65} height={78.65} />
+            <Image src="greycircle.svg" width={78.65} height={78.65} alt="" />
             <p>Designer name</p>
             <span>Local time</span>
             <div className='fl ali-cen gap3'>
