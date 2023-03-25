@@ -1,86 +1,75 @@
 import Image from "next/image";
 import { useState } from "react";
 const Brand= ()=>{
-    const [BrandStyle1, setBrandStyle1] = useState("Classic");
-    const [BrandStyle2, setBrandStyle2] = useState("Playful");
-    const [BrandStyle3, setBrandStyle3] = useState("Geometrical");
-    const [BrandStyle4, setBrandStyle4] = useState("Feminine");
-    const [BrandStyle5, setBrandStyle5] = useState("Economical");
-    const [BrandStyle6, setBrandStyle6] = useState("Mature");
-    const [BrandStyle7, setBrandStyle7] = useState("Handcrafted");
+    const [Slidervalue1, setSlidervalue1] = useState(0);
+    const [Slidervalue2, setSlidervalue2] = useState(0);
+    const [Slidervalue3, setSlidervalue3] = useState(0);
+    const [Slidervalue4, setSlidervalue4] = useState(0);
+    const [Slidervalue5, setSlidervalue5] = useState(0);
+    const [Slidervalue6, setSlidervalue6] = useState(0);
+    const [Slidervalue7, setSlidervalue7] = useState(0);
+
+
 
     return(
         <div className="oneto1 fl-col gap fl-gap32">
 
 
-    <div className='fl-col jstfe xyz ali-cen w900'>
+    <div className='fl-col jstfe xyz ali-cen '>
         {/* first filter */}
      <div className='choose2 '>
        <div className='fl jst-SB'>
-       <button id='nobtn2' onClick={()=>{setBrandStyle1('Classic')}}>Classic</button>
-       <button id='nobtn2' onClick={()=>{setBrandStyle1('Modern')}}>Modern</button>
+       <span id='nobtn2' >Classic</span>
+       <span id='nobtn2' >Modern</span>
        </div>
-       <div className='abc'>
-       <Image src="btn.svg" alt='' height={25} width={25} className={` ${BrandStyle1 === "Classic" ? "drag drag-left":"drag drag-right"}`} />
-       </div>
+       <input type="range" min="-100" max="100" defaultValue={Slidervalue1}  onChange={(e)=> setSlidervalue1(e.target.value)} id="valueSlider" />
      </div>
 {/* first filter end*/}
      <div className='choose2 '>
        <div className='fl jst-SB'>
-       <button id='nobtn2' onClick={()=>{setBrandStyle2('Playful')}}>Playful</button>
-       <button id='nobtn2' onClick={()=>{setBrandStyle2('Serious') }}>Serious</button>
+       <span id='nobtn2'>Playful</span>
+       <span id='nobtn2'>Serious</span>
        </div>
-       <div className='abc'>
-       <Image src="btn.svg" alt='' height={25} width={25} className={` ${BrandStyle2 === "Playful" ? "drag drag-left":"drag drag-right"}`} />
-       </div>
+       <input type="range" min="-100" max="100" defaultValue={Slidervalue2}  onChange={(e)=> setSlidervalue2(e.target.value)} id="valueSlider" />
      </div>   
      {/* first filter end*/} 
      <div className='choose2 '>
        <div className='fl jst-SB'>
-       <button id='nobtn2' onClick={()=>{setBrandStyle3('Geometrical')}}>Geometrical</button>
-       <button id='nobtn2' onClick={()=>{setBrandStyle3('Organic') }}>Organic</button>
+       <span id='nobtn2' >Geometrical</span>
+       <span id='nobtn2' >Organic</span>
        </div>
-       <div className='abc'>
-       <Image src="btn.svg" alt='' height={25} width={25} className={` ${BrandStyle3 === "Geometrical" ? "drag drag-left":"drag drag-right"}`} />
-       </div>
+       <input type="range" min="-100" max="100" defaultValue={Slidervalue3}  onChange={(e)=> setSlidervalue3(e.target.value)} id="valueSlider" />
      </div> 
      {/* first filter end*/}
      <div className='choose2 '>
        <div className='fl jst-SB'>
-       <button id='nobtn2' onClick={()=>{setBrandStyle4('Feminine')}}>Feminine</button>
-       <button id='nobtn2' onClick={()=>{setBrandStyle4('Masculine') }}>Masculine</button>
+       <span id='nobtn2' >Feminine</span>
+       <span id='nobtn2' >Masculine</span>
        </div>
-       <div className='abc'>
-       <Image src="btn.svg" alt='' height={25} width={25} className={` ${BrandStyle4 === "Feminine" ? "drag drag-left":"drag drag-right"}`} />
-       </div>
+       <input type="range" min="-100" max="100" defaultValue={Slidervalue4}  onChange={(e)=> setSlidervalue4(e.target.value)} id="valueSlider" />
      </div> 
      {/* first filter end*/}
      <div className='choose2 '>
        <div className='fl jst-SB'>
-       <button id='nobtn2' onClick={()=>{setBrandStyle5('Economical')}}>Economical</button>
-       <button id='nobtn2' onClick={()=>{setBrandStyle5('Luxurios') }}>Luxurios</button>
+       <span id='nobtn2'>Economical</span>
+       <span id='nobtn2'>Luxurios</span>
        </div>
-       <div className='abc'>
-       <Image src="btn.svg" alt='' height={25} width={25} className={` ${BrandStyle5 === "Economical" ? "drag drag-left":"drag drag-right"}`} />
-       </div>
+       <input type="range" min="-100" max="100" defaultValue={Slidervalue5}  onChange={(e)=> setSlidervalue5(e.target.value)} id="valueSlider" />
      </div> 
      <div className='choose2 '>
        <div className='fl jst-SB'>
-       <button id='nobtn2' onClick={()=>{setBrandStyle6('Mature')}}>Mature</button>
-       <button id='nobtn2' onClick={()=>{setBrandStyle6('Youthful') }}>Youthful</button>
+       <span id='nobtn2' >Mature</span>
+       <span id='nobtn2' >Youthful</span>
        </div>
-       <div className='abc'>
-       <Image src="btn.svg" alt='' height={25} width={25} className={` ${BrandStyle6 === "Mature" ? "drag drag-left":"drag drag-right"}`} />
-       </div>
+       <input type="range" min="-100" max="100" defaultValue={Slidervalue6}  onChange={(e)=> setSlidervalue6(e.target.value)} id="valueSlider" />
      </div> 
      <div className='choose2 '>
        <div className='fl jst-SB'>
-       <button id='nobtn2' onClick={()=>{setBrandStyle7('Handcrafted')}}>Handcrafted</button>
-       <button id='nobtn2' onClick={()=>{setBrandStyle7('Minimalist') }}>Minimalist</button>
+       <span id='nobtn2' >Handcrafted</span>
+       <span id='nobtn2' >Minimalist</span>
        </div>
-       <div className='abc'>
-       <Image src="btn.svg" alt='' height={25} width={25} className={` ${BrandStyle7 === "Handcrafted" ? "drag drag-left":"drag drag-right"}`} />
-       </div>
+       <input type="range" min="-100" max="100" defaultValue={Slidervalue7}  onChange={(e)=> setSlidervalue7(e.target.value)} id="valueSlider" />
+
      </div>  
 
 

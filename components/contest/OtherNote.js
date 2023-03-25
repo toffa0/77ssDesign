@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const OtherNote = ()=>{
 return(
-    <div className='contest-cont-content fl jst-SB contestpd'>
+    <div className='contest-cont-content fl jst-SB contestpd' id='OtherNote'>
 
     <div className='fl-col jstfe xyz'>
     <h2>Note:</h2>

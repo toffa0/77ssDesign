@@ -11,15 +11,14 @@ const Ndas = ()=>{
      
      <button id={`${
      activeside === "Active" ? "sideActive" : ""
-   }`} onClick={()=> setActiveside('Active')}>Designer name</button>
+   }`} onClick={()=> setActiveside('Active')}>Brief title</button>
 
     </div>
 
 
 
 <div className="mywork-ex">
-    <h2>Brief title</h2>
-    <span>...</span>
+    <span>Contest link</span>
  </div>
 
  </div>

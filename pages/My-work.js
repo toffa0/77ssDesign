@@ -20,10 +20,10 @@ const Mywork = () => {
       <div className="max">
 
   
-        <div className="my-workkk mt-125 mb-60">
-            <h1>My Work</h1>
+        <div className="my-workkk mt-125 mb-28">
+            <h1 id="title">My Work</h1>
         </div>
-      <div className="settings-nav mtop30" id="work-nav">
+      <div className="settings-nav " id="work-nav">
         <button
           className={` ${activeComponent === "contests" ? "active nav-btn" : "nav-btn"}`}
           onClick={() => setActiveComponent("contests")}

@@ -16,10 +16,10 @@ const Oneto1breif = ()=>{
     /////////////////////////////////////////
     const [name, setName] = useState("name"); 
     const [languages, setLanguages] = useState("languages"); 
-    const [industry, setIndustry] = useState(0);  
+    const [industry, setIndustry] = useState(1);  
     const [description, setDescription] = useState("description"); 
-    const [url, setUrl] = useState("url"); 
-    const [reference, setReference] = useState("reference"); 
+    const [url, setUrl] = useState("https://www.google.com/"); 
+    const [reference, setReference] = useState("https://www.google.com/"); 
     const [logo, setLogo] = useState("logo"); 
 
     const [budget_from, setBudget_from] = useState(4075);  
@@ -32,9 +32,9 @@ const Oneto1breif = ()=>{
 
     const [guarentee, setGuarentee] = useState(true); 
     const [deadline, setDeadline] = useState("2023-03-20"); 
-    const [category, setCategory] = useState(0); 
+    const [category, setCategory] = useState(1); 
     
-    const [color_palette, setColor_palette] = useState(0); 
+    const [color_palette, setColor_palette] = useState(1); 
 
     const callback = {
       name: name,

@@ -33,12 +33,13 @@ const BrowseContest = ()=>{
    
         
         <div className=' '>
-            <div>
+           
             <div className='disc-head2 ' id='blue'>
              <h1>Browse contests</h1>
             </div>
-            <div className='bgf5 fl'>
-            <div className='header-w60'>
+            <div className=''>
+            <div className='bgf5 fl h342 jst-SB'>
+            <div className='w-70 fl-col jst-SB'>
             <div className='pd-20 disc-fil2 firstline'>
                 <div className='head-w'>
                 <select className="filter2" id="filter" placeholder='All categories'>
@@ -66,7 +67,7 @@ const BrowseContest = ()=>{
 
                
             </div>
-            <div className='fl'>
+            <div className='fl jst-SB mb-30'>
 
           
             <div className='secline fl fl-gap99 head-w2 BC'>
@@ -89,7 +90,7 @@ const BrowseContest = ()=>{
               </div>  
     
             </div>
-            <div className='ml-8'>
+            <div className=''>
                 <p className='cont-p '>
                 Contest types
                 </p>
@@ -133,7 +134,7 @@ const BrowseContest = ()=>{
                 </div>
                 </div>
             </div>
-            <div className='header-w40 fl-col jst-SB gap15 ali-cen'>
+            <div className='header-w30 fl-col jst-SB gap15 ali-cen mb-30'>
                 
 
                 <div className='bc-header-rigth'>

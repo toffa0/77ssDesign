@@ -9,7 +9,7 @@ function balance() {
 
   return (
     <div className="ProfilePage">
-        <div className='mainscr home_section'>
+        <div className='mainscr home_section3'>
         <Navbar/>
         <div className='pd-1 mt-125 max'>
         <h1>Your Credits</h1>

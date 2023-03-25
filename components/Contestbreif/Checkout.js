@@ -4,17 +4,17 @@ import Image from 'next/image'
 const Checkout= ()=>{
     return(
         <div className="checkout-cont">
-            <div className="fl jstfe">
+            {/* <div className="fl jstfe">
                 <select>
                     <option>  Egp</option>
                     <option>  $</option>
                 </select>
-            </div>
+            </div> */}
             <div className="checkout-firstpart ">
-                <h4>Summary</h4>
-                <div className='fl fl-gap23 mt-22'>
+                <h4 id='summH4'>Summary</h4>
+                <div className='fl fl-gap23 ali-cen mt-22'>
                     <label>Cash Back code</label>
-                    <input/>
+                    <input className='cashbackinp'/>
                 </div>
             </div>
             <div className="checkout-secpart mb-200">

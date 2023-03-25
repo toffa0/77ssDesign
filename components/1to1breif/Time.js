@@ -28,8 +28,8 @@ const Time= ({cosn,setBudget_from,setBudget_to,setTimeline,setPortfolio_allowed}
             </div>
             <div className="fl fl-gap47">
                 <label>Your budget:</label>
-                <div className="fl-col">
-                <input placeholder="Guide: $199 - $799 " onChange={e => TimelineOnchange(e.target.value)} />
+                <div className="fl-col w-101 fl-gap8">
+                <input id="w-100" placeholder="Guide: $199 - $799 " onChange={e => TimelineOnchange(e.target.value)} />
                 <span>Designer will provide a quote</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@ const Time= ({cosn,setBudget_from,setBudget_to,setTimeline,setPortfolio_allowed}
             </div>
 
 
-            <div className="mt-159 mb-350">
+            <div className="mt-340 mb-50">
                 <button onClick={cosn} >Continue</button>
             </div>
         </div>

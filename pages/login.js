@@ -275,14 +275,15 @@ const LoginSignUp = () => {
             </div>
             <div className="form-part">
             <div className="switch-container">
-        <button onClick={() => {
-          setShowLogin(true);
-          setActiveComponent("login")}} className='btn-switch' id={`${activeComponent==="login"? "logactive":""}`} >Login</button>
-        
-        <button onClick={() => {
+            <button onClick={() => {
           setShowLogin(false);
           setActiveComponent("signup")}
         } className='btn-switch' id={`${activeComponent==="signup"? "logactive2":""}`}>Sign Up</button>
+        <button onClick={() => {
+          setShowLogin(true);
+          setActiveComponent("login")}} className='btn-switch' id={`${activeComponent==="login"? "logactive":""}`} >Log in</button>
+        
+
 
 
      

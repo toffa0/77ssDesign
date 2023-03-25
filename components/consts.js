@@ -2,35 +2,95 @@ export const BASE_URL="http://ec2-54-146-11-112.compute-1.amazonaws.com"
 
 
 export const listItems = [
+  { id: 1, text: "Logo design" },
+  { id: 2, text: "Logo & brand identity pack" },
+  { id: 3, text: "Logo & social media pack" },
+  { id: 4, text: "Logo & website Design" },
+  { id: 5, text: "Logo & business card" },
+  { id: 6, text: "Logo & Brand guide" },
+  { id: 7, text: "Logo & product packaging" },
+  { id: 8, text: "Business card" },
+  { id: 9, text: "Stationery" },
+  ];
+export const listItems2 = [
+  { id: 1, text: "Product packaging" },
+  { id: 2, text: "Product label" },
+  { id: 3, text: "Book/Magazine over" },
+  { id: 4, text: "Postcard/Flyer/Print Poster" },
+  { id: 5, text: "Card / Invitation" },
+  { id: 6, text: "Brochure" },
+  { id: 7, text: "Pag" },
+  { id: 8, text: "Car/truck/Van wrap" },
+  { id: 9, text: "Signage" },
+  { id: 11, text: "Menu" },
+  { id: 10, text: "Album cover" },
+  ];
+export const listItems3=[
+  { id: 1, text: "Web design" },
+  { id: 2, text: "WordPress theme design" },
+  { id: 3, text: "Landing page design" },
+  { id: 4, text: "App design" },
+  { id: 5, text: "Facebook cover / Post" },
+  { id: 6, text: "Social media page" },
+  { id: 7, text: "Banner ad" },
+  { id: 8, text: "Email" },
+  { id: 8, text: "Animated GIFs" },
+  { id: 8, text: "Logo animation" },
+  { id: 8, text: "Power Point template" },
+  ];
+export const listItems4=[
+  { id: 1, text: "T-shirt clothing / apparel" },
+  { id: 2, text: "Merchandise" },
+  { id: 3, text: "Cup / Mug" },
+  { id: 4, text: "Sticker" },
+  ];
+export const listItems5 =[
+  { id: 1, text: "Illustration / Graphics" },
+  { id: 2, text: "Infographic" },
+  { id: 3, text: "Character / Mascot" },
+  { id: 4, text: "Icon / Botton" },
+  { id: 5, text: "3D modeling / Animation" },
+  { id: 7, text: "Store branding" },
+  ];
+  export const Logoidentity = [
     { id: 1, text: "Logo design" },
     { id: 2, text: "Logo & brand identity pack" },
     { id: 3, text: "Logo & social media pack" },
     { id: 4, text: "Logo & website Design" },
     { id: 5, text: "Logo & business card" },
-    { id: 6, text: "Brand guide" },
+    { id: 6, text: "Logo & Brand guide" },
+    { id: 9, text: "Logo & product packaging" },
     { id: 7, text: "Business card" },
     { id: 8, text: "Stationery" },
-    { id: 9, text: "Logo & brand guide" },
-    { id: 10, text: "Logo & product packaging" },
-    { id: 11, text: "Logo & animation" },
   ];
-export const listItems2 = [
+export const Webdesign = [
     { id: 1, text: "Web design" },
     { id: 2, text: "WordPress theme design" },
     { id: 3, text: "Landing page design" },
     { id: 4, text: "App design" },
-    { id: 5, text: "Facebook cover" },
+    { id: 5, text: "Facebook cover / Post" },
     { id: 6, text: "Social media page" },
     { id: 7, text: "Banner ad" },
-    { id: 8, text: "Email" }
+    { id: 8, text: "Email" },
+    { id: 8, text: "Animated GIFs" },
+    { id: 8, text: "Logo animation" },
+    { id: 8, text: "Power Point template" },
   ];
-export const listItems3=[
+export const ClothingMerchandise=[
     { id: 1, text: "T-shirt clothing / apparel" },
     { id: 2, text: "Merchandise" },
     { id: 3, text: "Cup / Mug" },
     { id: 4, text: "Sticker" },
   ];
-export const listItems4=[
+  export const ArtIllustration =[
+    { id: 1, text: "Illustration / Graphics" },
+    { id: 2, text: "Infographic" },
+    { id: 3, text: "Character / Mascot" },
+    { id: 4, text: "Icon / Botton" },
+    { id: 5, text: "3D modeling / Animation" },
+    { id: 7, text: "Store branding" },
+  ];
+export const Businessadvertising=[
     { id: 1, text: "Product packaging" },
     { id: 2, text: "Product label" },
     { id: 3, text: "Book/Magazine over" },
@@ -40,17 +100,8 @@ export const listItems4=[
     { id: 7, text: "Pag" },
     { id: 8, text: "Car/truck/Van wrap" },
     { id: 9, text: "Signage" },
-    { id: 10, text: "Power Point template" },
-    { id: 11, text: "Menu/Album cover" },
-  ];
-export const listItems5 =[
-    { id: 1, text: "Illustration / Graphics" },
-    { id: 2, text: "Infographic" },
-    { id: 3, text: "Character / Mascot" },
-    { id: 4, text: "Icon / Botton" },
-    { id: 5, text: "3D modeling / Animation" },
-    { id: 6, text: "Animated GIFs" },
-    { id: 7, text: "Store branding" },
+    { id: 11, text: "Menu" },
+    { id: 10, text: "Album cover" },
   ];
 
 
@@ -65,6 +116,26 @@ export const listItems5 =[
     { id: 8, text: "Architectural" },
     { id: 9, text: "Art & design" },
     { id: 10, text: "Attorney & law" },
+    { id: 11, text: "Automotive" },
+    { id: 12, text: "Childcare" },
+    { id: 13, text: "Cleaning & maintenance" },
+    { id: 14, text: "Communications" },
+    { id: 15, text: "Community & non-profit" },
+    { id: 16, text: "Construction" },
+    { id: 17, text: "Cosmetics & beauty" },
+    { id: 18, text: "Education" },
+    { id: 19, text: "Fashion" },
+    { id: 20, text: "Industrial" },
+    { id: 21, text: "Landscaping" },
+    { id: 22, text: "Political" },
+    { id: 23, text: "Real estate & mortgage" },
+    { id: 24, text: "Religious" },
+    { id: 25, text: "Restaurant" },
+    { id: 26, text: "Security" },
+    { id: 27, text: "Sport" },
+    { id: 28, text: "Travel & hotel" },
+    { id: 29, text: "Wedding service" },
+    
   ];
   export const lastActivity =[
     { id: 1, text: "Anytime" },
@@ -127,4 +198,45 @@ export const cardData2=[
   { id: 10, img:"greyrect.svg"},
   { id: 11, img:"greyrect.svg"},
   { id: 12, img:"greyrect.svg"},
+];
+
+export const AllCategories=[
+  { id: 1, Text:"Logo-brand identity"},
+  { id: 2, Text:"Business-Advertising"},
+  { id: 3, Text:"Web-App design"},        
+  { id: 4, Text:"Clothing-Merchandise"},
+  { id: 5, Text:"Illustration-Graphics"},
+
+];
+export const industriesMenu =[
+  { id: 1, text: "Business & consulting" },
+  { id: 2, text: "Food & drink" },
+  { id: 3, text: "Medical & pharmaceutical" },
+  { id: 4, text: "Retail" },
+  { id: 5, text: "Technology" },
+  { id: 6, text: "Agriculture" },
+  { id: 7, text: "Animal & pet" },
+  { id: 8, text: "Architectural" },
+  { id: 9, text: "Art & design" },
+  { id: 10, text: "Attorney & law" },
+  { id: 11, text: "Automotive" },
+  { id: 12, text: "Childcare" },
+  { id: 13, text: "Cleaning & maintenance" },
+  { id: 14, text: "Communications" },
+  { id: 15, text: "Community & non-profit" },
+  { id: 16, text: "Construction" },
+  { id: 17, text: "Cosmetics & beauty" },
+  { id: 18, text: "Education" },
+  { id: 19, text: "Fashion" },
+  { id: 20, text: "Industrial" },
+  { id: 21, text: "Landscaping" },
+  { id: 22, text: "Political" },
+  { id: 23, text: "Real estate & mortgage" },
+  { id: 24, text: "Religious" },
+  { id: 25, text: "Restaurant" },
+  { id: 26, text: "Security" },
+  { id: 27, text: "Sport" },
+  { id: 28, text: "Travel & hotel" },
+  { id: 29, text: "Wedding service" },
+  { id: 29, text: "Others" },
 ];

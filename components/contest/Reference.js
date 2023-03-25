@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Reference = ()=>{
 return(
-    <div className='contest-cont-content fl jst-SB'>
+    <div className='contest-cont-content fl jst-SB' id="Reference">
     
     <div className='fl-col jstfe xyz'>
     <h2 className='mb-60'>Reference:</h2>

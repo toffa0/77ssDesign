@@ -57,14 +57,14 @@ const Contest = ()=>{
                         <p>Watch(7)</p>
                         <div>
                         
-                            <div className='fl mtop30 brrrr fl-gapp3'>
+                            <div className='fl mtop30  fl-gapp3'>
                             
                                 <div className=''>
                                     <div className='messpart1 p-s20 fl jsta fl-gap25 ' id='w-300'>
                                     <label>Price</label> <span>$ 190</span>
                                     </div>
                                     <div className='messpart2 fl p-s20 jst-SB ' id='w-300'>
-                                        <div className='fl-col jst'>
+                                        <div className='fl-col jst blind '>
                                         <Image src="blind.svg" width={22} height={25} alt=""  />
                                         <p className='messpart-p'>Blind</p>
                                         </div>
@@ -109,34 +109,34 @@ const Contest = ()=>{
                 </div> 
             </div>
             <div className='disc-head4 fl jst-SB contestnav'>
-            <button
+            <Link href="#Nameinfo"
             className={` ${navactiveComponent === "Nameinfo" ? "active" : "bn"}`}
             onClick={() => setnavActiveComponent("Nameinfo")}
-            >Name & Info </button>                      
-            <button
+            >Name & Info </Link>                      
+            <Link href="#BrandStyle"
             className={` ${navactiveComponent === "BrandStyle" ? "active" : "bn"}`}
             onClick={() => setnavActiveComponent("BrandStyle")}
-            >Brand Style </button> 
-            <button
+            >Brand Style </Link> 
+            <Link href="#Reference"
                 className={` ${navactiveComponent === "Reference" ? "active" : "bn"}`}
                 onClick={() => setnavActiveComponent("Reference")}
                 >Reference & Inspiration
-            </button> 
-            <button
+            </Link> 
+            <Link href="#OtherNote"
                 className={` ${navactiveComponent === "OtherNote" ? "active" : "bn"}`}
                 onClick={() => setnavActiveComponent("OtherNote")}
                 >Other Note
-            </button> 
+            </Link> 
 
 
             </div>
 
             <div className='contest-cont'> 
 
-            {navactiveComponent === "Nameinfo" && <Nameinfo />}              
-            {navactiveComponent === "BrandStyle" && <BrandStyle />}
-            {navactiveComponent === "Reference" && <Reference />} 
-            {navactiveComponent === "OtherNote" && <OtherNote />}  
+                <Nameinfo/>             
+                <BrandStyle/>
+                <Reference/>
+                <OtherNote/> 
             </div>
 
 

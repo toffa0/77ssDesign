@@ -24,7 +24,7 @@ const ProjectsMessage = ()=>{
 
    
         
-        <div className=' '>
+        <div className='max'>
             <div>
                 <div>
                 <h1>Name of the brief Name of the </h1>

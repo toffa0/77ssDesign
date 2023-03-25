@@ -70,7 +70,7 @@ const Checkout= ({handleDataCheckout})=>{
                     <p><span>If not guaranteed.</span> The minimum payment is $20 for publishing your project as a website fee <span>(Not active now)</span> </p>
                 </div>
                 <div>
-                    <p>JUST REMEMBER…NO REFUND</p>
+                    <label>JUST REMEMBER…NO REFUND</label>
                 </div>
             </div>
             <div>
@@ -178,7 +178,10 @@ const Checkout= ({handleDataCheckout})=>{
                     
                         <button>Continue</button>
                     </div>
-                    <button onClick={handleDataCheckout}>add</button>
+                   
+                </div>
+                <div className='fl-col checkout-9thpar'>
+                <button onClick={handleDataCheckout}>add</button>
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@ const Size= ({setFeature_text, setSize,})=>{
             </div>
             <div className="fl fl-gap47 ">
                 <label>upload text file:</label>
-                <div className="fl fl-gap10">
+                <div className="fl fl-gap10 w-80">
 
                 
                     <div className="plusabout">
@@ -32,11 +32,11 @@ const Size= ({setFeature_text, setSize,})=>{
             
             <div className="fl fl-gap47">
                 <label>Link of the image or upload: </label>
-                <div className="fl-col fl-gap32">
+                <div className="fl-col fl-gap32 w-80">
 
 
-                <input placeholder="If you have images link please upload" />
-                <div className="fl fl-gap10">
+                <input id="w-100" placeholder="If you have images link please upload" />
+                <div className="fl fl-gap10  ">
                     <div className="plusabout">
                     <Image src="+.svg" alt="" width={27} height={27} />
                     <p>Please attach</p>

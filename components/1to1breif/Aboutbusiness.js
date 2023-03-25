@@ -59,7 +59,7 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
             </div>
             <div className="fl fl-gap47 ">
                 <label>Attach your logo</label>
-                <div className="fl fl-gap10">
+                <div className="fl fl-gap10 w-80">
 
                 
                 <div className="plusabout">
@@ -75,15 +75,15 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
                 </div>
             </div>
             <div className="fl fl-gapp16">
-                <div className="fl fl-gap10 ">
+                <div className="fl fl-gap10 w-46">
                     <input type="checkbox" id="yes" />
                     <label>No logo</label>
                 </div>
-                <div>
+                <div className="w-74">
                     <p>Start a logo contest first</p>
                 </div>
             </div>
-            <div className="mt-159 mb-350">
+            <div className="mt-159 mb-50">
                 <button onClick={cosn}>Continue</button>
             </div>
             

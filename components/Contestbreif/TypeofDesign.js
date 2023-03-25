@@ -20,11 +20,14 @@ const TypeofDesign= ()=>{
                         <h3>SILVER</h3>
                         <h4>$ 299</h4>
                     </div>
-                    <div className='typesec-part2'>
-                        <p>+ 80 designs expected</p>
-                        <p>+ Available for all designers</p>
-                        <p>+ Larger prize</p>
-                        <p>+ %100 guarantee</p>
+                    <div className='typesec-part2 fl-col fl-gap6'>
+                        <ol className='fl-col fl-gap6'>
+                            <li>80 designs expected</li>
+                            <li>Available for all designers</li>
+                            <li>Larger prize</li>
+                            <li>%100 guarantee</li>
+
+                        </ol>
                         <div className='fl jst'>
                             <button>Select</button>    
                         </div>
@@ -36,12 +39,14 @@ const TypeofDesign= ()=>{
                         <h3>GOLD</h3>
                         <h4>$ 599</h4>
                     </div>
-                    <div className='typesec-part2'>
-                        <p>+ 60 designs expected</p>
-                        <p>+ Pro. and Adv. level </p>
-                        <p>designers only</p>
-                        <p>+ Dedicated director</p>
-                        <p>+ %100 guarantee</p>
+                    <div className='typesec-part2 fl-col fl-gap6'>
+                        <ol className='fl-col fl-gap6'>
+                            <li>60 designs expected</li>
+                            <li>Pro. and Adv. level designers only</li>
+                            <li>Dedicated director</li>
+                            <li>%100 guarantee</li>
+
+                        </ol>
                         <div className='fl jst'>
                             <button>Select</button>    
                         </div>
@@ -53,13 +58,16 @@ const TypeofDesign= ()=>{
                         <h3>PLATINUM</h3>
                         <h4>$ 999</h4>
                     </div>
-                    <div className='typesec-part2'>
-                        <p>+ 40 designs expected</p>
-                        <p>+ Advanceleve </p>
-                        <p>designers only</p>
-                        <p>+ Priority support</p>
-                        <p>+ Dedicated director</p>
-                        <p>+ %100 guarantee</p>
+                    <div className='typesec-part2 fl-col fl-gap6'>
+                        <ol className='fl-col fl-gap6'>
+                            <li>40 designs expected</li>
+                            <li>Advanceleve designers only</li>
+                            <li>Priority support</li>
+                            <li>Dedicated director</li>
+                            <li>%100 guarantee</li>
+
+                        </ol>
+
                         <div className='fl jst'>
                             <button>Select</button>    
                         </div>
@@ -125,7 +133,7 @@ const TypeofDesign= ()=>{
                     <p><span>If not guaranteed.</span> 77S design charges administration fee of $20 to process the refund (this will be deducted from the receivable). </p>
                 </div>
                 <div>
-                    <p>JUST REMEMBER…NO REFUND</p>
+                    <label>JUST REMEMBER…NO REFUND</label>
                 </div>
             </div>
             <div>

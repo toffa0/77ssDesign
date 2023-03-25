@@ -6,50 +6,50 @@ const Colors= ()=>{
 
 return(
     <div>
-        <div className='ght fl fl-gap33 mt-80 mb-101 wrap'>
+        <div className='ght fl fl-gap20  mb-101 wrap'>
             <div>
-                <Image src="blues.svg" alt="" width={188} height={188} />
+                <Image src="blues.svg" alt="" width={144.52} height={145.52} />
                 <p>Blues</p>
             </div>
             <div>
-                <Image src="Aquas.svg" alt="" width={188} height={188} />
+                <Image src="Aquas.svg" alt="" width={144.52} height={145.52} />
                 <p>Aquas </p>
             </div>
             <div>
-                <Image src="Greens.svg" alt="" width={188} height={188} />
+                <Image src="Greens.svg" alt="" width={144.52} height={145.52} />
                 <p>Greens</p>
             </div>
             <div>
-                <Image src="Purples.svg" alt="" width={188} height={188} />
+                <Image src="Purples.svg" alt="" width={144.52} height={145.52} />
                 <p>Purples  </p>
             </div>
             <div>
-                <Image src="Pinks.svg" alt="" width={188} height={188} />
+                <Image src="Pinks.svg" alt="" width={144.52} height={145.52} />
                 <p>Pinks</p>
             </div>
             <div>
-                <Image src="Reds.svg" alt="" width={188} height={188} />
+                <Image src="Reds.svg" alt="" width={144.52} height={145.52} />
                 <p>Reds</p>
             </div>
 
             <div>
-                <Image src="Oranges.svg" alt="" width={188} height={188} />
+                <Image src="Oranges.svg" alt="" width={144.52} height={145.52} />
                 <p>Oranges</p>
             </div>
             <div>
-                <Image src="Yellows.svg" alt="" width={188} height={188} />
+                <Image src="Yellows.svg" alt="" width={144.52} height={145.52} />
                 <p>Yellows</p>
             </div>
             <div>
-                <Image src="Lightneutrals.svg" alt="" width={188} height={188} />
+                <Image src="Lightneutrals.svg" alt="" width={144.52} height={145.52} />
                 <p>Light neutrals </p>
             </div>
             <div>
-                <Image src="dark.svg" alt="" width={188} height={188} />
+                <Image src="dark.svg" alt="" width={144.52} height={145.52} />
                 <p>Dark neutrals</p>
             </div>
             <div>
-                <Image src="descolor.svg" alt="" width={188} height={188} />
+                <Image src="descolor.svg" alt="" width={144.52} height={145.52} />
                 <p>Designers suggestions</p>
             </div>
 

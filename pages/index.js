@@ -20,7 +20,7 @@ export default function Home() {
 
       </Head>
       <main className=''>
-        <div className='home_section mainscr'>
+        <div className='home_section3 mainscr'>
        
        
         <section className="section ">
@@ -28,12 +28,12 @@ export default function Home() {
         <Navbar></Navbar>
     <div className="home_text">
       <div>
-      <h2 className='home_text_st'>Access creative <br/>and original designs from talented worldwide</h2>
+      <h2 className='home_text_st'>Access creative<br/> talent worldwide <br/>for original designs.</h2>
 
       </div>
       <div> 
       <form className="sr-div2 fl jst">
-                <input type="text" name='' placeholder="Logo, Brand identity, Backaging..." />
+                <input type="text" name='' placeholder="Logo, Brand Identity, Packaging . . ." />
                 <select name="test">
                   <option value="CONTESTPROJECT">CONTEST </option>
                   <option value="CONTESTPROJECT">PROJECT</option>
@@ -66,7 +66,10 @@ export default function Home() {
         
         <section className=' mainscr section '>
         <h1 className='next_text_st'>Categories:</h1>
+        <div className=' '>
         <ImageSlider></ImageSlider>
+        </div>
+       
         <div className='part'>
         <button className='btn1'>Get Started</button>
         </div>
@@ -101,12 +104,12 @@ export default function Home() {
 
     
     <section className="section m-tb-auto">
-    <div className="w-50 prel">
+    <div className="w-43 prel">
         <Image src="home3.svg" alt="your-image" className='home3-img' width={578} height={490} />
         <Image src="home33.svg" alt="your-image" className='home33-img' width={578} height={490} />
       </div>
-      <div className='w-50'>
-        <h1 className="home3">Contest Steps</h1>
+      <div className='w-51'>
+        <h1 className="home3">Hiring Steps</h1>
         <ol className='ol-home'>
           <li>Submit a creative brief</li>
           <li>Invite a designer or send to your designer</li>
@@ -120,7 +123,7 @@ export default function Home() {
     </section>
 
         </section>
-        <section className='home_section mainscr h-8 '>
+        <section className='home_section3 mainscr h-8 '>
       <div className='ref-cont '>
             <h2 className='ref-h2'>Refer new Clients and you both get a cashback code $50 promotion free.</h2>
       <div>

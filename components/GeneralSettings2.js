@@ -317,7 +317,7 @@ const GeneralSettings2 = () => {
                 <input type="text" className="form-control" id="Phone-Number" />
             </div>
         </div>
-        <div className='profile__submit-button'>
+        <div className='profile__submit-button mt-192' >
           <button type="submit" className="btn btn-primary">Save Changes</button>
         </div>
       </form>

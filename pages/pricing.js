@@ -16,24 +16,27 @@ const Pricing = () => {
         { id: 6, text: "Item 6" },
         { id: 7, text: "Item 7" },
       ]);
-
+      const [Categ, setCateg] = useState('');
     return(
         <div>
             <div className="bg-gr mainscr">
             <Navbar/>
+            <div className="max">
             <h1 className="mt-133">Pricing</h1>
             <form className="sr-div">
                 <input type="text" name='' placeholder="Logo, Brand identity, Packaging..." />
-                <input type="submit" name=''  value=" " /> 
+                <button type="submit"><Image src="SearchLogo.svg" alt="" width={37} height={36} /></button> 
             </form>
          
             <div className='cat-menu-bg' >
-            <Catmenu/>
+            <Catmenu setCateg={setCateg} Categ={Categ} />
     
             </div>
             </div>
-            <div className="mainscr p-t54 p-b220">
-                <div className="fl-all2 mb-79">
+            </div>
+            <div className="mainscr p-t54 p-b220 ">
+                <div className="max">
+                <div className="fl-all2 mb-79 ">
                     <h1>Contest packages</h1>
                     <div className="pricing">
                      <span>Currency</span>
@@ -47,15 +50,15 @@ const Pricing = () => {
                 <div className="fl-right mb-8">
                     <div className="pr-box bg-silver">
                         <h3>SILVER</h3>
-                        <span>2999</span>
+                        <span>299</span>
                     </div>
                     <div className="pr-box bg-gold">
                         <h3>GOLD</h3>
-                        <span>5999</span>
+                        <span>599</span>
                     </div>
                     <div className="pr-box bg-plat">
-                        <h3>CRYSTAL</h3>
-                        <span>9999</span>
+                        <h3>Platinum</h3>
+                        <span>999</span>
                     </div>
                 </div>
                 <div className="pr-details">
@@ -192,9 +195,11 @@ const Pricing = () => {
                     <button id="cyan">Hiring 1 to 1</button>
                 </div>
             </div>
+            </div>
             <Footer2/>
             <Footer/>
         </div>
+        
     )
 }
 

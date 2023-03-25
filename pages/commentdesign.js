@@ -1,7 +1,38 @@
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
+
 
 
 const Submitdesgin = ()=>{
+
+
+    const [NewCord, SetNewCord] = useState([]);
+
+    function handleGetCord(){
+        addEventListener("mousedown", (event) => {
+            console.log('on move, clientX:', event.clientX)
+            console.log('on move, clienty:', event.clientY)
+            SetNewCord([event.clientX, event.clientY])
+            drawPoint(NewCord[0],NewCord[1])
+        });
+    }
+    function drawPoint(x, y) {
+        // const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        // svg.setAttribute("width", "100%");
+        // svg.setAttribute("height", "100%");
+
+      
+        const circle = document.createElement("circle");
+        circle.setAttribute("position", "absolute");
+        circle.setAttribute("cx", x);
+        circle.setAttribute("cy", y);
+        circle.setAttribute("r", 10);
+        circle.setAttribute("fill", "red");
+      
+        svg.appendChild(circle);
+        document.body.appendChild(svg);
+      }
+
 return(
     <div className="max fl h-90">
         <div className="w-35 sb-col1">
@@ -65,7 +96,7 @@ return(
                 <button className="SD-btn3" >Add to folio</button>
             </div>
         </div>
-        <div className="sb-col2">
+        <div className="sb-col2 listen" onClick={handleGetCord}>
             <Image src="subex1.svg" alt='' width={861} height={917} />
         </div>
     </div>

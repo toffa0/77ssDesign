@@ -7,12 +7,27 @@ import { FaThumbsUp } from "react-icons/fa";
 import Footer2 from '@/components/footer2';
 import Link from 'next/link';
 import {cardData2} from "../components/consts"
-import Browse from './browse';
-import ProjectsMessage3comp from '@/components/ProjectsMessage3comp';
+import NormalView from '@/components/SpaceWork/NormalView';
+import DetailedView from '@/components/SpaceWork/DetailedView';
+
 const ProjectsMessage3 = ()=>{
     const [isOpen, setOpen] = useState(false);
-    const [activeComponent, setActiveComponent] = useState("Brief");
-
+    const [Filter1, setFilter1] = useState("All");
+    const [Filter2, setFilter2] = useState("Rated");
+    const [Filter3, setFilter3] = useState("All designers");
+    const [Filter4, setFilter4] = useState("Newest first");
+    const [Filter1Open, setFilter1Open] = useState(false);
+    const [Filter2Open, setFilter2Open] = useState(false);
+    const [Filter3Open, setFilter3Open] = useState(false);
+    const [Filter4Open, setFilter4Open] = useState(false);
+    const [activeComponent, setActiveComponent] = useState("Design");
+    const [ViewType, setViewType] = useState("Normal");
+    function handleViewTypeNormal(){
+        setViewType("Normal");
+    }
+    function handleViewTypeDetailed(){
+        setViewType("Detailed");
+    }
   return (
     <div className="ProfilePage">
         <div className='mainscr '>
@@ -50,14 +65,14 @@ const ProjectsMessage3 = ()=>{
                         <p>Watch(7)</p>
                         <div>
                         
-                            <div className='fl mtop30 brrrr fl-gapp3'>
+                            <div className='fl mtop30  fl-gapp3'>
                             
                                 <div className=''>
                                     <div className='messpart1 p-s20 fl jsta fl-gap25 ' id='w-300'>
                                     <label>Price</label> <span>$ 190</span>
                                     </div>
                                     <div className='messpart2 fl p-s20 jst-SB ' id='w-300'>
-                                        <div className='fl-col jst'>
+                                        <div className='fl-col jst blind'>
                                         <Image src="blind.svg" width={22} height={25} alt=""  />
                                         <p className='messpart-p'>Blind</p>
                                         </div>
@@ -76,9 +91,9 @@ const ProjectsMessage3 = ()=>{
                                     </div>
                                 </div>
                                 <div className='fl-col jst-SB messpart'>
-                                    <button>Brief</button>
-                                    <button>Messages</button>
-                                    <button>Designs</button>
+                                    <button onClick={()=>setActiveComponent("Brief")} id={activeComponent==="Brief"?"messpartActive":""}>Brief</button>
+                                    <button onClick={()=>setActiveComponent("Messages")} id={activeComponent==="Messages"?"messpartActive":""}>Messages</button>
+                                    <button onClick={()=>setActiveComponent("Design")} id={activeComponent==="Design"?"messpartActive":""}>Designs</button>
                                 </div>
                             </div>
                            
@@ -102,36 +117,83 @@ const ProjectsMessage3 = ()=>{
                 </div> 
             </div>
             <div className='disc-head4 fl jst-SB'>
-                <div className='fl w-60 jst-SB'>
-                <div  className='fl slct-cpm'>
-                    <select>
+                <div className='fl w-68 fl-gapp16'>
+                <div  className='fl slct-cpm w-191'>
+                    {/* <select className='w-191'>
                         <option>All (10)</option>
-                    </select>
+                    </select> */}
+                    <div className='selectSW w-191'>
+                                <button className='w-191 selectBtn' onClick={()=>setFilter1Open(!Filter1Open)}>{Filter1} (10)</button>
+                                <div className='SelectDropDown w-191' id={Filter1Open?'':'DN'}>
+                                    <ul className='fl-col fl-gap14'>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter1("All ");setFilter1Open(!Filter1Open)}}>All (10)</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter1("Active ");setFilter1Open(!Filter1Open)}}>Active (0)</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter1("Withdrawn ");setFilter1Open(!Filter1Open)}}>Withdrawn (0)</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter1("Declined ");setFilter1Open(!Filter1Open)}}>Declined (0)</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter1("Eliminated ");setFilter1Open(!Filter1Open)}}>Eliminated (0)</button></li>
+                                    </ul>
+                                </div>
+                    </div>
                 </div> 
-                <div  className='fl slct-cpm'>
-                    <select>
+                <div  className='fl slct-cpm w-223'>
+                    {/* <select className='w-223'>
                         <option>Rated (2)</option>
-                    </select>
+                    </select> */}
+                    <div className='selectSW w-223'>
+                                <button className='w-223 selectBtn' onClick={()=>setFilter2Open(!Filter2Open)}>{Filter2} </button>
+                                <div className='SelectDropDown w-223' id={Filter2Open?'':'DN'}>
+                                    <ul className='fl-col fl-gap14'>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter2("Rated ");setFilter2Open(!Filter2Open)}}>Rated (2)</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter2("5 stars ");setFilter2Open(!Filter2Open)}}>5 stars (2)</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter2("4 stars ");setFilter2Open(!Filter2Open)}}>4 stars (0)</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter2("3 stars ");setFilter2Open(!Filter2Open)}}>3 stars (0)</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter2("2 stars ");setFilter2Open(!Filter2Open)}}>2 stars (0)</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter2("1 stars ");setFilter2Open(!Filter2Open)}}>1 stars (0)</button></li>
+                                    </ul>
+                                </div>
+                    </div>
                 </div> 
-                <div  className='fl slct-cpm'>
-                    <select>
+                <div  className='fl slct-cpm w-256'>
+                    {/* <select className='w-256'>
                         <option>All designers (22)</option>
-                    </select>
+                    </select> */}
+                    <div className='selectSW'>
+                                <button className='w-256 selectBtn' onClick={()=>setFilter3Open(!Filter3Open)}>{Filter3} (22)</button>
+                                <div className='SelectDropDown w-256' id={Filter3Open?'':'DN'}>
+                                    <ul className='fl-col fl-gap14'>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter3("All Designers ");setFilter3Open(!Filter3Open)}}>All Designers</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter3("Designer Name");setFilter3Open(!Filter3Open)}}>Designer Name</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter3("Designer Name");setFilter3Open(!Filter3Open)}}>Designer Name</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter3("Designer Name");setFilter3Open(!Filter3Open)}}>Designer Name</button></li>
+                                    </ul>
+                                </div>
+                    </div>
                 </div> 
                 </div>
 
-                <div className='fl w-40 jst-SB pl-33'>
+                <div className='fl w-28 jst-SB '>
                 <div  className='fl slct-cpm'>
-                    <select>
+                    {/* <select className='w-157'>
                         <option>Newest first</option>
-                    </select>
+                    </select> */}
+                    <div className='selectSW'>
+                                <button className='w-157 selectBtn' onClick={()=>setFilter4Open(!Filter4Open)}>{Filter4} </button>
+                                <div className='SelectDropDown w-157' id={Filter4Open?'':'DN'}>
+                                    <ul className='fl-col fl-gap14'>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter4("Newest first");setFilter4Open(!Filter4Open)}}>Newest first</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter4("Oldest first");setFilter4Open(!Filter4Open)}}>Oldest first</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter4("Highest rated first");setFilter4Open(!Filter4Open)}}>Highest rated first</button></li>
+                                        <li><button id='dropdownbtn' onClick={()=>{setFilter4("Lowest rated first");setFilter4Open(!Filter4Open)}}>Lowest rated first</button></li>
+                                    </ul>
+                                </div>
+                    </div>
                     
                 </div> 
                 <div  className='fl slct-cpm jstfe'>
-                    <button className='clearbtn'>
+                    <button className='clearbtn' onClick={()=>handleViewTypeNormal()}>
                     <Image src="dotsquares.svg" alt='' width={50} height={50} />
                     </button>
-                    <button className='clearbtn'>
+                    <button className='clearbtn' onClick={()=>handleViewTypeDetailed()}>
                     <Image src="dotlines.svg" alt='' width={50} height={50} />
                     </button>
                 </div> 
@@ -141,13 +203,16 @@ const ProjectsMessage3 = ()=>{
             </div>
 
             <div className=' '> 
-            {activeComponent === "Brief" && 
+            {/* {activeComponent === "Brief" && 
             <ProjectsMessage3comp cardData={{cardData2}}/>
 
-            }
+            } */}
             {activeComponent === "Design" && 
             <div className='disc-card-cont'>
-            <Browse cardData={{cardData2}} />
+                {
+                    ViewType === "Normal"?<NormalView className="animate" cardData={{cardData2}} />:<DetailedView className="animate" cardData={{cardData2}}/>
+                }
+            
             </div>
             }
                 

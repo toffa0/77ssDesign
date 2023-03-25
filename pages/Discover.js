@@ -5,19 +5,24 @@ import Card from "@/components/profcard"
 import Image from 'next/image'
 import { FaThumbsUp } from "react-icons/fa";
 import Footer2 from '@/components/footer2';
+import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising, industriesMenu} from "../components/consts"
 
 const Discover = ()=>{
     const [isOpen, setOpen] = useState(false);
+    const [ActiveCat, setActiveCat] = useState('');
     const [listItems, setListItems] = useState([
         { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
-        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
-        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},        
-        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
-        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
-        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
-        { id: 1, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 2, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 3, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},        
+        { id: 4, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 5, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 6, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
+        { id: 7, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
       ]);
-
+      function handle(e){
+        setActiveCat(e)
+        console.log(ActiveCat)
+      }
   return (
     <div className="ProfilePage">
         <div className='mainscr '>
@@ -26,7 +31,7 @@ const Discover = ()=>{
         </div>
        
         <div className='mainscr  '>
-        <div className=' w-105 max mt-175'>
+        <div className='max mt-175'>
 
 
    
@@ -37,27 +42,56 @@ const Discover = ()=>{
             </div>
 
             <div className='pd-1 disc-fil'>
-                <div>
-                <select className="filter filter-contin" id="filter" placeholder='All categories'>
-                    <option value="volvo" >All Categories</option>
-                    <option value="volvo">2</option>
-                    <option value="saab">3</option>
-                    <option value="opel">4</option>
-                    <option value="audi">5</option>
+                <div className='fl fl-gap32'>
+                <select className="filter filter-contin" id="filter" placeholder='All categories' onChange={(e)=>handle(e.currentTarget.value)}>
+                    <option value="" >All Categories</option>
+                    <option value="Logo-brand">Logo-brand identity</option>
+                    <option value="Business-Advertising">Business-Advertising</option>
+                    <option value="Web-App">Web-App design</option>
+                    <option value="Clothing">Clothing-Merchandise</option>
+                    <option value="Illustration">Illustration-Graphics</option>
                 </select>
                 <select className="filter filter-contin" id="filter2">
-                <option value="volvo" >All Subcategories</option>
-                    <option value="volvo">3</option>
-                    <option value="saab">4</option>
-                    <option value="opel">5</option>
-                    <option value="audi">67</option>
+                {ActiveCat===""?<option value="Subcategories">All Subcategories</option>
+                :<option value="Subcategories" disabled >All Subcategories</option>}
+                  {ActiveCat==="Logo-brand"&&
+                  Logoidentity.map((item) => (
+                    <option>{item.text}</option>
+                  ))
+                  
+                  
+                 
+                  }
+                  {ActiveCat==="Business-Advertising"&&
+                  Businessadvertising.map((item) => (
+                    <option>{item.text}</option>
+                  ))
+
+                  }
+                  {ActiveCat==="Web-App"&&
+                  Webdesign.map((item) => (
+                    <option>{item.text}</option>
+                  ))
+
+                  }
+                  {ActiveCat==="Clothing"&&
+                  ClothingMerchandise.map((item) => (
+                    <option>{item.text}</option>
+                  ))
+                  }
+                  {ActiveCat==="Illustration" &&
+                  ArtIllustration.map((item) => (
+                    <option>{item.text}</option>
+                  ))
+                  }
                 </select>
                 <select className="filter filter-contin" id="filter3">
                 <option value="volvo" >All industries</option>
-                    <option value="volvo">1</option>
-                    <option value="saab">2</option>
-                    <option value="opel">3</option>
-                    <option value="audi">4</option>
+                {
+                  industriesMenu.map((item) => (
+                    <option>{item.text}</option>
+                  ))
+                  }
                 </select>
                 </div>
                 <div>  <select className="filter filter-contin filter-txtcent" id="filter4">

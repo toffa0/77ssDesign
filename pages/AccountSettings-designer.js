@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GeneralSettings from "@/components/GeneralSettings";
 import IDVerificationSettings2 from "@/components/IDVerificationSettings2";
-import NotificationsSettings from "@/components/NotificationsSettings";
+import NotificationsSettings from "@/components/NotificationsSettings-Designer";
 import ProfileSettings from "@/components/ProfileSettings";
 import MembershipSettings from "@/components/MembershipSettings";
 import Navbar from "@/components/navbar";
@@ -19,7 +19,7 @@ const AccountSettings = () => {
 
         <div className="home_section mainscr">
         <Navbar/>
-        <div className="max mt-125 mb-60">
+        <div className="max mt-125 mb-28">
         <h3 id="title">Account Settings</h3>
         </div>
       <div className="settings-nav">
@@ -67,25 +67,17 @@ const AccountSettings = () => {
         >
           ID Verification
         </button>
-        <button
-          className={`nav-btn ${
-            activeComponent === "Membership" ? "active" : ""
-          }`}
-          onClick={() => setActiveComponent("Membership")}
-        >
-          Membership
-        </button>
+
       </div>
       </div>    
 
       <div className=" mainscr h-60v ">
-      <div className="settings-content">
+      <div className="max">
         {activeComponent === "General" && <GeneralSettings2 />}
         {activeComponent === "Profile" && <ProfileSettings />}
         {activeComponent === "Experience" && <ExperSettings />}
         {activeComponent === "Notifications" && <NotificationsSettings />}
         {activeComponent === "ID Verification" && <IDVerificationSettings2 />}
-        {activeComponent === "Membership" && <MembershipSettings />}
       </div>
       </div>
       <Footer/>

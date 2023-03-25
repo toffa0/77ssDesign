@@ -11,14 +11,14 @@ import Link from 'next/link';
 
 const  Categories = () => {
     const [isOpen, setOpen] = useState(false);
-
+    const [Categ, setCateg] = useState('');
   return (
     <div className="ProfilePage">
-        <div className='mainscr home_section'>
+        <div className='mainscr home_section3'>
         <Navbar/>
         <div className='pd-1 cat-fl max'>
           <Image src='cat-img.svg' alt="" width={715} height={127} />
-          <form className="sr-div2" id='cat-search'>
+          <form className="sr-div3" >
                 <input type="text" name='' placeholder="Logo, Brand identity, Backaging..." />
                
                 <input type="submit" name=''  value="Start" /> 
@@ -28,10 +28,10 @@ const  Categories = () => {
 
         <div className='max'>
         
-        <div className='cat-header'>
+        <div className='cat-header2'>
           <h1>All Categories</h1>
           </div>
-        <div className='mainscr'>
+        <div className=''>
       
         
         <div className=' w-105 mb-32'>
@@ -75,12 +75,13 @@ const  Categories = () => {
 { isOpen &&
         <div className='cat-menu-bg p-30' id='cat-menu'>
 
-        <Catmenu/>
+        <Catmenu setCateg={setCateg} Categ={Categ} />
     </div>
       }
-    <div className='cat-btn'>
-        <Link href="/categories2">Get Started</Link>
-    </div>
+        <div className="cat2-btns max">
+                <Link href="Contestbreif" >Start contest</Link>
+                <Link href="1to1breif" id="cyan">Hiring (1 to1)</Link>
+            </div>
        
       </div>
       </div>

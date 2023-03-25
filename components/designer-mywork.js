@@ -25,8 +25,13 @@ const Designer = ()=>{
 
 
 <div className="mywork-ex">
-   <h2>Designer name</h2>
-   <span>Brief title</span>
+   <div className="myworkDesigner_h2">
+    <h2 className="">Designer name</h2>
+   </div>
+   <div className="myworkDesigner_span">
+    <span className="">Brief title</span>
+   </div>
+  
  </div>
 
  </div>
