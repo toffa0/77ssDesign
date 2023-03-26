@@ -113,7 +113,7 @@ const Login = () => {
   <p>or Login with your 77sdesign account</p>
 </div>
 <div  className="bottom-row3 ">
-      <input type="text" placeholder="Username" id="email1"/>
+      <input type="text" placeholder="Email" id="email1"/>
       <input type="password" placeholder="Password" id="password1"/>
       </div>
       <div className="bottom-row4">

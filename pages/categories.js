@@ -29,7 +29,7 @@ const  Categories = () => {
         <div className='max'>
         
         <div className='cat-header2'>
-          <h1>All Categories</h1>
+          <h1 >All Categories</h1>
           </div>
         <div className=''>
       
@@ -42,20 +42,20 @@ const  Categories = () => {
             <span>Custom Logo</span>
         </div>
         <div className='cat-card'>
-           <Image src='expLogo2.svg' alt="" width={96} height={51}/>
-            <span>Label-packaging</span>
+           <Image src='expLogo2.svg' alt="" width={219.72} height={195}/>
+            <span>Business - Advertising</span>
         </div>
         <div className='cat-card'>
-           <Image src='expLogo5.svg' alt="" width={96} height={51}/>
-            <span>Illustration-graphics</span>
+           <Image src='expLogo5.svg' alt="" width={67.05} height={64.46}/>
+            <span>Illustration -Graphics</span>
         </div>
         <div className='cat-card'>
-            <Image src='expLogo3.svg' alt="" width={96} height={51}/>
-            <span>web - app design</span>
+            <Image src='expLogo3.svg' alt="" width={77.52} height={85.27}/>
+            <span>Web-App design</span>
         </div>
  
         <div className='cat-card'>
-          <Image src='expLogo4.svg' alt="" width={96} height={51}/>
+          <Image src='expLogo4.svg' alt="" width={104.48} height={83.58}/>
            <span>Clothing -Merchandise</span>
           </div>
 
@@ -79,8 +79,7 @@ const  Categories = () => {
     </div>
       }
         <div className="cat2-btns max">
-                <Link href="Contestbreif" >Start contest</Link>
-                <Link href="1to1breif" id="cyan">Hiring (1 to1)</Link>
+                <Link href="1to1breif" id="cyan">Start</Link>
             </div>
        
       </div>

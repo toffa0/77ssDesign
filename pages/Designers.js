@@ -88,13 +88,13 @@ const Designers = ()=>{
     ]
     return(
         <div>
-               <div className="home_section3 mainscr pb-64">
+               <div className="home_section4 mainscr pb-64">
         <Navbar/>
         
             
-        <div className="mt-175 max">
+        <div className="mt-133 max">
         <div className="mb-50">
-            <h1 >Designers</h1>
+            <h1 className='DiffTitle' >Designers</h1>
         </div>
         <form className="sr-div mb-0" id="w-40">
                 <input type="text" name='' placeholder="Search keywords " id="desginform" />
@@ -107,7 +107,7 @@ const Designers = ()=>{
                     
                 
             <div className="fl-all4 w-30 gap60 pos">
-            <div className="fl-col gap19">
+            <div className="fl-col ">
             <div class="dropdown">
                 <div className="fl jst jst-SB DeCat Redbackground">
                     <Image src="DeLogo.svg" alt="" width={54.23} height={29.09}/>
