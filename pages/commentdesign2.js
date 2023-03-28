@@ -1,7 +1,58 @@
 import Image from "next/image";
-
-
+import { useState } from "react";
+import Dot from "@/components/Dot";
 const Submitdesgin = ()=>{
+
+    const [dot, setDot] = useState(null);
+    const [IDCom, setIDCom]= useState(1);
+    const [CommentText, setCommentText] = useState('');
+    const [Comment, setComment] = useState([{id:1,point:{x:47.203125,y:493},text:"yo yo",AccountName:'Osama',AccountType:"Client"}]);
+    const [IsHovering, setIsHovering] = useState(true);
+    const [IsHoveringID, setIsHoveringID] = useState(null);
+    const [DotColor, setDotColor] = useState('#FF6B6B');
+    const [AccountName, setAccountName] = useState('Osama');
+    const [AccountType, setAccountType] = useState('Client');
+    const DotColor2="blue";
+
+    function handleMouseEnter(id) {
+        setIsHovering(true);
+        setIsHoveringID(id)
+        // console.log(IsHovering)
+        console.log(IsHoveringID)
+        console.log(IDCom)
+      }
+    
+      function handleMouseLeave() {
+        setIsHovering(false);
+        
+      }
+
+
+
+    const handleDrawClick = (event)=>{
+        const rect = event.target.getBoundingClientRect();
+        // const x = event.clientX - rect.left;
+        // const y = event.clientY - rect.top;
+        const x = event.screenX - rect.left;
+        const y = event.screenY - rect.top;
+        setDot({ x, y });
+        console.log(rect)
+        console.log(dot)
+        return <Dot x={x} y={y} />   
+    }
+    const handleSubmit= ()=>{
+        if(CommentText!=""&dot!=null)
+        {  setComment([...Comment ,{id:IDCom+1,point:dot,text:CommentText,AccountName:AccountName,AccountType:AccountType}])
+            // console.log(Comment)
+            setDot(null);
+            setCommentText('');
+            setIDCom(IDCom+1);
+            
+        }
+        else{
+            console.log("please write a comment and choose a point")
+        }
+    }
 return(
     <div className="max fl h-90">
         <div className="w-35 sb-col1">
@@ -31,11 +82,25 @@ return(
             </div>
             <div className="SD-inp mb-45">
                 <label>Comment</label>
-                <input type="text" />
-                <button className="SD-btn5">Send</button>
+                <input type="text" value={CommentText}  onChange={e => setCommentText(e.target.value)} />
+                <button className="SD-btn5" onClick={handleSubmit}>Send</button>
             </div>
             <div className="fl-col fl-gap8 mt-18 mb-118">
-                <div className="cd-sec">
+
+                {Comment.map((item)=>(
+                    <div key={item.id} className="cd-sec feedbackhover2" onMouseEnter={()=>handleMouseEnter(item.id)} onMouseLeave={handleMouseLeave}>
+                        <label>{item.AccountName}</label>
+                        <div className={item.AccountType==="Client" ?"cd-csec fl":"cd-csec2 fl"}>
+                            <p>{item.text}</p>
+                        </div>
+                        {/* <Dot key={item.id} x={item.point.x} y={item.point.y}  /> */}
+                    </div>
+                ))}
+
+
+
+
+                {/* <div className="cd-sec">
                     <label>Client name</label>
                     <div className="cd-csec fl">
                         <p>PLease change this color</p>
@@ -46,8 +111,8 @@ return(
                     <div className="cd-csec2 fl">
                         <p>color changed</p>
                     </div>
-                </div>
-                <div className="cd-sec">
+                </div> */}
+                {/* <div className="cd-sec">
                     <label>Client name</label>
                     <div className="cd-csec fl">
                         <p>PLease change this font</p>
@@ -58,12 +123,18 @@ return(
                     <div className="cd-csec2 fl">
                         <p>font changed</p>
                     </div>
-                </div>
+                </div> */}
             </div>
     
         </div>
-        <div className="sb-col2">
+        <div className="sb-col2" onClick={handleDrawClick}>
             <Image src="subex1.svg" alt='' width={861} height={917} />
+            {dot && <Dot x={dot.x} y={dot.y} />}
+            {Comment.map((item)=>{
+                // console.log(item.id);
+                return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor}  />
+                
+            })} 
         </div>
     </div>
 )};
