@@ -85,22 +85,9 @@ const Discover = ()=>{
                   ))
                   }
                 </select>
-                <select className="filter filter-contin" id="filter3">
-                <option value="volvo" >All industries</option>
-                {
-                  industriesMenu.map((item) => (
-                    <option key={item.id}>{item.text}</option>
-                  ))
-                  }
-                </select>
+
                 </div>
-                <div>  <select className="filter filter-contin filter-txtcent" id="filter4">
-                <option value="volvo" >Search</option>
-                    <option value="volvo">1</option>
-                    <option value="saab">2</option>
-                    <option value="opel">3</option>
-                    <option value="audi">4</option>
-                </select></div>
+                <input  value="Search" className='filterSearch'/>
                
             </div>
 

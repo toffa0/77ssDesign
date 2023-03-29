@@ -90,13 +90,13 @@ const Categories2 = ()=>{
 
     return(
         <div>
-               <div className="home_section4  ">
+               <div className="home_section  ">
         <div className=" max">
                <Navbar/>
-        <div className="pb-64 mt-133  ">
+        <div className="pb-64 mt-110  ">
         
-        <div className="mb-16">
-            <h1 className='DiffTitle' >Categories</h1>
+        <div className="mb-20">
+            <h1 className='DiffTitle-'  id="title">Categories</h1>
         </div>
         <form className="sr-div2 fl jst" >
                 <input type="text" name='' placeholder="Logo, Brand identity, Packaging..." />

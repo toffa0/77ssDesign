@@ -88,15 +88,15 @@ const Designers = ()=>{
     ]
     return(
         <div>
-               <div className="home_section4 mainscr pb-64">
+               <div className="home_section mainscr pb-64">
         <Navbar/>
         
             
         <div className="mt-133 max">
-        <div className="mb-50">
-            <h1 className='DiffTitle' >Designers</h1>
+        <div className="mb-20">
+            <h1 className='DiffTitle-' id="title" >Designers</h1>
         </div>
-        <form className="sr-div mb-0" id="w-40">
+        <form className="sr-div mb-0" >
                 <input type="text" name='' placeholder="Search keywords " id="desginform" />
                 <input type="submit" name=''  value=" " /> 
         </form>
@@ -124,7 +124,7 @@ const Designers = ()=>{
             
                 </div>
             </div>
-                <div className="DeCat2 fl fl-gap5">
+                <div className="DeCat2 fl fl-gap5" id={FirstCat===""&&"DN"}>
                     <Image src="DeRectangle.svg" alt="" width={18.22} height={29.09}/> 
                     <p>{FirstCat}</p>
                 </div>
@@ -142,7 +142,7 @@ const Designers = ()=>{
                 </ul>
                 </div>
             </div>
-            <div className="DeCat2 fl fl-gap5">
+            <div className="DeCat2 fl fl-gap5" id={SecondCat===""&&"DN"}>
                     <Image src="DeRectangle.svg" alt="" width={18.22} height={29.09}/> 
                     <p>{SecondCat}</p>
                 </div>
@@ -160,7 +160,7 @@ const Designers = ()=>{
                 </ul>
                 </div>
             </div>
-            <div className="DeCat2 fl fl-gap5">
+            <div className="DeCat2 fl fl-gap5" id={ThirdCat===""&&"DN"}>
                     <Image src="DeRectangle.svg" alt="" width={18.22} height={29.09}/> 
                     <p>{ThirdCat}</p>
                 </div>
@@ -178,7 +178,7 @@ const Designers = ()=>{
                 </ul>
                 </div>
             </div>
-            <div className="DeCat2 fl fl-gap5">
+            <div className="DeCat2 fl fl-gap5" id={ForthCat===""&&"DN"}>
                     <Image src="DeRectangle.svg" alt="" width={18.22} height={29.09}/> 
                     <p>{ForthCat}</p>
                 </div>
@@ -196,7 +196,7 @@ const Designers = ()=>{
                 </ul>
                 </div>
             </div>
-            <div className="DeCat2 fl fl-gap5">
+            <div className="DeCat2 fl fl-gap5" id={FifthCat===""&&"DN"}>
                     <Image src="DeRectangle.svg" alt="" width={18.22} height={29.09}/> 
                     <p>{FifthCat}</p>
                 </div>

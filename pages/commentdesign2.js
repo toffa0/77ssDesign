@@ -164,21 +164,22 @@ export default Submitdesgin;
 const FeedBackInp= ({x,y,setCommentText,CommentText,handleSubmit,setDot})=>{
 
     return(
-        <div          
+        <div
+        className="FeedBackInp-cont"          
         style={{
             position: 'absolute',
             left: x -10,
             top: y  +40 ,
             backgroundColor: "white",
-            borderRadius: '10px',
+            display:"flex",
             
             
         }}> 
+            <div style={{display:"flex",flexDirection:"column",borderLeftWidth:"1px",borderLeftColor:"#9E9EA3",borderLeftStyle:"soild",padding:"3px"}} className="BordLeft">
             <button className="FeedBackInp-Close" onClick={()=>setDot(null)}>X</button>
-            <div style={{display:"flex",}}>
-            <input type="text" className="FeedBackInp-inp" value={CommentText}  onChange={e => setCommentText(e.target.value)} />
-            <button className="FeedBackInp-btn" onClick={handleSubmit}>Send</button>
+            <input type="text" className="FeedBackInp-inp" value={CommentText}  onChange={e => setCommentText(e.target.value)} placeholder="Enter Your Comment" />
             </div>
+            <button className="FeedBackInp-btn" onClick={handleSubmit}>Send</button>
             
 
             

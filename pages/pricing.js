@@ -22,8 +22,8 @@ const Pricing = () => {
             <div className="bg-gr mainscr">
             <Navbar/>
             <div className="max">
-            <h1 className="mt-133">Pricing</h1>
-            <form className="sr-div">
+            <h1 className="mt-133" id="title">Pricing</h1>
+            <form className="sr-div" id="mxw-540">
                 <input type="text" name='' placeholder="Logo, Brand identity, Packaging..." />
                 <button type="submit"><Image src="SearchLogo.svg" alt="" width={37} height={36} /></button> 
             </form>
@@ -37,7 +37,7 @@ const Pricing = () => {
             <div className="mainscr p-t54 p-b220 ">
                 <div className="max">
                 <div className="fl-all2 mb-79 ">
-                    <h1>Contest packages</h1>
+                    <h1 className="TitleInside">Contest packages</h1>
                     <div className="pricing">
                      <span>Currency</span>
                      <select>
@@ -170,21 +170,11 @@ const Pricing = () => {
                     <button>Start contest</button>
                 </div>
                 <div className="pd-51 ">
-                    <h1>Project</h1>
+                    <h1 className="TitleInside">Project</h1>
                     <div className="pr-sec prj">
-                        <p>
-                        from
+                        <p className="PricingPr">
+                        from EGP 2999 To EGP 6999
                         </p>
-                        <p>
-                        EGP 2999
-                        </p>
-                        <p>
-                        To
-                        </p>
-                        <p>
-                        EGP 6999
-                        </p>
-                       
                     </div>
                 </div>
                 <div className="p-t20 ">

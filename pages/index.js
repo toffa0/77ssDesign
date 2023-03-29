@@ -71,7 +71,7 @@ export default function Home() {
         </div>
        
         <div className='part'>
-        <button className='btn1'>Get Started</button>
+        <Link href="/categories2" className='Link1'>Get Started</Link>
         </div>
         </section>
         <section className=' mainscr'>
