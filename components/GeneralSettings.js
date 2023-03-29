@@ -296,7 +296,7 @@ const GeneralSettings = () => {
             </div>
         </div>
         <div className='profile__submit-button'>
-        <button type="submit" className="btn btn-primary">Save Changes</button>
+        <button type="submit" className="btn btn-primary">Continue</button>
 
         </div>
       </form>

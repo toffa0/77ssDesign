@@ -8,6 +8,7 @@ const Submitdesgin = ()=>{
     const [CommentText, setCommentText] = useState('');
     const [Comment, setComment] = useState([{id:1,point:{x:47.203125,y:493},text:"yo yo",AccountName:'Osama',AccountType:"Client"}]);
     const [IsHovering, setIsHovering] = useState(true);
+    const [IsHoveringDot, setIsHoveringDot] = useState(false);
     const [IsHoveringID, setIsHoveringID] = useState(null);
     const [DotColor, setDotColor] = useState('#FF6B6B');
     const [AccountName, setAccountName] = useState('Osama');
@@ -26,19 +27,36 @@ const Submitdesgin = ()=>{
         setIsHovering(false);
         
       }
-
+      function handleMouseEnterDot(id) {
+        console.log("yo")
+        setIsHoveringDot(true);
+        setIsHoveringID(id)
+        // console.log(IsHovering)
+        console.log(IsHoveringID)
+        console.log(IDCom)
+      }
+    
+      function handleMouseLeaveDot() {
+        setIsHovering(false);
+        
+      }
 
 
     const handleDrawClick = (event)=>{
         const rect = event.target.getBoundingClientRect();
         // const x = event.clientX - rect.left;
         // const y = event.clientY - rect.top;
-        const x = event.screenX - rect.left;
-        const y = event.screenY - rect.top;
+        //////////////////////////////////////
+        // const x = event.screenX - rect.left;
+        // const y = event.screenY - rect.top;
+        //////////////////////////////////////
+        const x = event.pageX - rect.left;
+        const y = event.pageY - rect.top;
         setDot({ x, y });
         console.log(rect)
         console.log(dot)
-        return <Dot x={x} y={y} />   
+        // return <Dot x={x} y={y} /> 
+
     }
     const handleSubmit= ()=>{
         if(CommentText!=""&dot!=null)
@@ -82,7 +100,7 @@ return(
             </div>
             <div className="SD-inp mb-45">
                 <label>Comment</label>
-                <input type="text" value={CommentText}  onChange={e => setCommentText(e.target.value)} />
+                <input type="text" value=""  onChange={e => setCommentText(e.target.value)} />
                 <button className="SD-btn5" onClick={handleSubmit}>Send</button>
             </div>
             <div className="fl-col fl-gap8 mt-18 mb-118">
@@ -90,7 +108,7 @@ return(
                 {Comment.map((item)=>(
                     <div key={item.id} className="cd-sec feedbackhover2" onMouseEnter={()=>handleMouseEnter(item.id)} onMouseLeave={handleMouseLeave}>
                         <label>{item.AccountName}</label>
-                        <div className={item.AccountType==="Client" ?"cd-csec fl":"cd-csec2 fl"}>
+                        <div className={item.AccountType==="Client" ?"cd-csec fl":"cd-csec2 fl"} id={IsHoveringDot&IsHoveringID===item.id?"pinkbackground":""} >
                             <p>{item.text}</p>
                         </div>
                         {/* <Dot key={item.id} x={item.point.x} y={item.point.y}  /> */}
@@ -127,12 +145,13 @@ return(
             </div>
     
         </div>
-        <div className="sb-col2" onClick={handleDrawClick}>
-            <Image src="subex1.svg" alt='' width={861} height={917} />
-            {dot && <Dot x={dot.x} y={dot.y} />}
+        <div className="sb-col2" >
+            <Image src="subex1.svg" alt='' width={861} height={917} onClick={handleDrawClick}  />
+            {dot && <Dot x={dot.x} y={dot.y} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} DotID={0} /> }  
+            {dot && <FeedBackInp x={dot.x} y={dot.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot}  /> }       
             {Comment.map((item)=>{
                 // console.log(item.id);
-                return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor}  />
+                return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  onClick={console.log("yes")} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID}/>
                 
             })} 
         </div>
@@ -140,3 +159,30 @@ return(
 )};
 
 export default Submitdesgin;
+
+
+const FeedBackInp= ({x,y,setCommentText,CommentText,handleSubmit,setDot})=>{
+
+    return(
+        <div          
+        style={{
+            position: 'absolute',
+            left: x -10,
+            top: y  +40 ,
+            backgroundColor: "white",
+            borderRadius: '10px',
+            
+            
+        }}> 
+            <button className="FeedBackInp-Close" onClick={()=>setDot(null)}>X</button>
+            <div style={{display:"flex",}}>
+            <input type="text" className="FeedBackInp-inp" value={CommentText}  onChange={e => setCommentText(e.target.value)} />
+            <button className="FeedBackInp-btn" onClick={handleSubmit}>Send</button>
+            </div>
+            
+
+            
+        </div>
+    )
+}
+// export default FeedBackInp;

@@ -48,8 +48,8 @@ export default function Home() {
       src="home1.svg"
       alt="Imageeee"
       className="image"
-      width={1024}
-      height={580}
+      width={400}
+      height={512}
       />
       </div>
 

@@ -98,8 +98,8 @@ const Login = () => {
     <form onSubmit={handleSubmit} className="form-container jst-SB " id="myForm2">
             <div className=" gap64 sm-btn bottom-row3 row2-mb mt-159">
 
-  <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign in with Google</p></div></button>
-<button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign in with Facebook</p></div> </button>
+  <button><div className="fl-sm"><Image src="google.svg" alt=""  width={57} height={44}/><p className="socialSUP">Sign in with Google</p></div></button>
+<button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={57} height={44}/> <p className="socialSUP">Sign in with Facebook</p></div> </button>
 </div>
 <div>
   <div>
@@ -195,8 +195,8 @@ const SignUp = () => {
  
       <div className=" fl-gap31 sm-btn bottom-row2 row2-mb">
 
-        <button><div className="fl-sm"><Image src="google.svg" alt=""  width={60} height={60}/><p>Sign Up with Google</p></div></button>
-        <button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={60} height={60}/> <p>Sign Up with Facebook</p></div> </button>
+        <button><div className="fl-sm"><Image src="google.svg" alt=""  width={57} height={44}/><p className="socialSUP">Sign Up with Google</p></div></button>
+        <button><div className="fl-sm"><Image src="facebook.svg" id="fb-btn" alt="" width={57} height={44}/> <p className="socialSUP">Sign Up with Facebook</p></div> </button>
       </div>
       <div>
       <div className="fl nntr"><p>Or, Create an account with email.</p></div>

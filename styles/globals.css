@@ -289,7 +289,7 @@ select {
 }
 .btn1{
   width: 384px;
-  height: 96px;
+  height: 80px;
   background-color: #4747C7;
   margin: 25px auto;
   border: none;
@@ -297,7 +297,7 @@ select {
   cursor: pointer;
   font-family: 'Rotunda';
 font-style: normal;
-font-size: 30px;
+font-size: 24px;
 line-height: 42px;
 text-transform: uppercase;
 
@@ -325,12 +325,12 @@ margin-bottom:50px;
 
 .home2{
   color:#4747c7 ; 
-  font-size:40px;
+  font-size:32px;
   line-height: 2.5;
 }
 .home3{
   color:#00C7C7 ; 
-  font-size:40px;
+  font-size:32px;
   line-height: 2.5;
 }
 .ol-home{ 
@@ -498,7 +498,7 @@ margin-right: 20px;
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size:24px;
   line-height: 42px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -681,8 +681,11 @@ margin-right: 20px;
 }
 
 .bottom-row2 label{
-  font-size: 28px;
+  font-size: 24px;
   color: #707070;
+}
+.socialSUP{
+  font-size: 20px;
 }
 .bottom-row3{
   width: 100%;
@@ -920,7 +923,7 @@ color: #3D3D3F;
 
 .form-group-sett button{
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   background-color: #00C7C7;
   width: 300px;
   height: 64px;
@@ -1338,7 +1341,7 @@ ul{
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 23px;
   color: #707070;
 }
@@ -1349,7 +1352,7 @@ ul{
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 23px;
   color: #707070;
 }
@@ -1584,9 +1587,10 @@ padding: 100px 0;
 }
 #btn-bal{
   background-color: #00C8C8;
-  font-size: 24px;
+  font-size: 20px;
   width: 100%;
   color: white;
+  /* text */
 }
 .bl-jps{
   border-top: 2px solid black;
@@ -2065,8 +2069,8 @@ color: #9E9EA3;
   box-shadow: 7px 7px 12px #4747C726;
   border-radius:  10px;
   overflow: hidden;
-  width: 125%;
-  height: 96px;
+  width: 118%;
+  height: 80px;
   background: white;
   max-width: 641.9px;
 
@@ -2079,7 +2083,7 @@ color: #9E9EA3;
   height: 90%;
   border: none;
   outline: none;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 19px;
   color: black;
   font-size: 20px;
   font-family:"Rotunda-medium";
@@ -2136,11 +2140,11 @@ color: white;
 
 .sr-div3 input[type="text"]{
   width: 79%;
-  height: 90%;
+  height: 84%;
   border: none;
   outline: none;
   padding: 0 0 0 25px;
-  color: black;
+  color: #9E9EA3;
   font-size: 20px;
   font-family:"Rotunda-medium";
   line-height: 10px;
@@ -2224,7 +2228,7 @@ margin-right: 10px;
   border-radius: 7px;
   border: 1px solid #9E9EA3;
   background-color: #F5F7FA;
-  font-size: 25px;
+  font-size: 20px;
   color: #707070;
   text-align: center;
   padding: 0;
@@ -2306,7 +2310,6 @@ margin-right: 10px;
   background-color: #4747C7;
   width: 352px;
   height: 64px;
-  font-size: 24px;
   color: #FFFFFF;
   border: none;
   border-radius: 10px;
@@ -2314,7 +2317,7 @@ margin-right: 10px;
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 34px;
   text-transform: uppercase;
 }
@@ -2692,8 +2695,8 @@ border-radius: 15px;
 cursor: pointer;
 }
 .cat2-btns a{
-  height: 96px;
-  width: 352px;
+  height: 80px;
+  width: 384px;
   background: #4747C7;
   color: white;
   font-family: 'Rotunda';
@@ -3400,7 +3403,7 @@ right: 0;
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 48px;
   color: #9E9EA3;
   cursor: pointer;
@@ -4068,7 +4071,7 @@ border-radius: 50%;
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 34px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -4096,7 +4099,7 @@ border-radius: 50%;
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 34px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -5005,8 +5008,15 @@ align-items: center;
 .feedbackhover{
   background-color: black;
 }
+.feedbackhover:hover{
+  transform: scale(1.5);
+  /* background: #F5F7FA; */
+}
 .feedbackhover2:hover .feedbackhover{
   background-color: blue;
+}
+#greybg{
+  background-color: #F5F7FA;
 }
 .DN{
   display: none;
@@ -5266,7 +5276,7 @@ align-items: center;
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 42px;
   color: #545457;
   padding-bottom: 5px;
@@ -5319,7 +5329,7 @@ align-items: center;
    font-size: 34.5px; 
   }
   #fs{
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 @media (max-width: 1506px) {

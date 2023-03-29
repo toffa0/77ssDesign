@@ -4,9 +4,22 @@ import { useState } from "react";
 
 
 // {const DotColor ="#FF6B6B"}
-const Dot = ({x,y,DotColor})=>{
+const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID})=>{
   
- 
+  function handleMouseEnterDot(id) {
+    
+    console.log("yo")
+    setIsHoveringDot(true);
+    setIsHoveringID(id)
+    console.log(id)
+    // console.log(IsHovering)
+    // console.log(IsHoveringID)
+  }
+
+  function handleMouseLeaveDot() {
+    setIsHoveringDot(false);
+    
+  }
  
   
     // console.log('Dot component')
@@ -17,14 +30,17 @@ const Dot = ({x,y,DotColor})=>{
           className="feedbackhover"
           style={{
             position: 'absolute',
-            left: x+50 ,
-            top: y  -50 ,
+            left: x +50,
+            top: y  +10 ,
             backgroundColor: DotColor,
             borderRadius: '50%',
           }}
-          
+          onMouseEnter={()=>handleMouseEnterDot(DotID)}
+          onMouseLeave={handleMouseLeaveDot}
       ></canvas>
       );
     }
 
 export default Dot;
+
+
