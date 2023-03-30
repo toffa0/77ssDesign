@@ -10,7 +10,7 @@ const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID})=>{
     
     setIsHoveringDot(true);
     setIsHoveringID(id)
-    console.log(id)
+    
     // console.log("yo")
     // console.log(IsHovering)
     // console.log(IsHoveringID)
@@ -20,8 +20,9 @@ const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID})=>{
     setIsHoveringDot(false);
     
   }
-  const handleDotClick=(x,y)=>{
+  const handleDotClick=(x,y,id)=>{
     console.log(x,y)
+    console.log(id)
   }
   
     // console.log('Dot component')
@@ -39,7 +40,7 @@ const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID})=>{
           }}
           onMouseEnter={()=>handleMouseEnterDot(DotID)}
           onMouseLeave={handleMouseLeaveDot}
-          onClick={()=>handleDotClick(x,y)}
+          // onClick={()=>handleDotClick(x,y,DotID)}
       ></canvas>
       );
     }

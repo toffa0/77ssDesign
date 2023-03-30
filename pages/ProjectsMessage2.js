@@ -8,7 +8,7 @@ import Footer2 from '@/components/footer2';
 import Link from 'next/link';
 import {cardData2} from "../components/consts"
 import Browse from './browse';
-import GeneralSettings from '@/components/GeneralSettings';
+import GeneralSettings from '@/components/AccountSettings/GeneralSettings';
 const ProjectsMessage2 = ()=>{
     const [isOpen, setOpen] = useState(false);
     const [activeComponent, setActiveComponent] = useState("Design");

@@ -71,8 +71,13 @@ const Submitdesgin = ()=>{
             console.log("please write a comment and choose a point")
         }
     }
+
+    const handleDotClick=()=>{
+        console.log("yes")
+      }
+      
 return(
-    <div className="max fl h-90">
+    <div className="max3 fl h-90">
         <div className="w-35 sb-col1">
             <div className="cd-header">
                 <div className="fl ali-cen fl-gap10 mb-11">
@@ -86,17 +91,17 @@ return(
                 </div>
                 <div className="fl  fl-gap2 jst-SB">
                 <Image src="5stars.svg" alt="" width={130} height={18.5} />
-                <button className="SD-btn2">share</button>
+                <button className="SD-btn2">share <Image src="arrowup.svg" alt="" width={6.74} height={7.04} /></button>
                 </div>
             </div>
             <div className="fl-col fl-gap2 mb-32">
-                <p>Description the Idea</p>
-                <p>Description the Idea</p>
+                <p className="CD-Description">Description the Idea </p>
+                <p className="CD-Description2">Description the Idea</p>
             </div>
 
-            <div className="fl fl-gap2 mb-101">
-                <Image src="paidstock.svg" alt="" width={22} height={22} />
-                <p>Design uses paid stock</p>
+            <div className="fl ali-cen fl-gap2 mb-101">
+                <Image src="paidstock.svg" alt="" width={31} height={31} />
+                <p className="paidstock-p">Design uses paid stock</p>
             </div>
             <div className="SD-inp mb-45">
                 <label>Comment</label>
@@ -116,42 +121,16 @@ return(
                 ))}
 
 
-
-
-                {/* <div className="cd-sec">
-                    <label>Client name</label>
-                    <div className="cd-csec fl">
-                        <p>PLease change this color</p>
-                    </div>
-                </div>
-                <div className="cd-sec">
-                    <label>Designer name</label>
-                    <div className="cd-csec2 fl">
-                        <p>color changed</p>
-                    </div>
-                </div> */}
-                {/* <div className="cd-sec">
-                    <label>Client name</label>
-                    <div className="cd-csec fl">
-                        <p>PLease change this font</p>
-                    </div>
-                </div>
-                <div className="cd-sec">
-                    <label>Designer name</label>
-                    <div className="cd-csec2 fl">
-                        <p>font changed</p>
-                    </div>
-                </div> */}
             </div>
     
         </div>
         <div className="sb-col2" >
-            <Image src="subex1.svg" alt='' width={861} height={917} onClick={handleDrawClick}  />
+            <Image src="subex1.svg" alt='' width={892} height={950} onClick={handleDrawClick}  />
             {dot && <Dot x={dot.x} y={dot.y} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} DotID={0} /> }  
             {dot && <FeedBackInp x={dot.x} y={dot.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot}  /> }       
             {Comment.map((item)=>{
                 // console.log(item.id);
-                return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  onClick={()=>console.log("yes")} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID}/>
+                return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  onClick={handleDotClick} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID}/>
                 
             })} 
         </div>

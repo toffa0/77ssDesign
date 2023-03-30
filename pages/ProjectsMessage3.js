@@ -68,10 +68,10 @@ const ProjectsMessage3 = ()=>{
                             <div className='fl mtop30  fl-gapp3'>
                             
                                 <div className=''>
-                                    <div className='messpart1 p-s20 fl jsta fl-gap25 ' id='w-300'>
-                                    <label>Price</label> <span>$ 190</span>
+                                    <div className='messpart1  fl jsta fl-gap6 '>
+                                    <label>Price</label> <span>$ 190</span> <p>Standard<br/>ward</p>
                                     </div>
-                                    <div className='messpart2 fl p-s20 jst-SB ' id='w-300'>
+                                    <div className='messpart2 fl jst-SB '>
                                         <div className='fl-col jst blind'>
                                         <Image src="blind.svg" width={22} height={25} alt=""  />
                                         <p className='messpart-p'>Blind</p>
@@ -102,12 +102,12 @@ const ProjectsMessage3 = ()=>{
                 </div>
                 
                 </div>
-            <div className='disc-head3 fl jst-SB'>
+            <div className='disc-head10 fl jst-SB'>
                 <div id='SD-header' className='fl'>
                     <h1 >Please submit logo design only (4 days)</h1>
                 </div> 
                 <div id='SD-header' className='fl'>
-                    <h1 >Selection ofqualified designers (4 days)</h1>
+                    <h1 > Selection of qualified designers (4 days)</h1>
                 </div> 
                 <div id='SD-header' className='fl'>
                     <h1 >Finalists (3 days)</h1>
@@ -124,7 +124,7 @@ const ProjectsMessage3 = ()=>{
                     </select> */}
                     <div className='selectSW w-191'>
                                 <button className='w-191 selectBtn' onClick={()=>setFilter1Open(!Filter1Open)}>{Filter1} (10)</button>
-                                <div className='SelectDropDown w-191' id={Filter1Open?'':'DN'}>
+                                <div className='SelectDropDown w-139' id={Filter1Open?'':'DN'}>
                                     <ul className='fl-col fl-gap14'>
                                         <li><button id='dropdownbtn' onClick={()=>{setFilter1("All ");setFilter1Open(!Filter1Open)}}>All (10)</button></li>
                                         <li><button id='dropdownbtn' onClick={()=>{setFilter1("Active ");setFilter1Open(!Filter1Open)}}>Active (0)</button></li>
@@ -141,7 +141,7 @@ const ProjectsMessage3 = ()=>{
                     </select> */}
                     <div className='selectSW w-223'>
                                 <button className='w-223 selectBtn' onClick={()=>setFilter2Open(!Filter2Open)}>{Filter2} </button>
-                                <div className='SelectDropDown w-223' id={Filter2Open?'':'DN'}>
+                                <div className='SelectDropDown w-139' id={Filter2Open?'':'DN'}>
                                     <ul className='fl-col fl-gap14'>
                                         <li><button id='dropdownbtn' onClick={()=>{setFilter2("Rated ");setFilter2Open(!Filter2Open)}}>Rated (2)</button></li>
                                         <li><button id='dropdownbtn' onClick={()=>{setFilter2("5 stars ");setFilter2Open(!Filter2Open)}}>5 stars (2)</button></li>
@@ -159,7 +159,7 @@ const ProjectsMessage3 = ()=>{
                     </select> */}
                     <div className='selectSW'>
                                 <button className='w-256 selectBtn' onClick={()=>setFilter3Open(!Filter3Open)}>{Filter3} (22)</button>
-                                <div className='SelectDropDown w-256' id={Filter3Open?'':'DN'}>
+                                <div className='SelectDropDown w-139' id={Filter3Open?'':'DN'}>
                                     <ul className='fl-col fl-gap14'>
                                         <li><button id='dropdownbtn' onClick={()=>{setFilter3("All Designers ");setFilter3Open(!Filter3Open)}}>All Designers</button></li>
                                         <li><button id='dropdownbtn' onClick={()=>{setFilter3("Designer Name");setFilter3Open(!Filter3Open)}}>Designer Name</button></li>
@@ -178,7 +178,7 @@ const ProjectsMessage3 = ()=>{
                     </select> */}
                     <div className='selectSW'>
                                 <button className='w-157 selectBtn' onClick={()=>setFilter4Open(!Filter4Open)}>{Filter4} </button>
-                                <div className='SelectDropDown w-157' id={Filter4Open?'':'DN'}>
+                                <div className='SelectDropDown w-139' id={Filter4Open?'':'DN'}>
                                     <ul className='fl-col fl-gap14'>
                                         <li><button id='dropdownbtn' onClick={()=>{setFilter4("Newest first");setFilter4Open(!Filter4Open)}}>Newest first</button></li>
                                         <li><button id='dropdownbtn' onClick={()=>{setFilter4("Oldest first");setFilter4Open(!Filter4Open)}}>Oldest first</button></li>

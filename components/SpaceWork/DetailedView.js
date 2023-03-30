@@ -7,7 +7,7 @@ import Image from 'next/image'
 const DetailedView = ({cardData})=>{
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [itemsPerPage, setItemsPerPage] = useState(4);
  
   useEffect(() => {
     const fetchData = async () => {
@@ -29,8 +29,8 @@ const DetailedView = ({cardData})=>{
 
   return (
 <div>
-    <div className='disc-card-cont2 gap3-5'>
-    <div className='fl-col PMC '>
+    <div className='disc-card-cont2 fl-gap25'>
+    <div className='fl-col PMC jst-SB'>
         <div className='w-101'>
         <button>Eliminate</button>
         </div>
@@ -44,6 +44,7 @@ const DetailedView = ({cardData})=>{
             </div>
             
         </div>
+        <div className='fl gap19'>
       {currentData.map((item) => (
             <div key={item.id} className='disc-card3 ' id=''><a href='#'>
                 {console.log(item)}
@@ -59,7 +60,7 @@ const DetailedView = ({cardData})=>{
              </a>
             </div>
       ))}
-
+      </div>
     </div>
     <div className="pagenumb">
         {Array.from({ length: totalPages }).map((_, index) => (
