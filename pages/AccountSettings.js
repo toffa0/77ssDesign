@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import GeneralSettings from "@/components/GeneralSettings";
-import IDVerificationSettings from "@/components/IDVerificationSettings";
-import NotificationsSettings from "@/components/NotificationsSettings";
-import ProfileSettings from "@/components/ProfileSettings";
-import MembershipSettings from "@/components/MembershipSettings";
+import GeneralSettings from "@/components/AccountSettings/GeneralSettings";
+import IDVerificationSettings from "@/components/AccountSettings/IDVerificationSettings";
+import NotificationsSettings from "@/components/AccountSettings/NotificationsSettings";
+import ProfileSettings from "@/components/AccountSettings/ProfileSettings";
+import MembershipSettings from "@/components/AccountSettings/MembershipSettings";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 const AccountSettings = () => {
@@ -17,8 +17,9 @@ const AccountSettings = () => {
 
         <div className="home_section mainscr">
         <Navbar/>
-        <div className="max mt-125 mb-60">
-        <h3 id="title">Account Settings</h3>
+        <div className="max mt-133">
+        <div className="my-workkk  mb-46">
+            <h3 id="title">Account Settings</h3>
         </div>
       
       <div className="settings-nav">
@@ -63,6 +64,7 @@ const AccountSettings = () => {
         >
           Membership
         </button>
+      </div>
       </div>
       </div>    
 

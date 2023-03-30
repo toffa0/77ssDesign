@@ -3,7 +3,7 @@ import React from 'react';
 const GeneralSettings2 = () => {
   return (
     <div>
-      <form className="form-group-sett mb-172">
+      <form className="form-group-sett m-40 mb-172">
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input type="email" className="form-control" id="name" />
@@ -318,7 +318,7 @@ const GeneralSettings2 = () => {
             </div>
         </div>
         <div className='profile__submit-button mt-192' >
-          <button type="submit" className="btn btn-primary">Save Changes</button>
+          <button type="submit" className="btn btn-primary">Continue</button>
         </div>
       </form>
     </div>

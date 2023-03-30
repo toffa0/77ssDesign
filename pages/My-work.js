@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Contests from "@/components/contests-mywork"
-import MembershipSettings from "@/components/MembershipSettings";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Projects from "@/components/projects-mywork";
@@ -17,10 +16,8 @@ const Mywork = () => {
 
         <div className="home_section mainscr ">
         <Navbar/>
-      <div className="max">
-
-  
-        <div className="my-workkk mt-125 mb-28">
+      <div className="max mt-133">
+        <div className="my-workkk  mb-46">
             <h1 id="title">My Work</h1>
         </div>
       <div className="settings-nav " id="work-nav">

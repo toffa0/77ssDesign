@@ -27,8 +27,8 @@ export default function Home() {
 
         <Navbar></Navbar>
     <div className="home_text">
-      <div>
-      <h2 className='home_text_st'>Access creative<br/> talent worldwide <br/>for original designs.</h2>
+      <div>  
+      <h2 className='home_text_st'>Access to talented<br/>and creative designers<br/>for original designs</h2>
 
       </div>
       <div> 
@@ -66,7 +66,7 @@ export default function Home() {
         
         <section className=' mainscr section '>
         <h1 className='next_text_st'>Categories:</h1>
-        <div className=' '>
+        <div className='max'>
         <ImageSlider></ImageSlider>
         </div>
        

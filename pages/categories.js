@@ -34,29 +34,24 @@ const  Categories = () => {
         <div className=''>
       
         
-        <div className=' w-105 mb-32'>
+        <div className='cat-card-cont mb-32'>
 
           
-        <div className='cat-card'>
-           <Image src='expLogo1.svg' alt="" width={96} height={51}/>
-            <span>Custom Logo</span>
+        <div className='cat-card' onClick={() => setOpen(!isOpen)}>
+           <Image src='catlogo1.svg' alt="" width={177.03} height={177.03}/>
         </div>
-        <div className='cat-card'>
-           <Image src='expLogo2.svg' alt="" width={219.72} height={195}/>
-            <span>Business - Advertising</span>
+        <div className='cat-card' onClick={() => setOpen(!isOpen)}>
+           <Image src='catlogo2.svg' alt="" width={219.72} height={195}/>
         </div>
-        <div className='cat-card'>
-           <Image src='expLogo5.svg' alt="" width={67.05} height={64.46}/>
-            <span>Illustration -Graphics</span>
+        <div className='cat-card' onClick={() => setOpen(!isOpen)}>
+           <Image src='catlogo5.svg' alt="" width={67.05} height={64.46}/>
         </div>
-        <div className='cat-card'>
-            <Image src='expLogo3.svg' alt="" width={77.52} height={85.27}/>
-            <span>Web-App design</span>
+        <div className='cat-card' onClick={() => setOpen(!isOpen)}>
+            <Image src='catlogo3.svg' alt="" width={77.52} height={85.27}/>
         </div>
  
-        <div className='cat-card'>
-          <Image src='expLogo4.svg' alt="" width={104.48} height={83.58}/>
-           <span>Clothing -Merchandise</span>
+        <div className='cat-card' onClick={() => setOpen(!isOpen)}>
+          <Image src='catlogo4.svg' alt="" width={104.48} height={83.58}/>
           </div>
 
         <div className={`cat-card drop-down-menu ${isOpen ? "open" : ""}`} onClick={() => setOpen(!isOpen)}>
@@ -73,7 +68,7 @@ const  Categories = () => {
 
 </div>
 { isOpen &&
-        <div className='cat-menu-bg p-30' id='cat-menu'>
+        <div className='cat-menu-bg' id='cat-menu'>
 
         <Catmenu setCateg={setCateg} Categ={Categ} />
     </div>

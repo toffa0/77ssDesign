@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Footer2 from '@/components/footer2';
 import Catmenu from '@/components/cat-menu';
 import Link from 'next/link';
-import {CatExp,Contacts, designerLevel, industries, Languages, lastActivity, listItems,listItems2,listItems3,listItems4,listItems5} from "../components/consts"
+import {CatExp,Contacts, designerLevel, industries, Languages, lastActivity, listItems,listItems2,listItems3,listItems4,listItems5} from "../consts"
 
 
 const  ExperSettings = () => {
@@ -33,10 +33,10 @@ const  ExperSettings = () => {
       
 
 <div className=" "> 
-<div className="fl  max">
+{/* <div className="fl  max"> */}
     
 
-<div className="fl-all4 fl-gap50 w-101  pos mt-40">
+<div className="fl-all4 fl-gap50 w-101  pos form-group-sett m-40 mb-172">
 <h1 className='pnew3'>Category</h1>
 {CatExp.map((item) => (
     <div key={item.id} className="fl-col ">
@@ -141,16 +141,15 @@ const  ExperSettings = () => {
         
     </div> 
 
-<div className='profile__submit-button'>
-        <button type="submit" className="button1">Submit</button>
-
-</div>
+    <div className="profile__submit-button mt-60"> 
+        <button>Submit</button>
+    </div>
            
 </div>
 
 </div>
 
-</div>
+// </div>
 
 
 

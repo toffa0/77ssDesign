@@ -28,7 +28,7 @@ const Submitdesgin = ()=>{
         
       }
       function handleMouseEnterDot(id) {
-        console.log("yo")
+        // console.log("yo")
         setIsHoveringDot(true);
         setIsHoveringID(id)
         // console.log(IsHovering)
@@ -151,7 +151,7 @@ return(
             {dot && <FeedBackInp x={dot.x} y={dot.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot}  /> }       
             {Comment.map((item)=>{
                 // console.log(item.id);
-                return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  onClick={console.log("yes")} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID}/>
+                return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  onClick={()=>console.log("yes")} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID}/>
                 
             })} 
         </div>

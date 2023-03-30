@@ -18,10 +18,11 @@
 
 .slick-slider {
   margin: 20px auto;
-  max-width: 1028px;
-  height: 340px;
+  max-width: 958px;
+  height: 240px;
   -webkit-tap-highlight-color:transparent;
   position: relative;
+  left: 0;
   display: flex;
   flex-direction: column;
 }
@@ -30,7 +31,7 @@
   /* width: 100%; */
   /* height: 240px; */
   display: block;
-  margin: 0 51px;
+  margin: 0 auto;
 }
 
 .slick-dots {
@@ -48,14 +49,14 @@
   opacity: 1;
 }
 .slick-prev{
-  left: 20px;
-  top: 110px;
+  /* left: 20px; */
+  top: 80px;
   transform:rotate(45deg);
-  position: relative;
-  margin-right: 50px
+  /* position: relative; */
+  /* margin-right: 50px */
 }
 .slick-prev:before {
-  font-size: 40px;
+  /* font-size: 30px; */
   border-top: 4px;
   border-left: 4px;
   border-width:0 0 4px 4px;
@@ -67,12 +68,12 @@
   /* content: url("../public/arrowleft.svg"); */
 }
 .slick-next{
-  right:25px;
-  top: 110px;
+  /* right:25px; */
+  top: 80px;
   transform:rotate(45deg);
 }
 .slick-next:before {
-  font-size: 40px;
+  /* font-size: 40px; */
   border-top: 4px;
   border-left: 4px;
   border-width:4px 4px 0 0;

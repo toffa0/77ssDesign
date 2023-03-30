@@ -167,7 +167,7 @@ a {
   background-color: #F5F7FA;
   opacity: 100%;
   /* height: 768px; */
-  max-height: 384px;
+  height: 384px;
 }
 .home_section2{
   /* position: absolute; */
@@ -191,7 +191,7 @@ a {
 
 
 .home_text {
-  width: 50%;
+  width: 55%;
   height: 580px;
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@ a {
   /* padding-top: 63px; */
 }
 .home_img {
-  width: 50%;
+  width: 45%;
   height: 580px;
   display: flex;
   justify-content: flex-end;
@@ -208,7 +208,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .home_text_st{
   font-size:52px; 
@@ -262,7 +262,7 @@ border-radius: 10px;
   /* font-size: clamp(28.5px,4vw,34.5px); */
   font-family: 'Rotunda-medium';
   font-style: normal;
-  font-size: 34.5px;
+  font-size: 33px;
   line-height: 72px;
   color: #FF5F6B;
   font-weight: 400;
@@ -274,14 +274,14 @@ border-radius: 10px;
   content: url('../public/pathright.svg')url('../public/pathright.svg');
   width: 15px;
   height: 15px;
-  padding: 0 12px 0 0;
+  padding: 0 24.28px 0 0;
   
 }
 .home-su::after{
   content: url('../public/pathleft.svg')url('../public/pathleft.svg');
   width: 17px;
   height: 24px;
-  padding: 0 0 0 9px;
+  padding: 0 0 0 25.39px;
   
 }
 select {
@@ -763,7 +763,7 @@ margin-right: 20px;
 #profile__About-button{
   font-family: 'Rotunda';
   font-style: normal;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 34px;
   color: #FFFFFF;
   background: #9E9EA3;
@@ -946,7 +946,7 @@ color: #3D3D3F;
   color: white;
   font-size: 20px;
   background-color: #00C7C7;
-  width: 300px;
+  width: 288px;
   height: 64px;
   border-radius: 7px;
   border: none;
@@ -980,7 +980,7 @@ color: #3D3D3F;
 }
 .form-group-sett1 button{
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   background-color: #00C7C7;
   width: 300px;
   height: 64px;
@@ -1383,7 +1383,8 @@ ul{
   padding-top: 50px;
 }
 .cat-menu-bg{
-  background-color: #f5f7fa;
+  /* background-color: #f5f7fa; */
+  padding-top: 40px;
 }
 #cat-menu{
   position: relative;
@@ -1393,8 +1394,8 @@ ul{
   height: 33px;
   background-color: #4747C7;
   position: absolute;
-  top:-10px;
-  right: 50px;
+  top: -41px;
+  right: 140px;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
   content: "";
 }
@@ -1447,10 +1448,10 @@ ul{
   color: #FF5F6B;
   border: none;
   background: transparent;
-  font-family: 'Rotunda-Medium';
+  font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 24px;
   cursor: pointer;
   margin-bottom:5px;
@@ -1762,25 +1763,31 @@ padding: 100px 0;
 /* ssssssssssssssss */
 
 .cat-card{
-  background-color: #f5f7fa;
-  width: 25%;
-  height: 240px;
+  width: 177.03px;
+  height: 177.03px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 20px;
+  background-color: #f5f7fa;
+  border-radius: 30px;
   cursor: pointer;
-  border-radius: 15px;
-  
 }
-
+.cat-card-cont{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 46px 117px;
+  padding: 0 88px;
+  justify-content: space-between;
+}
 .cat-card img{
   /* width: 50%; */
   object-fit: contain;
-  max-width: 100px;
-  height: 90px;
+  /* max-width: 100px; */
+  /* height: 90px; */
+  height: 100%;
+  width: 100%;
 }
 .cat-card span{
   font-family: 'Rotunda';
@@ -1799,13 +1806,15 @@ padding: 100px 0;
   line-height: 25px;
   color: #3D3D3F;
 }
-
+.cat-card:nth-child(6) img{
+height: 73px;
+}
 .cat-card:hover{
   transition: transform .2s ease-out;
   transform:scale(1.1);
   color: #fff;
 }
-.cat-card:nth-child(1){
+/* .cat-card:nth-child(1){
   background-color: #FF5F6B;
 }
 .cat-card:nth-child(2){
@@ -1819,7 +1828,7 @@ padding: 100px 0;
 }
 .cat-card:nth-child(5){
   background-color: #9E9EA3;
-}
+} */
 .fl-all{
   display: flex;
   justify-content: space-between;
@@ -2125,7 +2134,7 @@ color: #9E9EA3;
   height: 80px;
   background: white;
   max-width: 602px;
-
+  
   
   gap: 10px;
 }
@@ -2158,40 +2167,46 @@ color: #9E9EA3;
   background-position: center;
   object-fit: cover;
   border: none;
-outline: none;
-border-radius: 0 7px  7px 0;
-/* left: -5px; */
-background-color: #ff5f6b;
-font-size: 27px;
-color: white;
+  outline: none;
+  border-radius: 0 7px  7px 0;
+  background-color: #ff5f6b;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #FFFFFF;
 }
 .sr-div2 select[name="test"]{
   width: 21.5%;
   outline: none;
   border: none;
-  height: 50%;
+  height: 60%;
   background-color: #FFFFFF;
-  font-size: 16px;
   border-left: 2px solid #9E9EA3;
-
-  color: #9E9EA3;
   padding-left:20px ;
   /* text-align: center; */
-  
+  background: url('../public/selectarrow.svg') #fff no-repeat 100% !important;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #9E9EA3;
 }
 .sr-div3{
   box-shadow: 7px 7px 12px #4747C726;
   border-radius:  10px;
   overflow: hidden;
   width: 125%;
-  height: 96px;
+  height: 80px;
   background: white;
-  max-width: 641.9px;
+  max-width: 573px;
   gap: 14px;
 }
 
 .sr-div3 input[type="text"]{
-  width: 79%;
+  width: 78%;
   height: 84%;
   border: none;
   outline: none;
@@ -2212,7 +2227,7 @@ color: white;
   }
 .sr-div3 input[type="submit"]{
   position: relative;
-  width: 21%;
+  width: 22%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -2733,7 +2748,7 @@ margin-top:15px ;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  padding: 200px 0;
+  padding: 27px 0 112px;
 
 }
 .cat2-btns button{
@@ -2898,9 +2913,11 @@ align-items: center;
 #title{
 font-family: 'Rotunda-bold';
 font-style: normal;
+font-weight: 400;
 font-size: 30px;
-line-height: 51px;
-color: #3D3D3F;
+line-height: 43px;
+
+color: #545457;
 }
 .PL-p{
   font-family: 'Rotunda';
@@ -4234,7 +4251,7 @@ border-radius: 50%;
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 34px;
   color: #FFFFFF;
   float: right;
@@ -5226,6 +5243,9 @@ align-items: center;
 }
 .mb-45{
   margin-bottom: 45px;
+}
+.mb-46{
+  margin-bottom: 46px;
 }
 .mb-50{
   margin-bottom: 50px;

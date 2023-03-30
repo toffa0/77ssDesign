@@ -35,10 +35,11 @@ const SlickCarousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     initialSlide: 0,
-    variableWidth: true,
+    
+    variableWidth: false,
     responsive: [
       // {
       //   breakpoint: 1024,
@@ -70,8 +71,8 @@ const SlickCarousel = () => {
   return (
     <Slider {...settings} className="">
       {logos.map(logo => (
-        <div key={logo.key}>
-          <Image src={logo.src} alt={logo.alt} width={238} height={212}/>
+        <div key={logo.key} style={{width:"177.03px"}}>
+          <Image src={logo.src} alt={logo.alt} width={177.03} height={177.03}/>
         </div>
       ))}
     </Slider>
