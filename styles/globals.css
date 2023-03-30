@@ -5079,22 +5079,44 @@ align-items: center;
 .FeedBackInp-cont{
   border: 1px solid #9E9EA3;
   border-radius: 0px 25px 25px 25px;
-  padding: 0 5px 0 5px ;
+  /* padding: 0 5px 0 5px ; */
+  width: 192px;
+  height: 40px;
 }
 .FeedBackInp-btn{
   border: none;
   background-color: transparent;
-  color: #FF5F6B;
   cursor: pointer;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #FF5F6B;
+  width: 100%;
+  border-radius: 0px 25px 25px 0px;
+
 }
+/* .FeedBackInp-btn:hover{
+  background: #FF5F6B;
+  color: #fff;
+} */
 .FeedBackInp-Close{
   border: none;
   background-color: transparent;
   margin: 0;
   padding: 0;
   width: 10px;
+  height: 10px;
   cursor: pointer;
-  padding: 0 5px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9E9EA3;
+  font-family: 'Rotunda-bold';
+  margin-left: 2px;
+  margin-top: 1px;
 }
 .FeedBackInp-Close:hover{
   color: #FF5F6B;
@@ -5102,13 +5124,26 @@ align-items: center;
 .FeedBackInp-inp{
   border: none;
   outline: none;
-  padding: 5px;
+  padding: 0 0 0 16px;
   background-color: transparent;
-  font-size: 14px;
+  /* width: 118px; */
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: #9E9EA3;
 }
-.BordLeft{
+.FeedBackInp-inp::placeholder{
+  color: #9E9EA3;
+  font-size: 12px;
+}
+/* .BordLeft{
   border-right: 1px solid #9E9EA3;
-  margin-right: 4px;
+} */
+.BordLeft{
+  border-left: 1px solid #9E9EA3;
+  /* margin-right: 4px; */
 }
 #mxw-540{
   max-width: 539.14px;

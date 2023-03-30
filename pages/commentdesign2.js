@@ -175,11 +175,11 @@ const FeedBackInp= ({x,y,setCommentText,CommentText,handleSubmit,setDot})=>{
             
             
         }}> 
-            <div style={{display:"flex",flexDirection:"column",borderLeftWidth:"1px",borderLeftColor:"#9E9EA3",borderLeftStyle:"soild",padding:"3px"}} className="BordLeft">
+            <div style={{display:"flex",flexDirection:"column",borderLeftWidth:"1px",borderLeftColor:"#9E9EA3",borderLeftStyle:"soild",width:"152px"}} className="">
             <button className="FeedBackInp-Close" onClick={()=>setDot(null)}>X</button>
             <input type="text" className="FeedBackInp-inp" value={CommentText}  onChange={e => setCommentText(e.target.value)} placeholder="Enter Your Comment" />
             </div>
-            <button className="FeedBackInp-btn" onClick={handleSubmit}>Send</button>
+            <button className="FeedBackInp-btn BordLeft" onClick={handleSubmit}>Send</button>
             
 
             
