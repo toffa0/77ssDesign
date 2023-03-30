@@ -33,7 +33,7 @@ const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID})=>{
           className="feedbackhover"
           style={{
             position: 'absolute',
-            left: x +55,
+            left: x -5,
             top: y  +15 ,
             backgroundColor: DotColor,
             borderRadius: '50%',

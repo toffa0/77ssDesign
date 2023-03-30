@@ -147,7 +147,7 @@ const FeedBackInp= ({x,y,setCommentText,CommentText,handleSubmit,setDot})=>{
         className="FeedBackInp-cont"          
         style={{
             position: 'absolute',
-            left: x +55,
+            left: x -5,
             top: y  +40 ,
             backgroundColor: "white",
             display:"flex",
