@@ -43,6 +43,7 @@ const Discover = ()=>{
 
             <div className='pd-1 disc-fil'>
                 <div className='fl fl-gap32'>
+                  
                 <select className="filter filter-contin" id="filter" placeholder='All categories' onChange={(e)=>handle(e.currentTarget.value)}>
                     <option value="" >All Categories</option>
                     <option value="Logo-brand">Logo-brand identity</option>
@@ -51,43 +52,19 @@ const Discover = ()=>{
                     <option value="Clothing">Clothing-Merchandise</option>
                     <option value="Illustration">Illustration-Graphics</option>
                 </select>
+
                 <select className="filter filter-contin" id="filter2">
-                {ActiveCat===""?<option value="Subcategories">All Subcategories</option>
-                :<option value="Subcategories" disabled >All Subcategories</option>}
-                  {ActiveCat==="Logo-brand"&&
-                  Logoidentity.map((item) => (
-                    <option key={item.id}>{item.text}</option>
-                  ))
-                  
-                  
-                 
-                  }
-                  {ActiveCat==="Business-Advertising"&&
-                  Businessadvertising.map((item) => (
-                    <option key={item.id}>{item.text}</option>
-                  ))
-
-                  }
-                  {ActiveCat==="Web-App"&&
-                  Webdesign.map((item) => (
-                    <option key={item.id}>{item.text}</option>
-                  ))
-
-                  }
-                  {ActiveCat==="Clothing"&&
-                  ClothingMerchandise.map((item) => (
-                    <option key={item.id}>{item.text}</option>
-                  ))
-                  }
-                  {ActiveCat==="Illustration" &&
-                  ArtIllustration.map((item) => (
+                <option value="volvo" >All industries</option>
+                {
+                  industriesMenu.map((item) => (
                     <option key={item.id}>{item.text}</option>
                   ))
                   }
                 </select>
 
+
                 </div>
-                <input  value="Search" className='filterSearch'/>
+                <input   placeholder='Search' className='filterSearch'/>
                
             </div>
 

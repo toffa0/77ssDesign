@@ -42,7 +42,7 @@ const  ExperSettings = () => {
     <div key={item.id} className="fl-col ">
         <div className="fl exp fl-gap33">
             <div className='expLogo-cont fl-col jst'>
-                <Image src={item.img} alt="" width={75} height={60}/>
+                <Image src={item.img} alt="" width={item.width} height={item.height}/>
                 <p>{item.text}</p>
             </div>
        

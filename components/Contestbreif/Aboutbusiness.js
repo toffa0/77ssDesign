@@ -5,7 +5,7 @@ const Aboutbusiness= ()=>{
     return(
         <div className="oneto1 fl-col gap fl-gap32">
             <div className="fl fl-gap47">
-                <label>Languages:</label>
+                <label>Language:</label>
                 <input />
             </div>
             <div className="fl fl-gap47">

@@ -90,8 +90,8 @@ const Oneto1breif = ()=>{
             <div className="max">
                 <Navbar/>
                 <div className="my-workkk mt-125">
-                    <h2>1 to 1</h2>
-                    <h1>Brief details</h1>
+                    <h2 id="title2">1 to 1</h2>
+                    <h1 id="title">Brief details</h1>
                 </div>
             </div>
       

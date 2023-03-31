@@ -163,11 +163,11 @@ export const Businessadvertising=[
   ];
 
   export const CatExp =[
-    { id: 1, img: "expLogo1.svg" ,text:"Logo & brand identity" },
-    { id: 2, img: "expLogo2.svg" ,text:"Business -Advertising "},
-    { id: 3, img: "expLogo3.svg" ,text:"Web - App design"},
-    { id: 4, img: "expLogo4.svg" ,text:"Clothing - Merchandise"},
-    { id: 5, img: "expLogo5.svg" ,text:"Illustration - Graphics "},
+    { id: 1, img: "expLogo1.svg" ,width:67.56,height:36.27,text:"Logo & brand identity" },
+    { id: 2, img: "expLogo2.svg" ,width:80.93,height:57.68 ,text:"Business -Advertising "},
+    { id: 3, img: "expLogo3.svg" ,width:56.03,height:61.68 ,text:"Web - App design"},
+    { id: 4, img: "expLogo4.svg" ,width:75.52,height:60.46 ,text:"Clothing - Merchandise"},
+    { id: 5, img: "expLogo5.svg" ,width:48.46,height:46.63 ,text:"Illustration - Graphics "},
  
   ];
 

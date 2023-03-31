@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 // {const DotColor ="#FF6B6B"}
-const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID})=>{
+const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID,handleDotClick,textbody})=>{
   
   function handleMouseEnterDot(id) {
     
@@ -20,10 +20,10 @@ const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID})=>{
     setIsHoveringDot(false);
     
   }
-  const handleDotClick=(x,y,id)=>{
-    console.log(x,y)
-    console.log(id)
-  }
+  // const handleDotClick=(x,y,id)=>{
+  //   console.log(x,y)
+  //   console.log(id)
+  // }
   
     // console.log('Dot component')
     return (
@@ -40,7 +40,7 @@ const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID})=>{
           }}
           onMouseEnter={()=>handleMouseEnterDot(DotID)}
           onMouseLeave={handleMouseLeaveDot}
-          // onClick={()=>handleDotClick(x,y,DotID)}
+          onClick={()=>{if(DotID){handleDotClick()}}}
       ></canvas>
       );
     }

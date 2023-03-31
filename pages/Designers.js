@@ -112,7 +112,7 @@ const Designers = ()=>{
                 <div className="fl jst jst-SB DeCat Redbackground">
                     <Image src="DeLogo.svg" alt="" width={54.23} height={29.09}/>
                     <p>Logo-brand identity</p>
-                    <Image src="DeArrow.svg" alt="" width={17.12} height={10.56} className="imgmargin"/>
+                    <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
                 <div class="dropdown-content">
                     <ul>
@@ -132,7 +132,7 @@ const Designers = ()=>{
                 <div className="fl jst jst-SB DeCat bluebackground">
                     <Image src="Debuss.svg" alt="" width={48.04} height={34.21}/>
                     <p>Business-Advertising</p>
-                    <Image src="DeArrow.svg" alt="" width={17.12} height={10.56} className="imgmargin"/>
+                    <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
                 <div class="dropdown-content">
                     <ul>
@@ -150,7 +150,7 @@ const Designers = ()=>{
                 <div className="fl jst jst-SB DeCat cyanbackground">
                     <Image src="DeWeb.svg" alt="" width={38.76} height={42.64}/>
                     <p>Web-App design</p>
-                    <Image src="DeArrow.svg" alt="" width={17.12} height={10.56} className="imgmargin"/>
+                    <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
                 <div class="dropdown-content">
                     <ul>
@@ -168,7 +168,7 @@ const Designers = ()=>{
                 <div className="fl jst jst-SB DeCat greybackground">
                     <Image src="DeCloth.svg" alt="" width={55.13} height={44.1}/>
                     <p>Clothing- <br/>Merchandise</p>
-                    <Image src="DeArrow.svg" alt="" width={17.12} height={10.56} className="imgmargin"/>
+                    <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
                 <div class="dropdown-content">
                     <ul>
@@ -186,7 +186,7 @@ const Designers = ()=>{
                 <div className="fl jst jst-SB DeCat blackbackground">
                     <Image src="DeGraphics.svg" alt="" width={38.89} height={37.39}/>
                     <p>Illustration-Graphics</p>
-                    <Image src="DeArrow.svg" alt="" width={17.12} height={10.56} className="imgmargin"/>
+                    <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
                 <div class="dropdown-content">
                     <ul>

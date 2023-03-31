@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Dot from "@/components/Dot";
 const Submitdesgin = ()=>{
 
@@ -7,6 +7,8 @@ const Submitdesgin = ()=>{
     const [IDCom, setIDCom]= useState(1);
     const [CommentText, setCommentText] = useState('');
     const [Comment, setComment] = useState([{id:1,point:{x:47.203125,y:493},text:"yo yo",AccountName:'Osama',AccountType:"Client"}]);
+    const [EditedComment, setEditedComment] = useState('');
+    const [EditedCommentOpen, setEditedCommentOpen] = useState(false);
     const [IsHovering, setIsHovering] = useState(true);
     const [IsHoveringDot, setIsHoveringDot] = useState(false);
     const [IsHoveringID, setIsHoveringID] = useState(null);
@@ -56,7 +58,8 @@ const Submitdesgin = ()=>{
         console.log(rect)
         console.log(dot)
         // return <Dot x={x} y={y} /> 
-
+        setEditedCommentOpen(false);
+        setEditedComment("");
     }
     const handleSubmit= ()=>{
         if(CommentText!=""&dot!=null)
@@ -74,8 +77,51 @@ const Submitdesgin = ()=>{
 
     const handleDotClick=()=>{
         console.log("yes")
+        setEditedCommentOpen(!EditedCommentOpen)
+        setDot(null);
+    }
+    function EditButton(OldComm,id){
+        var text = document.getElementById("CommentEdit");
+        const textBody = document.getElementById("CommentBody");
+        const EditButton = document.getElementById("EditButton");
+        const UpdateButton = document.getElementById("UpdateButton");
+        // if (text.style.display === "none") {
+        console.log(text.style.display);
+      if (EditedComment==="") {
+        text.style.display = "block";
+        textBody.style.display = "none";
+        setEditedComment(OldComm);
+        // UpdateButton.style.display = "block";
+        // EditButton.style.display = "none";
+      } else {
+        text.style.display = "none";
+        textBody.style.display = "flex";
+        EditComment(id)
+        setEditedComment("");
+        // UpdateButton.style.display = "none";
+        // EditButton.style.display = "block";
       }
       
+    }
+
+    const EditComment=(id)=>{
+        const newState = Comment.map(obj=>{
+            if (obj.id === id){
+                return {...obj, text:EditedComment}
+            }
+            return obj;
+        })
+        setComment(newState);
+        setEditedComment("");
+    }
+    const handleDeleteComment = (id) => {
+        const newState = Comment.filter((obj) => obj.id !== id);
+            setComment( newState);
+        setEditedComment("");
+        setIsHovering(false)
+        setEditedCommentOpen(false)
+      };
+
 return(
     <div className="max3 fl h-90">
         <div className="w-35 sb-col1">
@@ -113,8 +159,11 @@ return(
                 {Comment.map((item)=>(
                     <div key={item.id} className="cd-sec feedbackhover2" onMouseEnter={()=>handleMouseEnter(item.id)} onMouseLeave={handleMouseLeave}>
                         <label>{item.AccountName}</label>
-                        <div className={item.AccountType==="Client" ?"cd-csec fl":"cd-csec2 fl"} id={IsHoveringDot&IsHoveringID===item.id?"pinkbackground":""} >
-                            <p>{item.text}</p>
+                        <div className={item.AccountType==="Client" ?"cd-csec fl jst-SB":"cd-csec2 fl jst-SB"} id={IsHoveringDot&IsHoveringID===item.id?"pinkbackground":""} >
+                            <p id="CommentBody">{item.text}</p>
+                            <input value={EditedComment} onChange={e => setEditedComment(e.target.value)} type="text" id="CommentEdit" style={{display: "none"}}/>
+                            <button className="EditComm" onClick={()=>EditButton(item.text,item.id)} id="EditButton" >{EditedComment===""?"Edit":"Update"}</button>
+                            {/* <button onClick={()=>EditComment(item.id)} id="UpdateButton" style={{display: "none"}}>Update</button> */}
                         </div>
                         {/* <Dot key={item.id} x={item.point.x} y={item.point.y}  /> */}
                     </div>
@@ -129,9 +178,17 @@ return(
             {dot && <Dot x={dot.x} y={dot.y} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} DotID={0} /> }  
             {dot && <FeedBackInp x={dot.x} y={dot.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot}  /> }       
             {Comment.map((item)=>{
-                // console.log(item.id);
-                return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  onClick={handleDotClick} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID}/>
-                
+                // console.log(item.id);       &&  
+                if(EditedCommentOpen&&item.id===IsHoveringID){
+                    
+                    // console.log("yes")
+                    return <div key={item.id}> <Dot  x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  handleDotClick={handleDotClick} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} textbody={item.text}/>
+                    <FeedBackEditInp  x={item.point.x} y={item.point.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot} setEditedComment={setEditedComment} EditedComment={EditedComment} EditComment={EditComment} textbody={item.text} DotID={item.id} handleDotClick={handleDotClick} handleDeleteComment={handleDeleteComment} />      
+                    </div>
+                }
+                else{
+                    return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  handleDotClick={handleDotClick} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID}/>
+                }
             })} 
         </div>
     </div>
@@ -141,7 +198,7 @@ export default Submitdesgin;
 
 
 const FeedBackInp= ({x,y,setCommentText,CommentText,handleSubmit,setDot})=>{
-
+    
     return(
         <div
         className="FeedBackInp-cont"          
@@ -149,20 +206,50 @@ const FeedBackInp= ({x,y,setCommentText,CommentText,handleSubmit,setDot})=>{
             position: 'absolute',
             left: x -5,
             top: y  +40 ,
-            backgroundColor: "white",
             display:"flex",
             
             
         }}> 
-            <div style={{display:"flex",flexDirection:"column",borderLeftWidth:"1px",borderLeftColor:"#9E9EA3",borderLeftStyle:"soild",width:"152px"}} className="">
-            <button className="FeedBackInp-Close" onClick={()=>setDot(null)}>X</button>
+            <div style={{display:"flex",background:"transparent",flexDirection:"column",width:"152px"}} className="">
+            <button className="FeedBackInp-Close" onClick={()=>setDot(null)} title="Delete" >X</button>
             <input type="text" className="FeedBackInp-inp" value={CommentText}  onChange={e => setCommentText(e.target.value)} placeholder="Enter Your Comment" />
             </div>
-            <button className="FeedBackInp-btn BordLeft" onClick={handleSubmit}>Send</button>
+            <button className="FeedBackInp-btn" onClick={handleSubmit}><Image src="send.svg" width={25} height={25} alt="send" /></button>
             
 
             
         </div>
     )
 }
-// export default FeedBackInp;
+
+const FeedBackEditInp= ({x,y,handleDotClick,EditedComment,DotID,handleDeleteComment,setEditedComment,textbody,EditComment})=>{
+
+    useEffect(()=>{
+        if(textbody!=""){
+            setEditedComment(textbody);
+        }
+    },[textbody])
+    
+    
+    return(
+        <div
+        className="FeedBackInp-cont"          
+        style={{
+            position: 'absolute',
+            left: x -5,
+            top: y  +40 ,
+            display:"flex",
+            
+            
+        }}> 
+            <div style={{display:"flex",flexDirection:"column",width:"152px"}} className="">
+            <button className="FeedBackInp-Close" onClick={()=>handleDeleteComment(DotID)} title="Delete" >X</button>
+            <input type="text" className="FeedBackInp-inp" value={EditedComment}   onChange={e => setEditedComment(e.target.value)} />
+            </div>
+            <button className="FeedBackInp-btn" onClick={()=>{EditComment(DotID);handleDotClick()}}>Edit</button>
+            
+
+            
+        </div>
+    )
+}
