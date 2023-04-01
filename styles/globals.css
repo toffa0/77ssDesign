@@ -5313,7 +5313,7 @@ align-items: center;
   position: relative;
 }
 .SelectedHighlight::after{
-  content: url('/SelectedHighlight.svg');
+  content: url('../public/SelectedHighlight.svg');
   width: 50px;
   height: 50px;
   background: #FFFFFF;
