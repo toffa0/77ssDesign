@@ -1,9 +1,20 @@
 import Image from "next/image";
 import React, { useState } from "react";
 const Style= ()=>{
-    const [lettermarks, setlettermarks] = useState(null);
+    const [lettermarks, setlettermarks] = useState([]);
+    const [selectedItems, setSelectedItems] = useState([]);
 
-    
+    const handleItemClick = (itemId) => {
+        setSelectedItems((prevSelectedItems) => {
+          if (prevSelectedItems.includes(itemId)) {
+            // If item is already selected, remove it from selected items
+            return prevSelectedItems.filter((id) => id !== itemId);
+          } else {
+            // If item is not selected, add it to selected items
+            return [...prevSelectedItems, itemId];
+          }
+        });
+      };
 
     return(
         <div className="oneto1 fl-col gap fl-gap32">
@@ -15,13 +26,13 @@ const Style= ()=>{
 
                 
                 <div className="fl fl-gap32">
-                    <div  className={lettermarks==="ibm"?"logoabout SelectedHighlight":"logoabout"}  onClick={()=>setlettermarks('ibm')}>
+                    <div   className={selectedItems.includes(1)?"logoabout SelectedHighlight":"logoabout"}  onClick={()=>handleItemClick(1)}>
                     <Image src="ibm.svg" alt="" width={27} height={27} className="" />
                     </div>
-                    <div className={lettermarks==="HM"?"logoabout SelectedHighlight":"logoabout"} onClick={()=>setlettermarks('HM')} >
+                    <div className={selectedItems.includes(2)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(2);console.log(selectedItems)}} >
                     <Image src="HM.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className={lettermarks==="LV"?"logoabout SelectedHighlight":"logoabout"} onClick={()=>setlettermarks('LV')} >
+                    <div className={selectedItems.includes(3)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(3);console.log(selectedItems)}} >
                     <Image src="LV.svg" alt="" width={27} height={27} />
                     </div>
                 </div>
@@ -36,13 +47,13 @@ const Style= ()=>{
 
                 
                 <div className="fl fl-gap32">
-                    <div className="logoabout">
-                    <Image src="coca.svg" alt="" width={27} height={27} />
+                    <div className={selectedItems.includes(4)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(4);console.log(selectedItems)}} >
+                    <Image src="coca.svg" alt="" width={27} height={27}  />
                     </div>
-                    <div className="logoabout">
-                    <Image src="visa2.svg" alt="" width={27} height={27} />
+                    <div className={selectedItems.includes(5)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(5);console.log(selectedItems)}} >
+                    <Image src="visa2.svg" alt="" width={27} height={27}  />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(6)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(6);console.log(selectedItems)}} >
                     <Image src="virgin.svg" alt="" width={27} height={27} />
                     </div>
                 </div>
