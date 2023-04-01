@@ -33,61 +33,71 @@ const Categories2 = ()=>{
 
     const [GeneralCat, setGeneralCat] = useState('');
     const [FirstCat, setFirstCat] = useState('');
+    const [FirstCatIsOpen, setFirstCatIsOpen] = useState(false); 
     const [SecondCat, setSecondCat] = useState('');
+    const [SecondCatIsOpen, setSecondCatIsOpen] = useState(false); 
     const [ThirdCat, setThirdCat] = useState('');
+    const [ThirdCatIsOpen, setThirdCatIsOpen] = useState(false);
     const [ForthCat, setForthCat] = useState('');
+    const [ForthCatIsOpen, setForthCatIsOpen] = useState(false);
     const [FifthCat, setFifthCat] = useState('');
+    const [FifthCatIsOpen, setFifthCatIsOpen] = useState(false);
     function handleFirstCat(e){
         setFirstCat(e)
         setGeneralCat(e)
-        // 
         setSecondCat('')
         setThirdCat('')
         setForthCat('')
         setFifthCat('')
-
+        setFirstCatIsOpen(false)
     }
     function handleSecondCat(e){
         setSecondCat(e)
         setGeneralCat(e)
-        // 
         setFirstCat('')
         setThirdCat('')
         setForthCat('')
         setFifthCat('')
+        setSecondCatIsOpen(false)
     }
 
     function handleThirdCat(e){
         
         setThirdCat(e)
         setGeneralCat(e)
-        // 
         setFirstCat('')
         setSecondCat('')
         setForthCat('')
         setFifthCat('')
+        setThirdCatIsOpen(false) 
     }
 
     function handleForthCat(e){
         setForthCat(e)
         setGeneralCat(e)
-        // 
         setFirstCat('')
         setSecondCat('')
         setThirdCat('')
         setFifthCat('')
+        setForthCatIsOpen(false) 
     }
 
     function handleFifthCat(e){
         setFifthCat(e)
         setGeneralCat(e)
-        // 
         setFirstCat('')
         setSecondCat('')
         setThirdCat('')
         setForthCat('')
+        setFifthCatIsOpen(false)
     }
-
+    function handleCatClick(){
+        setFirstCatIsOpen(false)
+        setSecondCatIsOpen(false)
+        setThirdCatIsOpen(false) 
+        setForthCatIsOpen(false) 
+        setFifthCatIsOpen(false)
+    }
     return(
         <div>
                <div className="home_section  ">
@@ -114,68 +124,87 @@ const Categories2 = ()=>{
                     
                 
             <div className="fl-all4 w-30 fl-gap58 pos">
-            <div class="dropdown">
-                <Image src="catlogo1.svg" alt="" width={238} height={212}/>
-                <div class="dropdown-content2">
+            <div class="dropdown" >
+                <div onClick={()=>{handleCatClick();setFirstCatIsOpen(!FirstCatIsOpen)}}>
+                <Image src="cat2logo1.svg" alt="" width={238} height={212}/>
+                </div>
+                <div class="dropdown-content2" id={FirstCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleFirstCat(item.text)}>{item.text}</button></li>
                             ))}
-                </ul>
+                    </ul>
                 </div>
-                <div  className={FirstCat!=""?"CategResult":"DN"}>
+                <div  className={FirstCatIsOpen?"CategResult ":"CategResult DN"} id={FirstCat!=""&&"DF"}>
+                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
                             <p>{FirstCat}</p>
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="catlogo2.svg" alt="" width={238} height={212}/>
-                <div class="dropdown-content2">
+            <div onClick={()=>{handleCatClick();setSecondCatIsOpen(!SecondCatIsOpen)}}>
+                <Image src="cat2logo2.svg" alt="" width={238} height={212}/> 
+                </div>
+                <div class="dropdown-content2"  id={SecondCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems2.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleSecondCat(item.text)}>{item.text}</button></li>
                             ))}
                 </ul>
                 </div>
-                <div  className={SecondCat!=""?"CategResult":"DN"}>
+                <div  className={SecondCatIsOpen?"CategResult ":"CategResult DN"} id={SecondCat!=""&&"DF"}> 
+                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
+
                             <p>{SecondCat}</p>
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="catlogo3.svg" alt="" width={238} height={212}/>
-                <div class="dropdown-content2">
+                <div onClick={()=>{handleCatClick();setThirdCatIsOpen(!ThirdCatIsOpen)}}>
+                    <Image src="cat2logo3.svg" alt="" width={238} height={212}/>  
+                </div>
+                <div class="dropdown-content2" id={ThirdCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems3.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleThirdCat(item.text)}>{item.text}</button></li>
                             ))}
                 </ul>
                 </div>
-                <div  className={ThirdCat!=""?"CategResult":"DN"}>
-                            <p>{ThirdCat}</p>
+                <div  className={ThirdCatIsOpen?"CategResult ":"CategResult DN"} id={ThirdCat!=""&&"DF"}>
+                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
+
+                            <p>{ThirdCat}</p>  
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="catlogo4.svg" alt="" width={238} height={212}/>
-                <div class="dropdown-content2">
+                <div onClick={()=>{handleCatClick();setForthCatIsOpen(!ForthCatIsOpen)}}>
+                <Image src="cat2logo4.svg" alt="" width={238} height={212}/>  
+                </div>
+                <div class="dropdown-content2" id={ForthCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems4.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleForthCat(item.text)}>{item.text}</button></li>
                         ))}
                 </ul>
                 </div>
-                <div  className={ForthCat!=""?"CategResult":"DN"}>
-                            <p>{ForthCat}</p>
+                <div  className={ForthCatIsOpen?"CategResult ":"CategResult DN"} id={ForthCat!=""&&"DF"}>
+                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
+
+                            <p>{ForthCat}</p>  
                 </div>
             </div>
             <div class="dropdown">
-                <Image src="catlogo5.svg" alt="" width={238} height={212}/>
-                <div class="dropdown-content2">
+                <div onClick={()=>{handleCatClick();setFifthCatIsOpen(!FifthCatIsOpen)}}>
+                <Image src="cat2logo5.svg" alt="" width={238} height={212}/>
+                </div>
+                <div class="dropdown-content2" id={FifthCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems5.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleFifthCat(item.text)}>{item.text}</button></li>
                             ))}
                 </ul>
                 </div>
-                <div  className={FifthCat!=""?"CategResult":"DN"}>
+                <div  className={FifthCatIsOpen?"CategResult ":"CategResult DN"} id={FifthCat!=""&&"DF"}>
+                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
+
                             <p>{FifthCat}</p>
                 </div>
             </div>
@@ -183,14 +212,14 @@ const Categories2 = ()=>{
             <div className="cat2-chatbox">
             <button id="catbtn" onClick={()=>SetchatboxOpen(!chatboxOpen)}>Others</button>
             <Link href="#" className={chatboxOpen?"":"DN"}>           
-                <Image src="chatbox.svg" alt="" width={106} height={106} />
+                <Image src="chatbox.svg" alt="" width={74.15} height={74.15} />
             </Link>
 
             </div>
          
             </div>
-            <div className="fl-all4 w-70 jst">
-                <Image src="cat2img.svg" alt="" width={678} height={1470}/>
+            <div className="fl-all4 w-70 prel">
+                <Image src="cat2img.svg" alt="" width={700} height={633.8} className="cat2img"/>
             </div>
             </div>
             <div className="cat2-btns max">

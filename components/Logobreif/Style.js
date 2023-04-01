@@ -1,6 +1,9 @@
 import Image from "next/image";
-
+import React, { useState } from "react";
 const Style= ()=>{
+    const [lettermarks, setlettermarks] = useState(null);
+
+    
 
     return(
         <div className="oneto1 fl-col gap fl-gap32">
@@ -11,14 +14,14 @@ const Style= ()=>{
                 <div className="fl fl-gap10">
 
                 
-                <div className="fl fl-gap10">
-                    <div className="logoabout">
-                    <Image src="ibm.svg" alt="" width={27} height={27} />
+                <div className="fl fl-gap32">
+                    <div  className={lettermarks==="ibm"?"logoabout SelectedHighlight":"logoabout"}  onClick={()=>setlettermarks('ibm')}>
+                    <Image src="ibm.svg" alt="" width={27} height={27} className="" />
                     </div>
-                    <div className="logoabout">
+                    <div className={lettermarks==="HM"?"logoabout SelectedHighlight":"logoabout"} onClick={()=>setlettermarks('HM')} >
                     <Image src="HM.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={lettermarks==="LV"?"logoabout SelectedHighlight":"logoabout"} onClick={()=>setlettermarks('LV')} >
                     <Image src="LV.svg" alt="" width={27} height={27} />
                     </div>
                 </div>
@@ -32,7 +35,7 @@ const Style= ()=>{
 
 
                 
-                <div className="fl fl-gap10">
+                <div className="fl fl-gap32">
                     <div className="logoabout">
                     <Image src="coca.svg" alt="" width={27} height={27} />
                     </div>
@@ -50,7 +53,7 @@ const Style= ()=>{
                 <div className="fl fl-gap10">
 
                 
-                <div className="fl fl-gap10">
+                <div className="fl fl-gap32">
                     <div className="logoabout">
                     <Image src="7.svg" alt="" width={27} height={27} />
                     </div>
@@ -71,9 +74,9 @@ const Style= ()=>{
 
 
                 
-                <div className="fl fl-gap10">
+                <div className="fl fl-gap32">
                     <div className="logoabout">
-                    <Image src="addidas.svg" alt="" width={27} height={27} />
+                    <Image src="addidas.svg" alt="" width={27} height={27}  />
                     </div>
                     <div className="logoabout">
                     <Image src="pepsi.svg" alt="" width={27} height={27} />
@@ -89,7 +92,7 @@ const Style= ()=>{
                 <div className="fl fl-gap10">
 
                 
-                <div className="fl fl-gap10">
+                <div className="fl fl-gap32">
                     <div className="logoabout">
                     <Image src="Intersection5.svg" alt="" width={27} height={27} />
                     </div>
@@ -110,7 +113,7 @@ const Style= ()=>{
 
 
                 
-                <div className="fl fl-gap10">
+                <div className="fl fl-gap32">
                     <div className="logoabout">
                     <Image src="doritos.svg" alt="" width={27} height={27} />
                     </div>
@@ -128,7 +131,7 @@ const Style= ()=>{
                 <div className="fl fl-gap10">
 
                 
-                <div className="fl fl-gap10">
+                <div className="fl fl-gap32">
                     <div className="logoabout">
                     <Image src="harley.svg" alt="" width={27} height={27} />
                     </div>

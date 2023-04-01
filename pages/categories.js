@@ -39,6 +39,7 @@ const  Categories = () => {
           
         <div className='cat-card' onClick={() => setOpen(!isOpen)}>
            <Image src='catlogo1.svg' alt="" width={177.03} height={177.03}/>
+
         </div>
         <div className='cat-card' onClick={() => setOpen(!isOpen)}>
            <Image src='catlogo2.svg' alt="" width={219.72} height={195}/>

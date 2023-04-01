@@ -28,26 +28,22 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
                 <label>Other requirements:</label>
                 <textarea onChange={setName}/>
             </div>
-            <div className="fl fl-gap47">
+            <div className="fl fl-gap47 ">
                 <label>Reference and/or sketch: </label>
-                <div className="fl-col fl-gap32">
-
-                
-                <input onChange={setName}/>
-                <div className="fl fl-gap10">
-
-                
-                <div className="plusabout">
-                    <Image src="+.svg" alt="" width={27} height={27} />
-                    <p>Please attach</p>
-                </div>
-                <div className="plusabout">
-                    <Image src="+.svg" alt="" width={27} height={27} />
-                </div>
-                <div className="plusabout">
-                    <Image src="+.svg" alt="" width={27} height={27} />
-                </div>
-                </div>
+                <div className="fl-col fl-gap32 w-80">
+                    <input onChange={setName} id="w-100"/>
+                    <div className="fl fl-gap10 ">
+                        <div className="plusabout">
+                            <Image src="+.svg" alt="" width={27} height={27} />
+                            <p>Please attach</p>
+                        </div>
+                        <div className="plusabout">
+                            <Image src="+.svg" alt="" width={27} height={27} />
+                        </div>
+                        <div className="plusabout">
+                            <Image src="+.svg" alt="" width={27} height={27} />
+                        </div>
+                    </div>
                 </div>
             </div>
      
