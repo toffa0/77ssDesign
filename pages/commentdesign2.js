@@ -171,7 +171,7 @@ return(
                 <input type="text" value={CommentText2}  onChange={e => setCommentText2(e.target.value)} />
                 <button className="SD-btn5" onClick={handleSubmit2}>Send</button>
             </div>
-            <div className="fl-col fl-gap8 mt-18 mb-118">
+            <div className="fl-col CMSec fl-gap8 mt-18 mb-118">
 
                 {Comment.map((item)=>(
                     <div key={item.id} className="cd-sec feedbackhover2" onMouseEnter={()=>handleMouseEnter(item.id)} onMouseLeave={handleMouseLeave}>

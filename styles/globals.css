@@ -4036,6 +4036,11 @@ right: 0;
   width: 24px;
   height: 24px;
 }
+.CMSec{
+  overflow-y:auto; 
+  overflow-x: hidden;
+  height:250px;
+}
 .cd-csec{
   min-height: 40px;
   width: 256px;
@@ -4045,7 +4050,7 @@ right: 0;
   display: flex;
   gap: 5px;
   padding: 10px 10px;
-
+  margin-right: 10px;
  
 }
 .cd-sec label{
