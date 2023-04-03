@@ -22,7 +22,14 @@ const Aboutbusiness= ()=>{
             </div>
             <div className="fl fl-gap47">
                 <label>Type of design:</label>
-                <input />
+                <select id="catsele" placeholder='All categories'>
+                    <option value="" >All Categories</option>
+                    <option value="Logo-brand">Logo-brand identity</option>
+                    <option value="Business-Advertising">Business-Advertising</option>
+                    <option value="Web-App">Web-App design</option>
+                    <option value="Clothing">Clothing-Merchandise</option>
+                    <option value="Illustration">Illustration-Graphics</option>
+                </select>
             </div>
             <div className="fl fl-gap47">
                 <label>Describe your project:</label>

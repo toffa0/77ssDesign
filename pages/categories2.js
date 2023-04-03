@@ -123,10 +123,10 @@ const Categories2 = ()=>{
                 <div className="fl max">
                     
                 
-            <div className="fl-all4 w-30 fl-gap58 pos">
+            <div className="fl-all4 w-30 fl-gap32 pos">
             <div class="dropdown" >
-                <div onClick={()=>{handleCatClick();setFirstCatIsOpen(!FirstCatIsOpen)}}>
-                <Image src="cat2logo1.svg" alt="" width={238} height={212}/>
+                <div className="Cat2" onClick={()=>{handleCatClick();setFirstCatIsOpen(!FirstCatIsOpen)}}>
+                <Image src="cat2logo1.svg" alt="" width={160} height={160}/>
                 </div>
                 <div class="dropdown-content2" id={FirstCatIsOpen?"":"DN"}>
                     <ul>
@@ -135,14 +135,13 @@ const Categories2 = ()=>{
                             ))}
                     </ul>
                 </div>
-                <div  className={FirstCatIsOpen?"CategResult ":"CategResult DN"} id={FirstCat!=""&&"DF"}>
-                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
-                            <p>{FirstCat}</p>
+                <div  className={FirstCatIsOpen?"CategResult CategResultRedBG ":"CategResult CategResultRedBG DN"} id={FirstCat!=""&&"DF"} onClick={()=>{handleCatClick();setFirstCatIsOpen(!FirstCatIsOpen)}}>
+                            <p>{FirstCat===""?"Select from category":FirstCat}</p>
                 </div>
             </div>
             <div class="dropdown">
-            <div onClick={()=>{handleCatClick();setSecondCatIsOpen(!SecondCatIsOpen)}}>
-                <Image src="cat2logo2.svg" alt="" width={238} height={212}/> 
+            <div className="Cat2" onClick={()=>{handleCatClick();setSecondCatIsOpen(!SecondCatIsOpen)}}>
+                <Image src="cat2logo2.svg" alt="" width={160} height={160}/> 
                 </div>
                 <div class="dropdown-content2"  id={SecondCatIsOpen?"":"DN"}>
                     <ul>
@@ -151,15 +150,13 @@ const Categories2 = ()=>{
                             ))}
                 </ul>
                 </div>
-                <div  className={SecondCatIsOpen?"CategResult ":"CategResult DN"} id={SecondCat!=""&&"DF"}> 
-                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
-
-                            <p>{SecondCat}</p>
+                <div  className={SecondCatIsOpen?"CategResult CategResultBlueBG ":"CategResult CategResultBlueBG DN"} id={SecondCat!=""&&"DF"} onClick={()=>{handleCatClick();setSecondCatIsOpen(!SecondCatIsOpen)}}> 
+                            <p>{SecondCat===""?"Select from category":SecondCat}</p>
                 </div>
             </div>
             <div class="dropdown">
-                <div onClick={()=>{handleCatClick();setThirdCatIsOpen(!ThirdCatIsOpen)}}>
-                    <Image src="cat2logo3.svg" alt="" width={238} height={212}/>  
+                <div className="Cat2" onClick={()=>{handleCatClick();setThirdCatIsOpen(!ThirdCatIsOpen)}}>
+                    <Image src="cat2logo3.svg" alt="" width={160} height={160}/>  
                 </div>
                 <div class="dropdown-content2" id={ThirdCatIsOpen?"":"DN"}>
                     <ul>
@@ -168,15 +165,13 @@ const Categories2 = ()=>{
                             ))}
                 </ul>
                 </div>
-                <div  className={ThirdCatIsOpen?"CategResult ":"CategResult DN"} id={ThirdCat!=""&&"DF"}>
-                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
-
-                            <p>{ThirdCat}</p>  
+                <div  className={ThirdCatIsOpen?"CategResult CategResultCyanBG ":"CategResult CategResultCyanBG DN"} id={ThirdCat!=""&&"DF"} onClick={()=>{handleCatClick();setThirdCatIsOpen(!ThirdCatIsOpen)}}>
+                            <p>{ThirdCat===""?"Select from category":ThirdCat}</p>
                 </div>
             </div>
             <div class="dropdown">
-                <div onClick={()=>{handleCatClick();setForthCatIsOpen(!ForthCatIsOpen)}}>
-                <Image src="cat2logo4.svg" alt="" width={238} height={212}/>  
+                <div className="Cat2" onClick={()=>{handleCatClick();setForthCatIsOpen(!ForthCatIsOpen)}}>
+                <Image src="cat2logo4.svg" alt="" width={160} height={160}/>  
                 </div>
                 <div class="dropdown-content2" id={ForthCatIsOpen?"":"DN"}>
                     <ul>
@@ -185,15 +180,14 @@ const Categories2 = ()=>{
                         ))}
                 </ul>
                 </div>
-                <div  className={ForthCatIsOpen?"CategResult ":"CategResult DN"} id={ForthCat!=""&&"DF"}>
-                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
+                <div  className={ForthCatIsOpen?"CategResult CategResultDarkBG ":"CategResult CategResultDarkBG DN"} id={ForthCat!=""&&"DF"} onClick={()=>{handleCatClick();setForthCatIsOpen(!ForthCatIsOpen)}}>
+                            <p>{ForthCat===""?"Select from category":ForthCat}</p>
 
-                            <p>{ForthCat}</p>  
                 </div>
             </div>
             <div class="dropdown">
-                <div onClick={()=>{handleCatClick();setFifthCatIsOpen(!FifthCatIsOpen)}}>
-                <Image src="cat2logo5.svg" alt="" width={238} height={212}/>
+                <div className="Cat2" onClick={()=>{handleCatClick();setFifthCatIsOpen(!FifthCatIsOpen)}}>
+                <Image src="cat2logo5.svg" alt="" width={160} height={160}/>
                 </div>
                 <div class="dropdown-content2" id={FifthCatIsOpen?"":"DN"}>
                     <ul>
@@ -202,10 +196,8 @@ const Categories2 = ()=>{
                             ))}
                 </ul>
                 </div>
-                <div  className={FifthCatIsOpen?"CategResult ":"CategResult DN"} id={FifthCat!=""&&"DF"}>
-                <Image src="DeRectangle.svg" alt="" width={11} height={21.92}/>
-
-                            <p>{FifthCat}</p>
+                <div  className={FifthCatIsOpen?"CategResult CategResultblackBG ":"CategResult CategResultblackBG DN"} id={FifthCat!=""&&"DF"} onClick={()=>{handleCatClick();setFifthCatIsOpen(!FifthCatIsOpen)}}>
+                            <p>{FifthCat===""?"Select from category":FifthCat}</p>
                 </div>
             </div>
 

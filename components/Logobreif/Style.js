@@ -65,13 +65,13 @@ const Style= ()=>{
 
                 
                 <div className="fl fl-gap32">
-                    <div className="logoabout">
+                <div className={selectedItems.includes(7)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(7);console.log(selectedItems)}} >
                     <Image src="7.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(8)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(8);console.log(selectedItems)}} >
                     <Image src="twitter.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(9)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(9);console.log(selectedItems)}} >
                     <Image src="apple.svg" alt="" width={27} height={27} />
                     </div>
                 </div>
@@ -86,13 +86,13 @@ const Style= ()=>{
 
                 
                 <div className="fl fl-gap32">
-                    <div className="logoabout">
+                <div className={selectedItems.includes(10)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(10);console.log(selectedItems)}} >
                     <Image src="addidas.svg" alt="" width={27} height={27}  />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(11)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(11);console.log(selectedItems)}} >
                     <Image src="pepsi.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(12)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(12);console.log(selectedItems)}} >
                     <Image src="bp.svg" alt="" width={27} height={27} />
                     </div>
                 </div>
@@ -104,13 +104,13 @@ const Style= ()=>{
 
                 
                 <div className="fl fl-gap32">
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(13)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(13);console.log(selectedItems)}} >
                     <Image src="Intersection5.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(14)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(14);console.log(selectedItems)}} >
                     <Image src="kfc.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(15)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(15);console.log(selectedItems)}} >
                     <Image src="Intersection6.svg" alt="" width={27} height={27} />
                     </div>
                 </div>
@@ -125,13 +125,13 @@ const Style= ()=>{
 
                 
                 <div className="fl fl-gap32">
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(16)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(16);console.log(selectedItems)}} >
                     <Image src="doritos.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(17)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(17);console.log(selectedItems)}} >
                     <Image src="lacoste.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(18)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(18);console.log(selectedItems)}} >
                     <Image src="Bk.svg" alt="" width={27} height={27} />
                     </div>
                 </div>
@@ -143,13 +143,13 @@ const Style= ()=>{
 
                 
                 <div className="fl fl-gap32">
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(19)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(19);console.log(selectedItems)}} >
                     <Image src="harley.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(20)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(20);console.log(selectedItems)}} >
                     <Image src="starbucks.svg" alt="" width={27} height={27} />
                     </div>
-                    <div className="logoabout">
+                    <div className={selectedItems.includes(21)?"logoabout SelectedHighlight":"logoabout"} onClick={()=>{handleItemClick(21);console.log(selectedItems)}} >
                     <Image src="harvard.svg" alt="" width={27} height={27} />
                     </div>
                 </div>

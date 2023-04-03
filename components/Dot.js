@@ -34,7 +34,7 @@ const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID,handleDotClick
           style={{
             position: 'absolute',
             left: x -5,
-            top: y  +15 ,
+            top: y  -5 ,
             backgroundColor: DotColor,
             borderRadius: '50%',
           }}

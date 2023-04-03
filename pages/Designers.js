@@ -10,70 +10,82 @@ import { useEffect } from "react";
 
 const Designers = ()=>{
 
-    const [GeneralCat, setGeneralCat] = useState('');
-    const [FirstCat, setFirstCat] = useState('');
-    const [SecondCat, setSecondCat] = useState('');
-    const [ThirdCat, setThirdCat] = useState('');
-    const [ForthCat, setForthCat] = useState('');
-    const [FifthCat, setFifthCat] = useState('');
-
     const [Indst, setIndst] = useState(industries.slice(0,6));
-    
     function handleShowMore(){
         setIndst(industries)
     }
     function handleShowLess(){
         setIndst(industries.slice(0,6))
     }
+
+    const [GeneralCat, setGeneralCat] = useState('');
+    const [FirstCat, setFirstCat] = useState('');
+    const [FirstCatIsOpen, setFirstCatIsOpen] = useState(false); 
+    const [SecondCat, setSecondCat] = useState('');
+    const [SecondCatIsOpen, setSecondCatIsOpen] = useState(false); 
+    const [ThirdCat, setThirdCat] = useState('');
+    const [ThirdCatIsOpen, setThirdCatIsOpen] = useState(false);
+    const [ForthCat, setForthCat] = useState('');
+    const [ForthCatIsOpen, setForthCatIsOpen] = useState(false);
+    const [FifthCat, setFifthCat] = useState('');
+    const [FifthCatIsOpen, setFifthCatIsOpen] = useState(false);
+    
+    
     function handleFirstCat(e){
         setFirstCat(e)
         setGeneralCat(e)
-        // 
         setSecondCat('')
         setThirdCat('')
         setForthCat('')
         setFifthCat('')
-
+        setFirstCatIsOpen(false)
     }
     function handleSecondCat(e){
         setSecondCat(e)
         setGeneralCat(e)
-        // 
         setFirstCat('')
         setThirdCat('')
         setForthCat('')
         setFifthCat('')
+        setSecondCatIsOpen(false)
     }
 
     function handleThirdCat(e){
         
         setThirdCat(e)
         setGeneralCat(e)
-        // 
         setFirstCat('')
         setSecondCat('')
         setForthCat('')
         setFifthCat('')
+        setThirdCatIsOpen(false) 
     }
 
     function handleForthCat(e){
         setForthCat(e)
         setGeneralCat(e)
-        // 
         setFirstCat('')
         setSecondCat('')
         setThirdCat('')
         setFifthCat('')
+        setForthCatIsOpen(false) 
     }
 
     function handleFifthCat(e){
         setFifthCat(e)
         setGeneralCat(e)
-        // 
         setFirstCat('')
         setSecondCat('')
         setThirdCat('')
         setForthCat('')
+        setFifthCatIsOpen(false)
+    }
+    function handleCatClick(){
+        setFirstCatIsOpen(false)
+        setSecondCatIsOpen(false)
+        setThirdCatIsOpen(false) 
+        setForthCatIsOpen(false) 
+        setFifthCatIsOpen(false)
     }
 
 
@@ -109,12 +121,12 @@ const Designers = ()=>{
             <div className="fl-all4 w-30 gap60 pos">
             <div className="fl-col ">
             <div class="dropdown">
-                <div className="fl jst jst-SB DeCat Redbackground">
+                <div className="fl jst jst-SB DeCat Redbackground" onClick={()=>{handleCatClick();setFirstCatIsOpen(!FirstCatIsOpen)}}>
                     <Image src="DeLogo.svg" alt="" width={54.23} height={29.09}/>
                     <p>Logo-brand identity</p>
                     <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
-                <div class="dropdown-content">
+                <div class="dropdown-content" id={FirstCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleFirstCat(item.text)}>{item.text}</button></li>
@@ -129,12 +141,12 @@ const Designers = ()=>{
                     <p>{FirstCat}</p>
                 </div>
             <div class="dropdown">
-                <div className="fl jst jst-SB DeCat bluebackground">
+                <div className="fl jst jst-SB DeCat bluebackground" onClick={()=>{handleCatClick();setSecondCatIsOpen(!SecondCatIsOpen)}}>
                     <Image src="Debuss.svg" alt="" width={48.04} height={34.21}/>
                     <p>Business-Advertising</p>
                     <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
-                <div class="dropdown-content">
+                <div class="dropdown-content" id={SecondCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems2.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleSecondCat(item.text)}>{item.text}</button></li>
@@ -147,12 +159,12 @@ const Designers = ()=>{
                     <p>{SecondCat}</p>
                 </div>
             <div class="dropdown">
-                <div className="fl jst jst-SB DeCat cyanbackground">
+                <div className="fl jst jst-SB DeCat cyanbackground"  onClick={()=>{handleCatClick();setThirdCatIsOpen(!ThirdCatIsOpen)}}>
                     <Image src="DeWeb.svg" alt="" width={38.76} height={42.64}/>
                     <p>Web-App design</p>
                     <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
-                <div class="dropdown-content">
+                <div class="dropdown-content" id={ThirdCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems3.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleThirdCat(item.text)}>{item.text}</button></li>
@@ -165,12 +177,12 @@ const Designers = ()=>{
                     <p>{ThirdCat}</p>
                 </div>
             <div class="dropdown">
-                <div className="fl jst jst-SB DeCat greybackground">
+                <div className="fl jst jst-SB DeCat greybackground" onClick={()=>{handleCatClick();setForthCatIsOpen(!ForthCatIsOpen)}}>
                     <Image src="DeCloth.svg" alt="" width={55.13} height={44.1}/>
-                    <p>Clothing- <br/>Merchandise</p>
+                    <p id="MR44">Clothing- <br/>Merchandise</p>
                     <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
-                <div class="dropdown-content">
+                <div class="dropdown-content" id={ForthCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems4.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleForthCat(item.text)}>{item.text}</button></li>
@@ -183,12 +195,12 @@ const Designers = ()=>{
                     <p>{ForthCat}</p>
                 </div>
             <div class="dropdown">
-                <div className="fl jst jst-SB DeCat blackbackground">
+                <div className="fl jst jst-SB DeCat blackbackground" onClick={()=>{handleCatClick();setFifthCatIsOpen(!FifthCatIsOpen)}}>
                     <Image src="DeGraphics.svg" alt="" width={38.89} height={37.39}/>
                     <p>Illustration-Graphics</p>
                     <Image src="DeArrow.svg" alt="" width={10} height={10} className="imgmargin"/>
                 </div>
-                <div class="dropdown-content">
+                <div class="dropdown-content" id={FifthCatIsOpen?"":"DN"}>
                     <ul>
                         {listItems5.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleFifthCat(item.text)}>{item.text}</button></li>

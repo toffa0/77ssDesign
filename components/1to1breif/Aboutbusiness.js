@@ -22,7 +22,7 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
     return(
         <div className="oneto1 fl-col gap fl-gap32">
             <div className="fl fl-gap47">
-                <label>Languages:</label>
+                <label>Language:</label>
                 <input type="text" onChange={e => languagesonchange(e.target.value)}/>
             </div>
             <div className="fl fl-gap47">
@@ -39,7 +39,14 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
             </div>
             <div className="fl fl-gap47">
                 <label>Type of design:</label>
-                <input />
+                <select id="catsele" placeholder='All categories'>
+                    <option value="" >All Categories</option>
+                    <option value="Logo-brand">Logo-brand identity</option>
+                    <option value="Business-Advertising">Business-Advertising</option>
+                    <option value="Web-App">Web-App design</option>
+                    <option value="Clothing">Clothing-Merchandise</option>
+                    <option value="Illustration">Illustration-Graphics</option>
+                </select>
             </div>
             <div className="fl fl-gap47">
                 <label>Describe your project:</label>

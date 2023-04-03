@@ -24,7 +24,6 @@ const Footer2 = () => {
       <li><Link href="#" icon="check" text="Link 2" >Logo / brand identity</Link></li>
       <li><Link href="#" icon="check" text="Link 3" >T-shirt</Link></li>
       <li><Link href="#" icon="check" text="Link 4" >Label - packaging</Link></li>
-      <li><Link href="#" icon="check" text="Link 5" >Book - Magazine </Link></li>
       <li><Link href="#" icon="check" text="Link 6" >Illustration - graphics</Link></li>
       <li><Link href="#" icon="check" text="Link 7" >Web - App design</Link></li>
       <li><Link href="#" icon="check" text="Link 7" >All categories</Link></li>
@@ -32,8 +31,8 @@ const Footer2 = () => {
     </div>
     <div>
     
-    <ul>
-      <li><Link href="#" icon="check" text="Link 1" ><Image src="footerSearch.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp;Find Work</Link></li>
+    <ul id="fl-gap30">
+      {/* <li><Link href="#" icon="check" text="Link 1" ><Image src="footerSearch.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp;Find Work</Link></li> */}
       <li><Link href="/pricing" icon="check" text="Link 2" ><Image src="footerPricing.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp; Pricing</Link></li>
       <li><Link href="#" icon="check" text="Link 3" ><Image src="footerEnv.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp; Join to 77S design</Link></li>
       <li><Link href="#" icon="check" text="Link 4" ><Image src="footerHelp.svg" alt="" width={23} height={24} />&nbsp;&nbsp;&nbsp; Help</Link></li>

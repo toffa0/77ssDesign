@@ -46,13 +46,15 @@ const  ExperSettings = () => {
                 <p>{item.text}</p>
             </div>
        
-        <button > Add design +</button>
+        <button onClick={()=>handleClick(item.id)}> Add design +</button>
        
-        <div className='grycir'>
-        <button onClick={()=>handleClick(item.id)} id="kkkkkk">
-            <Image src="droparrow2.svg" alt='' width={20} height={11.5} />
-            </button>
-        </div>
+        {isOpen===item.id&&        
+            <div className='grycir'>
+                <button  id="kkkkkk" onClick={()=>handleClick(item.id)}>
+                    <Image src="droparrow2.svg" alt='' width={20} height={11.5} />
+                </button>
+            </div>
+        }
         
         </div>
         <div className='fl gap2 exp-ex-cont' id={`${isOpen===item.id? "flex":''}`}>
@@ -63,7 +65,7 @@ const  ExperSettings = () => {
           }`}      /> */}
 
             <div className='outofbox'>
-                <p className='pnew'>{Approved?"Approved":"Disapproved"}</p>
+                <p className='pnew' id='approved'>{Approved?"Approved":"Disapproved"}</p>
             </div>
 
 
@@ -98,11 +100,13 @@ const  ExperSettings = () => {
        <div className='fl-col fl-gap5  jstfe h1000'>
         <div className='fl exp fl-gap33'>
         <button onClick={()=>handleClick(key)}> Add design +</button>
+        {isOpen&&   
         <div className='grycir'>
             <Image src="droparrow2.svg" alt='' width={20} height={11.5} />
         </div>
+        }
         </div>
-        <p className='pnew2'>Finalizer, copy writer (company name), etc. ...</p>
+        <p className='pnew2' id='copywriter'>Finalizer, copy writer (company name), etc. ...</p>
 
        </div>
         
@@ -117,7 +121,7 @@ const  ExperSettings = () => {
           }`}      /> */}
 
             <div className='outofbox'>
-            <p className='pnew'>{Approved?"Approved":"Disapproved"}</p>
+            <p className='pnew' id='approved'>{Approved?"Approved":"Disapproved"}</p>
             </div>
 
 

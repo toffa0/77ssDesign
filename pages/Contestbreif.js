@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from 'next/image'
-import Aboutbusiness from "@/components/1to1breif/Aboutbusiness";
+import Aboutbusiness from "@/components/Contestbreif/Aboutbusiness";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Time from "@/components/Contestbreif/TypeofDesign";

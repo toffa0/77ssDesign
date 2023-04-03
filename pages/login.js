@@ -84,7 +84,7 @@ const Login = () => {
           console.log(data);
       const csrfToken = generateCsrfToken();
       document.cookie = `csrfToken=${csrfToken}; expires=${getExpirationDate()}; path=/`;
-      window.location.href = '/';
+      // window.location.href = '/';
         })
       .catch(error => console.error(error));
       
@@ -110,7 +110,7 @@ const Login = () => {
 </div>
 <div className="bottom-row3 fl-gap32">
 <div className="fl nntr">
-  <p>or Login with your 77sdesign account</p>
+  <p id="Fs-16">or Login with your 77S design account</p>
 </div>
 <div  className="bottom-row3 ">
       <input type="text" placeholder="Email" id="email1"/>
