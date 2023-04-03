@@ -166,7 +166,7 @@ return(
                 <Image src="paidstock.svg" alt="" width={31} height={31} />
                 <p className="paidstock-p">Design uses paid stock</p>
             </div>
-            <div className="SD-inp mb-45">
+            <div className="SD-inp mb-45" style={{width:"256px"}}>
                 <label>Comment</label>
                 <input type="text" value={CommentText2}  onChange={e => setCommentText2(e.target.value)} />
                 <button className="SD-btn5" onClick={handleSubmit2}>Send</button>
