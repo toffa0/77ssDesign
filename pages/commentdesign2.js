@@ -186,7 +186,7 @@ return(
             <div className="SD-inp mb-45" style={{width:"256px"}}>
                 <label>Comment</label>
                 <div className="comment-textarea-cont">
-                <textarea id="CommentBodyTextArea" className="comment-textarea" type="text" value={CommentText2}  onChange={e => setCommentText2(e.target.value)} placeholder="Add your comment" />
+                <textarea id="CommentBodyTextArea" className="comment-textarea" type="text" value={CommentText2}  onChange={e => setCommentText2(e.target.value)} placeholder="Add your commentt" />
                 </div>
                 <button className="SD-btn5" onClick={handleSubmit2}>Send</button>
             </div>
