@@ -131,6 +131,23 @@ const Submitdesgin = ()=>{
         setEditedCommentOpen(false)
       };
 
+
+      var textarea = document.querySelector('textarea');
+      if(textarea){
+  
+          textarea.addEventListener('keydown', autosize);
+      }
+                   
+      function autosize(){
+        var el = this;
+        setTimeout(function(){
+          el.style.cssText = 'height:auto; padding:0';
+          // for box-sizing other than "content-box" use:
+          // el.style.cssText = '-moz-box-sizing:content-box';
+          el.style.cssText = 'height:' + el.scrollHeight + 'px';
+        },0);
+      }
+
 return(
     <div className="max3 fl h-90">
         <div className="w-35 sb-col1">
@@ -168,7 +185,9 @@ return(
             </div>
             <div className="SD-inp mb-45" style={{width:"256px"}}>
                 <label>Comment</label>
-                <input type="text" value={CommentText2}  onChange={e => setCommentText2(e.target.value)} />
+                <div className="comment-textarea-cont">
+                <textarea id="CommentBodyTextArea" className="comment-textarea" type="text" value={CommentText2}  onChange={e => setCommentText2(e.target.value)} placeholder="Add your comment" />
+                </div>
                 <button className="SD-btn5" onClick={handleSubmit2}>Send</button>
             </div>
             <div className="fl-col CMSec fl-gap8 mt-18 mb-118">
