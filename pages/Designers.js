@@ -108,9 +108,9 @@ const Designers = ()=>{
         <div className="mb-20">
             <h1 className='DiffTitle-' id="title" >Designers</h1>
         </div>
-        <form className="sr-div mb-0" >
-                <input type="text" name='' placeholder="Search keywords " id="desginform" />
-                <input type="submit" name=''  value=" " /> 
+        <form className="sr-div" id="mxw-540">
+                <input type="text" id="FM" name='' placeholder="Search keywords" />
+                <button type="submit"><Image src="SearchLogo.svg" alt="" width={37} height={36} /></button> 
         </form>
         </div>
         </div>

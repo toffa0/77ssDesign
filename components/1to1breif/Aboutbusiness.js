@@ -81,7 +81,7 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
                 </div>
                 </div>
             </div>
-            <div className="fl fl-gapp16">
+            <div className="fl fl-gap47">
                 <div className="fl fl-gap10 w-46">
                     <input type="checkbox" id="yes" />
                     <label>No logo</label>

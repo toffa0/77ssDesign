@@ -1,6 +1,21 @@
-import React from 'react';
+import ReactFlagsSelect from "react-flags-select";
+import React, { useState } from "react";
+import 'react-phone-input-2/lib/style.css'
+// import TimezoneSelect from 'react-timezone-select'
+import PhoneInput from 'react-phone-input-2'
+
+
 
 const GeneralSettings2 = () => {
+  
+  const [selected, setSelected] = useState("");
+  const [value, setValue] = useState()
+  const [selectedTimezone, setSelectedTimezone] =useState(
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  )
+
+
+
   return (
     <div>
       <form className="form-group-sett m-40 mb-172">
@@ -21,8 +36,8 @@ const GeneralSettings2 = () => {
         </div>
         <div className='form-group1'> 
           <div className="form-group w-40">
-                <label htmlFor="first-name">Mounth Day of Birth Year of Birth</label>
-                <input type="text" className="form-control" id="first-name" />
+                <label htmlFor="first-name">Month / Day /	Year of Birth</label>
+                <input type="Date" className="form-control" id="first-name" />
             </div>
             <div className="form-group w-40">
                 <label htmlFor="last-name">Gender</label>
@@ -48,13 +63,10 @@ const GeneralSettings2 = () => {
         </div>
 
        <div className='form-group1'> 
-          <div className="form-group w-30">
-                <label htmlFor="first-name">Time Zone</label>
-                <input type="text" className="form-control" id="Time-Zone" />
-            </div>
+
             <div className="form-group w-30">
                 <label htmlFor="last-name">Country</label>
-                <select>
+                {/* <select>
     <option value="  " selected>Select a country</option>
     <option value="--">Not Specified</option>
     <option value="AF">Afghanistan</option>
@@ -296,11 +308,25 @@ const GeneralSettings2 = () => {
     <option value="YU">Yugoslavia</option>
     <option value="ZM">Zambia</option>
     <option value="ZW">Zimbabwe</option>
-                </select>
+                </select> */}
+                                                 <ReactFlagsSelect
+                                    selected={selected}
+                                    onSelect={(code) => setSelected(code)}
+                                    selectButtonClassName='SelectCountry'
+                                />
             </div>
             <div className="form-group w-30">
                 <label htmlFor="last-name">City</label>
                 <input type="text" className="form-control" id="City" />
+            </div>
+            <div className="form-group w-30">
+                <label htmlFor="first-name">Time Zone</label>
+                {/* <input type="text" className="form-control" id="Time-Zone" /> */}
+                {/* <TimezoneSelect
+                  value={selectedTimezone}
+                  onChange={setSelectedTimezone}
+                  selectButtonClassName='SelectCountry'
+                /> */}
             </div>
         </div>
         <div className='form-group1'> 

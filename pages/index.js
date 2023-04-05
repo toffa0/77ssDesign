@@ -5,9 +5,11 @@ import ImageSlider from'@/components/LogoSlider'
 import Link from 'next/link'
 import Footer2 from '@/components/footer2'
 import Footer from '@/components/footer'
+import React, { useState } from 'react';
 
 // const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
+  const [isOpen, setOpen] = useState(false);
   return (
     <>
       <Head>
@@ -67,12 +69,37 @@ export default function Home() {
         <section className=' mainscr section '>
         <h1 className='next_text_st'>Categories:</h1>
         <div className='max'>
-        <ImageSlider></ImageSlider>
+        <div className='cat-card-cont mb-32'>
+
+          
+        <Link href="/categories2" className='cat-card' onClick={() => setOpen(!isOpen)}>
+   <Image src='catlogo1.svg' alt="" width={177.03} height={177.03}/>
+
+</Link>
+<Link href="/categories2" className='cat-card' onClick={() => setOpen(!isOpen)}>
+   <Image src='catlogo2.svg' alt="" width={219.72} height={195}/>
+</Link>
+<Link href="/categories2" className='cat-card' onClick={() => setOpen(!isOpen)}>
+   <Image src='catlogo5.svg' alt="" width={67.05} height={64.46}/>
+</Link>
+<Link href="/categories2" className='cat-card' onClick={() => setOpen(!isOpen)}>
+    <Image src='catlogo3.svg' alt="" width={77.52} height={85.27}/>
+</Link>
+
+<Link href="/categories2" className='cat-card' onClick={() => setOpen(!isOpen)}>
+  <Image src='catlogo4.svg' alt="" width={104.48} height={83.58}/>
+  </Link>
+
+    {/* <Link href="/categories2"> */}
+      <Link href="/categories2" className={`cat-card drop-down-menu ${isOpen ? "open" : ""}`} onClick={() => setOpen(!isOpen)}>
+    {/* <Image source={require('./cat8.png') }alt="" width={96} height={51}/> */}
+    <span>Others</span>
+      </Link>
+      
+
+</div>
         </div>
        
-        <div className='part'>
-        <Link href="/categories2" className='Link1'>Get Started</Link>
-        </div>
         </section>
         <section className=' mainscr'>
           <div className='part2'>
@@ -104,11 +131,11 @@ export default function Home() {
 
     
     <section className="section m-tb-auto">
-    <div className="w-43 prel">
+    <div className="w-50 prel">
         <Image src="home3.svg" alt="your-image" className='home3-img' width={578} height={490} />
         <Image src="home33.svg" alt="your-image" className='home33-img' width={578} height={490} />
       </div>
-      <div className='w-51'>
+      <div className='w-40'>
         <h1 className="home3">Hiring Steps</h1>
         <ol className='ol-home'>
           <li>Submit a creative brief</li>

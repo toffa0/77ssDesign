@@ -49,10 +49,10 @@ const Aboutbusiness= ()=>{
             </div>
             <div className="fl fl-gap47 ">
                 <label>Attach your logo</label>
-                <div className="fl fl-gap10">
+                <div className="fl fl-gap10 w-80">
 
                 
-                <div className="plusabout">
+                <div className="plusabout ">
                     <Image src="+.svg" alt="" width={27} height={27} />
                     <p>Please attach</p>
                 </div>
@@ -64,12 +64,12 @@ const Aboutbusiness= ()=>{
                 </div>
                 </div>
             </div>
-            <div className="fl fl-gapp16">
-                <div className="fl fl-gap10 ">
-                    <input type="checkbox" id="inptabout" />
+            <div className="fl fl-gap47">
+                <div className="fl fl-gap10 w-46">
+                    <input type="checkbox" id="yes" />
                     <label>No logo</label>
                 </div>
-                <div>
+                <div className="w-74">
                     <p>Start a logo contest first</p>
                 </div>
             </div>

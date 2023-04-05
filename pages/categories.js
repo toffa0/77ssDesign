@@ -34,7 +34,7 @@ const  Categories = () => {
         <div className=''>
       
         
-        <div className='cat-card-cont mb-32'>
+      <div className='cat-card-cont mb-32'>
 
           
         <div className='cat-card' onClick={() => setOpen(!isOpen)}>
@@ -61,13 +61,7 @@ const  Categories = () => {
             <span>All Categories</span>
         </div>
         
-      
-
-
-
-
-
-</div>
+      </div>
 { isOpen &&
         <div className='cat-menu-bg' id='cat-menu'>
 

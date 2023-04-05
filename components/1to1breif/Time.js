@@ -29,8 +29,14 @@ const Time= ({cosn,setBudget_from,setBudget_to,setTimeline,setPortfolio_allowed}
             <div className="fl fl-gap47">
                 <label>Your budget:</label>
                 <div className="fl-col w-101 fl-gap8">
-                <input id="w-100" placeholder="Guide: $199 - $799 " onChange={e => TimelineOnchange(e.target.value)} />
-                <span>Designer will provide a quote</span>
+                    <div className="fl budget">
+                        <input id="w-100" placeholder="Guide: $199 - $799 " onChange={e => TimelineOnchange(e.target.value)} />
+                        <select>
+                            <option>EGP</option>
+                            <option>$</option>
+                        </select>
+                    </div>
+                    <span>Designer will provide a quote</span>
                 </div>
             </div>
             <div className="fl-col yoyoy jst-SB">

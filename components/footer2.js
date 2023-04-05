@@ -10,7 +10,7 @@ const Footer2 = () => {
     <ul>
       <li><h2 id="footercatTitle">Design Services</h2></li>
       <li><Link href="#" icon="check" text="Link 2" >Design Contest</Link></li>
-      <li><Link href="#" icon="check" text="Link 3" >Hiring (1 to1)</Link></li>
+      <li><Link href="#" icon="check" text="Link 3" >Hiring 1 to 1</Link></li>
       <li><Link href="#" icon="check" text="Link 4" >Agencies 360</Link></li>
       <li><Link href="/categories" icon="check" text="Link 5" >77S design Studio</Link></li>
       <li><Link href="#" icon="check" text="Link 6" >Find a Designer</Link></li>

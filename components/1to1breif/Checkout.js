@@ -1,7 +1,12 @@
 import Image from 'next/image'
-
+import ReactFlagsSelect from "react-flags-select";
+import React, { useState } from "react";
+import 'react-phone-input-2/lib/style.css'
+import PhoneInput from 'react-phone-input-2'
 
 const Checkout= ({handleDataCheckout})=>{
+    const [selected, setSelected] = useState("");
+    const [value, setValue] = useState()
     return(
         <div className="checkout-cont">
             <div className="fl jstfe">
@@ -85,12 +90,18 @@ const Checkout= ({handleDataCheckout})=>{
                             <input placeholder='' className='inptw' />
                         </div>
                     </div>
-                    <div className='mobsec'>
-                        <select>
-                            <option>Country code</option>
-                        </select>
-                        <input className='mobinpt' id='bodernone'/>
-                    </div>
+
+                    <div className='fl-col fl-gap10'>
+                            <label>Phone number</label>
+                       
+                    <PhoneInput
+                        placeholder="Enter phone number"
+                        value={value}
+                        onChange={setValue}
+                        inputClass="mobileFlag"
+                        country='us'
+                        />
+                    </div>   
                     <div className='fl jst-SB'>
                         <div className='fl-col fl-gap10 w-40'>
                             <label>Company Name (opt.)</label>
@@ -149,9 +160,14 @@ const Checkout= ({handleDataCheckout})=>{
                         <div className='fl jst-SB'>
                             <div className='fl-col gap5 w-40'>
                                 <label>Country </label>
-                                <select>
+                                {/* <select>
                                     <option></option>
-                                </select>
+                                </select> */}
+                                 <ReactFlagsSelect
+                                    selected={selected}
+                                    onSelect={(code) => setSelected(code)}
+                                    selectButtonClassName='SelectCountry'
+                                />
                             </div>
                             <div className='fl-col gap5 w-40'>
                                 <label>Zip code</label>

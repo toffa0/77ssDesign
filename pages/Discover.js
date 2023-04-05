@@ -5,9 +5,11 @@ import Card from "@/components/profcard"
 import Image from 'next/image'
 import { FaThumbsUp } from "react-icons/fa";
 import Footer2 from '@/components/footer2';
-import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising, industriesMenu} from "../components/consts"
+import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising,industriesMenu } from "../components/consts"
+import Select from "react-select";
 
 const Discover = ()=>{
+    const [selectedOption, setSelectedOption] = useState("");
     const [isOpen, setOpen] = useState(false);
     const [ActiveCat, setActiveCat] = useState('');
     const [listItems, setListItems] = useState([
@@ -23,6 +25,12 @@ const Discover = ()=>{
         setActiveCat(e)
         console.log(ActiveCat)
       }
+
+
+      const industriesMenustrAscending = [...industriesMenu].sort((a, b) =>
+      a.label > b.label ? 1 : -1,
+    );
+    console.log(industriesMenustrAscending);
   return (
     <div className="ProfilePage">
         <div className='mainscr '>
@@ -38,7 +46,7 @@ const Discover = ()=>{
         { 
         <div className='w-101 '>
             <div className='pd-1 disc-head'>
-             <h1>Discover design ideas & inspiration</h1>
+             <h1 id='FFBold'>Discover design ideas & inspiration</h1>
             </div>
 
             <div className='pd-1 disc-fil'>
@@ -53,16 +61,31 @@ const Discover = ()=>{
                     <option value="Illustration">Illustration-Graphics</option>
                 </select>
 
-                <select className="filter filter-contin" id="filter2">
+                {/* <select className="filter filter-contin" id="filter2" maxMenuHeight={175}>
                 <option value="volvo" >All industries</option>
                 {
                   industriesMenu.map((item) => (
                     <option key={item.id}>{item.text}</option>
                   ))
                   }
-                </select>
-
-
+                </select> */}
+                <div>
+                <Select  
+                // className="filter filter-contin"  id="filter2"
+                        defaultValue={selectedOption}
+                        onChange={setSelectedOption}
+                        options={industriesMenustrAscending}
+                        isSearchable={true}
+                        maxMenuHeight="150px"
+                        placeholder="All Industries"
+                        classNames={{
+                          control: (state) =>
+                            state.isFocused ? 'filter10' : 'filter10',
+                          
+                          
+                        }}
+                />
+                </div>
                 </div>
                 <input   placeholder='Search' className='filterSearch'/>
                
