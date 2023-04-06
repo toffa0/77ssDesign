@@ -76,7 +76,7 @@ const AccountSettings = () => {
 
       <div className=" mainscr h-60v ">
       <div className="max">
-        {activeComponent === "General" && <GeneralSettings2 TimezoneSelect={TimezoneSelect} />}
+        {activeComponent === "General" && <GeneralSettings2 />}
         {activeComponent === "Profile" && <ProfileSettings />}
         {activeComponent === "Experience" && <ExperSettings />}
         {activeComponent === "Notifications" && <NotificationsSettings />}
