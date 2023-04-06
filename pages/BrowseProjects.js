@@ -100,7 +100,7 @@ const BrowseProjects = ()=>{
                 {/* First Select */}
                 <div  className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
                   <p>{AllCategories}</p>
-                  <div  className='SelectMenu' id={AllCategoriesisOpen?"":"DN"}>
+                  <div  style={{height:"max-content"}} className='SelectMenu'  id={AllCategoriesisOpen?"":"DN"}>
                     <ul>
                     {
                       AllCategoriesItems.map((item) => (

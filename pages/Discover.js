@@ -79,7 +79,7 @@ const Discover = ()=>{
                 </select> */}
                 <div style={{width:"320px"}} className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
                   <p>{AllCategories}</p>
-                  <div style={{width:"320px"}} className='SelectMenu' id={AllCategoriesisOpen?"":"DN"}>
+                  <div   style={{width:"320px",height:"max-content"}} className='SelectMenu' id={AllCategoriesisOpen?"":"DN"}>
                     <ul>
                     {
                       AllCategoriesItems.map((item) => (
