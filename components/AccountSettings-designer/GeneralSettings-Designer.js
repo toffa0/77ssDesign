@@ -321,7 +321,7 @@ const GeneralSettings2 = ({TimezoneSelect}) => {
             </div>
             <div className="form-group w-30">
                 <label htmlFor="first-name">Time Zone</label>
-                {/* <input type="text" className="form-control" id="Time-Zone" /> */}
+                <input value={selectedTimezone} type="text" className="form-control" id="Time-Zone" />
                 {/* <TimezoneSelect
                   value={selectedTimezone}
                   onChange={setSelectedTimezone}
