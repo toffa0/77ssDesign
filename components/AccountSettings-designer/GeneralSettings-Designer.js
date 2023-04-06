@@ -13,7 +13,7 @@ const GeneralSettings2 = ({TimezoneSelect}) => {
   const [selectedTimezone, setSelectedTimezone] =useState(
     Intl.DateTimeFormat().resolvedOptions().timeZone
   )
-
+  console.log(selectedTimezone)
 
 
   return (
@@ -322,11 +322,11 @@ const GeneralSettings2 = ({TimezoneSelect}) => {
             <div className="form-group w-30">
                 <label htmlFor="first-name">Time Zone</label>
                 {/* <input type="text" className="form-control" id="Time-Zone" /> */}
-                <TimezoneSelect
+                {/* <TimezoneSelect
                   value={selectedTimezone}
                   onChange={setSelectedTimezone}
                   selectButtonClassName='SelectCountry'
-                />
+                /> */}
             </div>
         </div>
         <div className='form-group1'> 

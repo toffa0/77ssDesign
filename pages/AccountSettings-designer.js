@@ -6,7 +6,7 @@ import ExperSettings from "@/components/AccountSettings-designer/exp-settings";
 import IDVerificationSettings2 from "@/components/AccountSettings-designer/IDVerificationSettings-Designer";
 import NotificationsSettings from "@/components/AccountSettings-designer/NotificationsSettings-Designer";
 import ProfileSettings from "@/components/AccountSettings-designer/ProfileSettings-Designer";
-import TimezoneSelect from 'react-timezone-select'
+// import TimezoneSelect from 'react-timezone-select'
 
 const AccountSettings = () => {
   const [activeComponent, setActiveComponent] = useState("General");
