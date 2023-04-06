@@ -21,6 +21,12 @@ const Discover = ()=>{
         { id: 6, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
         { id: 7, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
       ]);
+      const [AllIndustries, setAllIndustries] = useState("All Industries");
+      const [IndustriesisOpen, setIndustriesOpen] = useState(false);
+      function IndustClick(item){
+        setAllIndustries(item);
+        setIndustriesOpen(!IndustriesisOpen)
+      }
       function handle(e){
         setActiveCat(e)
         console.log(ActiveCat)
@@ -70,8 +76,7 @@ const Discover = ()=>{
                   }
                 </select> */}
                 <div>
-                <Select  
-                // className="filter filter-contin"  id="filter2"
+                {/* <Select  
                         defaultValue={selectedOption}
                         onChange={setSelectedOption}
                         options={industriesMenustrAscending}
@@ -84,7 +89,19 @@ const Discover = ()=>{
                           
                           
                         }}
-                />
+                /> */}
+                <div style={{width:"320px"}} className="filter2 prel" id="filter3" onClick={()=>setIndustriesOpen(!IndustriesisOpen)}>
+                <p>{AllIndustries}</p>
+                <div style={{width:"320px"}} className='SelectMenu' id={IndustriesisOpen?"":"DN"}>
+                  <ul>
+                {
+                  industriesMenu.map((item) => (
+                    <button key={item.id} onClick={()=>IndustClick(item.label)}>{item.label}</button>
+                  ))
+                }
+                 </ul>
+                </div>
+                </div>
                 </div>
                 </div>
                 <input   placeholder='Search' className='filterSearch'/>

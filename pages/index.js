@@ -35,10 +35,10 @@ export default function Home() {
       </div>
       <div> 
       <form className="sr-div2 fl jst">
-                <input type="text" name='' placeholder="Logo, Brand Identity, Packaging . . ." />
+                <input type="text" name='' placeholder="Logo, Brand Identity, Packaging . . ." id='select_arrow' />
                 <select name="test">
                   <option value="CONTESTPROJECT">CONTEST </option>
-                  <option value="CONTESTPROJECT">PROJECT</option>
+                  <option value="CONTESTPROJECT">HIRING</option>
                 </select>
                 <input type="submit" name=''  value="Start" /> 
             </form>

@@ -1,12 +1,12 @@
 import ReactFlagsSelect from "react-flags-select";
 import React, { useState } from "react";
 import 'react-phone-input-2/lib/style.css'
-// import TimezoneSelect from 'react-timezone-select'
+
 import PhoneInput from 'react-phone-input-2'
 
 
 
-const GeneralSettings2 = () => {
+const GeneralSettings2 = ({TimezoneSelect}) => {
   
   const [selected, setSelected] = useState("");
   const [value, setValue] = useState()
@@ -322,11 +322,11 @@ const GeneralSettings2 = () => {
             <div className="form-group w-30">
                 <label htmlFor="first-name">Time Zone</label>
                 {/* <input type="text" className="form-control" id="Time-Zone" /> */}
-                {/* <TimezoneSelect
+                <TimezoneSelect
                   value={selectedTimezone}
                   onChange={setSelectedTimezone}
                   selectButtonClassName='SelectCountry'
-                /> */}
+                />
             </div>
         </div>
         <div className='form-group1'> 

@@ -2063,6 +2063,7 @@ width: 22%;
   font-size: 16px;
   color: #545457;
   text-overflow: ellipsis;
+  cursor: pointer;
 }
 .h342{
   height: 320px;
@@ -2180,7 +2181,7 @@ color: #9E9EA3;
   width: 118%;
   height: 80px;
   background: white;
-  max-width: 602px;
+  max-width: 641px;
   
   
   gap: 10px;
@@ -5596,9 +5597,73 @@ outline: none;
   width: 95px;
 
 }
+.abs1{
+  position: absolute;
+  right: 157px;
+  top: 17px;
+  background: white;
+}
+.abs2{
+  position: absolute;
+  right: 125px;
+  top: 17px;
+  background: white;
 
+}
+.abs3{
+  position: absolute;
+  right: 93px;
+  top: 17px;
+  background: white;
 
+}
+.abs4{
+  position: absolute;
+  left: 90px;
+  top: 17px;
+  background: white;
 
+}
+.abs5{
+  position: absolute;
+  left: 162px;
+  top: 17px;
+  background: white;
+
+}
+.SelectMenu{
+  
+  position: absolute;
+  background: #F5F7FA;
+  box-shadow: 5px 5px 37px rgba(0, 199, 199, 0.17);
+  top:  50px;
+  left: 0;
+  width: 225.21px;
+  height: 300px;
+  border-radius: 7px;
+  overflow-y: scroll;
+  padding: 4px;
+}
+.SelectMenu button{
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.5;
+  color: #545457;
+  border-bottom: 1px solid #000000;
+  z-index: 9999;
+  cursor: pointer;
+}
+.SelectMenu button:hover{
+  background-color: lightgrey;
+}
+.SelectMenu button:last-child{
+  border: none;
+}
 
 #DF{
   display: flex;
@@ -6013,3 +6078,15 @@ outline: none;
 /* .ReactFlagsSelect-module_flagsSelect__2pfa2{
   padding-bottom: 0;
 } */
+
+#select_arrow{
+  background: url('../public/selectarrow.svg') #fff no-repeat 100% !important;
+}
+.react-tel-input .country-list .search-box{
+  height: 32px !important;
+}
+
+.ReactFlagsSelect-module_filterBox__3m8EU input{
+  height: 32px !important;
+
+}

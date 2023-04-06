@@ -20,8 +20,12 @@ const BrowseContest = ()=>{
         { id: 6, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
         { id: 7, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
       ]);
-
-
+      const [AllIndustries, setAllIndustries] = useState("All Industries");
+      const [IndustriesisOpen, setIndustriesOpen] = useState(false);
+      function IndustClick(item){
+        setAllIndustries(item);
+        setIndustriesOpen(!IndustriesisOpen)
+      }
       const [ActiveCat, setActiveCat] = useState('');
       function handle(e){
         setActiveCat(e)
@@ -95,14 +99,26 @@ const BrowseContest = ()=>{
                   ))
                   }
                 </select>
-                <select className="filter2" id="filter3">
+                {/* <select className="filter2" id="filter3">
                 <option value="volvo" >All industries</option>
                 {
                   industriesMenu.map((item) => (
                     <option key={item.id}>{item.text}</option>
                   ))
                   }
-                </select>
+                </select> */}
+                <div className="filter2 prel" id="filter3" onClick={()=>setIndustriesOpen(!IndustriesisOpen)}>
+                <p>{AllIndustries}</p>
+                <div className='SelectMenu' id={IndustriesisOpen?"":"DN"}>
+                  <ul>
+                {
+                  industriesMenu.map((item) => (
+                    <button key={item.id} onClick={()=>IndustClick(item.label)}>{item.label}</button>
+                  ))
+                }
+                 </ul>
+                </div>
+                </div>
                 </div>
                 
                

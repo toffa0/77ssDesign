@@ -100,6 +100,7 @@ const Checkout= ({handleDataCheckout})=>{
                         onChange={setValue}
                         inputClass="mobileFlag"
                         country='us'
+                        enableSearch
                         />
                     </div>   
                     <div className='fl jst-SB'>
@@ -167,6 +168,7 @@ const Checkout= ({handleDataCheckout})=>{
                                     selected={selected}
                                     onSelect={(code) => setSelected(code)}
                                     selectButtonClassName='SelectCountry'
+                                    searchable
                                 />
                             </div>
                             <div className='fl-col gap5 w-40'>

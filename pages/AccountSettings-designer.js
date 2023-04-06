@@ -6,6 +6,8 @@ import ExperSettings from "@/components/AccountSettings-designer/exp-settings";
 import IDVerificationSettings2 from "@/components/AccountSettings-designer/IDVerificationSettings-Designer";
 import NotificationsSettings from "@/components/AccountSettings-designer/NotificationsSettings-Designer";
 import ProfileSettings from "@/components/AccountSettings-designer/ProfileSettings-Designer";
+import TimezoneSelect from 'react-timezone-select'
+
 const AccountSettings = () => {
   const [activeComponent, setActiveComponent] = useState("General");
   
@@ -74,7 +76,7 @@ const AccountSettings = () => {
 
       <div className=" mainscr h-60v ">
       <div className="max">
-        {activeComponent === "General" && <GeneralSettings2 />}
+        {activeComponent === "General" && <GeneralSettings2 TimezoneSelect={TimezoneSelect} />}
         {activeComponent === "Profile" && <ProfileSettings />}
         {activeComponent === "Experience" && <ExperSettings />}
         {activeComponent === "Notifications" && <NotificationsSettings />}

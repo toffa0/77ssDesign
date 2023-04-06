@@ -1,6 +1,9 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useCallback } from "react";
 import Dot from "@/components/Dot";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
+import Link from "next/link";
+
 const Submitdesgin = ()=>{
 
     const [dot, setDot] = useState(null);
@@ -148,6 +151,10 @@ const Submitdesgin = ()=>{
         },0);
       }
 
+
+      const handle = useFullScreenHandle();
+
+
 return(
     <div className="max3 fl h-90">
         <div className="w-35 sb-col1">
@@ -157,7 +164,7 @@ return(
                         <p>#3</p>
                         <span>by designer name</span>
                     </div>
-                    <button className="IconBtn"><Image src="ChatBtn.svg" alt="" width={32.4} height={27} /> </button>
+                    <Link href="/ProjectsMessage" className="IconBtn"><Image src="ChatBtn.svg" alt="" width={32.4} height={27} /> </Link>
                 </div>
                 
                 <div className="fl  fl-gap2 mb-32">
@@ -215,7 +222,15 @@ return(
     
         </div>
         <div className="sb-col2" >
+
+            <button className="IconBtn abs1"><Image src="SearchComm.svg" alt='' width={19} height={19} onClick={console.log("Search")}  /></button>
+            <button className="IconBtn abs2"><Image src="FullScreen.svg" alt='' width={19} height={19} onClick={handle.enter}  /></button>
+            <button className="IconBtn abs3"><Image src="CloseComm.svg" alt='' width={19} height={19} onClick={console.log("close")}  /></button>
+            <button className="IconBtn abs4"><Image src="CommLeft.svg" alt='' width={19} height={19} onClick={console.log("Left")}  /></button>
+            <button className="IconBtn abs5"><Image src="CommRight.svg" alt='' width={19} height={19} onClick={console.log("Right")}  /></button>
+            <FullScreen handle={handle}>
             <Image src="subex1.svg" alt='' width={928} height={928} onClick={handleDrawClick}  />
+            </FullScreen>
             
             {dot!=null && <Dot x={dot.x} y={dot.y} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} DotID={0} /> }  
             {dot!=null && <FeedBackInp x={dot.x} y={dot.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot}  /> }       
