@@ -5,7 +5,7 @@ import Card from "@/components/profcard"
 import Image from 'next/image'
 import { FaThumbsUp } from "react-icons/fa";
 import Footer2 from '@/components/footer2';
-import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising,industriesMenu } from "../components/consts"
+import {AllCategoriesItems,industriesMenu } from "../components/consts"
 import Select from "react-select";
 
 const Discover = ()=>{
@@ -26,14 +26,25 @@ const Discover = ()=>{
       function IndustClick(item){
         setAllIndustries(item);
         setIndustriesOpen(!IndustriesisOpen)
+        
       }
+      const [AllCategories, setAllCategories] = useState("All Categories");
+      const [AllCategoriesisOpen, setAllCategoriesOpen] = useState(false);
+      function CategoryClick(item){
+        setAllCategories(item);
+        setAllCategoriesOpen(!AllCategoriesisOpen)
+        
+      }
+
+
+
       function handle(e){
         setActiveCat(e)
         console.log(ActiveCat)
       }
 
 
-      const industriesMenustrAscending = [...industriesMenu].sort((a, b) =>
+    const industriesMenustrAscending = [...industriesMenu].sort((a, b) =>
       a.label > b.label ? 1 : -1,
     );
     console.log(industriesMenustrAscending);
@@ -58,15 +69,26 @@ const Discover = ()=>{
             <div className='pd-1 disc-fil'>
                 <div className='fl fl-gap32'>
                   
-                <select className="filter filter-contin" id="filter" placeholder='All categories' onChange={(e)=>handle(e.currentTarget.value)}>
+                {/* <select className="filter filter-contin" id="filter" placeholder='All categories' onChange={(e)=>handle(e.currentTarget.value)}>
                     <option value="" >All Categories</option>
                     <option value="Logo-brand">Logo-brand identity</option>
                     <option value="Business-Advertising">Business-Advertising</option>
                     <option value="Web-App">Web-App design</option>
                     <option value="Clothing">Clothing-Merchandise</option>
                     <option value="Illustration">Illustration-Graphics</option>
-                </select>
-
+                </select> */}
+                <div style={{width:"320px"}} className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
+                  <p>{AllCategories}</p>
+                  <div style={{width:"320px"}} className='SelectMenu' id={AllCategoriesisOpen?"":"DN"}>
+                    <ul>
+                    {
+                      AllCategoriesItems.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.Text)}>{item.Text}</button>
+                      ))
+                    }
+                    </ul>
+                  </div>
+                </div>
                 {/* <select className="filter filter-contin" id="filter2" maxMenuHeight={175}>
                 <option value="volvo" >All industries</option>
                 {
@@ -75,7 +97,7 @@ const Discover = ()=>{
                   ))
                   }
                 </select> */}
-                <div>
+                
                 {/* <Select  
                         defaultValue={selectedOption}
                         onChange={setSelectedOption}
@@ -90,19 +112,19 @@ const Discover = ()=>{
                           
                         }}
                 /> */}
-                <div style={{width:"320px"}} className="filter2 prel" id="filter3" onClick={()=>setIndustriesOpen(!IndustriesisOpen)}>
-                <p>{AllIndustries}</p>
-                <div style={{width:"320px"}} className='SelectMenu' id={IndustriesisOpen?"":"DN"}>
-                  <ul>
-                {
-                  industriesMenu.map((item) => (
-                    <button key={item.id} onClick={()=>IndustClick(item.label)}>{item.label}</button>
-                  ))
-                }
-                 </ul>
+                <div style={{width:"320px"}} className="filter2 prel" id="filter3" onClick={()=>{setIndustriesOpen(!IndustriesisOpen);setAllCategoriesOpen(false)}}>
+                  <p>{AllIndustries}</p>
+                  <div style={{width:"320px"}} className='SelectMenu' id={IndustriesisOpen?"":"DN"}>
+                    <ul>
+                    {
+                      industriesMenustrAscending.map((item) => (
+                        <button key={item.id} onClick={()=>IndustClick(item.label)}>{item.label}</button>
+                      ))
+                    }
+                    </ul>
+                  </div>
                 </div>
-                </div>
-                </div>
+                
                 </div>
                 <input   placeholder='Search' className='filterSearch'/>
                

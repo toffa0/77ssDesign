@@ -8,7 +8,7 @@ import Footer2 from '@/components/footer2';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { BASE_URL ,API_VERSION } from '@/config';
-import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising, industriesMenu} from "../components/consts"
+import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising, industriesMenu,AllCategoriesItems} from "../components/consts"
 
 const BrowseProjects = ()=>{
     const [isOpen, setOpen] = useState(false);
@@ -24,13 +24,14 @@ const BrowseProjects = ()=>{
         { id: 7, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
       ]);
 
+    const [ProjectItems, setProjectItems] = useState([]);
       
     useEffect(()=>{
         
         fetch(`${BASE_URL}/${API_VERSION}/project/`, {
       })
       .then(response => {return response.json()})
-      .then(data => console.log(data))
+      .then(data => {console.log(data);setProjectItems(data)})
       .catch(error => console.error(error));
 
 
@@ -48,7 +49,23 @@ const BrowseProjects = ()=>{
       setAllIndustries(item);
       setIndustriesOpen(!IndustriesisOpen)
     }
-
+    const [AllCategories, setAllCategories] = useState("All Categories");
+    const [AllCategoriesisOpen, setAllCategoriesOpen] = useState(false);
+    function CategoryClick(item){
+      setAllCategories(item);
+      setAllCategoriesOpen(!AllCategoriesisOpen)
+      
+    }
+    const [Allsubcategories, setAllsubcategories] = useState("All subcategories");
+    const [AllsubcategoriesisOpen, setAllsubcategoriesOpen] = useState(false);
+    function SubCategoryClick(item){
+      setAllsubcategories(item);
+      setAllsubcategoriesOpen(!AllCategoriesisOpen)
+      
+    }
+    const industriesMenustrAscending = [...industriesMenu].sort((a, b) =>
+    a.label > b.label ? 1 : -1,
+    );
   return (
     <div className="ProfilePage">
         <div className='mainscr '>
@@ -72,17 +89,66 @@ const BrowseProjects = ()=>{
             <div className='w-80 fl-col fl-gap32'>
             <div className=' disc-fil2 firstline'>
                 <div className='head-w'>
-                <select className="filter2" id="filter2" placeholder='All categories' onChange={(e)=>handle(e.currentTarget.value)}>
+                {/* <select className="filter2" id="filter2" placeholder='All categories' onChange={(e)=>handle(e.currentTarget.value)}>
                     <option value="" >All Categories</option>
                     <option value="Logo-brand">Logo-brand identity</option>
                     <option value="Business-Advertising">Business-Advertising</option>
                     <option value="Web-App">Web-App design</option>
                     <option value="Clothing">Clothing-Merchandise</option>
                     <option value="Illustration">Illustration-Graphics</option>
-                </select>
+                </select> */}
+                {/* First Select */}
+                <div  className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
+                  <p>{AllCategories}</p>
+                  <div  className='SelectMenu' id={AllCategoriesisOpen?"":"DN"}>
+                    <ul>
+                    {
+                      AllCategoriesItems.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.Text)}>{item.Text}</button>
+                      ))
+                    }
+                    </ul>
+                  </div>
+                </div>
+                {/* //////////////////////////////////////////////// */}
+                {/* Second Select */}
+                <button disabled={AllCategories==="All Categories"}  className="filter2 prel" id="filter3" onClick={()=>{setAllsubcategoriesOpen(!AllsubcategoriesisOpen);setIndustriesOpen(false)}}>
+                  <p className='Selectp'>{Allsubcategories}</p>
+                  <div  className='SelectMenu' id={AllsubcategoriesisOpen?"":"DN"}>
+                    <ul>
+                    {AllCategories==="Logo-brand identity"&&
+                      Logoidentity.map((item) => (
+                        <button key={item.id} onClick={()=>SubCategoryClick(item.text)}>{item.text}</button>
+                      ))
 
+                    }
+                    {AllCategories==="Business-Advertising"&&
+                      Businessadvertising.map((item) => (
+                        <button key={item.id} onClick={()=>SubCategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+                    {AllCategories==="Web-App design"&&
+                      Webdesign.map((item) => (
+                        <button key={item.id} onClick={()=>SubCategoryClick(item.text)}>{item.text}</button>
+                      ))
 
-                <select className="filter2" id="filter2" disabled={ActiveCat===""}>
+                    }
+                    {AllCategories==="Clothing-Merchandise"&&
+                      ClothingMerchandise.map((item) => (
+                        <button key={item.id} onClick={()=>SubCategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+                    {AllCategories==="Illustration-Graphics" &&
+                    ArtIllustration.map((item) => (
+                      <button key={item.id} onClick={()=>SubCategoryClick(item.text)}>{item.text}</button>
+                    ))
+                    }
+                    </ul>
+                  </div>
+                </button>
+                {/* //////////////////////////////////////////////// */}
+
+                {/* <select className="filter2" id="filter2" disabled={ActiveCat===""}>
                 {ActiveCat===""?<option value="Subcategories">All Subcategories</option>
                 :<option value="Subcategories" disabled >All Subcategories</option>}
                   {ActiveCat==="Logo-brand"&&
@@ -115,7 +181,7 @@ const BrowseProjects = ()=>{
                     <option key={item.id}>{item.text}</option>
                   ))
                   }
-                </select>
+                </select> */}
 
                 {/* <select className="filter2" id="filter3">
                 <option value="volvo" >All industries</option>
@@ -126,16 +192,16 @@ const BrowseProjects = ()=>{
                   }
                 </select> */}
                 <div className="filter2 prel" id="filter3" onClick={()=>setIndustriesOpen(!IndustriesisOpen)}>
-                <p>{AllIndustries}</p>
-                <div className='SelectMenu' id={IndustriesisOpen?"":"DN"}>
-                  <ul>
-                {
-                  industriesMenu.map((item) => (
-                    <button key={item.id} onClick={()=>IndustClick(item.label)}>{item.label}</button>
-                  ))
-                }
-                 </ul>
-                </div>
+                  <p>{AllIndustries}</p>
+                  <div className='SelectMenu' id={IndustriesisOpen?"":"DN"}>
+                    <ul>
+                    {
+                      industriesMenustrAscending.map((item) => (
+                        <button key={item.id} onClick={()=>IndustClick(item.label)}>{item.label}</button>
+                      ))
+                    }
+                    </ul>
+                  </div>
                 </div>
                 </div>
 
@@ -237,13 +303,14 @@ const BrowseProjects = ()=>{
             <div className='w-101'>
             
             
-          {listItems.map((item) => (
+          {ProjectItems.map((item) => (
             
                 
-            <div key={item.id} className='disc-card-Proj'><Link href='#'>
+            <div key={item.id} className='disc-card-Proj'>
+              <Link href={{ pathname: "/commentdesign2", query: { id: item.id } }}>
 
-            <Image src="ex5.svg" alt='' width={783} height={147}  />
-            </Link>
+                <Image src="ex5.svg" alt='' width={783} height={147}  />
+              </Link>
             </div>
            
           ))}

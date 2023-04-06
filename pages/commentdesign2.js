@@ -3,6 +3,9 @@ import { useEffect, useState,useCallback } from "react";
 import Dot from "@/components/Dot";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import Link from "next/link";
+import { BASE_URL ,API_VERSION } from '@/config';
+import { useRouter } from "next/router";
+
 
 const Submitdesgin = ()=>{
 
@@ -21,6 +24,23 @@ const Submitdesgin = ()=>{
     const [AccountType, setAccountType] = useState('Client');
     const DotColor2="blue";
 
+
+
+    const router = useRouter();
+    // console.log(router.query.id);
+    useEffect(()=>{
+    // console.log(id)        
+        fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments`, {
+      })
+      .then(response => {return response.json()})
+      .then(data => {console.log(data)})
+      .catch(error => console.error(error));
+
+
+        
+    },[])
+    
+    
     function handleMouseEnter(id) {
         setIsHovering(true);
         setIsHoveringID(id)
@@ -223,12 +243,12 @@ return(
         </div>
         <div className="sb-col2" >
 
-            <button className="IconBtn abs1"><Image src="SearchComm.svg" alt='' width={19} height={19} onClick={console.log("Search")}  /></button>
+            <button className="IconBtn abs1"><Image src="SearchComm.svg" alt='' width={19} height={19} onClick={()=>console.log("Search")}  /></button>
             <button className="IconBtn abs2"><Image src="FullScreen.svg" alt='' width={19} height={19} onClick={handle.enter}  /></button>
-            <button className="IconBtn abs3"><Image src="CloseComm.svg" alt='' width={19} height={19} onClick={console.log("close")}  /></button>
-            <button className="IconBtn abs4"><Image src="CommLeft.svg" alt='' width={19} height={19} onClick={console.log("Left")}  /></button>
-            <button className="IconBtn abs5"><Image src="CommRight.svg" alt='' width={19} height={19} onClick={console.log("Right")}  /></button>
-            <FullScreen handle={handle}>
+            <button className="IconBtn abs3"><Image src="CloseComm.svg" alt='' width={19} height={19} onClick={()=>console.log("close")}  /></button>
+            <button className="IconBtn abs4"><Image src="CommLeft.svg" alt='' width={19} height={19} onClick={()=>console.log("Left")}  /></button>
+            <button className="IconBtn abs5"><Image src="CommRight.svg" alt='' width={19} height={19} onClick={()=>console.log("Right")}  /></button>
+            <FullScreen handle={handle} style={{display:"flex",justifyContent:"center"}}>
             <Image src="subex1.svg" alt='' width={928} height={928} onClick={handleDrawClick}  />
             </FullScreen>
             

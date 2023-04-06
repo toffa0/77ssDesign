@@ -200,7 +200,7 @@ export const cardData2=[
   { id: 12, img:"greyrect.svg"},
 ];
 
-export const AllCategories=[
+export const AllCategoriesItems=[
   { id: 1, Text:"Logo-brand identity"},
   { id: 2, Text:"Business-Advertising"},
   { id: 3, Text:"Web-App design"},        
