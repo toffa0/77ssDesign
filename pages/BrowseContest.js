@@ -72,7 +72,7 @@ const BrowseContest = ()=>{
             <div className='w-80 fl-col fl-gap32'>
             <div className=' disc-fil2 firstline'>
                 <div className='head-w'>
-
+{/* 
                 <div style={{width:"320px"}}  className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
                   <p>{AllCategories}</p>
                   <div  style={{width:"320px",height:"max-content"}}  className='SelectMenu' id={AllCategoriesisOpen?"":"DN"}>
@@ -82,6 +82,52 @@ const BrowseContest = ()=>{
                         <button key={item.id} onClick={()=>CategoryClick(item.Text)}>{item.Text}</button>
                       ))
                     }
+                    </ul>
+                  </div>
+                </div> */}
+
+                <div style={{width:"320px"}}  className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
+                  <p>{AllCategories}</p>
+                  <div  style={{width:"320px"}}  className='SelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
+                    <ul>
+                      <h4 className='CatH4'>Logo & identity</h4>
+                      {
+                      Logoidentity.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                      }
+
+                    <h4 className='CatH4'>Web - UI/UX design</h4>
+                    {
+                      Webdesign.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+        
+
+                    <h4 className='CatH4'>Clothing & Merchandise</h4>
+                    {
+                      ClothingMerchandise.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+           
+
+                    <h4 className='CatH4'>Art & Illustration</h4>
+                    { 
+                    ArtIllustration.map((item) => (
+                      <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                    ))
+                    }
+        
+
+                    <h4 className='CatH4'>Business & advertising</h4>
+                    {
+                      Businessadvertising.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+
                     </ul>
                   </div>
                 </div>

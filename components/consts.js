@@ -240,3 +240,4 @@ export      const industriesMenu =[
   { id: 29, label: "Wedding service" },
   { id: 29, label: "Others" },
 ];
+
