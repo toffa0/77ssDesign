@@ -98,9 +98,9 @@ const BrowseProjects = ()=>{
                     <option value="Illustration">Illustration-Graphics</option>
                 </select> */}
                 {/* First Select */}
-                <div  className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
+                <div style={{width:"320px"}}  className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
                   <p>{AllCategories}</p>
-                  <div  style={{height:"max-content"}} className='SelectMenu'  id={AllCategoriesisOpen?"":"DN"}>
+                  <div  style={{width:"320px",height:"max-content"}} className='SelectMenu'  id={AllCategoriesisOpen?"":"DN"}>
                     <ul>
                     {
                       AllCategoriesItems.map((item) => (
@@ -112,7 +112,7 @@ const BrowseProjects = ()=>{
                 </div>
                 {/* //////////////////////////////////////////////// */}
                 {/* Second Select */}
-                <button disabled={AllCategories==="All Categories"}  className="filter2 prel" id="filter3" onClick={()=>{setAllsubcategoriesOpen(!AllsubcategoriesisOpen);setIndustriesOpen(false)}}>
+                {/* <button disabled={AllCategories==="All Categories"}  className="filter2 prel" id="filter3" onClick={()=>{setAllsubcategoriesOpen(!AllsubcategoriesisOpen);setIndustriesOpen(false)}}>
                   <p className='Selectp'>{Allsubcategories}</p>
                   <div  className='SelectMenu' id={AllsubcategoriesisOpen?"":"DN"}>
                     <ul>
@@ -145,7 +145,7 @@ const BrowseProjects = ()=>{
                     }
                     </ul>
                   </div>
-                </button>
+                </button> */}
                 {/* //////////////////////////////////////////////// */}
 
                 {/* <select className="filter2" id="filter2" disabled={ActiveCat===""}>
@@ -191,9 +191,9 @@ const BrowseProjects = ()=>{
                   ))
                   }
                 </select> */}
-                <div className="filter2 prel" id="filter3" onClick={()=>setIndustriesOpen(!IndustriesisOpen)}>
+                <div style={{width:"320px"}} className="filter2 prel" id="filter3" onClick={()=>setIndustriesOpen(!IndustriesisOpen)}>
                   <p>{AllIndustries}</p>
-                  <div className='SelectMenu' id={IndustriesisOpen?"":"DN"}>
+                  <div style={{width:"320px"}} className='SelectMenu' id={IndustriesisOpen?"":"DN"}>
                     <ul>
                     {
                       industriesMenustrAscending.map((item) => (
