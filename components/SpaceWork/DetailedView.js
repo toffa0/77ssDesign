@@ -27,6 +27,19 @@ const DetailedView = ({cardData})=>{
     setCurrentPage(pageNumber);
   };
 
+  const [currentDate, setCurrentDate] = useState('');
+useEffect(() => {
+
+  const interval = setInterval(() => {
+    var hours = new Date().getHours(); //Current Hours
+    var min = new Date().getMinutes(); //Current Minutes
+    var sec = new Date().getSeconds(); //Current Seconds
+    setCurrentDate(
+    hours + ':' + min + ':' + sec
+    );
+  }, 1000);
+
+},[] );
   return (
 <div>
     <div className='disc-card-cont2 fl-gap25'>
@@ -37,7 +50,7 @@ const DetailedView = ({cardData})=>{
             
             <Image src="greycircle.svg" width={78.65} height={78.65} alt="" />
             <p>Designer name</p>
-            <span>Local time</span>
+            <span>Local Time: {currentDate}</span>
             <div className='fl ali-cen gap3'>
             <input type="checkbox"/>
             <label>Select for final round</label>

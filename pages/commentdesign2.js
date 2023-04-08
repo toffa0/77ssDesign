@@ -184,7 +184,14 @@ return(
                         <p>#3</p>
                         <span>by designer name</span>
                     </div>
+                    <div className="fl fl-gapp16">
                     <Link href="/ProjectsMessage" className="IconBtn"><Image src="ChatBtn.svg" alt="" width={32.4} height={27} /> </Link>
+                    
+                    <button className="IconBtn Eliminate"><Image src="Eliminate.svg" alt="" width={27.08} height={27.08} />
+                    <p className="Eliminatehover">Eliminate </p>
+                    </button>
+                    
+                    </div>
                 </div>
                 
                 <div className="fl  fl-gap2 mb-32">
@@ -198,7 +205,8 @@ return(
                 <div className="fl  fl-gap2 jst-SB">
                 <Image src="5stars.svg" alt="" width={130} height={18.5} />
                 <button className="IconBtn"><Image src="trash.svg" alt="" width={19} height={22} /></button>
-                <button className="SD-btn4">Eliminate </button>
+                
+                
                 </div>
             </div>
             <div className="cd-csec fl-col mb-32">

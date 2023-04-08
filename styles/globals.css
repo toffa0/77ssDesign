@@ -5789,6 +5789,30 @@ button[disabled]{
 .BreifSelectMenu button:hover{
   background-color: lightgrey;
 }
+.Eliminate{
+  position: relative;
+}
+ .Eliminatehover{
+  content: "Eliminate";
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  width: 58px;
+  height: 16px;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  color: #FFFFFF;
+  background: #CACAD1;
+  border-radius: 3px;
+  display: none;
+}
+.Eliminate:hover .Eliminatehover{
+  display: block;
+}
+
 
 #DF{
   display: flex;
@@ -6212,11 +6236,13 @@ button[disabled]{
 }
 .react-tel-input .country-list .search-box{
   height: 32px !important;
+  
 }
 
 .ReactFlagsSelect-module_filterBox__3m8EU input{
   height: 32px !important;
   font-size: 15px !important;
+  width: 90% !important;
 }
 .ReactFlagsSelect-module_selectOptionValue__vS99-{
   color: #545457 !important;

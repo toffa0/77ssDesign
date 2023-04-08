@@ -309,10 +309,11 @@ const GeneralSettings2 = ({TimezoneSelect}) => {
     <option value="ZM">Zambia</option>
     <option value="ZW">Zimbabwe</option>
                 </select> */}
-                                                 <ReactFlagsSelect
+                                <ReactFlagsSelect
                                     selected={selected}
                                     onSelect={(code) => setSelected(code)}
                                     selectButtonClassName='SelectCountry'
+                                    searchable
                                 />
             </div>
             <div className="form-group w-30">

@@ -49,7 +49,7 @@ export default function Home() {
                   <input type="text" value={AllCategories} onChange={e => setAllCategories(e.target.value)} name='' placeholder="Logo, Brand Identity, Packaging . . ." />
                   <div    className='SelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
                     <ul>
-                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Logo & identity")}>Logo & identity</button>
+                    <h4 type='button' className='CatH4' >Logo & identity</h4>
                     
                       {
                       Logoidentity.map((item) => (
@@ -57,7 +57,7 @@ export default function Home() {
                       ))
                       }
 
-                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Web - UI/UX design")}>Web - UI/UX design</button>
+                    <h4 type='button' className='CatH4'>Web - UI/UX design</h4>
                     {
                       Webdesign.map((item) => (
                         <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
@@ -65,7 +65,7 @@ export default function Home() {
                     }
         
                     {/* <h4 className='CatH4'>Clothing & Merchandise</h4> */}
-                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Clothing & Merchandise")}>Clothing & Merchandise</button>
+                    <h4 type='button' className='CatH4' >Clothing & Merchandise</h4>
                     {
                       ClothingMerchandise.map((item) => (
                         <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
@@ -73,7 +73,7 @@ export default function Home() {
                     }
            
 
-                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Art & Illustration")}>Art & Illustration</button>
+                    <h4 type='button' className='CatH4'>Art & Illustration</h4>
                     { 
                     ArtIllustration.map((item) => (
                       <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
@@ -81,7 +81,7 @@ export default function Home() {
                     }
         
 
-                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Business & advertising")}>Business & advertising</button>
+                    <h4 type='button' className='CatH4' >Business & advertising</h4>
                     {
                       Businessadvertising.map((item) => (
                         <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>

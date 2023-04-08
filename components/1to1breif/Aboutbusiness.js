@@ -55,14 +55,14 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
                   <p id="catsele">{AllCategories}</p>
                   <div   className='BreifSelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
                     <ul>
-                    <button className='CatH4' onClick={()=>CategoryClick("Logo & identity")}>Logo & identity</button>
+                    <h4 className='CatH4' >Logo & identity</h4>
                       {
                       Logoidentity.map((item) => (
                         <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                       ))
                       }
 
-                    <button className='CatH4' onClick={()=>CategoryClick("Web - UI/UX design")}>Web - UI/UX design</button>
+                    <h4 className='CatH4' >Web - UI/UX design</h4>
                     {
                       Webdesign.map((item) => (
                         <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
@@ -70,7 +70,7 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
                     }
         
                     {/* <h4 className='CatH4'>Clothing & Merchandise</h4> */}
-                    <button className='CatH4' onClick={()=>CategoryClick("Clothing & Merchandise")}>Clothing & Merchandise</button>
+                    <h4 className='CatH4' >Clothing & Merchandise</h4>
                     {
                       ClothingMerchandise.map((item) => (
                         <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
@@ -78,7 +78,7 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
                     }
            
 
-                    <button className='CatH4' onClick={()=>CategoryClick("Art & Illustration")}>Art & Illustration</button>
+                    <h4 className='CatH4' >Art & Illustration</h4>
                     { 
                     ArtIllustration.map((item) => (
                       <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
@@ -86,7 +86,7 @@ const Aboutbusiness= ({setName, setLanguages, setIndustry, setDescription, setUr
                     }
         
 
-                    <button className='CatH4' onClick={()=>CategoryClick("Business & advertising")}>Business & advertising</button>
+                    <h4 className='CatH4' >Business & advertising</h4>
                     {
                       Businessadvertising.map((item) => (
                         <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
