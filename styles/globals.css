@@ -2214,7 +2214,7 @@ color: #9E9EA3;
   font-family:"Rotunda-medium";
 }
 .sr-div2 input[type="text"]{
-  width: 60%;
+  width: 100%;
   height: 90%;
   border: none;
   outline: none;

@@ -12,7 +12,7 @@ import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadver
 export default function Home() {
   const [isOpen, setOpen] = useState(false);
 
-  const [AllCategories, setAllCategories] = useState("Logo, Brand Identity, Packaging . . .");
+  const [AllCategories, setAllCategories] = useState("");
   const [AllCategoriesisOpen, setAllCategoriesOpen] = useState(false);
   function CategoryClick(item){
     setAllCategories(item);
@@ -44,9 +44,9 @@ export default function Home() {
       </div>
       <div> 
       <form className="sr-div2 fl jst">
-                {/* <input type="text" name='' placeholder="Logo, Brand Identity, Packaging . . ." id='select_arrow' /> */}
                 <div   className="SelectCat" id="" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen)}}>
-                  <p>{AllCategories}</p>
+                  {/* <p>{AllCategories}</p> */}
+                  <input type="text" value={AllCategories} onChange={e => setAllCategories(e.target.value)} name='' placeholder="Logo, Brand Identity, Packaging . . ." />
                   <div    className='SelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
                     <ul>
                     <button type='button' className='CatH4' onClick={()=>CategoryClick("Logo & identity")}>Logo & identity</button>
