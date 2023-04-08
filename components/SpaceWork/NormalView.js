@@ -29,7 +29,7 @@ const NormalView = ({cardData})=>{
 
   return (
 <div>
-    <div className='disc-card-cont2'>
+    <div className='disc-card-cont2 jst-SB'>
 
       {currentData.map((item) => (
             <div key={item.id} className='disc-card2 ' id='h-220'><a href='#'>
