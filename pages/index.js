@@ -49,41 +49,42 @@ export default function Home() {
                   <p>{AllCategories}</p>
                   <div    className='SelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
                     <ul>
-                    <button className='CatH4' onClick={()=>CategoryClick("Logo & identity")}>Logo & identity</button>
+                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Logo & identity")}>Logo & identity</button>
+                    
                       {
                       Logoidentity.map((item) => (
-                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                        <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                       ))
                       }
 
-                    <button className='CatH4' onClick={()=>CategoryClick("Web - UI/UX design")}>Web - UI/UX design</button>
+                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Web - UI/UX design")}>Web - UI/UX design</button>
                     {
                       Webdesign.map((item) => (
-                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                        <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                       ))
                     }
         
                     {/* <h4 className='CatH4'>Clothing & Merchandise</h4> */}
-                    <button className='CatH4' onClick={()=>CategoryClick("Clothing & Merchandise")}>Clothing & Merchandise</button>
+                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Clothing & Merchandise")}>Clothing & Merchandise</button>
                     {
                       ClothingMerchandise.map((item) => (
-                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                        <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                       ))
                     }
            
 
-                    <button className='CatH4' onClick={()=>CategoryClick("Art & Illustration")}>Art & Illustration</button>
+                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Art & Illustration")}>Art & Illustration</button>
                     { 
                     ArtIllustration.map((item) => (
-                      <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                     ))
                     }
         
 
-                    <button className='CatH4' onClick={()=>CategoryClick("Business & advertising")}>Business & advertising</button>
+                    <button type='button' className='CatH4' onClick={()=>CategoryClick("Business & advertising")}>Business & advertising</button>
                     {
                       Businessadvertising.map((item) => (
-                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                        <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                       ))
                     }
 
