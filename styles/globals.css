@@ -5784,6 +5784,7 @@ button[disabled]{
   cursor: pointer;
   text-align: left;
   padding: 0 45px;
+  height: fit-content;
 }
 .BreifSelectMenu button:hover{
   background-color: lightgrey;
