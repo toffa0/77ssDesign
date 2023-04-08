@@ -12,7 +12,7 @@ import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadver
 
 const BrowseProjects = ()=>{
     const [isOpen, setOpen] = useState(false);
-    const [AllIndustries, setAllIndustries] = useState("All Industries");
+    const [AllIndustries, setAllIndustries] = useState("Industries");
     const [IndustriesisOpen, setIndustriesOpen] = useState(false);
     const [listItems, setListItems] = useState([
         { id: 1, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
@@ -100,13 +100,46 @@ const BrowseProjects = ()=>{
                 {/* First Select */}
                 <div style={{width:"320px"}}  className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
                   <p>{AllCategories}</p>
-                  <div  style={{width:"320px",height:"max-content"}} className='SelectMenu'  id={AllCategoriesisOpen?"":"DN"}>
+                  <div  style={{width:"320px"}}  className='SelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
                     <ul>
+                    <button className='CatH4' onClick={()=>CategoryClick("Logo & identity")}>Logo & identity</button>
+                      {
+                      Logoidentity.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                      }
+
+                    <button className='CatH4' onClick={()=>CategoryClick("Web - UI/UX design")}>Web - UI/UX design</button>
                     {
-                      AllCategoriesItems.map((item) => (
-                        <button key={item.id} onClick={()=>CategoryClick(item.Text)}>{item.Text}</button>
+                      Webdesign.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                       ))
                     }
+        
+                    {/* <h4 className='CatH4'>Clothing & Merchandise</h4> */}
+                    <button className='CatH4' onClick={()=>CategoryClick("Clothing & Merchandise")}>Clothing & Merchandise</button>
+                    {
+                      ClothingMerchandise.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+           
+
+                    <button className='CatH4' onClick={()=>CategoryClick("Art & Illustration")}>Art & Illustration</button>
+                    { 
+                    ArtIllustration.map((item) => (
+                      <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                    ))
+                    }
+        
+
+                    <button className='CatH4' onClick={()=>CategoryClick("Business & advertising")}>Business & advertising</button>
+                    {
+                      Businessadvertising.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+
                     </ul>
                   </div>
                 </div>
@@ -270,7 +303,7 @@ const BrowseProjects = ()=>{
             <div className='header-w30 fl-col fl-gap32 gap15 ali-cen mb-30'>
                 
             <div className='BC-search'>  
-                <input placeholder='Search' />
+                <input  />
                 </div> 
                 
                 <div className='w192'><p className='PL-p'>Price</p>

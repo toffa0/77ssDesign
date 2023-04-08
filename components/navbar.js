@@ -146,7 +146,7 @@ const Navbar = () => {
           <Link href="/profile" >Profile</Link>
         </li>
         <li className="menu-item">
-          <Link href="/balance">balance</Link>
+          <Link href="/balance">Balance</Link>
         </li>
         <li className="menu-item">
           <button href="#" onClick={handleLogout}>Log Out</button>

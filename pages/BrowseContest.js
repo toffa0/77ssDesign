@@ -20,7 +20,7 @@ const BrowseContest = ()=>{
         { id: 6, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
         { id: 7, name: "bayuRip" ,pp:'profileicon.png' , img:"DesignThinking.jpg"},
       ]);
-      const [AllIndustries, setAllIndustries] = useState("All Industries");
+      const [AllIndustries, setAllIndustries] = useState("Industries");
       const [IndustriesisOpen, setIndustriesOpen] = useState(false);
       function IndustClick(item){
         setAllIndustries(item);
@@ -90,22 +90,22 @@ const BrowseContest = ()=>{
                   <p>{AllCategories}</p>
                   <div  style={{width:"320px"}}  className='SelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
                     <ul>
-                      <h4 className='CatH4'>Logo & identity</h4>
+                    <button className='CatH4' onClick={()=>CategoryClick("Logo & identity")}>Logo & identity</button>
                       {
                       Logoidentity.map((item) => (
                         <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                       ))
                       }
 
-                    <h4 className='CatH4'>Web - UI/UX design</h4>
+                    <button className='CatH4' onClick={()=>CategoryClick("Web - UI/UX design")}>Web - UI/UX design</button>
                     {
                       Webdesign.map((item) => (
                         <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                       ))
                     }
         
-
-                    <h4 className='CatH4'>Clothing & Merchandise</h4>
+                    {/* <h4 className='CatH4'>Clothing & Merchandise</h4> */}
+                    <button className='CatH4' onClick={()=>CategoryClick("Clothing & Merchandise")}>Clothing & Merchandise</button>
                     {
                       ClothingMerchandise.map((item) => (
                         <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
@@ -113,7 +113,7 @@ const BrowseContest = ()=>{
                     }
            
 
-                    <h4 className='CatH4'>Art & Illustration</h4>
+                    <button className='CatH4' onClick={()=>CategoryClick("Art & Illustration")}>Art & Illustration</button>
                     { 
                     ArtIllustration.map((item) => (
                       <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
@@ -121,7 +121,7 @@ const BrowseContest = ()=>{
                     }
         
 
-                    <h4 className='CatH4'>Business & advertising</h4>
+                    <button className='CatH4' onClick={()=>CategoryClick("Business & advertising")}>Business & advertising</button>
                     {
                       Businessadvertising.map((item) => (
                         <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
@@ -192,15 +192,15 @@ const BrowseContest = ()=>{
                 <div  className="fl-col">
                     <div className="fl fl-gap10 ">
                         <input type="radio" id="remember" name="accounttype"/>
-                        <label htmlFor="remember">Entry</label>
+                        <label htmlFor="remember">Silver</label>
                     </div>
                     <div className="fl fl-gap10">
                         <input type="radio" id="remember2" name="accounttype" />
-                        <label htmlFor="remember2">Mid</label>
+                        <label htmlFor="remember2">Gold</label>
                     </div>
                     <div className="fl fl-gap10">
                         <input type="radio" id="remember3" name="accounttype" />
-                        <label htmlFor="remember3">Advance</label>
+                        <label htmlFor="remember3">Platinum</label>
                     </div>
                 </div>
               </div>  
@@ -253,7 +253,7 @@ const BrowseContest = ()=>{
             <div className='header-w30 fl-col fl-gap32 gap15 ali-cen mb-30'>
                 
                 <div className='BC-search'>  
-                    <input placeholder='Search' />
+                    <input  />
                 </div>  
                 
                 <div className='dayscont'>

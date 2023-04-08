@@ -5,7 +5,9 @@ import Card from "@/components/profcard"
 import Image from 'next/image'
 import { FaThumbsUp } from "react-icons/fa";
 import Footer2 from '@/components/footer2';
-import {AllCategoriesItems,industriesMenu } from "../components/consts"
+// import {AllCategoriesItems,industriesMenu } from "../components/consts"
+import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising, industriesMenu,AllCategoriesItems} from "../components/consts"
+
 import Select from "react-select";
 
 const Discover = ()=>{
@@ -21,7 +23,7 @@ const Discover = ()=>{
         { id: 6, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
         { id: 7, name: "bayuRip" ,pp:'PI.svg' , img:"1549403924.svg"},
       ]);
-      const [AllIndustries, setAllIndustries] = useState("All Industries");
+      const [AllIndustries, setAllIndustries] = useState("Industries");
       const [IndustriesisOpen, setIndustriesOpen] = useState(false);
       function IndustClick(item){
         setAllIndustries(item);
@@ -77,15 +79,48 @@ const Discover = ()=>{
                     <option value="Clothing">Clothing-Merchandise</option>
                     <option value="Illustration">Illustration-Graphics</option>
                 </select> */}
-                <div style={{width:"320px"}} className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
+                <div style={{width:"320px"}}  className="filter2 prel" id="filter3" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen);setIndustriesOpen(false)}}>
                   <p>{AllCategories}</p>
-                  <div   style={{width:"320px",height:"max-content"}} className='SelectMenu' id={AllCategoriesisOpen?"":"DN"}>
+                  <div  style={{width:"320px"}}  className='SelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
                     <ul>
+                    <button className='CatH4' onClick={()=>CategoryClick("Logo & identity")}>Logo & identity</button>
+                      {
+                      Logoidentity.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                      }
+
+                    <button className='CatH4' onClick={()=>CategoryClick("Web - UI/UX design")}>Web - UI/UX design</button>
                     {
-                      AllCategoriesItems.map((item) => (
-                        <button key={item.id} onClick={()=>CategoryClick(item.Text)}>{item.Text}</button>
+                      Webdesign.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                       ))
                     }
+        
+                    {/* <h4 className='CatH4'>Clothing & Merchandise</h4> */}
+                    <button className='CatH4' onClick={()=>CategoryClick("Clothing & Merchandise")}>Clothing & Merchandise</button>
+                    {
+                      ClothingMerchandise.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+           
+
+                    <button className='CatH4' onClick={()=>CategoryClick("Art & Illustration")}>Art & Illustration</button>
+                    { 
+                    ArtIllustration.map((item) => (
+                      <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                    ))
+                    }
+        
+
+                    <button className='CatH4' onClick={()=>CategoryClick("Business & advertising")}>Business & advertising</button>
+                    {
+                      Businessadvertising.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+
                     </ul>
                   </div>
                 </div>

@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import { useState } from 'react';
 
 
 const TypeofDesign= ()=>{
+
+    const [PackageSelect, setPackageSelect]= useState('');
     return(
         <div className="checkout-cont">
             <div className="fl jstfe fl-gap10">
@@ -15,7 +18,8 @@ const TypeofDesign= ()=>{
             </div>
 
             <div className="typeDesign-secpart fl fl-gap32 jst-SB">
-                <div className='firstcol'>
+                
+                <div className={PackageSelect==="silver"?'firstcol ActivePackage':"firstcol"}>
                     <div className='typesec-part1'>
                         <h3>SILVER</h3>
                         <h4>$ 299</h4>
@@ -29,12 +33,12 @@ const TypeofDesign= ()=>{
 
                         </ol>
                         <div className='fl jst'>
-                            <button>Select</button>    
+                            <button className={PackageSelect==="silver"?'':"packageDef"} onClick={()=>setPackageSelect("silver")}>Select</button>    
                         </div>
                         
                     </div>
                 </div>
-                <div className='seccol'>
+                <div className={PackageSelect==="Gold"?'seccol ActivePackage':"seccol"}>
                     <div className='typesec-part1'>
                         <h3>GOLD</h3>
                         <h4>$ 599</h4>
@@ -48,12 +52,12 @@ const TypeofDesign= ()=>{
 
                         </ol>
                         <div className='fl jst'>
-                            <button>Select</button>    
+                            <button className={PackageSelect==="Gold"?'':"packageDef"} onClick={()=>setPackageSelect("Gold")}>Select</button>    
                         </div>
                         
                     </div>
                 </div>
-                <div className='thirdcol'>
+                <div className={PackageSelect==="Plat"?'thirdcol ActivePackage':"thirdcol"}>
                     <div className='typesec-part1'>
                         <h3>PLATINUM</h3>
                         <h4>$ 999</h4>
@@ -69,7 +73,7 @@ const TypeofDesign= ()=>{
                         </ol>
 
                         <div className='fl jst'>
-                            <button>Select</button>    
+                            <button className={PackageSelect==="Plat"?'':"packageDef"} onClick={()=>setPackageSelect("Plat")}>Select</button>    
                         </div>
                         
                     </div>

@@ -215,7 +215,7 @@ const Designers = ()=>{
             </div>
             {/* 1 filter box               */}
             <div className="filter-box">
-                <h3>industries</h3>
+                <h3>Industries</h3>
                 <ul>
                               
                     {Indst.map((item) => (

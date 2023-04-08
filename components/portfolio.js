@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from "@/components/profcard"
 
 const cardsData = [
@@ -49,6 +49,19 @@ const cardsData = [
 const Portfolio = () => {
 
 const [cards, setCards] = useState(cardsData);
+const [currentDate, setCurrentDate] = useState('');
+useEffect(() => {
+
+  const interval = setInterval(() => {
+    var hours = new Date().getHours(); //Current Hours
+    var min = new Date().getMinutes(); //Current Minutes
+    var sec = new Date().getSeconds(); //Current Seconds
+    setCurrentDate(
+    hours + ':' + min + ':' + sec
+    );
+  }, 1000);
+
+},[] );
 
   return ( <div className='  fl jst-SB'>
 
@@ -77,7 +90,7 @@ const [cards, setCards] = useState(cardsData);
         <div className="stat-text">German - English</div>
       </div>
       <div className="stat-box3">
-        <div className="stat-text3">Local Time 12:00 am</div>
+        <div className="stat-text3">Local Time: {currentDate}</div>
       </div>
     </div>
     </div>

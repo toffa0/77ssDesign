@@ -100,7 +100,6 @@ const Checkout= ({handleDataCheckout})=>{
                         onChange={setValue}
                         inputClass="mobileFlag"
                         country='us'
-                        enableSearch
                         />
                     </div>   
                     <div className='fl jst-SB'>

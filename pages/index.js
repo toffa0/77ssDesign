@@ -6,10 +6,19 @@ import Link from 'next/link'
 import Footer2 from '@/components/footer2'
 import Footer from '@/components/footer'
 import React, { useState } from 'react';
+import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising, industriesMenu,AllCategoriesItems} from "../components/consts"
 
 // const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [isOpen, setOpen] = useState(false);
+
+  const [AllCategories, setAllCategories] = useState("Logo, Brand Identity, Packaging . . .");
+  const [AllCategoriesisOpen, setAllCategoriesOpen] = useState(false);
+  function CategoryClick(item){
+    setAllCategories(item);
+    setAllCategoriesOpen(!AllCategoriesisOpen)
+    
+  }
   return (
     <>
       <Head>
@@ -35,7 +44,52 @@ export default function Home() {
       </div>
       <div> 
       <form className="sr-div2 fl jst">
-                <input type="text" name='' placeholder="Logo, Brand Identity, Packaging . . ." id='select_arrow' />
+                {/* <input type="text" name='' placeholder="Logo, Brand Identity, Packaging . . ." id='select_arrow' /> */}
+                <div   className="SelectCat" id="" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen)}}>
+                  <p>{AllCategories}</p>
+                  <div    className='SelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
+                    <ul>
+                    <button className='CatH4' onClick={()=>CategoryClick("Logo & identity")}>Logo & identity</button>
+                      {
+                      Logoidentity.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                      }
+
+                    <button className='CatH4' onClick={()=>CategoryClick("Web - UI/UX design")}>Web - UI/UX design</button>
+                    {
+                      Webdesign.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+        
+                    {/* <h4 className='CatH4'>Clothing & Merchandise</h4> */}
+                    <button className='CatH4' onClick={()=>CategoryClick("Clothing & Merchandise")}>Clothing & Merchandise</button>
+                    {
+                      ClothingMerchandise.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+           
+
+                    <button className='CatH4' onClick={()=>CategoryClick("Art & Illustration")}>Art & Illustration</button>
+                    { 
+                    ArtIllustration.map((item) => (
+                      <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                    ))
+                    }
+        
+
+                    <button className='CatH4' onClick={()=>CategoryClick("Business & advertising")}>Business & advertising</button>
+                    {
+                      Businessadvertising.map((item) => (
+                        <button key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+
+                    </ul>
+                  </div>
+                </div>
                 <select name="test">
                   <option value="CONTESTPROJECT">CONTEST </option>
                   <option value="CONTESTPROJECT">HIRING</option>
@@ -106,7 +160,7 @@ export default function Home() {
           <h1 className='home-h1 fs50' id='fs'>How it works & Experience</h1>
           </div>
           <section className="section m-tb-auto">
-      <div className='w-50'>
+      <div className='w-40'>
         <h1 className="home2">Contest Steps</h1>
         <ol className='ol-home'>
           <li>Submit a creative brief</li>
@@ -123,7 +177,7 @@ export default function Home() {
 
         </ol>
       </div>
-      <div className="w-50 prel">
+      <div className="w-56 prel">
         <Image src="home2.svg" alt="your-image" className='home3-img'  width={578} height={490}/>
         <Image src="home22.svg" alt="your-image" className='home33-img' width={578} height={490} />
       </div>
@@ -131,7 +185,7 @@ export default function Home() {
 
     
     <section className="section m-tb-auto">
-    <div className="w-50 prel">
+    <div className="w-56 prel">
         <Image src="home3.svg" alt="your-image" className='home3-img' width={578} height={490} />
         <Image src="home33.svg" alt="your-image" className='home33-img' width={578} height={490} />
       </div>

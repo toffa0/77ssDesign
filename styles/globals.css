@@ -575,7 +575,7 @@ margin-right: 20px;
   background: transparent;
   border-radius: 10px;
   height: 13px;
-  width: 283px;
+  width: 260px;
   box-shadow: 0 13px 0 0 #CACAD1;
   font-family: sans-serif;
   /* padding-bottom: 100px 0 ; */
@@ -593,13 +593,13 @@ margin-right: 20px;
   background: transparent;
   border-radius: 10px;
   height: 13px;
-  width: 160px;
+  width: 120px;
   box-shadow: 0 13px 0 0 #4747C7;
   font-family: sans-serif;
   position: absolute;
   bottom: 0;
   z-index: 99;
-  right: 200px;
+  right: 240px;
 }
 #logactive2{
   color: #4747C7;
@@ -906,6 +906,8 @@ line-height: 70px;
     margin-bottom:20px ;
     font-size: 20px;
     padding: 10px;
+    color: #545457;
+    font-size: 20px;
 }
 .form-group1 .form-group input{
   width: 100%;
@@ -923,8 +925,8 @@ line-height: 70px;
   margin-top:15px ;
   margin-bottom:20px ;
   font-size: 20px;
-  text-transform: uppercase;
-  color: #9E9EA3;
+  /* text-transform: uppercase; */
+  color: #545457;
 }
 .my-workkk{
   margin: 0 0 0 0;
@@ -2177,7 +2179,7 @@ color: #9E9EA3;
   /* margin-bottom:  52px; */
   box-shadow: 7px 7px 12px #4747C726;
   border-radius:  10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 118%;
   height: 80px;
   background: white;
@@ -2186,7 +2188,31 @@ color: #9E9EA3;
   
   gap: 10px;
 }
-
+.sr-div2 .SelectCat{
+  width: 60%;
+  height: 90%;
+  border: none;
+  outline: none;
+  padding: 0 0 0 19px;
+  line-height: 10px;
+  color: #545457  ;
+  font-size: 20px;
+  font-family:"Rotunda-medium";
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: url('../public/selectarrow.svg') #fff no-repeat 100% 55% !important;
+}
+.sr-div2 .SelectCat .SelectMenu{
+  width: 100%;
+  top: 76px;
+}
+.sr-div2 .SelectCat  p{
+  color: #9E9EA3  ;
+  font-size: 20px;
+  font-family:"Rotunda-medium";
+}
 .sr-div2 input[type="text"]{
   width: 60%;
   height: 90%;
@@ -3704,6 +3730,7 @@ right: 0;
   color: #545457;
   padding: 0 10px;
   outline: none;
+  background: url(../public/inputSearch.svg) #fff  no-repeat 90% !important;
 }
 .BC-search input::placeholder{
   font-family: 'Rotunda';
@@ -5017,9 +5044,13 @@ align-items: center;
   margin-top: 22px;
   width: 136.36px;
   height: 40.9px;
-  background: #CACAD1;
+  background: #9E9EA3;
   border: 1px solid #9E9EA3;
   border-radius: 7px;
+  cursor: pointer;
+}
+.packageDef{
+  background-color:#CACAD1 !important;
 }
 .typesec-part1{
   height: 161.71px;
@@ -5032,7 +5063,7 @@ align-items: center;
 }
 .typesec-part2{
   background: #F5F7FA;
-  height: 200px;
+  height: 225px;
   padding: 19px 23px 0 31px;
 }
 .firstcol{
@@ -5041,6 +5072,9 @@ align-items: center;
 }
 .seccol{
   width: 192px;
+}
+.ActivePackage{
+  filter: drop-shadow(7px 7px 17px rgba(71, 71, 199, 0.4));
 }
 .seccol .typesec-part1 {
   background: #DDB35E;
@@ -5062,7 +5096,7 @@ align-items: center;
   background: #00C7C7;
 }
 .thirdcol .typesec-part2 {
-  height:300px;
+  height:275px;
 }
 .typesec3 label{
   font-family: 'Rotunda-medium';
@@ -5353,11 +5387,19 @@ align-items: center;
   background-color: #F5F7FA;
 }
 .FeedBackInp-cont{
-  width: 192px;
+  width: 224px;
   min-height: 52px;
   background: #3D3D3F;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   border-radius: 0px 12px 12px 12px;
+}
+.FeedBackInp-cont span{
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #9E9EA3;
 }
 .FeedBackInp-btn{
   border: none;
@@ -5532,18 +5574,19 @@ align-items: center;
   position: relative;
 }
 .ColorSelectedHighlight::after{
-  content: url('../public/SelectedHighlight.svg');
-  width: 40px;
-  height: 40px;
+  content: url('../public/ColorSelectedHighlight1.svg');
+  /* width: 32px;
+  height: 32px;
   background: #FFFFFF;
   border: 1px solid #000000;
-  position: absolute;
+ 
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  bottom: 8px;
-  right: -10px;
+  align-items: center; */
+  position: absolute;
+  bottom: 25px;
+  right: 5px;
 }
 .cat2img{
   position: absolute;
@@ -5651,20 +5694,18 @@ outline: none;
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 2.5;
   color:#3D3D3F;
   z-index: 9999;
   cursor: pointer;
   text-align: left;
-  padding: 0 15px;
+  padding: 0 45px;
 }
 .SelectMenu button:hover{
   background-color: lightgrey;
 }
-.SelectMenu button:last-child{
-  border: none;
-}
+
 button:disabled,
 button[disabled]{
   border: 1px solid #999999 !important;
@@ -5686,19 +5727,67 @@ button[disabled]{
   height: 100%;
 }
 .CatH4{
-  font-family: 'Rotunda-bold';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 29px;
-  color: #3D3D3F;
-  text-align: left;
-  padding: 0 15px;
-  margin-bottom: 23px;
-  margin-top: 23px;
+  font-family: 'Rotunda-bold' !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 2.5 !important;
+  color: #3D3D3F !important;
+  text-align: left !important;
+  padding: 0 20px !important;
+  /* margin-bottom: 23px !important; */
+  margin-top: 23px !important;
   cursor: pointer;
 }
-
+.BreifSelect{
+  position: relative;
+  width: 80%;
+  height: 64px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  color: #545457;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../public/droparrow.svg') white no-repeat 96% !important;
+  cursor: pointer;
+}
+.BreifSelectMenu{
+  position: absolute;
+  background: #F5F7FA;
+  box-shadow: 5px 5px 37px rgba(0, 199, 199, 0.17);
+  top: 63px;
+  left: -1;
+  width: 102%;
+  height: 300px;
+  border-radius: 7px;
+  overflow-y: scroll;
+  padding: 4px;
+}
+.BreifSelectMenu button{
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2.5;
+  color:#3D3D3F;
+  z-index: 9999;
+  cursor: pointer;
+  text-align: left;
+  padding: 0 45px;
+}
+.BreifSelectMenu button:hover{
+  background-color: lightgrey;
+}
 
 #DF{
   display: flex;
@@ -5917,6 +6006,9 @@ button[disabled]{
 .w-51{
   width: 50%;
 }
+.w-56{
+  width: 56%;
+}
 .w-60{
   width: 60%;
 }
@@ -6123,5 +6215,13 @@ button[disabled]{
 
 .ReactFlagsSelect-module_filterBox__3m8EU input{
   height: 32px !important;
-
+  font-size: 15px !important;
+}
+.ReactFlagsSelect-module_selectOptionValue__vS99-{
+  color: #545457 !important;
+  font-size: 18px;
+}
+.ReactFlagsSelect-module_selectValue__152eS{
+  color: #545457 !important;
+  font-size: 20px;
 }

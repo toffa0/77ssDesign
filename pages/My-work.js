@@ -25,7 +25,7 @@ const Mywork = () => {
           className={` ${activeComponent === "contests" ? "active nav-btn" : "nav-btn"}`}
           onClick={() => setActiveComponent("contests")}
         >
-          contests
+          Contests
         </button>
 
         <button

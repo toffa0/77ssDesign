@@ -363,8 +363,12 @@ const FeedBackEditInp= ({x,y,handleDotClick,EditedComment,DotID,handleDeleteComm
             {/* <textarea className="FeedBackInp-inp" rows='1' placeholder='Auto-Expanding Textarea'></textarea> */}
 
             <div className="fl jst-SB buttonSection">
-            <button className="FeedBackInp-Close" onClick={()=>{handleDotClick();}} title="Delete" ><Image src="X.svg" width={10} height={10} alt="" /></button>
-            <button className="FeedBackInp-btn" onClick={()=>{EditComment(DotID);handleDotClick()}}><Image src="send.svg" width={17.5} height={17.5} alt="send" /></button>
+                <div className="fl ali-cen fl-gap10">
+                    <button className="FeedBackInp-Close" onClick={()=>{handleDotClick();}} title="Delete" ><Image src="X.svg" width={10} height={10} alt="" /></button>
+                    <span >3 hr. ago</span>
+                </div>
+      
+                <button className="FeedBackInp-btn" onClick={()=>{EditComment(DotID);handleDotClick()}}><Image src="send.svg" width={17.5} height={17.5} alt="send" /></button>
             </div>
             </div>
 
