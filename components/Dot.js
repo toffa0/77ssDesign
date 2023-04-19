@@ -41,6 +41,7 @@ const Dot = ({x,y,DotColor,DotID,setIsHoveringDot,setIsHoveringID,handleDotClick
           onMouseEnter={()=>handleMouseEnterDot(DotID)}
           onMouseLeave={handleMouseLeaveDot}
           onClick={()=>{if(DotID){handleDotClick()}}}
+          draggable
       ></canvas>
       );
     }

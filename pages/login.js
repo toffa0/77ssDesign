@@ -3,63 +3,24 @@ import React, { useEffect, useState } from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Cookies from 'js-cookie';
 import Image from 'next/image';
-
+import { BASE_URL ,API_VERSION } from '@/config';
 
 
 
 const Login = () => {
-
-  const [csrfToken, setScrf] = useState("");
-  // const history = useHistory(); 
-    
   useEffect(()=>{
-    const csrfToken = Cookies.get('csrfToken');
-    console.log(csrfToken);
-
-
-
-    // fetch("http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/csrf/",
-    // {credentials:"include",})
-    // .then((res)=>{
-    //   let csrfTokken = res.headers.get("X-CSRFToken")
-    //   setScrf(csrfToken);
-    //   console.log(csrfToken);
-    // })
-    // .catch((err)=>{
-    //   console.log(err)
-    // })
+    fetch("http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/csrf/",
+    )
+    .then((res)=>{
+      console.log(res)
+      console.log(console.log(Cookies.get('csrftoken')))
+      })
+    .catch((err)=>{
+      console.log(err)
+    })
   },[])
     
-  function generateCsrfToken() {
-    let token = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    for (let i = 0; i < 32; i++) {
-      token += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return token;
-  }
-  function getExpirationDate(token) {
-    if (!token || typeof token !== 'string') {
-      return null;
-    }
-    
-    const tokenParts = token.split('.');
-    
-    if (tokenParts.length !== 3) {
-      return null;
-    }
-    
-    const encodedPayload = tokenParts[1];
-    const payload = JSON.parse(atob(encodedPayload));
-    
-    if (!payload || !payload.exp) {
-      return null;
-    }
-    
-    const expirationDate = new Date(payload.exp * 1000);
-    return expirationDate;
-  }
-  
+  // const csrfToken1 = Cookies.get('csrftoken');
   const handleSubmit= (e)=>{
       e.preventDefault();
       
@@ -68,8 +29,11 @@ const Login = () => {
       const password = document.getElementById('password1').value;
       
       const formData = { email,password  };
-      
-      fetch('http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/login/', {
+      console.log(formData)
+      // console.log(console.log(Cookies.get('csrftoken')))
+      const csrfToken = Cookies.get('csrfToken');
+      console.log(csrfToken);
+      fetch(`${BASE_URL}/${API_VERSION}/user/login/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,9 +46,8 @@ const Login = () => {
       .then(data => 
         {
           console.log(data);
-      const csrfToken = generateCsrfToken();
-      document.cookie = `csrfToken=${csrfToken}; expires=${getExpirationDate()}; path=/`;
-      // window.location.href = '/';
+          document.cookie = `csrfToken=${csrfToken}; expires=${getExpirationDate()}; path=/`;
+          window.location.href = '/';
         })
       .catch(error => console.error(error));
       
@@ -125,20 +88,6 @@ const Login = () => {
       </div>
       <button type="submit">Log in</button>
 </div>
-
-
-      {/* <div className="social-group ">
-        <p>Or login with</p>
-        <div>
-        <FaFacebook style={styles.footerIcon} />
-        <FaTwitter style={styles.footerIcon} />
-        <FaInstagram style={styles.footerIcon} />
-        <FaLinkedin style={styles.footerIcon} />
-        </div>
-      </div> */}
-
-      
-      
     </form>
   );
 };
@@ -151,7 +100,6 @@ const SignUp = () => {
     
     const handleSignup= (e)=>{
       e.preventDefault();
-
     
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
@@ -216,25 +164,8 @@ const SignUp = () => {
       <div className="fl jst-SB">
       <button className="w-40 signupbtn">Sign Up</button>
       <button className="w-40 signupbtn bg-wh">Log in</button>
-{/* <div className="bottom-row12">
-      <p>
-        Already have an account?{" "}
-        <Link href="/login" >
-          Login
-        </Link>
 
-        </p>
-        </div> */}
         </div>
-        {/* <div className="social-group mdl">
-        <p>Or SignUp with</p>
-        <div>
-        <FaFacebook style={styles.footerIcon} />
-        <FaTwitter style={styles.footerIcon} />
-        <FaInstagram style={styles.footerIcon} />
-        <FaLinkedin style={styles.footerIcon} />
-        </div>
-      </div> */}
     </form>
   );
 };

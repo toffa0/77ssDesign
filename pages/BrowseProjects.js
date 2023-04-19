@@ -31,7 +31,7 @@ const BrowseProjects = ()=>{
         fetch(`${BASE_URL}/${API_VERSION}/project/`, {
       })
       .then(response => {return response.json()})
-      .then(data => {console.log(data);setProjectItems(data)})
+      .then(data => {console.log(data);setProjectItems(data.results)})
       .catch(error => console.error(error));
 
 

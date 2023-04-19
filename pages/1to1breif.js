@@ -9,6 +9,7 @@ import Brand from "@/components/1to1breif/Brand";
 import Colors from "@/components/1to1breif/Colors";
 import Checkout from "@/components/1to1breif/Checkout";
 import { BASE_URL ,API_VERSION } from '@/config';
+import Cookies from 'js-cookie';
 
 const Oneto1breif = ()=>{
     const [activeside, setActiveside] = useState("About");
@@ -35,23 +36,31 @@ const Oneto1breif = ()=>{
     const [category, setCategory] = useState(1); 
     
     const [color_palette, setColor_palette] = useState(1); 
-
+    
     const callback = {
       name: name,
       languages: languages,
-      industry: industry,
       description: description,
       url: url,
       reference: reference,
-      logo: logo,
+      // logo: logo,
       budget_from: budget_from,
       budget_to: budget_to,
+      timeline:timeline,
       portfolio_allowed: portfolio_allowed,
-      logo: logo,
       size: size,
       feature_text: feature_text,
+      classic_to_modern: 10,
+      playful_to_serious: 10,
+      geometrical_to_organic: 10,
+      feminine_to_masculine: 10,
+      economical_to_luxurious: 10,
+      mature_to_youthful: 10,
+      handcrafted_to_minimalist: 10,
       guarentee: guarentee,
       deadline: deadline,
+      budget: "-1718",
+      industry: industry,
       category: category,
       color_palette: color_palette,
     }
@@ -64,15 +73,17 @@ const Oneto1breif = ()=>{
 
     const handleDataCheckout= (e)=>{
       e.preventDefault();
+      const csrfToken = Cookies.get('csrfToken');
+      console.log(csrfToken);
       const formData = { ...callback  };
       console.log(formData);
       fetch(`${BASE_URL}/${API_VERSION}/project/client/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          
+          'X-CSRFToken': csrfToken,
         },
-        
+        credentials:"include",
         body: JSON.stringify(formData)
       })
       .then(response => response.json())

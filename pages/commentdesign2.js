@@ -5,6 +5,9 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import Link from "next/link";
 import { BASE_URL ,API_VERSION } from '@/config';
 import { useRouter } from "next/router";
+import Cookies from 'js-cookie';
+import moment from 'moment';
+import { redirect } from "next/dist/server/api-utils";
 
 
 const Submitdesgin = ()=>{
@@ -24,23 +27,46 @@ const Submitdesgin = ()=>{
     const [AccountType, setAccountType] = useState('Client');
     const DotColor2="blue";
 
-
+    const csrfToken = Cookies.get('csrfToken');
+    
 
     const router = useRouter();
     // console.log(router.query.id);
     useEffect(()=>{
-    // console.log(id)        
-        fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments`, {
-      })
+      if(!csrfToken){
+        // window.location.href = '/login';
+      }
+        fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
+            
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken,
+              },
+              credentials:"include",
+              
+        })
       .then(response => {return response.json()})
-      .then(data => {console.log(data)})
+      .then(data => {setComment(data.results);console.log(data);console.log(Comment)})
       .catch(error => console.error(error));
 
 
         
     },[])
     
-    
+    const GetComments = ()=>{
+        fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrfToken,
+              },
+              credentials:"include",
+              
+        })
+      .then(response => {return response.json()})
+      .then(data => {console.log(data)})
+      .catch(error => console.error(error));
+    }
     function handleMouseEnter(id) {
         setIsHovering(true);
         setIsHoveringID(id)
@@ -87,11 +113,32 @@ const Submitdesgin = ()=>{
     }
     const handleSubmit= ()=>{
         if(CommentText!=""&dot!=null)
-        {  setComment([...Comment ,{id:IDCom+1,point:dot,text:CommentText,AccountName:AccountName,AccountType:AccountType}])
-            // console.log(Comment)
-            setDot(null);
-            setCommentText('');
-            setIDCom(IDCom+1);
+        {  
+            console.log(csrfToken);
+            const x=dot.x;
+            const y=dot.y;
+            const comment=CommentText;
+            const parent=null;
+            const formData = {x,y,comment,parent};
+            console.log(formData)
+            fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken,
+                  },
+                  credentials:"include",
+                  body: JSON.stringify(formData)
+            })
+          .then(response => {return response.json()})
+          .then(data => {setComment([data,...Comment]);console.log(data)})
+          .catch(error => console.error(error));
+            
+            // setComment([...Comment ,{id:IDCom+1,point:dot,text:CommentText,AccountName:AccountName,AccountType:AccountType}])
+            // // console.log(Comment)
+            // setDot(null);
+            // setCommentText('');
+            // setIDCom(IDCom+1);
             
         }
         else{
@@ -99,11 +146,37 @@ const Submitdesgin = ()=>{
         }
     }
     const handleSubmit2= ()=>{
-            setComment([...Comment ,{id:IDCom+1,point:undefined,text:CommentText2,AccountName:AccountName,AccountType:AccountType}])
-            // console.log(Comment)
-            setDot(null);
-            setCommentText2('');
-            setIDCom(IDCom+1);
+            
+        if(CommentText2!="")
+        {  
+            console.log(csrfToken);
+            const x=0;
+            const y=0;
+            const comment=CommentText2;
+            const parent=null;
+            const formData = {x,y,comment,parent};
+            console.log(formData)
+            fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken,
+                  },
+                  credentials:"include",
+                  body: JSON.stringify(formData)
+            })
+          .then(response => {return response.json()})
+          .then(data => {setComment([data,...Comment]);console.log(data)})
+          .catch(error => console.error(error));
+        }
+        else{
+            console.log("please write a comment")
+        }
+        // setComment([...Comment ,{id:IDCom+1,point:undefined,text:CommentText2,AccountName:AccountName,AccountType:AccountType}])
+            // // console.log(Comment)
+            // setDot(null);
+            // setCommentText2('');
+            // setIDCom(IDCom+1);
             
 
     }
@@ -174,7 +247,7 @@ const Submitdesgin = ()=>{
 
       const handle = useFullScreenHandle();
 
-
+      
 return(
     <div className="max3 fl h-90">
         <div className="w-35 sb-col1">
@@ -227,23 +300,24 @@ return(
             </div>
             <div className="fl-col CMSec fl-gap8 mt-18 mb-118">
 
-                {Comment.map((item)=>(
+                {Comment&&Comment.map((item)=>(
+                    
                     <div key={item.id} className="cd-sec feedbackhover2" onMouseEnter={()=>handleMouseEnter(item.id)} onMouseLeave={handleMouseLeave}>
-                        <label>{item.AccountName}</label> <span>3 hr. ago</span>
-                        <div className={item.AccountType==="Client" ?"cd-csec fl ":"cd-csec2 fl "} id={IsHoveringDot&IsHoveringID===item.id?"pinkbackground":""} >
-                        {item.point!=undefined&&    
-                            <div>
-                                <div className="point">
-                                </div> 
+                        <label>osama</label> <span>{moment(new Date(item.created_at)).fromNow()}</span>
+                        <div className={item.AccountType==="Client" ?"cd-csec fl ":"cd-csec fl "} id={IsHoveringDot&IsHoveringID===item.id?"pinkbackground":""} >
+                        {item.x!=undefined&&    
+                            <div style={{display:"flex",alignItems:"center"}}>
+                                {item.x!=0&&<div className="point">
+                                </div> }
                             </div>
                             } 
-                            <p id="CommentBody">{item.text}</p>
+                            <p id="CommentBody">{item.comment}</p>
                             <input value={EditedComment} onChange={e => setEditedComment(e.target.value)} type="text" id="CommentEdit" style={{display: "none"}}/>
                             {/* <button onClick={()=>EditComment(item.id)} id="UpdateButton" style={{display: "none"}}>Update</button> */}
                         </div>
                         {/* <Dot key={item.id} x={item.point.x} y={item.point.y}  /> */}
                     </div>
-                ))}
+                )).reverse()}
 
 
             </div>
@@ -263,8 +337,8 @@ return(
             {dot!=null && <Dot x={dot.x} y={dot.y} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} DotID={0} /> }  
             {dot!=null && <FeedBackInp x={dot.x} y={dot.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot}  /> }       
             {Comment.map((item)=>{
-                // console.log(item.id);       && 
-                if(item.point === undefined)
+                console.log(item.y);        
+                if(item.x === 0)
                 {
                     console.log("no dot")
                 }
@@ -273,12 +347,12 @@ return(
                 if(EditedCommentOpen&&item.id===IsHoveringID){
                     
                     // console.log("yes")
-                    return <div key={item.id}> <Dot  x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  handleDotClick={handleDotClick} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} textbody={item.text}/>
-                    <FeedBackEditInp  x={item.point.x} y={item.point.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot} setEditedComment={setEditedComment} EditedComment={EditedComment} EditComment={EditComment} textbody={item.text} DotID={item.id} handleDotClick={handleDotClick} handleDeleteComment={handleDeleteComment} />      
+                    return <div key={item.id}> <Dot  x={item.x} y={item.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  handleDotClick={handleDotClick} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} textbody={item.text}/>
+                    <FeedBackEditInp  x={item.x} y={item.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot} setEditedComment={setEditedComment} EditedComment={EditedComment} EditComment={EditComment} textbody={item.text} DotID={item.id} handleDotClick={handleDotClick} handleDeleteComment={handleDeleteComment} />      
                     </div>
                 }
                 else{
-                    return  <Dot key={item.id} x={item.point.x} y={item.point.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  handleDotClick={handleDotClick} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID}/>
+                    return  <Dot key={item.id} x={item.x} y={item.y} DotColor={IsHovering&IsHoveringID===item.id?DotColor2:DotColor} DotID={item.id}  handleDotClick={handleDotClick} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID}/>
                 }
 
                 }
