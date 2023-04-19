@@ -107,16 +107,10 @@ if (typeof window !== "undefined") {
                     <ul>
                       {cates.length>0?
                       cates.map((item) => (
-                        <div>
-                        
                           <div key={item.id}>
                             <h4  type='button' className='CatH4' >{item.header}</h4>
                             <button type='button'  onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                           </div>
-                         
-                        
-                        
-                        </div>
                       ))
                       :
                       <h4  type='button' className='CatH4' >There is no items</h4>

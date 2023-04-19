@@ -31,7 +31,7 @@ const Login = () => {
       const formData = { email,password  };
       console.log(formData)
       // console.log(console.log(Cookies.get('csrftoken')))
-      const csrfToken = Cookies.get('csrfToken');
+      const csrfToken = Cookies.get('csrftoken');
       console.log(csrfToken);
       fetch(`${BASE_URL}/${API_VERSION}/user/login/`, {
         method: 'POST',
