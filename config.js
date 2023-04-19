@@ -1,2 +1,2 @@
-export const BASE_URL="http://ec2-54-146-11-112.compute-1.amazonaws.com"
-export const API_VERSION= "v1.0"
+export const BASE_URL = "https://a7ee-41-69-113-87.ngrok-free.app";
+export const API_VERSION = "v1.0";
