@@ -11,7 +11,7 @@ const Login = () => {
   useEffect(() => {
     fetch(`${BASE_URL}/${API_VERSION}/user/csrf/`)
       .then((res) => {
-        setCsrfToken(res.headers["x-csrftoken"]);
+        setCSRFToken(res.headers["x-csrftoken"]);
       })
       .catch((err) => {
         console.log(err);
