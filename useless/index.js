@@ -5,7 +5,7 @@ import ImageSlider from'@/components/LogoSlider'
 import Link from 'next/link'
 import Footer2 from '@/components/footer2'
 import Footer from '@/components/footer'
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising, industriesMenu,AllCategoriesItems,AllCategoriesAll} from "../components/consts"
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +15,7 @@ export default function Home() {
   const [AllCategories, setAllCategories] = useState("");
   const [AllCategoriesisOpen, setAllCategoriesOpen] = useState(false);
   function CategoryClick(item){
-    setSearch(item);
+    setAllCategories(item);
     setAllCategoriesOpen(!AllCategoriesisOpen)
     
   }
@@ -25,55 +25,11 @@ export default function Home() {
     if (!search) return AllCategoriesAll;
 
     return AllCategoriesAll.filter((Category)=>{
-      if(Category.text){
-        if(Category.text.toLowerCase().includes(search.toLowerCase())){
-          
-          return Category.text.toLowerCase().includes(search.toLowerCase());
-        }
-      
-      } 
+      return Category.text.toLowerCase().includes(search.toLowerCase());
     })
-  },[search]);
+  },[search,AllCategoriesAll]);
 
-
-  function CategoryTyping(item){
-    setSearch(item);
-    console.log(cates)
-  }
-
-  useEffect(()=>{
-    if(search)
-    {
-      setAllCategoriesOpen(true)
-      
-    }
-    else{
-      setAllCategoriesOpen(false)
-    }
-  },[search])
-
-//   if (document.getElementsByClassName("SelectCat")) {
-//   document.getElementsByClassName("SelectCat").addEventListener("mousedown", ()=>{
-//     setAllCategoriesOpen(false)
-//   });
-// }
-
-if (typeof window !== "undefined") {
-  window.addEventListener("click", function (e) {
-    if (document.getElementById("SelectAcat")) {
-      if (document.getElementById("SelectAcat").contains(e.target)) {
-        setAllCategoriesOpen(true);
-      }
-      else{
-        setAllCategoriesOpen(false)
-      } 
-    }
-
-  });
-}
-
-
-
+  console.log(AllCategoriesAll)
 
   return (
     <>
@@ -100,27 +56,56 @@ if (typeof window !== "undefined") {
       </div>
       <div> 
       <form className="sr-div2 fl jst">
-                <div   className="SelectCat" id="SelectAcat">
+                <div   className="SelectCat" id="" onClick={()=>{setAllCategoriesOpen(!AllCategoriesisOpen)}}>
                   {/* <p>{AllCategories}</p> */}
-                  <input type="text" value={search} onChange={e => CategoryTyping(e.target.value)} name='' placeholder="Logo, Brand Identity, Packaging . . ." />
+                  <input type="text" value={AllCategories} onChange={e => setAllCategories(e.target.value)} name='' placeholder="Logo, Brand Identity, Packaging . . ." />
                   <div    className='SelectMenu' id={AllCategoriesisOpen?"":"DN"} onClick={()=>setAllCategoriesOpen(true)}>
                     <ul>
-                      {cates.length>0?
-                      cates.map((item) => (
+                    {/* <h4 type='button' className='CatH4' >Logo & identity</h4> */}
+                      {
+                      AllCategoriesAll.map((item) => (
                         <div>
-                        
-                          <div key={item.id}>
-                            <h4  type='button' className='CatH4' >{item.header}</h4>
-                            <button type='button'  onClick={()=>CategoryClick(item.text)}>{item.text}</button>
-                          </div>
-                         
-                        
-                        
+                          <h4 type='button' className='CatH4' >{item.header}</h4>
+                          <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
                         </div>
                       ))
-                      :
-                      <h4  type='button' className='CatH4' >There is no items</h4>
                       }
+                      {/* {
+                      Logoidentity.map((item) => (
+                        <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                      }
+
+                    <h4 type='button' className='CatH4'>Web - UI/UX design</h4>
+                    {
+                      Webdesign.map((item) => (
+                        <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+        
+                    <h4 type='button' className='CatH4' >Clothing & Merchandise</h4>
+                    {
+                      ClothingMerchandise.map((item) => (
+                        <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    }
+           
+
+                    <h4 type='button' className='CatH4'>Art & Illustration</h4>
+                    { 
+                    ArtIllustration.map((item) => (
+                      <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                    ))
+                    }
+        
+
+                    <h4 type='button' className='CatH4' >Business & advertising</h4>
+                    {
+                      Businessadvertising.map((item) => (
+                        <button type='button' key={item.id} onClick={()=>CategoryClick(item.text)}>{item.text}</button>
+                      ))
+                    } */}
+
                     </ul>
                   </div>
                 </div>
