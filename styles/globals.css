@@ -5812,7 +5812,18 @@ button[disabled]{
 .Eliminate:hover .Eliminatehover{
   display: block;
 }
-
+#ProjectSubmitDesignerButton{
+  width: 256px;
+  height: 64px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
 
 #DF{
   display: flex;

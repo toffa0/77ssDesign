@@ -4,15 +4,15 @@ import Image from 'next/image'
 
 
 
-const NormalView = ({cardData})=>{
+const NormalView = ({cardData,projectID})=>{
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
  
   useEffect(() => {
     const fetchData = async () => {
-      setData(cardData.cardData2);
-      console.log(data)
+      setData(cardData.cardDataProject);
+      console.log(projectID )
     };
     fetchData();
   });
@@ -32,13 +32,14 @@ const NormalView = ({cardData})=>{
     <div className='disc-card-cont2 jst-SB'>
 
       {currentData.map((item) => (
-            <div key={item.id} className='disc-card2 ' id='h-220'><a href='#'>
-                {console.log(item)}
+            <div key={item.id} className='disc-card2 ' id='h-220'>
+              <Link href={{ pathname: `/commentdesign2`, query: { id: projectID } }}>
+                {/* {console.log(item)} */}
                 <Image src={item.img} id='ds-img' alt="" width={400} height={400}/>
-
+ 
              
              
-             </a>
+             </Link>
             </div>
       ))}
 

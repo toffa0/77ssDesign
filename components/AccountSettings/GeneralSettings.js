@@ -1,6 +1,19 @@
-import React from 'react';
+import ReactFlagsSelect from "react-flags-select";
+import React, { useState } from "react";
+import 'react-phone-input-2/lib/style.css'
+
+import PhoneInput from 'react-phone-input-2'
 
 const GeneralSettings = () => {
+
+
+  const [selected, setSelected] = useState("");
+  const [value, setValue] = useState()
+  const [selectedTimezone, setSelectedTimezone] =useState(
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  )
+  console.log(selectedTimezone)
+
   return (
     <div>
       <form className="form-group-sett m-40 mb-172">
@@ -26,13 +39,18 @@ const GeneralSettings = () => {
         </div>
 
         <div className='form-group1'> 
-          <div className="form-group w-30">
+        <div className="form-group w-30">
                 <label htmlFor="first-name">Time Zone</label>
-                <input type="text" className="form-control" id="Time-Zone" />
+                <input value={selectedTimezone} type="text" className="form-control" id="Time-Zone" />
+                {/* <TimezoneSelect
+                  value={selectedTimezone}
+                  onChange={setSelectedTimezone}
+                  selectButtonClassName='SelectCountry'
+                /> */}
             </div>
             <div className="form-group w-30">
                 <label htmlFor="last-name">Country</label>
-                <select>
+                {/* <select>
     <option value="  " selected>Select a country</option>
     <option value="--">Not Specified</option>
     <option value="AF">Afghanistan</option>
@@ -274,7 +292,13 @@ const GeneralSettings = () => {
     <option value="YU">Yugoslavia</option>
     <option value="ZM">Zambia</option>
     <option value="ZW">Zimbabwe</option>
-                </select>
+                </select> */}
+                                <ReactFlagsSelect
+                                    selected={selected}
+                                    onSelect={(code) => setSelected(code)}
+                                    selectButtonClassName='SelectCountry'
+                                    searchable
+                                />
             </div>
             <div className="form-group w-30">
                 <label htmlFor="last-name">City</label>

@@ -24,12 +24,12 @@ const Login = () => {
   const handleSubmit= (e)=>{
       e.preventDefault();
       
-    
+      console.log('coookies', document.cookie)
       const email = document.getElementById('email1').value;
       const password = document.getElementById('password1').value;
       
       const formData = { email,password  };
-      console.log(formData)
+      // console.log(formData)
       // console.log(console.log(Cookies.get('csrftoken')))
       const csrfToken = Cookies.get('csrftoken');
       console.log(csrfToken);
@@ -45,7 +45,8 @@ const Login = () => {
       .then(response => response.json())
       .then(data => 
         {
-          console.log(data);
+          console.log(data.data);
+          localStorage.setItem('user', JSON.stringify(data.data));
           document.cookie = `csrfToken=${csrfToken}; expires=${getExpirationDate()}; path=/`;
           window.location.href = '/';
         })

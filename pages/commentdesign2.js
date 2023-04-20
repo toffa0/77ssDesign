@@ -31,27 +31,45 @@ const Submitdesgin = ()=>{
     
 
     const router = useRouter();
-    // console.log(router.query.id);
-    useEffect(()=>{
-      if(!csrfToken){
-        // window.location.href = '/login';
-      }
-        fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
+    useEffect(() => {
+        if(router.isReady){
+            const { id } = router.query;
+            if (!id) return null;
+            fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
             
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': csrfToken,
-              },
-              credentials:"include",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken,
+                  },
+                  credentials:"include",
+                  
+            })
+            .then(response => {return response.json()})
+            .then(data => {setComment(data.results);console.log(data);console.log(Comment)})
+            .catch(error => console.error(error));
+         }
+    }, [router.isReady]);
+    // console.log(router.query.id);
+    // useEffect(()=>{
+    //   if(!csrfToken){
+    //     // window.location.href = '/login';
+    //   }
+    //     fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
+            
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'X-CSRFToken': csrfToken,
+    //           },
+    //           credentials:"include",
               
-        })
-      .then(response => {return response.json()})
-      .then(data => {setComment(data.results);console.log(data);console.log(Comment)})
-      .catch(error => console.error(error));
+    //     })
+    //   .then(response => {return response.json()})
+    //   .then(data => {setComment(data.results);console.log(data);console.log(Comment)})
+    //   .catch(error => console.error(error));
 
 
         
-    },[])
+    // },[])
     
     const GetComments = ()=>{
         fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
@@ -337,7 +355,7 @@ return(
             {dot!=null && <Dot x={dot.x} y={dot.y} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} DotID={0} /> }  
             {dot!=null && <FeedBackInp x={dot.x} y={dot.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot}  /> }       
             {Comment.map((item)=>{
-                console.log(item.y);        
+                // console.log(item.y);        
                 if(item.x === 0)
                 {
                     console.log("no dot")

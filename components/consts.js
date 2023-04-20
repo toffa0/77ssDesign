@@ -186,7 +186,7 @@ export const Businessadvertising=[
     { id: 6, text: "Spanish" },
   ];
 export const cardData2=[
-  { id: 1, img:"greyrect.svg"},
+  { id: 1, img:"subex1.svg"},
   { id: 2, img:"greyrect.svg"},
   { id: 3, img:"greyrect.svg"},        
   { id: 4, img:"greyrect.svg"},
@@ -199,7 +199,9 @@ export const cardData2=[
   { id: 11, img:"greyrect.svg"},
   { id: 12, img:"greyrect.svg"},
 ];
-
+export const cardDataProject=[
+  { id: 1, img:"subex1.svg"},
+];
 export const AllCategoriesItems=[
   { id: 1, Text:"Logo-brand identity"},
   { id: 2, Text:"Business-Advertising"},

@@ -9,10 +9,11 @@ import Cookies from "js-cookie";
 
 const Navbar = () => {
   const [csrfToken, csrfTokenSet] = useState("");
-
+  const [user, setUser] = useState(null)
   useEffect(() => {
     const csrfToken = Cookies.get("csrfToken");
     csrfTokenSet(csrfToken);
+    setUser(localStorage.getItem('user'))
   }, []);
 
   if (typeof window !== "undefined") {
@@ -51,6 +52,7 @@ const Navbar = () => {
       .then((response) => {
         if (response.ok) {
           console.log(response);
+          localStorage.removeItem('user');
           window.location.href = "/login";
         } else {
           throw new Error("Something went wrong");
@@ -101,7 +103,7 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* {csrfToken? */}
+        {user?
         <div className="fl fl-gap5">
           <Link href="/">
             <Image
@@ -137,7 +139,7 @@ const Navbar = () => {
               <ul className="menu">
                 <div className="p-t20 fl-col fl-gap23">
                   <li className="menu-item">
-                    <Link href="/AccountSettings-designer">
+                    <Link href={user.user_type==="designer"?"/AccountSettings-designer":"/AccountSettings/"}>
                       Account Settings
                     </Link>
                   </li>
@@ -157,10 +159,10 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        {/* :
+        :
       <div>
         <Link href='/login'>Login/SignUp</Link>
-      </div>} */}
+      </div>}
       </div>
     </nav>
   );
