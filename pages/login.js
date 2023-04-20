@@ -28,6 +28,7 @@ const Login = () => {
     const password = document.getElementById("password1").value;
 
     const formData = { email, password };
+    console.log(formData);
     fetch(`${BASE_URL}/${API_VERSION}/user/login/`, {
       method: "POST",
       headers: {
@@ -40,8 +41,7 @@ const Login = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        document.cookie = `csrfToken=${csrfToken}; expires=${getExpirationDate()}; path=/`;
-        window.location.href = "/";
+        // window.location.href = "/";
       })
       .catch((error) => console.error(error));
   };
