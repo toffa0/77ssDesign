@@ -14,7 +14,7 @@ const Login = () => {
       "Access-Control-Allow-Origin": "true",
     })
       .then((res) => {
-        setCSRFToken(res.headers["x-csrftoken"]);
+        setCSRFToken(Cookies.get("csrftoken"));
       })
       .catch((err) => {
         console.log(err);
@@ -41,7 +41,8 @@ const Login = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        // window.location.href = "/";
+
+        window.location.href = "/";
       })
       .catch((error) => console.error(error));
   };
