@@ -208,17 +208,17 @@ const SignUp = () => {
 const LoginSignUp = () => {
   const [showLogin, setShowLogin] = useState(true);
   const [activeComponent, setActiveComponent] = useState("login");
-  useEffect(()=>{
-    fetch("http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/csrf/",
-    )
-    .then((res)=>{
-      console.log(res)
-      console.log(console.log(Cookies.get('csrftoken')))
-      })
-    .catch((err)=>{
-      console.log(err)
-    })
-  },[])
+  // useEffect(()=>{
+  //   fetch("http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/csrf/",
+  //   )
+  //   .then((res)=>{
+  //     console.log(res)
+  //     console.log(console.log(Cookies.get('csrftoken')))
+  //     })
+  //   .catch((err)=>{
+  //     console.log(err)
+  //   })
+  // },[])
   return (
     <div className="page1">
       <div className="page-container max2">
