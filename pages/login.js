@@ -9,6 +9,7 @@ const Login = () => {
   const [csrfToken, setCSRFToken] = useState("");
 
   useEffect(() => {
+    console.log(BASE_URL);
     fetch(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
       credentials: "include",
       "Access-Control-Allow-Origin": "true",
