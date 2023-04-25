@@ -8,17 +8,7 @@ import { BASE_URL ,API_VERSION } from '@/config';
 
 
 const Login = () => {
-  useEffect(()=>{
-    fetch("http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/csrf/",
-    )
-    .then((res)=>{
-      console.log(res)
-      console.log(console.log(Cookies.get('csrftoken')))
-      })
-    .catch((err)=>{
-      console.log(err)
-    })
-  },[])
+
     
   // const csrfToken1 = Cookies.get('csrftoken');
   const handleSubmit= (e)=>{
@@ -47,7 +37,7 @@ const Login = () => {
         {
           console.log(data.data);
           localStorage.setItem('user', JSON.stringify(data.data));
-          document.cookie = `csrfToken=${csrfToken}; expires=${getExpirationDate()}; path=/`;
+          document.cookie = `csrfToken=${csrfToken}}; path=/`;
           window.location.href = '/';
         })
       .catch(error => console.error(error));
@@ -184,7 +174,17 @@ const SignUp = () => {
 const LoginSignUp = () => {
   const [showLogin, setShowLogin] = useState(true);
   const [activeComponent, setActiveComponent] = useState("login");
-
+  useEffect(()=>{
+    fetch("http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/csrf/",
+    )
+    .then((res)=>{
+      console.log(res)
+      console.log(console.log(Cookies.get('csrftoken')))
+      })
+    .catch((err)=>{
+      console.log(err)
+    })
+  },[])
   return (
     <div className="page1">
    

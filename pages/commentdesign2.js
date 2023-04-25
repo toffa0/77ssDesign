@@ -264,7 +264,7 @@ const Submitdesgin = ()=>{
 
 
       const handle = useFullScreenHandle();
-
+      
       
 return(
     <div className="max3 fl h-90">
@@ -345,7 +345,7 @@ return(
 
             <button className="IconBtn abs1"><Image src="SearchComm.svg" alt='' width={19} height={19} onClick={()=>console.log("Search")}  /></button>
             <button className="IconBtn abs2"><Image src="FullScreen.svg" alt='' width={19} height={19} onClick={handle.enter}  /></button>
-            <button className="IconBtn abs3"><Image src="CloseComm.svg" alt='' width={19} height={19} onClick={()=>console.log("close")}  /></button>
+            <button className="IconBtn abs3"><Image src="CloseComm.svg" alt='' width={19} height={19} onClick={()=>router.back()}  /></button>
             <button className="IconBtn abs4"><Image src="CommLeft.svg" alt='' width={19} height={19} onClick={()=>console.log("Left")}  /></button>
             <button className="IconBtn abs5"><Image src="CommRight.svg" alt='' width={19} height={19} onClick={()=>console.log("Right")}  /></button>
             <FullScreen handle={handle} style={{display:"flex",justifyContent:"center"}}>
