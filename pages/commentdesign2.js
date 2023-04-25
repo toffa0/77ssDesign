@@ -31,27 +31,45 @@ const Submitdesgin = ()=>{
     
 
     const router = useRouter();
-    // console.log(router.query.id);
-    useEffect(()=>{
-      if(!csrfToken){
-        // window.location.href = '/login';
-      }
-        fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
+    useEffect(() => {
+        if(router.isReady){
+            const { id } = router.query;
+            if (!id) return null;
+            fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
             
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': csrfToken,
-              },
-              credentials:"include",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken,
+                  },
+                  credentials:"include",
+                  
+            })
+            .then(response => {return response.json()})
+            .then(data => {setComment(data.results);console.log(data);console.log(Comment)})
+            .catch(error => console.error(error));
+         }
+    }, [router.isReady]);
+    // console.log(router.query.id);
+    // useEffect(()=>{
+    //   if(!csrfToken){
+    //     // window.location.href = '/login';
+    //   }
+    //     fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
+            
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'X-CSRFToken': csrfToken,
+    //           },
+    //           credentials:"include",
               
-        })
-      .then(response => {return response.json()})
-      .then(data => {setComment(data.results);console.log(data);console.log(Comment)})
-      .catch(error => console.error(error));
+    //     })
+    //   .then(response => {return response.json()})
+    //   .then(data => {setComment(data.results);console.log(data);console.log(Comment)})
+    //   .catch(error => console.error(error));
 
 
         
-    },[])
+    // },[])
     
     const GetComments = ()=>{
         fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.id}/comments/`, {
@@ -246,7 +264,7 @@ const Submitdesgin = ()=>{
 
 
       const handle = useFullScreenHandle();
-
+      
       
 return(
     <div className="max3 fl h-90">
@@ -327,7 +345,7 @@ return(
 
             <button className="IconBtn abs1"><Image src="SearchComm.svg" alt='' width={19} height={19} onClick={()=>console.log("Search")}  /></button>
             <button className="IconBtn abs2"><Image src="FullScreen.svg" alt='' width={19} height={19} onClick={handle.enter}  /></button>
-            <button className="IconBtn abs3"><Image src="CloseComm.svg" alt='' width={19} height={19} onClick={()=>console.log("close")}  /></button>
+            <button className="IconBtn abs3"><Image src="CloseComm.svg" alt='' width={19} height={19} onClick={()=>router.back()}  /></button>
             <button className="IconBtn abs4"><Image src="CommLeft.svg" alt='' width={19} height={19} onClick={()=>console.log("Left")}  /></button>
             <button className="IconBtn abs5"><Image src="CommRight.svg" alt='' width={19} height={19} onClick={()=>console.log("Right")}  /></button>
             <FullScreen handle={handle} style={{display:"flex",justifyContent:"center"}}>
@@ -337,7 +355,7 @@ return(
             {dot!=null && <Dot x={dot.x} y={dot.y} setIsHoveringDot={setIsHoveringDot} setIsHoveringID={setIsHoveringID} DotID={0} /> }  
             {dot!=null && <FeedBackInp x={dot.x} y={dot.y} setCommentText={setCommentText} CommentText={CommentText} handleSubmit={handleSubmit} setDot={setDot}  /> }       
             {Comment.map((item)=>{
-                console.log(item.y);        
+                // console.log(item.y);        
                 if(item.x === 0)
                 {
                     console.log("no dot")

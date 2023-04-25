@@ -6,12 +6,42 @@ import ExperSettings from "@/components/AccountSettings-designer/exp-settings";
 import IDVerificationSettings2 from "@/components/AccountSettings-designer/IDVerificationSettings-Designer";
 import NotificationsSettings from "@/components/AccountSettings-designer/NotificationsSettings-Designer";
 import ProfileSettings from "@/components/AccountSettings-designer/ProfileSettings-Designer";
+import { useEffect } from "react";
+import { BASE_URL,API_VERSION } from "@/config";
+import Cookies from "js-cookie";
+
+
 // import TimezoneSelect from 'react-timezone-select'
 
 const AccountSettings = () => {
   const [activeComponent, setActiveComponent] = useState("General");
-  
 
+  const csrfToken = Cookies.get('csrfToken');
+  
+  useEffect(()=>{
+    const user = localStorage.getItem('user');
+    console.log(user)
+      if(user.user_type!=='designer')
+      {
+        window.location.href = '/AccountSettings';
+      }
+   
+    if(!csrfToken){
+      // window.location.href = '/login';
+    }
+      fetch(`${BASE_URL}/${API_VERSION}/user/profile/client/5/`, {
+          
+          headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': csrfToken,
+            },
+            credentials:"include",
+            
+      })
+    .then(response => {return response.json()})
+    .then(data => {console.log(data)})
+    .catch(error => console.error(error));
+  },[])
 
   return (
     <div className="settings-container ">

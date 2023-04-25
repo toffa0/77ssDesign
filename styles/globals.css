@@ -207,6 +207,7 @@ a {
 }
 .home_img .image {
   width: 100%;
+  height: auto;
   object-fit: contain;
   margin-left: 20px;
 }
@@ -3445,6 +3446,23 @@ padding: 0;
   border-radius: 10px  0 0 10px;
   padding-right: 20px;
 }
+.cpm a{
+  width: 198px;
+  height: 64px;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #FFFFFF;
+  background: #4747C7;
+  border: none;
+  border-radius: 10px  0 0 10px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #cpm2{
   width: 56.1px;
   background: #00C8C8;
@@ -5812,8 +5830,50 @@ button[disabled]{
 .Eliminate:hover .Eliminatehover{
   display: block;
 }
-
-
+#ProjectSubmitDesignerButton{
+  width: 256px;
+  height: 64px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+.inputfileupload{
+  width: 90%;
+  height: 719.06px;
+  color: transparent;
+  position: relative;
+  cursor: pointer;
+  border: 1px dashed #3D3D3F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputfileupload::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.inputfileupload::before {
+  content: 'Drag and drop to upload or click to browse to choose a file';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10px;
+  color: #3d3d3f;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
 #DF{
   display: flex;
 }

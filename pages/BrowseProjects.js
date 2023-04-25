@@ -340,7 +340,7 @@ const BrowseProjects = ()=>{
             
                 
             <div key={item.id} className='disc-card-Proj'>
-              <Link href={{ pathname: "/commentdesign2", query: { id: item.id } }}>
+              <Link href={{ pathname: `/ProjectSubmitClient`, query: { projectID: item.id } }}>
 
                 <Image src="ex5.svg" alt='' width={783} height={147}  />
               </Link>
