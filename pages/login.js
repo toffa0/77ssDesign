@@ -4,46 +4,12 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Cookies from "js-cookie";
 import Image from "next/image";
 import { BASE_URL, API_VERSION } from "@/config";
+import Google from "@/helpers/google";
 
 const Login = () => {
-   
-  // const csrfToken1 = Cookies.get('csrftoken');
-  const handleSubmit= (e)=>{
-      e.preventDefault();
-      
-      console.log('coookies', document.cookie)
-      const email = document.getElementById('email1').value;
-      const password = document.getElementById('password1').value;
-      
-      const formData = { email,password  };
-      // console.log(formData)
-      // console.log(console.log(Cookies.get('csrftoken')))
-      const csrfToken = Cookies.get('csrftoken');
-      console.log(csrfToken);
-      fetch(`${BASE_URL}/${API_VERSION}/user/login/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRFToken': csrfToken,
-        },
-        credentials:"include",
-        body: JSON.stringify(formData)
-      })
-      .then(response => response.json())
-      .then(data => 
-        {
-          console.log(data.data);
-          localStorage.setItem('user', JSON.stringify(data.data));
-          document.cookie = `csrfToken=${csrfToken}}; path=/`;
-          window.location.href = '/';
-        })
-      .catch(error => console.error(error));
-      
-    };
   const [csrfToken, setCSRFToken] = useState("");
 
   useEffect(() => {
-    console.log(BASE_URL);
     fetch(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
       credentials: "include",
       "Access-Control-Allow-Origin": "true",
@@ -56,6 +22,37 @@ const Login = () => {
       });
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email1").value;
+    const password = document.getElementById("password1").value;
+
+    const formData = { email, password };
+    fetch(`${BASE_URL}/${API_VERSION}/user/login/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRFToken": csrfToken,
+      },
+      credentials: "include",
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+
+        window.location.href = "/";
+      })
+      .catch((error) => console.error(error));
+  };
+  const handleGoogleSignIn = () => {
+    const google = new Google();
+    google.login().then((url) => {
+      window.open(url, "_self");
+    });
+  };
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -63,7 +60,7 @@ const Login = () => {
       id="myForm2"
     >
       <div className=" gap64 sm-btn bottom-row3 row2-mb mt-159">
-        <button>
+        <button onClick={handleGoogleSignIn}>
           <div className="fl-sm">
             <Image src="google.svg" alt="" width={57} height={44} />
             <p className="socialSUP">Sign in with Google</p>
@@ -208,6 +205,7 @@ const SignUp = () => {
 const LoginSignUp = () => {
   const [showLogin, setShowLogin] = useState(true);
   const [activeComponent, setActiveComponent] = useState("login");
+<<<<<<< HEAD
   // useEffect(()=>{
   //   fetch("http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/csrf/",
   //   )
@@ -219,6 +217,18 @@ const LoginSignUp = () => {
   //     console.log(err)
   //   })
   // },[])
+=======
+  useEffect(() => {
+    fetch("http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/csrf/")
+      .then((res) => {
+        console.log(res);
+        console.log(console.log(Cookies.get("csrftoken")));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+>>>>>>> 5295b09f22c82b856e188e8dc73864b6073665ea
   return (
     <div className="page1">
       <div className="page-container max2">
