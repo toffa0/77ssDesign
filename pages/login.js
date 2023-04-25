@@ -4,12 +4,12 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Cookies from "js-cookie";
 import Image from "next/image";
 import { BASE_URL, API_VERSION } from "@/config";
+import Google from "@/helpers/google";
 
 const Login = () => {
   const [csrfToken, setCSRFToken] = useState("");
 
   useEffect(() => {
-    console.log(BASE_URL);
     fetch(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
       credentials: "include",
       "Access-Control-Allow-Origin": "true",
@@ -29,7 +29,6 @@ const Login = () => {
     const password = document.getElementById("password1").value;
 
     const formData = { email, password };
-    console.log(formData);
     fetch(`${BASE_URL}/${API_VERSION}/user/login/`, {
       method: "POST",
       headers: {
@@ -47,6 +46,12 @@ const Login = () => {
       })
       .catch((error) => console.error(error));
   };
+  const handleGoogleSignIn = () => {
+    const google = new Google();
+    google.login().then((url) => {
+      window.open(url, "_self");
+    });
+  };
 
   return (
     <form
@@ -55,7 +60,7 @@ const Login = () => {
       id="myForm2"
     >
       <div className=" gap64 sm-btn bottom-row3 row2-mb mt-159">
-        <button>
+        <button onClick={handleGoogleSignIn}>
           <div className="fl-sm">
             <Image src="google.svg" alt="" width={57} height={44} />
             <p className="socialSUP">Sign in with Google</p>
