@@ -113,7 +113,7 @@ if (typeof window !== "undefined") {
                           </div>
                       ))
                       :
-                      <h4  type='button' className='CatH4' >There is no items</h4>
+                      <h4  type='button' className='CatH4' >Item not found.</h4>
                       }
                     </ul>
                   </div>

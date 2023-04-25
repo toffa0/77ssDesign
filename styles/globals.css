@@ -653,7 +653,7 @@ margin-right: 20px;
  
 }
 .img-part2{
-  background: linear-gradient(41deg, #474BC0 10.52%, #00C7C7 92.91%);
+  background: linear-gradient(to right,41deg, #474BC0 10.52%, #00C7C7 92.91%);
   height: 961px;
   width: 352px;
   display: flex;
