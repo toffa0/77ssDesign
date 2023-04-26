@@ -4,23 +4,30 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Cookies from "js-cookie";
 import Image from "next/image";
 import { BASE_URL, API_VERSION } from "@/config";
-import Google from "@/helpers/google";
 
-const Login = () => {
-  const [csrfToken, setCSRFToken] = useState("");
-
+const Login = (csrfToken) => {
+  const googleLogin = async (response) => {
+    const res = await fetch(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRFToken": csrfToken,
+      },
+      body: JSON.stringify({ auth_token: response.credential }),
+    });
+    const data = await res.json();
+    console.log(data);
+  };
   useEffect(() => {
-    console.log(BASE_URL);
-    fetch(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
-      credentials: "include",
-      "Access-Control-Allow-Origin": "true",
-    })
-      .then((res) => {
-        setCSRFToken(Cookies.get("csrftoken"));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+      callback: googleLogin,
+    });
+    google.accounts.id.renderButton(document.getElementById("googleSignIn"), {
+      theme: "outline",
+      size: "large",
+    });
   }, []);
 
   const handleSubmit = (e) => {
@@ -47,12 +54,6 @@ const Login = () => {
       })
       .catch((error) => console.error(error));
   };
-  const handleGoogleSignIn = () => {
-    const google = new Google();
-    google.login().then((url) => {
-      window.open(url, "_self");
-    });
-  };
 
   return (
     <form
@@ -61,8 +62,8 @@ const Login = () => {
       id="myForm2"
     >
       <div className=" gap64 sm-btn bottom-row3 row2-mb mt-159">
-        <button onClick={handleGoogleSignIn}>
-          <div className="fl-sm">
+        <button>
+          <div className="fl-sm" id="googleSignIn">
             <Image src="google.svg" alt="" width={57} height={44} />
             <p className="socialSUP">Sign in with Google</p>
           </div>
@@ -106,7 +107,33 @@ const Login = () => {
   );
 };
 
-const SignUp = () => {
+const SignUp = (csrfToken) => {
+  const googleRegister = async (response) => {
+    const res = await fetch(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRFToken": csrfToken,
+      },
+      body: JSON.stringify({
+        auth_token: response.credential,
+        user_type: "client",
+      }),
+    });
+    const data = await res.json();
+    console.log(data);
+  };
+  useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+      callback: googleRegister,
+    });
+    google.accounts.id.renderButton(document.getElementById("googleSignUp"), {
+      theme: "outline",
+      size: "large",
+    });
+  }, []);
   const handleSignup = (e) => {
     e.preventDefault();
 
@@ -115,17 +142,14 @@ const SignUp = () => {
 
     const formData = { email, password };
 
-    fetch(
-      "http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/register/",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+    fetch(`${BASE_URL}/${API_VERSION}/user/register/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
 
-        body: JSON.stringify(formData),
-      }
-    )
+      body: JSON.stringify(formData),
+    })
       .then((response) => response.json())
       .then((data) => console.log(data))
       .catch((error) => console.error(error));
@@ -156,7 +180,7 @@ const SignUp = () => {
 
       <div className=" fl-gap31 sm-btn bottom-row2 row2-mb">
         <button>
-          <div className="fl-sm">
+          <div className="fl-sm" id="googleSignUp">
             <Image src="google.svg" alt="" width={57} height={44} />
             <p className="socialSUP">Sign Up with Google</p>
           </div>
@@ -206,16 +230,19 @@ const SignUp = () => {
 const LoginSignUp = () => {
   const [showLogin, setShowLogin] = useState(true);
   const [activeComponent, setActiveComponent] = useState("login");
-  // useEffect(() => {
-  //   fetch("http://ec2-54-146-11-112.compute-1.amazonaws.com/v1.0/user/csrf/")
-  //     .then((res) => {
-  //       console.log(res);
-  //       console.log(console.log(Cookies.get("csrftoken")));
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
+  const [csrfToken, setCSRFToken] = useState("");
+  useEffect(() => {
+    fetch(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
+      credentials: "include",
+      "Access-Control-Allow-Origin": "true",
+    })
+      .then((res) => {
+        setCSRFToken(Cookies.get("csrftoken"));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className="page1">
       <div className="page-container max2">
@@ -263,7 +290,7 @@ const LoginSignUp = () => {
               Log in
             </button>
           </div>
-          {showLogin ? <Login /> : <SignUp />}
+          {showLogin ? <Login csrfToken /> : <SignUp csrfToken />}
         </div>
       </div>
     </div>
