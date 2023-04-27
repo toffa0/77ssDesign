@@ -1,10 +1,12 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Cookies from "js-cookie";
 import Image from "next/image";
 import { BASE_URL, API_VERSION } from "@/config";
 import { useRouter } from "next/router";
+import { AuthContext } from "@/contexts/auth.contexts";
+import axiosInstance from "@/helpers/axios";
 
 const Login = (csrfToken) => {
   const router = useRouter();
@@ -40,20 +42,11 @@ const Login = (csrfToken) => {
     const password = document.getElementById("password1").value;
 
     const formData = { email, password };
-    fetch(`${BASE_URL}/${API_VERSION}/user/login/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRFToken": csrfToken,
-      },
-      credentials: "include",
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-
-        window.location.href = "/";
+    axiosInstance
+      .post(`${BASE_URL}/${API_VERSION}/user/login/`, formData)
+      .then((res) => {
+        console.log(res.data);
+        router.push("/");
       })
       .catch((error) => console.error(error));
   };
@@ -148,16 +141,9 @@ const SignUp = (csrfToken) => {
 
     const formData = { email, password };
 
-    fetch(`${BASE_URL}/${API_VERSION}/user/register/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
+    axiosInstance
+      .post(`${BASE_URL}/${API_VERSION}/user/register/`, formData)
+      .then((res) => console.log(res.data))
       .catch((error) => console.error(error));
   };
 
@@ -237,18 +223,8 @@ const LoginSignUp = () => {
   const [showLogin, setShowLogin] = useState(true);
   const [activeComponent, setActiveComponent] = useState("login");
   const [csrfToken, setCSRFToken] = useState("");
-  useEffect(() => {
-    fetch(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
-      credentials: "include",
-      "Access-Control-Allow-Origin": "true",
-    })
-      .then((res) => {
-        setCSRFToken(Cookies.get("csrftoken"));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  const { auth, setAuth } = useContext(AuthContext);
+
   return (
     <div className="page1">
       <div className="page-container max2">
