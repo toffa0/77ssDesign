@@ -1,15 +1,17 @@
 import Link from "next/link";
+import { Redirect } from "next";
 import React, { useEffect, useState, useContext } from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Cookies from "js-cookie";
 import Image from "next/image";
 import { BASE_URL, API_VERSION } from "@/config";
 import { useRouter } from "next/router";
-import { AuthContext } from "@/contexts/auth.contexts";
 import axiosInstance from "@/helpers/axios";
+import useAuth from "@/contexts/auth.contexts";
 
-const Login = (csrfToken) => {
+const Login = () => {
   const router = useRouter();
+
   const googleLogin = async (response) => {
     const res = await fetch(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
       method: "POST",
@@ -45,7 +47,7 @@ const Login = (csrfToken) => {
     axiosInstance
       .post(`${BASE_URL}/${API_VERSION}/user/login/`, formData)
       .then((res) => {
-        console.log(res.data);
+        // setUser();
         router.push("/");
       })
       .catch((error) => console.error(error));
@@ -220,10 +222,15 @@ const SignUp = (csrfToken) => {
 };
 
 const LoginSignUp = () => {
+  const { user, setUser } = useAuth();
   const [showLogin, setShowLogin] = useState(true);
   const [activeComponent, setActiveComponent] = useState("login");
   const [csrfToken, setCSRFToken] = useState("");
-  const { auth, setAuth } = useContext(AuthContext);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user.user_id) router.push("/");
+  }, []);
 
   return (
     <div className="page1">
@@ -272,7 +279,7 @@ const LoginSignUp = () => {
               Log in
             </button>
           </div>
-          {showLogin ? <Login csrfToken /> : <SignUp csrfToken />}
+          {showLogin ? <Login /> : <SignUp />}
         </div>
       </div>
     </div>

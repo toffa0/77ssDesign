@@ -5,17 +5,8 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import PIcon from "@/public/PI.svg";
 import { BASE_URL, API_VERSION } from "@/config";
-import Cookies from "js-cookie";
 
-const Navbar = () => {
-  const [csrfToken, csrfTokenSet] = useState("");
-  const [user, setUser] = useState(null)
-  useEffect(() => {
-    const csrfToken = Cookies.get("csrfToken");
-    csrfTokenSet(csrfToken);
-    setUser(localStorage.getItem('user'))
-  }, []);
-
+const Navbar = (user) => {
   if (typeof window !== "undefined") {
     window.addEventListener("click", function (e) {
       if (document.getElementById("icon-menu")) {
@@ -52,7 +43,7 @@ const Navbar = () => {
       .then((response) => {
         if (response.ok) {
           console.log(response);
-          localStorage.removeItem('user');
+          localStorage.removeItem("user");
           window.location.href = "/login";
         } else {
           throw new Error("Something went wrong");
@@ -103,66 +94,73 @@ const Navbar = () => {
           )}
         </div>
 
-        {user?
-        <div className="fl fl-gap5">
-          <Link href="/">
-            <Image
-              src="env.svg"
-              className="navicon"
-              alt=""
-              width={25}
-              height={25}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="bell.svg"
-              className="navicon"
-              alt=""
-              width={25}
-              height={25}
-            />
-          </Link>
-
-          <div className="action">
-            <i className="icon" id="icon-menu">
+        {user.user_id ? (
+          <div className="fl fl-gap5">
+            <Link href="/">
               <Image
-                src="PI.svg"
+                src="env.svg"
                 className="navicon"
                 alt=""
-                width={29}
-                height={30}
+                width={25}
+                height={25}
               />
-            </i>
-            {/* onClick={handleClick} */}
-            {!showMenu && (
-              <ul className="menu">
-                <div className="p-t20 fl-col fl-gap23">
-                  <li className="menu-item">
-                    <Link href={user.user_type==="designer"?"/AccountSettings-designer":"/AccountSettings/"}>
-                      Account Settings
-                    </Link>
-                  </li>
-                  <li className="menu-item">
-                    <Link href="/profile">Profile</Link>
-                  </li>
-                  <li className="menu-item">
-                    <Link href="/balance">Balance</Link>
-                  </li>
-                  <li className="menu-item">
-                    <button href="#" onClick={handleLogout}>
-                      Log Out
-                    </button>
-                  </li>
-                </div>
-              </ul>
-            )}
+            </Link>
+            <Link href="/">
+              <Image
+                src="bell.svg"
+                className="navicon"
+                alt=""
+                width={25}
+                height={25}
+              />
+            </Link>
+
+            <div className="action">
+              <i className="icon" id="icon-menu">
+                <Image
+                  src="PI.svg"
+                  className="navicon"
+                  alt=""
+                  width={29}
+                  height={30}
+                />
+              </i>
+              {/* onClick={handleClick} */}
+              {!showMenu && (
+                <ul className="menu">
+                  <div className="p-t20 fl-col fl-gap23">
+                    <li className="menu-item">
+                      <Link
+                        href={
+                          user.user_type === "designer"
+                            ? "/AccountSettings-designer"
+                            : "/AccountSettings/"
+                        }
+                      >
+                        Account Settings
+                      </Link>
+                    </li>
+                    <li className="menu-item">
+                      <Link href="/profile">Profile</Link>
+                    </li>
+                    <li className="menu-item">
+                      <Link href="/balance">Balance</Link>
+                    </li>
+                    <li className="menu-item">
+                      <button href="#" onClick={handleLogout}>
+                        Log Out
+                      </button>
+                    </li>
+                  </div>
+                </ul>
+              )}
+            </div>
           </div>
-        </div>
-        :
-      <div>
-        <Link href='/login'>Login/SignUp</Link>
-      </div>}
+        ) : (
+          <div>
+            <Link href="/login">Login/SignUp</Link>
+          </div>
+        )}
       </div>
     </nav>
   );
