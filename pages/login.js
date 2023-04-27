@@ -4,8 +4,10 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Cookies from "js-cookie";
 import Image from "next/image";
 import { BASE_URL, API_VERSION } from "@/config";
+import { useRouter } from "next/router";
 
 const Login = (csrfToken) => {
+  const router = useRouter();
   const googleLogin = async (response) => {
     const res = await fetch(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
       method: "POST",
@@ -17,6 +19,7 @@ const Login = (csrfToken) => {
     });
     const data = await res.json();
     console.log(data);
+    router.push("/");
   };
   useEffect(() => {
     /* global google */
@@ -108,6 +111,7 @@ const Login = (csrfToken) => {
 };
 
 const SignUp = (csrfToken) => {
+  const router = useRouter();
   const googleRegister = async (response) => {
     const res = await fetch(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
       method: "POST",
@@ -120,8 +124,10 @@ const SignUp = (csrfToken) => {
         user_type: "client",
       }),
     });
-    const data = await res.json();
-    console.log(data);
+    const jsonData = await res.json();
+    console.log(jsonData);
+    localStorage.setItem("user", JSON.stringify(jsonData.data));
+    router.push("/AccountSettings");
   };
   useEffect(() => {
     /* global google */
