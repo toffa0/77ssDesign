@@ -8,6 +8,7 @@ import { BASE_URL, API_VERSION } from "@/config";
 import { useRouter } from "next/router";
 import axiosInstance from "@/helpers/axios";
 import useAuth from "@/contexts/auth.contexts";
+import axios from "axios";
 
 const Login = () => {
   const router = useRouter();
