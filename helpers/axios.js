@@ -21,9 +21,9 @@ axiosInstance.interceptors.request.use(
       }
       console.log(Cookies.get("csrftoken"));
       if (Cookies.get("csrftoken") == undefined)
-        axios(`${BASE_URL}/${API_VERSION}/user/csrf/`).then((res) =>
-          console.log(res)
-        );
+        axios(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
+          withCredentials: true,
+        });
     }
     return request;
   },

@@ -242,13 +242,6 @@ const LoginSignUp = () => {
   const [activeComponent, setActiveComponent] = useState("login");
   const router = useRouter();
 
-  useEffect(() => {
-    axios(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
-      withCredentials: true,
-    }).then((res) => console.log(res));
-    if (user.user_id) router.push("/");
-  }, []);
-
   return (
     <>
       <div className="page1">
