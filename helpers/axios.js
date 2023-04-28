@@ -19,11 +19,6 @@ axiosInstance.interceptors.request.use(
       if (request.data instanceof FormData) {
         request.headers["Content-Type"] = "multipart/form-data";
       }
-      console.log(Cookies.get("csrftoken"));
-      if (Cookies.get("csrftoken") == undefined)
-        axios(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
-          withCredentials: true,
-        });
     }
     return request;
   },

@@ -9,7 +9,6 @@ import { BASE_URL, API_VERSION } from "@/config";
 import { useRouter } from "next/router";
 import axiosInstance from "@/helpers/axios";
 import useAuth from "@/contexts/auth.contexts";
-import axios from "axios";
 import Script from "next/script";
 
 const Login = () => {
@@ -241,6 +240,11 @@ const LoginSignUp = () => {
   const [showLogin, setShowLogin] = useState(true);
   const [activeComponent, setActiveComponent] = useState("login");
   const router = useRouter();
+
+  useEffect(() => {
+    axiosInstance(`${BASE_URL}/${API_VERSION}/user/csrf/`);
+    if (user.user_id) router.push("/");
+  }, []);
 
   return (
     <>
