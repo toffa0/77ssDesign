@@ -2,7 +2,7 @@
 
 import axiosInstance from "@/helpers/axios";
 import Cookies from "js-cookie";
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { API_VERSION, BASE_URL } from "@/config";
 import { useContext } from "react";
 
@@ -15,11 +15,19 @@ export const AuthProvider = ({ children }) => {
   const storeUser = () => {
     axiosInstance(`${BASE_URL}/${API_VERSION}/user/details/`);
   };
-  const user = {
-    user_type: Cookies.get("user_type"),
-    user_id: Cookies.get("user_id"),
-    username: Cookies.get("username"),
-  };
+  let user = undefined;
+  if (
+    Cookies.get("77SDESIGN_USER_TYPE") &&
+    Cookies.get("77SDESIGN_UID") &&
+    Cookies.get("77SDESIGN_USERNAME")
+  ) {
+    user =
+      {
+        user_type: Cookies.get("77SDESIGN_USER_TYPE"),
+        id: Cookies.get("77SDESIGN_UID"),
+        username: Cookies.get("77SDESIGN_USERNAME"),
+      } || undefined;
+  }
   return (
     <AuthContext.Provider
       value={{

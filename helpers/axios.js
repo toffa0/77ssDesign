@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
     "Content-Type": "application/json",
     Accept: "application/json",
   },
-  xsrfCookieName: "csrftoken",
+  xsrfCookieName: "77SDESIGN_CSRF_TOKEN",
   xsrfHeaderName: "X-CSRFToken",
   withCredentials: true,
 });
@@ -24,6 +24,16 @@ axiosInstance.interceptors.request.use(
   },
   async (error) => {
     return Promise.reject(error);
+  }
+);
+axiosInstance.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  async (error) => {
+    if (error.status === 401) {
+      window.location.href = "/login";
+    }
   }
 );
 export default axiosInstance;

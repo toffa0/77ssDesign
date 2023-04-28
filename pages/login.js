@@ -13,30 +13,38 @@ import Script from "next/script";
 
 const Login = () => {
   const router = useRouter();
+  const { setUser } = useAuth();
 
   const googleLogin = async (response) => {
-    const res = await fetch(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRFToken": csrfToken,
-      },
-      body: JSON.stringify({ auth_token: response.credential }),
-    });
-    const data = await res.json();
-    console.log(data);
-    router.push("/");
+    axiosInstance
+      .post(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
+        auth_token: response.credential,
+      })
+      .then((res) => {
+        const data = res.data;
+        console.log(data);
+        setUser();
+        router.push("/");
+      });
   };
   useEffect(() => {
     /* global google */
+
     google.accounts.id.initialize({
       client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
       callback: googleLogin,
+      context: "login",
+      itpSupport: "true",
     });
     google.accounts.id.renderButton(document.getElementById("googleSignIn"), {
+      text: "login_with",
+      shape: "pill",
+      logoAlignment: "center",
       theme: "outline",
       size: "large",
+      width: "400",
     });
+    google.accounts.id.prompt();
   }, []);
 
   const handleSubmit = (e) => {
@@ -49,7 +57,7 @@ const Login = () => {
     axiosInstance
       .post(`${BASE_URL}/${API_VERSION}/user/login/`, formData)
       .then((res) => {
-        // setUser();
+        setUser();
         router.push("/");
       })
       .catch((error) => console.error(error));
@@ -107,37 +115,40 @@ const Login = () => {
   );
 };
 
-const SignUp = (csrfToken) => {
+const SignUp = () => {
   const [userType, setUserType] = useState("client");
 
   const router = useRouter();
   const googleRegister = async (response) => {
-    const res = await fetch(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-CSRFToken": csrfToken,
-      },
-      body: JSON.stringify({
+    axiosInstance
+      .post(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
         auth_token: response.credential,
-        user_type: "client",
-      }),
-    });
-    const jsonData = await res.json();
-    console.log(jsonData);
-    localStorage.setItem("user", JSON.stringify(jsonData.data));
-    router.push("/AccountSettings");
+        user_type: userType,
+      })
+      .then((res) => {
+        const data = res.data;
+        console.log(data);
+        router.push("/AccountSettings");
+      });
   };
+
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
       client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
       callback: googleRegister,
+      context: "signup",
+      itpSupport: "true",
     });
     google.accounts.id.renderButton(document.getElementById("googleSignUp"), {
+      text: "signup_with",
+      shape: "pill",
+      logoAlignment: "center",
       theme: "outline",
       size: "large",
+      width: "400",
     });
+    google.accounts.id.prompt();
   }, []);
 
   const handleUserType = (e) => {
@@ -236,14 +247,14 @@ const SignUp = (csrfToken) => {
 };
 
 const LoginSignUp = () => {
-  const { user, setUser } = useAuth();
+  const { user } = useAuth();
   const [showLogin, setShowLogin] = useState(true);
   const [activeComponent, setActiveComponent] = useState("login");
   const router = useRouter();
 
   useEffect(() => {
     axiosInstance(`${BASE_URL}/${API_VERSION}/user/csrf/`);
-    if (user.user_id) router.push("/");
+    if (user) router.push("/");
   }, []);
 
   return (
@@ -299,7 +310,7 @@ const LoginSignUp = () => {
                 Log in
               </button>
             </div>
-            {showLogin ? <Login /> : <SignUp />}
+            {showLogin ? <Login csrfToken /> : <SignUp csrfToken />}
           </div>
         </div>
       </div>

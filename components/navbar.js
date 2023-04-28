@@ -5,8 +5,10 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import PIcon from "@/public/PI.svg";
 import { BASE_URL, API_VERSION } from "@/config";
+import { useRouter } from "next/router";
 
-const Navbar = (user) => {
+const Navbar = ({ user }) => {
+  const router = useRouter();
   if (typeof window !== "undefined") {
     window.addEventListener("click", function (e) {
       if (document.getElementById("icon-menu")) {
@@ -44,7 +46,7 @@ const Navbar = (user) => {
         if (response.ok) {
           console.log(response);
           localStorage.removeItem("user");
-          window.location.href = "/login";
+          router.push("/");
         } else {
           throw new Error("Something went wrong");
         }
@@ -52,6 +54,7 @@ const Navbar = (user) => {
 
       .catch((error) => console.error(error));
   };
+  console.log(user);
 
   return (
     <nav className="navbar">
@@ -94,7 +97,7 @@ const Navbar = (user) => {
           )}
         </div>
 
-        {user.user_id ? (
+        {user ? (
           <div className="fl fl-gap5">
             <Link href="/">
               <Image

@@ -8,7 +8,11 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { BASE_URL, API_VERSION } from "@/config";
 import Cookies from "js-cookie";
+import useAuth from "@/contexts/auth.contexts";
+import axiosInstance from "@/helpers/axios";
+
 const AccountSettings = () => {
+  const { user } = useAuth();
   const [activeComponent, setActiveComponent] = useState("General");
 
   const [avatar, setAvatar] = useState("");
@@ -83,19 +87,12 @@ const AccountSettings = () => {
   };
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    console.log(user);
     if (user.user_type === "designer") {
       window.location.href = "/AccountSettings-designer";
     }
 
-    if (!csrfToken) {
-      // window.location.href = '/login';
-    }
     if (user) {
-      const userID = localStorage.getItem("user");
-      console.log(userID.username);
-
+      axiosInstance(`${BASE_URL}/${API_VERSION}/user/csrf/`);
       fetch(`${BASE_URL}/${API_VERSION}/user/profile/client/${user.user_id}`, {
         headers: {
           // 'Content-Type': 'application/json',
@@ -115,7 +112,7 @@ const AccountSettings = () => {
   return (
     <div className="settings-container ">
       <div className="home_section mainscr">
-        <Navbar />
+        <Navbar user />
         <div className="max mt-133">
           <div className="my-workkk  mb-46">
             <h3 id="title">Account Settings</h3>
