@@ -19,7 +19,9 @@ axiosInstance.interceptors.request.use(
         request.headers["Content-Type"] = "multipart/form-data";
       }
       if (!Cookies.get("csrftoken"))
-        axios(`${BASE_URL}/${API_VERSION}/user/csrf/`);
+        axios(`${BASE_URL}/${API_VERSION}/user/csrf/`).then((res) =>
+          console.log(res)
+        );
     }
     return request;
   },
