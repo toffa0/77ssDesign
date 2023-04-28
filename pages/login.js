@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import axiosInstance from "@/helpers/axios";
 import useAuth from "@/contexts/auth.contexts";
 import Script from "next/script";
+import { Sdk, useInitFacebook } from "@nixjs23n6/facebook-login";
 
 const Login = () => {
   const router = useRouter();
@@ -63,6 +64,25 @@ const Login = () => {
       .catch((error) => console.error(error));
   };
 
+  useInitFacebook({
+    version: "v16.0",
+    appId: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID,
+  });
+  const facebookLogin = (e) => {
+    e.preventDefault();
+    Sdk.login({
+      scope: "email",
+    })
+      .then((response) => {
+        const access_token = response.authResponse.accessToken;
+        console.log(access_token);
+        axiosInstance.post(`${BASE_URL}/${API_VERSION}/user/auth/facebook/`, {
+          access_token,
+        });
+      })
+      .catch(console.log);
+  };
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -76,17 +96,11 @@ const Login = () => {
             <p className="socialSUP">Sign in with Google</p>
           </div>
         </button>
-        <button>
+        <button onClick={facebookLogin}>
           <div className="fl-sm">
-            <Image
-              src="facebook.svg"
-              id="fb-btn"
-              alt=""
-              width={57}
-              height={44}
-            />{" "}
+            <Image src="facebook.svg" alt="" width={57} height={44} />
             <p className="socialSUP">Sign in with Facebook</p>
-          </div>{" "}
+          </div>
         </button>
       </div>
       <div>
@@ -128,6 +142,7 @@ const SignUp = () => {
       .then((res) => {
         const data = res.data;
         console.log(data);
+        setUser();
         router.push("/AccountSettings");
       });
   };
