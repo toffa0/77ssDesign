@@ -106,6 +106,8 @@ const Login = () => {
 };
 
 const SignUp = (csrfToken) => {
+  const [userType, setUserType] = useState("client");
+
   const router = useRouter();
   const googleRegister = async (response) => {
     const res = await fetch(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
@@ -135,13 +137,18 @@ const SignUp = (csrfToken) => {
       size: "large",
     });
   }, []);
+
+  const handleUserType = (e) => {
+    setUserType(e.target.value);
+  };
+
   const handleSignup = (e) => {
     e.preventDefault();
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const formData = { email, password };
+    const formData = { email, password, user_type: userType };
 
     axiosInstance
       .post(`${BASE_URL}/${API_VERSION}/user/register/`, formData)
@@ -158,6 +165,9 @@ const SignUp = (csrfToken) => {
             id="remember"
             name="accounttype"
             className="radioinp"
+            defaultChecked
+            onChange={handleUserType}
+            value="client"
           />
           <label htmlFor="remember">Need design</label>
         </div>
@@ -167,6 +177,8 @@ const SignUp = (csrfToken) => {
             id="remember2"
             name="accounttype"
             className="radioinp"
+            onChange={handleUserType}
+            value="designer"
           />
           <label htmlFor="remember2">Designer</label>
         </div>
@@ -225,7 +237,6 @@ const LoginSignUp = () => {
   const { user, setUser } = useAuth();
   const [showLogin, setShowLogin] = useState(true);
   const [activeComponent, setActiveComponent] = useState("login");
-  const [csrfToken, setCSRFToken] = useState("");
   const router = useRouter();
 
   useEffect(() => {
