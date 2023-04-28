@@ -131,6 +131,7 @@ const Login = () => {
 
 const SignUp = () => {
   const [userType, setUserType] = useState("client");
+  const { setUser } = useAuth();
 
   const router = useRouter();
   const googleRegister = async (response) => {
