@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/config";
+import { API_VERSION, BASE_URL } from "@/config";
 import axios from "axios";
 import Cookies from "js-cookie";
 
@@ -18,7 +18,8 @@ axiosInstance.interceptors.request.use(
       if (request.data instanceof FormData) {
         request.headers["Content-Type"] = "multipart/form-data";
       }
-      if (!Cookies.get("csrftoken")) axios(`${BASE_URL}/v1/user/csrf/`);
+      if (!Cookies.get("csrftoken"))
+        axios(`${BASE_URL}/${API_VERSION}/user/csrf/`);
     }
     return request;
   },
