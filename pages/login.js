@@ -241,9 +241,9 @@ const LoginSignUp = () => {
   const router = useRouter();
 
   useEffect(() => {
-    axios(`${BASE_URL}/${API_VERSION}/user/csrf/`).then((res) =>
-      console.log(res)
-    );
+    axios(`${BASE_URL}/${API_VERSION}/user/csrf/`, {
+      withCredentials: true,
+    }).then((res) => console.log(res));
     if (user.user_id) router.push("/");
   }, []);
 
