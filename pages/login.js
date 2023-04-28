@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-before-interactive-script-outside-document */
 import Link from "next/link";
 import { Redirect } from "next";
 import React, { useEffect, useState, useContext } from "react";
@@ -9,6 +10,7 @@ import { useRouter } from "next/router";
 import axiosInstance from "@/helpers/axios";
 import useAuth from "@/contexts/auth.contexts";
 import axios from "axios";
+import Script from "next/script";
 
 const Login = () => {
   const router = useRouter();
@@ -248,56 +250,67 @@ const LoginSignUp = () => {
   }, []);
 
   return (
-    <div className="page1">
-      <div className="page-container max2">
-        <div className="img-part">
-          <Link href="/" id="lg">
-            {" "}
-            <Image
-              src="logo1.svg"
-              className="logimg"
-              alt=""
-              width={149}
-              height={40}
-            />
-          </Link>
-          <div className="img-part2">
-            <Image src="loginbulb.svg" alt="" width={105.34} height={167.75} />
-            <h1>Discover</h1>
-            <h3>the world’s best</h3>
-            <h3>community of </h3>
-            <h1>Talented</h1>
-            <h3>and</h3>
-            <h3>business owners</h3>
+    <>
+      <div className="page1">
+        <div className="page-container max2">
+          <div className="img-part">
+            <Link href="/" id="lg">
+              {" "}
+              <Image
+                src="logo1.svg"
+                className="logimg"
+                alt=""
+                width={149}
+                height={40}
+              />
+            </Link>
+            <div className="img-part2">
+              <Image
+                src="loginbulb.svg"
+                alt=""
+                width={105.34}
+                height={167.75}
+              />
+              <h1>Discover</h1>
+              <h3>the world’s best</h3>
+              <h3>community of </h3>
+              <h1>Talented</h1>
+              <h3>and</h3>
+              <h3>business owners</h3>
+            </div>
           </div>
-        </div>
-        <div className="form-part">
-          <div className="switch-container">
-            <button
-              onClick={() => {
-                setShowLogin(false);
-                setActiveComponent("signup");
-              }}
-              className="btn-switch"
-              id={`${activeComponent === "signup" ? "logactive2" : ""}`}
-            >
-              Sign Up
-            </button>
-            <button
-              onClick={() => {
-                setShowLogin(true);
-                setActiveComponent("login");
-              }}
-              className="btn-switch"
-              id={`${activeComponent === "login" ? "logactive" : ""}`}
-            >
-              Log in
-            </button>
+          <div className="form-part">
+            <div className="switch-container">
+              <button
+                onClick={() => {
+                  setShowLogin(false);
+                  setActiveComponent("signup");
+                }}
+                className="btn-switch"
+                id={`${activeComponent === "signup" ? "logactive2" : ""}`}
+              >
+                Sign Up
+              </button>
+              <button
+                onClick={() => {
+                  setShowLogin(true);
+                  setActiveComponent("login");
+                }}
+                className="btn-switch"
+                id={`${activeComponent === "login" ? "logactive" : ""}`}
+              >
+                Log in
+              </button>
+            </div>
+            {showLogin ? <Login /> : <SignUp />}
           </div>
-          {showLogin ? <Login /> : <SignUp />}
         </div>
       </div>
-    </div>
+      <Script
+        src="https://accounts.google.com/gsi/client"
+        strategy="beforeInteractive"
+      />
+    </>
   );
 };
 
