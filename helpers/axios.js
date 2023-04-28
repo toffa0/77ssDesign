@@ -7,8 +7,9 @@ const axiosInstance = axios.create({
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
-    "X-CSRFToken": Cookies.get("csrftoken"),
   },
+  xsrfCookieName: "csrftoken",
+  xsrfHeaderName: "X-CSRFToken",
   withCredentials: true,
 });
 
