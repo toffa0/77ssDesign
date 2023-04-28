@@ -9,7 +9,7 @@ import ProfileSettings from "@/components/AccountSettings-designer/ProfileSettin
 import { useEffect } from "react";
 import { BASE_URL, API_VERSION } from "@/config";
 import Cookies from "js-cookie";
-import useAuth from "@/contexts/auth.context";
+import useAuth from "@/contexts/auth.contexts";
 import axiosInstance from "@/helpers/axios";
 
 // import TimezoneSelect from 'react-timezone-select'
