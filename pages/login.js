@@ -27,7 +27,12 @@ const Login = () => {
         setUser();
         router.push("/");
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        if (err.code === "ERR_BAD_REQUEST") {
+          router.reload();
+        }
+        console.error(err);
+      });
   };
   useEffect(() => {
     /* global google */
@@ -266,8 +271,8 @@ const SignUp = () => {
 
 const LoginSignUp = () => {
   const { user } = useAuth();
-  const [showLogin, setShowLogin] = useState(true);
-  const [activeComponent, setActiveComponent] = useState("login");
+  const [showLogin, setShowLogin] = useState(false);
+  const [activeComponent, setActiveComponent] = useState("signup");
   const router = useRouter();
 
   useEffect(() => {
