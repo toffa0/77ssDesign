@@ -11,16 +11,27 @@ import axiosInstance from "@/helpers/axios";
 import useAuth from "@/contexts/auth.contexts";
 import Script from "next/script";
 import { Sdk, useInitFacebook } from "@nixjs23n6/facebook-login";
-
+import axios from "axios";
 const Login = () => {
   const router = useRouter();
   const { setUser } = useAuth();
 
   const googleLogin = async (response) => {
-    axiosInstance
-      .post(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
-        auth_token: response.credential,
-      })
+    axios
+      .post(
+        `${BASE_URL}/${API_VERSION}/user/auth/google/`,
+        {
+          auth_token: response.credential,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          xsrfCookieName: "77SDESIGN_CSRF_TOKEN",
+          xsrfHeaderName: "X-CSRFToken",
+        }
+      )
       .then((res) => {
         const data = res.data;
         console.log(data);

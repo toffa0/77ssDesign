@@ -1,6 +1,5 @@
-import { API_VERSION, BASE_URL } from "@/config";
+import { BASE_URL } from "@/config";
 import axios from "axios";
-import Cookies from "js-cookie";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
