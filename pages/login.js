@@ -29,7 +29,7 @@ const Login = () => {
       })
       .catch((err) => {
         if (err.code === "ERR_BAD_REQUEST") {
-          router.push('/login');
+          router.reload();
         }
         console.error(err);
       });
