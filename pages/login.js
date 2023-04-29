@@ -26,7 +26,8 @@ const Login = () => {
         console.log(data);
         setUser();
         router.push("/");
-      });
+      })
+      .catch((err) => console.error(err));
   };
   useEffect(() => {
     /* global google */
@@ -145,7 +146,8 @@ const SignUp = () => {
         console.log(data);
         setUser();
         router.push("/AccountSettings");
-      });
+      })
+      .catch((error) => console.error(error));
   };
 
   useEffect(() => {
