@@ -24,7 +24,6 @@ const Login = () => {
       .then((res) => {
         const data = res.data;
         console.log(data);
-        setUser();
         router.push("/");
       })
       .catch((err) => {
@@ -149,7 +148,6 @@ const SignUp = () => {
       .then((res) => {
         const data = res.data;
         console.log(data);
-        setUser();
         router.push("/AccountSettings");
       })
       .catch((error) => console.error(error));
