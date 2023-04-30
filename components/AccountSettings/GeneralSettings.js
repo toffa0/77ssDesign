@@ -4,7 +4,7 @@ import 'react-phone-input-2/lib/style.css'
 
 import PhoneInput from 'react-phone-input-2'
 
-const GeneralSettings = () => {
+const GeneralSettings = ({setActiveComponent,setFirstname,setLastname,setAddress,setCity,setCountry,setTimezone,setZip_code,setState,setPhone,payload}) => {
 
 
   const [selected, setSelected] = useState("");
@@ -13,7 +13,7 @@ const GeneralSettings = () => {
     Intl.DateTimeFormat().resolvedOptions().timeZone
   )
   console.log(selectedTimezone)
-
+  setTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone)
   return (
     <div>
       <form className="form-group-sett m-40 mb-172">
@@ -25,17 +25,17 @@ const GeneralSettings = () => {
         <div className='form-group1'> 
           <div className="form-group w-40">
                 <label htmlFor="first-name">First Name</label>
-                <input type="text" className="form-control" id="first-name" />
+                <input type="text" className="form-control" id="first-name" onChange={(e)=>setFirstname(e.currentTarget.value)} />
             </div>
             <div className="form-group w-40">
                 <label htmlFor="last-name">Last Name</label>
-                <input type="text" className="form-control" id="last-name" />
+                <input type="text" className="form-control" id="last-name" onChange={(e)=>setLastname(e.currentTarget.value)} />
             </div>
         </div>
 
         <div className="form-group">
           <label htmlFor="text">Address details</label>
-          <input type="text" className="form-control" id="Address" />
+          <input type="text" className="form-control" id="Address" onChange={(e)=>setAddress(e.currentTarget.value)} />
         </div>
 
         <div className='form-group1'> 
@@ -295,32 +295,32 @@ const GeneralSettings = () => {
                 </select> */}
                                 <ReactFlagsSelect
                                     selected={selected}
-                                    onSelect={(code) => setSelected(code)}
+                                    onSelect={(code) => {setSelected(code);setCountry(code)}}
                                     selectButtonClassName='SelectCountry'
                                     searchable
                                 />
             </div>
             <div className="form-group w-30">
                 <label htmlFor="last-name">City</label>
-                <input type="text" className="form-control" id="City" />
+                <input type="text" className="form-control" id="City" onChange={(e)=>setCity(e.currentTarget.value)} />
             </div>
         </div>
         <div className='form-group1 mb-200'> 
           <div className="form-group w-30">
                 <label htmlFor="State">State(opt.)</label>
-                <input type="text" className="form-control" id="State" />
+                <input type="text" className="form-control" id="State" onChange={(e)=>setState(e.currentTarget.value)} />
             </div>
             <div className="form-group w-30">
                 <label htmlFor="Zip">Zip(opt.)</label>
-                <input type="text" className="form-control" id="Zip" />
+                <input type="text" className="form-control" id="Zip" onChange={(e)=>setZip_code(e.currentTarget.value)} />
             </div>
             <div className="form-group w-30 ">
                 <label htmlFor="Phone-Number">Phone Number</label>
-                <input type="text" className="form-control" id="Phone-Number" />
+                <input type="text" className="form-control" id="Phone-Number" onChange={(e)=>setPhone(e.currentTarget.value)} />
             </div>
         </div>
         <div className='profile__submit-button'>
-        <button type="submit" className="btn btn-primary">Continue</button>
+        <button type="button" className="btn btn-primary" onClick={()=>{setActiveComponent("Profile");console.log(payload)}}>Continue</button>
 
         </div>
       </form>

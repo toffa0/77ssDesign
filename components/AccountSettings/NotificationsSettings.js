@@ -1,6 +1,6 @@
 import React from "react";
 
-const Notifications = () => {
+const Notifications = ({setActiveComponent,payload}) => {
   return (
     <div className="form-group-sett1 m-40 mb-172">
       <div>
@@ -41,9 +41,10 @@ const Notifications = () => {
             </li>
         </ul>
       </div>
-      <div className="profile__submit-button">
-        <button>Continue</button>
-      </div>
+      <div className='profile__submit-button'>
+        <button type="button" className="btn btn-primary" onClick={()=>{setActiveComponent("ID Verification");console.log(payload)}}>Continue</button>
+
+        </div>
     </div>
   );
 };

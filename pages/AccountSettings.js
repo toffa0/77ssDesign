@@ -179,11 +179,11 @@ const AccountSettings = () => {
             }}
           /> */}
           {/* <button onClick={handleContinue}>Cont</button> */}
-          {activeComponent === "General" && <GeneralSettings />}
-          {activeComponent === "Profile" && <ProfileSettings />}
-          {activeComponent === "Notifications" && <NotificationsSettings />}
-          {activeComponent === "ID Verification" && <IDVerificationSettings />}
-          {activeComponent === "Membership" && <MembershipSettings />}
+          {activeComponent === "General" && <GeneralSettings setActiveComponent={setActiveComponent} setFirstname={setFirstname} setLastname={setLastname} setAddress={setAddress} setCity={setCity} setCountry={setCountry} setTimezone={setTimezone} setZip_code={setZip_code} setState={setState} setPhone={setPhone} payload={payload} />}
+          {activeComponent === "Profile" && <ProfileSettings setBio={setBio} setAvatar={setAvatar} setLanguages={setLanguages} setActiveComponent={setActiveComponent} payload={payload} />}
+          {activeComponent === "Notifications" && <NotificationsSettings setActiveComponent={setActiveComponent} payload={payload} />}
+          {activeComponent === "ID Verification" && <IDVerificationSettings setId_card={setId_card} handleContinue={handleContinue} />}
+          {activeComponent === "Membership" && <MembershipSettings  />}
         </div>
       </div>
       <Footer />

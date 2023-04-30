@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 
-const IDVerification = () => {
+const IDVerification = ({setId_card,handleContinue}) => {
   const [file, setFile] = useState("idver.svg")
   const [status, setStatus] = useState('Pending Verification')
   const [result, setResult] = useState(null)
@@ -24,8 +24,17 @@ const IDVerification = () => {
         </div>
         <div className='submitID'>
         <div className='idimg2'>
-        <Image src={file} alt='ID Document Preview' width={235} height={180} />
-        <input type='file' onChange={handleFileUpload} id="imgup" />
+        <Image  src={file} alt='ID Document Preview' width={235} height={180} />
+        <input
+                    type="file"
+                    placeholder=""
+                    name="myImage"
+                    className="inputfileupload2"
+                    onChange={(event) => {
+                    console.log(event.target.files[0]);
+                    setId_card(event.target.files[0]);
+            }}
+          />
         </div>
         <p>Submit your ID</p>
         </div>
@@ -41,7 +50,7 @@ const IDVerification = () => {
         )}
       </div>
       <div className="profile__submit-button mt-80"> 
-        <button>Submit</button>
+        <button onClick={handleContinue}>Submit</button>
       </div>
     </div>
   )
