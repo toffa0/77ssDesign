@@ -35,6 +35,7 @@ const AccountSettings = () => {
   const [email, setEmail] = useState("");
   const [Username, setUsername] = useState("");
  
+  const [settings, setSettings] = useState([]);
 
   const csrfToken = Cookies.get("csrfToken");
 
@@ -109,6 +110,8 @@ const AccountSettings = () => {
         })
         .then((data) => {
           console.log(data);
+          setSettings(data);
+          console.log(settings)
         })
         .catch((error) => console.error(error));
     }
