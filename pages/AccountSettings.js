@@ -117,7 +117,7 @@ const AccountSettings = () => {
     }
   }, []);
   console.log(settings)
-  if(settings){
+  if(settings!=={}){
     console.log("settings:",settings.user)
     setEmail(settings.user.email)
   }
