@@ -35,7 +35,7 @@ const AccountSettings = () => {
   const [email, setEmail] = useState("");
   const [Username, setUsername] = useState("");
  
-  const [settings, setSettings] = useState([]);
+  const [settings, setSettings] = useState({});
 
   const csrfToken = Cookies.get("csrfToken");
 
