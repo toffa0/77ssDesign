@@ -46,7 +46,7 @@ const Navbar = ({ user }) => {
         if (response.ok) {
           console.log(response);
           localStorage.removeItem("user");
-          router.push("/");
+          router.reload;
         } else {
           throw new Error("Something went wrong");
         }

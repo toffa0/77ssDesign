@@ -40,7 +40,7 @@ const AccountSettings = () => {
 
   const payload = {
     avatar: avatar,
-    firstname: firstname,
+    firstname: firstname, 
     lastname: lastname,
     country: country,
     city: city,
@@ -51,7 +51,7 @@ const AccountSettings = () => {
     phone: phone,
     languages: languages,
     bio: bio,
-    id_card: avatar,
+    id_card: id_card,
     rating: rating,
   };
   const handleContinue = () => {
@@ -183,7 +183,7 @@ const AccountSettings = () => {
             }}
           /> */}
           {/* <button onClick={handleContinue}>Cont</button> */}
-          {activeComponent === "General" && <GeneralSettings setActiveComponent={setActiveComponent} setFirstname={setFirstname} setLastname={setLastname} setAddress={setAddress} setCity={setCity} setCountry={setCountry} setTimezone={setTimezone} setZip_code={setZip_code} setState={setState} setPhone={setPhone}  setEmail={setEmail} email={email}  payload={payload} />} 
+          {activeComponent === "General" && <GeneralSettings setActiveComponent={setActiveComponent} setFirstname={setFirstname} setLastname={setLastname} setAddress={setAddress} setCity={setCity} setCountry={setCountry} setTimezone={setTimezone} setZip_code={setZip_code} setState={setState} setPhone={setPhone} email={email} setEmail={setEmail}   payload={payload} />} 
           {activeComponent === "Profile" && <ProfileSettings setBio={setBio} setAvatar={setAvatar} setLanguages={setLanguages} setActiveComponent={setActiveComponent} setUsername={setUsername} Username={Username} payload={payload} />}
           {activeComponent === "Notifications" && <NotificationsSettings setActiveComponent={setActiveComponent} payload={payload} />}
           {activeComponent === "ID Verification" && <IDVerificationSettings setId_card={setId_card} handleContinue={handleContinue} />}
@@ -196,3 +196,6 @@ const AccountSettings = () => {
 };
 
 export default AccountSettings;
+
+
+// firstname,lastname,country,city,timezone,address,state,zip_code,phone,languages,bio,avatar, id_card,

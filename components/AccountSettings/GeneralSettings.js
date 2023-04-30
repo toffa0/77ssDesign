@@ -15,6 +15,7 @@ const GeneralSettings = ({setActiveComponent,setFirstname,setLastname,setAddress
   console.log(selectedTimezone)
   setTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone)
   const { user } = useAuth();
+  console.log(user)
   if(user){
     setEmail(user.email)
   }
