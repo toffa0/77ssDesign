@@ -32,6 +32,10 @@ const AccountSettings = () => {
   const [id_card, setId_card] = useState("12312312312");
   const [rating, setRating] = useState(34);
 
+  const [email, setEmail] = useState("");
+  const [Username, setUsername] = useState("");
+ 
+
   const csrfToken = Cookies.get("csrfToken");
 
   const payload = {
@@ -179,8 +183,8 @@ const AccountSettings = () => {
             }}
           /> */}
           {/* <button onClick={handleContinue}>Cont</button> */}
-          {activeComponent === "General" && <GeneralSettings setActiveComponent={setActiveComponent} setFirstname={setFirstname} setLastname={setLastname} setAddress={setAddress} setCity={setCity} setCountry={setCountry} setTimezone={setTimezone} setZip_code={setZip_code} setState={setState} setPhone={setPhone} payload={payload} />}
-          {activeComponent === "Profile" && <ProfileSettings setBio={setBio} setAvatar={setAvatar} setLanguages={setLanguages} setActiveComponent={setActiveComponent} payload={payload} />}
+          {activeComponent === "General" && <GeneralSettings setActiveComponent={setActiveComponent} setFirstname={setFirstname} setLastname={setLastname} setAddress={setAddress} setCity={setCity} setCountry={setCountry} setTimezone={setTimezone} setZip_code={setZip_code} setState={setState} setPhone={setPhone}  setEmail={setEmail} email={email}  payload={payload} />} 
+          {activeComponent === "Profile" && <ProfileSettings setBio={setBio} setAvatar={setAvatar} setLanguages={setLanguages} setActiveComponent={setActiveComponent} setUsername={setUsername} Username={Username} payload={payload} />}
           {activeComponent === "Notifications" && <NotificationsSettings setActiveComponent={setActiveComponent} payload={payload} />}
           {activeComponent === "ID Verification" && <IDVerificationSettings setId_card={setId_card} handleContinue={handleContinue} />}
           {activeComponent === "Membership" && <MembershipSettings  />}

@@ -1,10 +1,10 @@
 import ReactFlagsSelect from "react-flags-select";
 import React, { useState } from "react";
 import 'react-phone-input-2/lib/style.css'
-
+import useAuth from "@/contexts/auth.contexts";
 import PhoneInput from 'react-phone-input-2'
 
-const GeneralSettings = ({setActiveComponent,setFirstname,setLastname,setAddress,setCity,setCountry,setTimezone,setZip_code,setState,setPhone,payload}) => {
+const GeneralSettings = ({setActiveComponent,setFirstname,setLastname,setAddress,setCity,setCountry,setTimezone,setZip_code,setState,setPhone,payload,setEmail,email,}) => {
 
 
   const [selected, setSelected] = useState("");
@@ -14,12 +14,18 @@ const GeneralSettings = ({setActiveComponent,setFirstname,setLastname,setAddress
   )
   console.log(selectedTimezone)
   setTimezone(Intl.DateTimeFormat().resolvedOptions().timeZone)
+  const { user } = useAuth();
+  if(user){
+    setEmail(user.email)
+  }
+
+
   return (
     <div>
       <form className="form-group-sett m-40 mb-172">
         <div className="form-group">
           <label htmlFor="email">Email</label>
-          <input type="email" className="form-control" id="name" />
+          <input type="email" className="form-control" id="name" value={email} onChange={(e)=>setEmail(e.currentTarget.value)} />
         </div>
         
         <div className='form-group1'> 

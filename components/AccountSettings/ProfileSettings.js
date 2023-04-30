@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
+import useAuth from "@/contexts/auth.contexts";
 
-const Profile = ({setBio,setAvatar,setLanguages,setActiveComponent,payload}) => {
+const Profile = ({setBio,setAvatar,setLanguages,setActiveComponent,Username,setUsername,payload}) => {
     const [file, setFile] = useState(null)
-
+    const { user } = useAuth();
     const handleFileUpload = e => {
         setFile(URL.createObjectURL(e.target.files[0]))
       }
-
+    if(user){
+      setUsername(user.username)
+    }
   return (
     <div className="form-group-sett m-40 mb-172">
       <div className="form-group1 ">
@@ -33,7 +36,7 @@ const Profile = ({setBio,setAvatar,setLanguages,setActiveComponent,payload}) => 
         <div className="form-group  w-100">
           <div>
             <label htmlFor="last-name">Username</label>
-            <input type="text" id="Username" />
+            <input type="text" id="Username" value={Username} onChange={(e)=>setUsername(e.currentTarget.value)} />
           </div>
           <div>
             <label htmlFor="last-name">Languages</label>
