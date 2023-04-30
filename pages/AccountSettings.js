@@ -90,10 +90,10 @@ const AccountSettings = () => {
     if (user.user_type === "designer") {
       window.location.href = "/AccountSettings-designer";
     }
-
+    console.log(user.id)
     if (user) {
       axiosInstance(`${BASE_URL}/${API_VERSION}/user/csrf/`);
-      fetch(`${BASE_URL}/${API_VERSION}/user/profile/client/${user.user_id}`, {
+      fetch(`${BASE_URL}/${API_VERSION}/user/profile/client/${user.id}`, {
         headers: {
           // 'Content-Type': 'application/json',
           "X-CSRFToken": csrfToken,
@@ -168,7 +168,7 @@ const AccountSettings = () => {
 
       <div className=" mainscr h-60v ">
         <div className="settings-content ">
-          <input
+          {/* <input
             type="file"
             placeholder="Drag and drop to upload or click to browse to choose a file"
             name="myImage"
@@ -177,8 +177,8 @@ const AccountSettings = () => {
               console.log(event.target.files[0]);
               setAvatar(event.target.files[0]);
             }}
-          />
-          <button onClick={handleContinue}>Cont</button>
+          /> */}
+          {/* <button onClick={handleContinue}>Cont</button> */}
           {activeComponent === "General" && <GeneralSettings />}
           {activeComponent === "Profile" && <ProfileSettings />}
           {activeComponent === "Notifications" && <NotificationsSettings />}

@@ -31,6 +31,7 @@ const Login = () => {
           router.reload();
         }
         console.error(err);
+        console.log(error.response.data)
       });
   };
   useEffect(() => {
