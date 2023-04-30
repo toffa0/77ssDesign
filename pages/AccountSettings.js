@@ -117,7 +117,10 @@ const AccountSettings = () => {
     }
   }, []);
   console.log(settings)
-  
+  if(settings){
+    console.log("settings:",settings.user)
+    setEmail(settings.user.email)
+  }
   return (
     <div className="settings-container ">
       <div className="home_section mainscr">
