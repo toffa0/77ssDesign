@@ -111,11 +111,13 @@ const AccountSettings = () => {
         .then((data) => {
           console.log(data);
           setSettings(data);
-          console.log(settings)
+          
         })
         .catch((error) => console.error(error));
     }
   }, []);
+  console.log(settings)
+  
   return (
     <div className="settings-container ">
       <div className="home_section mainscr">
