@@ -12,6 +12,7 @@ const BrandStyle = ({ApiData})=>{
   const [Slidervalue7, setSlidervalue7] = useState(0);
 
   useEffect(() => {
+    console.log(ApiData.classic_to_modern)
     setSlidervalue1(ApiData.classic_to_modern)
     setSlidervalue2(ApiData.playful_to_serious)
     setSlidervalue3(ApiData.geometrical_to_organic)
