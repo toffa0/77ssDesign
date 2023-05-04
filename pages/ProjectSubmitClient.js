@@ -13,7 +13,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { BASE_URL ,API_VERSION } from '@/config';
 import Cookies from 'js-cookie';
-
+import ProjectDetails from "@/components/projectDetails/ProjectDetails"
 const ProjectSubmitDesigner = ()=>{
     const [isOpen, setOpen] = useState(false);
     const [Filter1, setFilter1] = useState("All");
@@ -220,10 +220,10 @@ const ProjectSubmitDesigner = ()=>{
             </div>
 
             <div className=' '> 
-            {/* {activeComponent === "Brief" && 
-            <ProjectsMessage3comp cardData={{cardData2}}/>
+            {activeComponent === "Brief" && 
+            <ProjectDetails  projectID={itemID}/>
 
-            } */}
+            }
             {activeComponent === "Design" && 
             <div className='disc-card-cont'>
                 {
