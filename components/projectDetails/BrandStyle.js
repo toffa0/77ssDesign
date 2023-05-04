@@ -13,12 +13,14 @@ const BrandStyle = ({ApiData})=>{
 
   useEffect(() => {
     console.log(ApiData)
-    console.log("ClassicTo: "+ApiData.classic_to_modern)
-    console.log("ClassicTo: "+ApiData.playful_to_serious)
-    console.log("ClassicTo: "+ApiData.geometrical_to_organic)
+
     setSlidervalue1(ApiData.classic_to_modern)
     setSlidervalue2(ApiData.playful_to_serious)
     setSlidervalue3(ApiData.geometrical_to_organic)
+    setSlidervalue4(ApiData.feminine_to_masculine)
+    setSlidervalue5(ApiData.economical_to_luxurious)
+    setSlidervalue6(ApiData.mature_to_youthful)
+    setSlidervalue7(ApiData.handcrafted_to_minimalist)
 }, [ApiData]);
 return(
     <div className='contest-cont-content  jst-SB' id="BrandStyle" >
@@ -40,7 +42,7 @@ return(
        <span id='nobtn2'>Playful</span>
        <span id='nobtn2'>Serious</span>
        </div>
-       <input type="range" min="-100" max="100" defaultValue={Slidervalue2}  onChange={(e)=> setSlidervalue2(e.target.value)} id="valueSlider" />
+       <input type="range" min="-100" max="100" value={Slidervalue2}   id="valueSlider" />
      </div>   
      {/* first filter end*/} 
      <div className='choose2 '>
@@ -48,7 +50,7 @@ return(
        <span id='nobtn2' >Geometrical</span>
        <span id='nobtn2' >Organic</span>
        </div>
-       <input type="range" min="-100" max="100" defaultValue={Slidervalue3}  onChange={(e)=> setSlidervalue3(e.target.value)} id="valueSlider" />
+       <input type="range" min="-100" max="100" value={Slidervalue3}   id="valueSlider" />
      </div> 
      {/* first filter end*/}
      <div className='choose2 '>
@@ -56,7 +58,7 @@ return(
        <span id='nobtn2' >Feminine</span>
        <span id='nobtn2' >Masculine</span>
        </div>
-       <input type="range" min="-100" max="100" defaultValue={Slidervalue4}  onChange={(e)=> setSlidervalue4(e.target.value)} id="valueSlider" />
+       <input type="range" min="-100" max="100" value={Slidervalue4}  id="valueSlider" />
      </div> 
      {/* first filter end*/}
      <div className='choose2 '>
@@ -64,21 +66,21 @@ return(
        <span id='nobtn2'>Economical</span>
        <span id='nobtn2'>Luxurios</span>
        </div>
-       <input type="range" min="-100" max="100" defaultValue={Slidervalue5}  onChange={(e)=> setSlidervalue5(e.target.value)} id="valueSlider" />
+       <input type="range" min="-100" max="100" value={Slidervalue5}   id="valueSlider" />
      </div> 
      <div className='choose2 '>
        <div className='fl jst-SB'>
        <span id='nobtn2' >Mature</span>
        <span id='nobtn2' >Youthful</span>
        </div>
-       <input type="range" min="-100" max="100" defaultValue={Slidervalue6}  onChange={(e)=> setSlidervalue6(e.target.value)} id="valueSlider" />
+       <input type="range" min="-100" max="100" value={Slidervalue6}   id="valueSlider" />
      </div> 
      <div className='choose2 '>
        <div className='fl jst-SB'>
        <span id='nobtn2' >Handcrafted</span>
        <span id='nobtn2' >Minimalist</span>
        </div>
-       <input type="range" min="-100" max="100" defaultValue={Slidervalue7}  onChange={(e)=> setSlidervalue7(e.target.value)} id="valueSlider" />
+       <input type="range" min="-100" max="100" value={Slidervalue7}   id="valueSlider" />
 
      </div>  
 
