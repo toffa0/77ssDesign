@@ -12,11 +12,12 @@ const BrandStyle = ({ApiData})=>{
   const [Slidervalue7, setSlidervalue7] = useState(0);
 
   useEffect(() => {
-    console.log(ApiData.classic_to_modern)
+    console.log(ApiData)
+    console.log("ClassicTo"+ApiData.classic_to_modern)
     setSlidervalue1(ApiData.classic_to_modern)
     setSlidervalue2(ApiData.playful_to_serious)
     setSlidervalue3(ApiData.geometrical_to_organic)
-}, []);
+}, [ApiData]);
 return(
     <div className='contest-cont-content  jst-SB' id="BrandStyle" >
         <div className='mb-30'>
