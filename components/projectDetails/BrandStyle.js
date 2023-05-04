@@ -1,15 +1,21 @@
 import Image from 'next/image'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 const BrandStyle = ({ApiData})=>{
-  const [Slidervalue1, setSlidervalue1] = useState(ApiData.classic_to_modern);
+  const [Slidervalue1, setSlidervalue1] = useState(0);
   const [Slidervalue2, setSlidervalue2] = useState(0);
   const [Slidervalue3, setSlidervalue3] = useState(0);
   const [Slidervalue4, setSlidervalue4] = useState(0);
   const [Slidervalue5, setSlidervalue5] = useState(0);
   const [Slidervalue6, setSlidervalue6] = useState(0);
   const [Slidervalue7, setSlidervalue7] = useState(0);
+
+  useEffect(() => {
+    setSlidervalue1(ApiData.classic_to_modern)
+    setSlidervalue2(ApiData.playful_to_serious)
+    setSlidervalue3(ApiData.geometrical_to_organic)
+}, []);
 return(
     <div className='contest-cont-content  jst-SB' id="BrandStyle" >
         <div className='mb-30'>
