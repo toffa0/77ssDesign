@@ -6,8 +6,10 @@ import React, { useEffect, useState } from "react";
 import PIcon from "@/public/PI.svg";
 import { BASE_URL, API_VERSION } from "@/config";
 import { useRouter } from "next/router";
+import useAuth from "@/contexts/auth.contexts";
 
-const Navbar = ({ user }) => {
+const Navbar = () => {
+  const { user, setUser } = useAuth();
   const router = useRouter();
   if (typeof window !== "undefined") {
     window.addEventListener("click", function (e) {
