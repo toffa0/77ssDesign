@@ -39,7 +39,7 @@ const ProjectDetails = ({projectID})=>{
                   
             })
           .then(response => {return response.json()})
-          .then(data => {console.log(data);setProjectData(data);setApiData(data)})
+          .then(data => {console.log(data);setApiData(data)})
           .catch(error => console.error(error));
          }
     }, [projectID]);
