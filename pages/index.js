@@ -27,9 +27,8 @@ export default function Home() {
   const [AllCategoriesisOpen, setAllCategoriesOpen] = useState(false);
   function CategoryClick(item) {
     setSearch(item);
-    setAllCategoriesOpen(!AllCategoriesisOpen);
+    setAllCategoriesOpen(false);
   }
-  // const AllCategoriesAll = [Logoidentity,Webdesign,ClothingMerchandise,ArtIllustration,Businessadvertising,]
   const [search, setSearch] = useState("");
   const cates = useMemo(() => {
     if (!search) return AllCategoriesAll;
@@ -45,34 +44,11 @@ export default function Home() {
 
   function CategoryTyping(item) {
     setSearch(item);
+    
     console.log(cates);
   }
 
-  useEffect(() => {
-    if (search) {
-      setAllCategoriesOpen(true);
-    } else {
-      setAllCategoriesOpen(false);
-    }
-  }, [search]);
 
-  //   if (document.getElementsByClassName("SelectCat")) {
-  //   document.getElementsByClassName("SelectCat").addEventListener("mousedown", ()=>{
-  //     setAllCategoriesOpen(false)
-  //   });
-  // }
-
-  if (typeof window !== "undefined") {
-    window.addEventListener("click", function (e) {
-      if (document.getElementById("SelectAcat")) {
-        if (document.getElementById("SelectAcat").contains(e.target)) {
-          setAllCategoriesOpen(true);
-        } else {
-          setAllCategoriesOpen(false);
-        }
-      }
-    });
-  }
 
   return (
     <>
@@ -100,8 +76,7 @@ export default function Home() {
               </div>
               <div>
                 <form className="sr-div2 fl jst">
-                  <div className="SelectCat" id="SelectAcat">
-                    {/* <p>{AllCategories}</p> */}
+                  <div className="SelectCat" id="SelectAcat"  onClick={()=>setAllCategoriesOpen(!AllCategoriesisOpen)}>
                     <input
                       type="text"
                       value={search}
@@ -112,9 +87,9 @@ export default function Home() {
                     <div
                       className="SelectMenu"
                       id={AllCategoriesisOpen ? "" : "DN"}
-                      onClick={() => setAllCategoriesOpen(true)}
+                      
                     >
-                      <ul>
+                      <ul id="CatesSelect">
                         {cates.length > 0 ? (
                           cates.map((item) => (
                             <div key={item.id}>
@@ -143,6 +118,7 @@ export default function Home() {
                   </select>
                   <input type="submit" name="" value="Start" />
                 </form>
+
               </div>
             </div>
             <div className="home_img">
@@ -216,13 +192,11 @@ export default function Home() {
                 />
               </Link>
 
-              {/* <Link href="/categories2"> */}
               <Link
                 href="/categories2"
                 className={`cat-card drop-down-menu ${isOpen ? "open" : ""}`}
                 onClick={() => setOpen(!isOpen)}
               >
-                {/* <Image source={require('./cat8.png') }alt="" width={96} height={51}/> */}
                 <span>Others</span>
               </Link>
             </div>

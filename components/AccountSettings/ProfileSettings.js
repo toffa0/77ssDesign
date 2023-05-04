@@ -1,24 +1,44 @@
 import React, { useState } from 'react'
 import useAuth from "@/contexts/auth.contexts";
+import { Im } from 'react-flags-select';
 
-const Profile = ({setBio,setAvatar,setLanguages,setActiveComponent,Username,setUsername,payload}) => {
+const Profile = ({setBio,avatar,setAvatar,setLanguages,setActiveComponent,Username,setUsername,payload}) => {
     const [file, setFile] = useState(null)
     const { user } = useAuth();
     const handleFileUpload = e => {
         setFile(URL.createObjectURL(e.target.files[0]))
       }
-    if(user){
-      setUsername(user.username)
-    }
+    // if(user){
+    //   setUsername(user.username)
+    // }
+
+    const [OldpasswordShown, setOldPasswordShown] = useState(false);
+    const [NewpasswordShown, setNewPasswordShown] = useState(false);
+    const toggleOldPassword = () => {
+      setOldPasswordShown(!OldpasswordShown);
+    };
+    const toggleNewPassword = () => {
+      setNewPasswordShown(!NewpasswordShown);
+    };
+
   return (
     <div className="form-group-sett m-40 mb-172">
       <div className="form-group1 ">
         <div className="profile__img-upload">
             <div className='img-up jst'>
-              <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"absolute",}}>
+              {avatar?
+                      <img
+                        className='uploadedImage'
+                        alt="not found"
+                        width={"250px"}
+                        src={URL.createObjectURL(avatar)}
+                      />
+              :
+                <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"absolute",}}>
                 <span>Avatar</span>
                 <span>200x200</span>
-              </div>
+                </div>
+              }
          
             {/* <input type='file' onChange={handleFileUpload} id="imgup" /> */}
                   <input
@@ -57,11 +77,13 @@ const Profile = ({setBio,setAvatar,setLanguages,setActiveComponent,Username,setU
       <div className='form-group1'> 
           <div className="form-group w-40">
                 <label htmlFor="first-name">Current Password</label>
-                <input type="password" className="form-control" id="passwordold" />
+                <input type={OldpasswordShown ? "text" : "password"} className="form-control" id="passwordold" />
+                <button  className='show_hide_Pass'  onClick={toggleOldPassword}>{!OldpasswordShown?"Show":"Hide"}</button>
             </div>
             <div className="form-group w-40">
                 <label htmlFor="last-name">New Password</label>
-                <input type="password" className="form-control" id="passwordnew" />
+                <input type={NewpasswordShown ? "text" : "password"} className="form-control" id="passwordnew" />
+                <button  className='show_hide_Pass'  onClick={toggleNewPassword}>{!NewpasswordShown?"Show":"Hide"}</button>
             </div>
         </div>
         </div>

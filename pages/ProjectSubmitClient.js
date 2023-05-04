@@ -132,20 +132,7 @@ const ProjectSubmitDesigner = ()=>{
                 </div>
                 
                 </div>
-            <div className='disc-head10 fl jst-SB'>
-                <div id='SD-header' className='fl'>
-                    <h1 >Please submit logo design only (4 days)</h1>
-                </div> 
-                <div id='SD-header' className='fl'>
-                    <h1 > Selection of qualified designers (4 days)</h1>
-                </div> 
-                <div id='SD-header' className='fl'>
-                    <h1 >Finalists (3 days)</h1>
-                </div> 
-                <div id='SD-header' className='fl'>
-                    <h1 >Winner selection (7 days)</h1>
-                </div> 
-            </div>
+
             <div className='disc-head4 fl jst-SB'>
                 <div className='fl w-68 fl-gapp16'>
                 <div  className='fl slct-cpm w-191'>

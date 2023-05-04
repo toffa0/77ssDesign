@@ -33,7 +33,7 @@ const AccountSettings = () => {
   const [rating, setRating] = useState(34);
 
   const [email, setEmail] = useState("");
-  const [Username, setUsername] = useState("");
+  const [Username, setUsername] = useState(user?user.username:"");
  
   const [settings, setSettings] = useState({});
 
@@ -41,6 +41,7 @@ const AccountSettings = () => {
 
   const payload = {
     avatar: avatar,
+    username:Username,
     firstname: firstname, 
     lastname: lastname,
     country: country,
@@ -119,7 +120,7 @@ const AccountSettings = () => {
   console.log(settings)
   if(settings!=={}){
     console.log("settings:",settings.user)
-    setEmail(settings.user.email)
+    // setEmail(settings.user.email)
   }
   return (
     <div className="settings-container ">
@@ -192,7 +193,7 @@ const AccountSettings = () => {
           /> */}
           {/* <button onClick={handleContinue}>Cont</button> */}
           {activeComponent === "General" && <GeneralSettings setActiveComponent={setActiveComponent} setFirstname={setFirstname} setLastname={setLastname} setAddress={setAddress} setCity={setCity} setCountry={setCountry} setTimezone={setTimezone} setZip_code={setZip_code} setState={setState} setPhone={setPhone} email={email} setEmail={setEmail}   payload={payload} />} 
-          {activeComponent === "Profile" && <ProfileSettings setBio={setBio} setAvatar={setAvatar} setLanguages={setLanguages} setActiveComponent={setActiveComponent} setUsername={setUsername} Username={Username} payload={payload} />}
+          {activeComponent === "Profile" && <ProfileSettings setBio={setBio} avatar={avatar} setAvatar={setAvatar} setLanguages={setLanguages} setActiveComponent={setActiveComponent} setUsername={setUsername} Username={Username} payload={payload} />}
           {activeComponent === "Notifications" && <NotificationsSettings setActiveComponent={setActiveComponent} payload={payload} />}
           {activeComponent === "ID Verification" && <IDVerificationSettings setId_card={setId_card} handleContinue={handleContinue} />}
           {activeComponent === "Membership" && <MembershipSettings  />}

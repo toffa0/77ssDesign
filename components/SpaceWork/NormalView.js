@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'
-
+import { Rating } from 'react-simple-star-rating'
 
 
 const NormalView = ({cardData,projectID})=>{
@@ -26,6 +26,9 @@ const NormalView = ({cardData,projectID})=>{
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+////////////////////////////////
+
+
 
   return (
 <div>
@@ -33,6 +36,7 @@ const NormalView = ({cardData,projectID})=>{
 
       {currentData.map((item) => (
             <div key={item.id} className='disc-card2 ' id='h-220'>
+              <span className='card-text'>#1 by osama</span>
               <Link href={{ pathname: `/commentdesign2`, query: { id: projectID } }}>
                 {/* {console.log(item)} */}
                 <Image src={item.img} id='ds-img' alt="" width={400} height={400}/>
@@ -40,6 +44,7 @@ const NormalView = ({cardData,projectID})=>{
              
              
              </Link>
+             <Rating   />
             </div>
       ))}
 

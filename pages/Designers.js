@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from 'next/image'
 import { Link, Router, Routes } from "react-router-dom";
 import Footer2 from "@/components/footer2";
-import {Contacts, designerLevel, industries, Languages, lastActivity, listItems,listItems2,listItems3,listItems4,listItems5} from "../components/consts"
+import {Contacts, designerLevel, industries, Languages, lastActivity, Logoidentity,Businessadvertising,Webdesign,ClothingMerchandise,ArtIllustration} from "../components/consts"
 import Designerswork from "@/components/designerswork";
 import { useEffect } from "react";
 
@@ -128,7 +128,7 @@ const Designers = ()=>{
                 </div>
                 <div class="dropdown-content" id={FirstCatIsOpen?"":"DN"}>
                     <ul>
-                        {listItems.map((item) => (
+                        {Logoidentity.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleFirstCat(item.text)}>{item.text}</button></li>
                         ))}
                 </ul>
@@ -148,7 +148,7 @@ const Designers = ()=>{
                 </div>
                 <div class="dropdown-content" id={SecondCatIsOpen?"":"DN"}>
                     <ul>
-                        {listItems2.map((item) => (
+                        {Businessadvertising.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleSecondCat(item.text)}>{item.text}</button></li>
                         ))}
                 </ul>
@@ -166,7 +166,7 @@ const Designers = ()=>{
                 </div>
                 <div class="dropdown-content" id={ThirdCatIsOpen?"":"DN"}>
                     <ul>
-                        {listItems3.map((item) => (
+                        {Webdesign.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleThirdCat(item.text)}>{item.text}</button></li>
                         ))}
                 </ul>
@@ -184,7 +184,7 @@ const Designers = ()=>{
                 </div>
                 <div class="dropdown-content" id={ForthCatIsOpen?"":"DN"}>
                     <ul>
-                        {listItems4.map((item) => (
+                        {ClothingMerchandise.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleForthCat(item.text)}>{item.text}</button></li>
                         ))}
                 </ul>
@@ -202,7 +202,7 @@ const Designers = ()=>{
                 </div>
                 <div class="dropdown-content" id={FifthCatIsOpen?"":"DN"}>
                     <ul>
-                        {listItems5.map((item) => (
+                        {ArtIllustration.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>handleFifthCat(item.text)}>{item.text}</button></li>
                         ))}
                 </ul>

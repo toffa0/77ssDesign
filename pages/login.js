@@ -11,11 +11,12 @@ import axiosInstance from "@/helpers/axios";
 import useAuth from "@/contexts/auth.contexts";
 import Script from "next/script";
 import { Sdk, useInitFacebook } from "@nixjs23n6/facebook-login";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 const Login = () => {
   const router = useRouter();
   const { setUser } = useAuth();
-
+  const [passwordShown, setPasswordShown] = useState(false);
   const googleLogin = async (response) => {
     axiosInstance
       .post(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
@@ -36,7 +37,6 @@ const Login = () => {
   };
   useEffect(() => {
     /* global google */
-
     google.accounts.id.initialize({
       client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
       callback: googleLogin,
@@ -89,6 +89,9 @@ const Login = () => {
       .catch(console.log);
   };
 
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
   return (
     <form
       onSubmit={handleSubmit}
@@ -118,7 +121,11 @@ const Login = () => {
         </div>
         <div className="bottom-row3 ">
           <input type="text" placeholder="Email" id="email1" />
-          <input type="password" placeholder="Password" id="password1" />
+          <div style={{position:"relative"}}>
+          <input type={passwordShown ? "text" : "password"} placeholder="Password" id="password1" />
+          <button className='show_hide_Pass2' onClick={togglePassword}>{!passwordShown?"Show":"Hide"}</button>
+
+          </div>
         </div>
         <div className="bottom-row4">
           <div>
@@ -153,7 +160,6 @@ const SignUp = () => {
       })
       .catch((error) => console.error(error));
   };
-
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
