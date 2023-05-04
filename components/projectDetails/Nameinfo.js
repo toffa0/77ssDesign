@@ -11,7 +11,7 @@ return(
     {/* <Image src="contestex1.svg" alt="" width={587} height={339} /> */}
     <div>
         <div>
-        <h3></h3>
+        <h3>Name to incorporate in logo</h3>
         <p>{ApiData.name}</p>
         </div>
         <div>
