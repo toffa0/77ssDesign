@@ -13,7 +13,9 @@ const BrandStyle = ({ApiData})=>{
 
   useEffect(() => {
     console.log(ApiData)
-    console.log("ClassicTo"+ApiData.classic_to_modern)
+    console.log("ClassicTo: "+ApiData.classic_to_modern)
+    console.log("ClassicTo: "+ApiData.playful_to_serious)
+    console.log("ClassicTo: "+ApiData.geometrical_to_organic)
     setSlidervalue1(ApiData.classic_to_modern)
     setSlidervalue2(ApiData.playful_to_serious)
     setSlidervalue3(ApiData.geometrical_to_organic)
