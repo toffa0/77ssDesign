@@ -92,6 +92,8 @@ const AccountSettings = () => {
       .catch((error) => console.error(error));
   };
 
+ 
+
   useEffect(() => {
     if (user.user_type === "designer") {
       window.location.href = "/AccountSettings-designer";
@@ -120,7 +122,7 @@ const AccountSettings = () => {
   console.log(settings)
   if(settings!=={}){
     console.log("settings:",settings.user)
-    // setEmail(settings.user.email)
+    setEmail(settings.user.email)
   }
   return (
     <div className="settings-container ">

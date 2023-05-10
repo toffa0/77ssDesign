@@ -29,7 +29,14 @@ const Navbar = () => {
       }
     });
   }
+  const [user_details, setUser_details]=useState(null)
+  useEffect(()=>{
+        
+    setUser_details(user);
+    console.log('userDetails',user_details)
 
+    
+},[user])
   const [showMenu, setShowMenu] = useState(true);
   const [showWorkMenu, setShowWorkMenu] = useState(true);
 
@@ -82,7 +89,7 @@ const Navbar = () => {
           <button className="navworkbtn" id="actions">
             Work
           </button>
-          {!showWorkMenu && (
+         {!showWorkMenu && (
             <ul className="menu">
               <div className="p-t20 fl-col fl-gap23">
                 <li className="menu-item">
@@ -96,10 +103,10 @@ const Navbar = () => {
                 </li>
               </div>
             </ul>
-          )}
+          )} 
         </div>
 
-        {user ? (
+         {user ? (
           <div className="fl fl-gap5">
             <Link href="/">
               <Image
@@ -130,7 +137,6 @@ const Navbar = () => {
                   height={30}
                 />
               </i>
-              {/* onClick={handleClick} */}
               {!showMenu && (
                 <ul className="menu">
                   <div className="p-t20 fl-col fl-gap23">
@@ -165,7 +171,7 @@ const Navbar = () => {
           <div>
             <Link href="/login">Login/SignUp</Link>
           </div>
-        )}
+        )} 
       </div>
     </nav>
   );
