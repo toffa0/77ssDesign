@@ -16,20 +16,18 @@ const AccountSettings = () => {
   const [activeComponent, setActiveComponent] = useState("General");
 
   const [avatar, setAvatar] = useState("");
-  const [firstname, setFirstname] = useState("Abdelrhman");
-  const [lastname, setLastname] = useState("Atef");
-  const [country, setCountry] = useState("Egyptyco");
-  const [city, setCity] = useState("Giza");
-  const [timezone, setTimezone] = useState("Africa/Cairo");
-  const [address, setAddress] = useState("12 st st");
-  const [state, setState] = useState("Giza");
-  const [zip_code, setZip_code] = useState("0022");
-  const [phone, setPhone] = useState("123123");
-  const [languages, setLanguages] = useState("arabic"); 
-  const [bio, setBio] = useState(
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
-  );
-  const [id_card, setId_card] = useState("12312312312");
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [country, setCountry] = useState("");
+  const [city, setCity] = useState("");
+  const [timezone, setTimezone] = useState("");
+  const [address, setAddress] = useState("");
+  const [state, setState] = useState("");
+  const [zip_code, setZip_code] = useState("");
+  const [phone, setPhone] = useState("");
+  const [languages, setLanguages] = useState(""); 
+  const [bio, setBio] = useState("");
+  const [id_card, setId_card] = useState("");
   const [rating, setRating] = useState(34);
 
   const [email, setEmail] = useState("");
@@ -124,7 +122,7 @@ const AccountSettings = () => {
           setPhone(data.phone) 
           setZip_code(data.zip_code)
           setLanguages(data.languages)
-          // setBio(data.bio)
+          setBio(data.bio)
           // setAvatar(data.avatar)
         })
         .catch((error) => console.error(error));
@@ -205,8 +203,8 @@ const AccountSettings = () => {
             }}
           /> */}
           {/* <button onClick={handleContinue}>Cont</button> */}
-          {activeComponent === "General" && <GeneralSettings setActiveComponent={setActiveComponent} setFirstname={setFirstname} setLastname={setLastname} setAddress={setAddress} setCity={setCity} setCountry={setCountry} setTimezone={setTimezone} setZip_code={setZip_code} setState={setState} setPhone={setPhone} email={email} setEmail={setEmail}   payload={payload} />} 
-          {activeComponent === "Profile" && <ProfileSettings setBio={setBio} avatar={avatar} setAvatar={setAvatar} setLanguages={setLanguages} setActiveComponent={setActiveComponent} setUsername={setUsername} Username={Username} payload={payload} />}
+          {activeComponent === "General" && <GeneralSettings setActiveComponent={setActiveComponent} setFirstname={setFirstname} setLastname={setLastname} setAddress={setAddress} setCity={setCity} setCountry={setCountry} setTimezone={setTimezone} setZip_code={setZip_code} setState={setState} setPhone={setPhone} email={email} setEmail={setEmail} firstname={firstname} lastname={lastname} phone={phone} city={city} state={state} zip_code={zip_code} address={address}   payload={payload} />} 
+          {activeComponent === "Profile" && <ProfileSettings setBio={setBio} avatar={avatar} setAvatar={setAvatar} setLanguages={setLanguages} setActiveComponent={setActiveComponent} setUsername={setUsername} Username={Username} languages={languages} bio={bio} payload={payload} />}
           {activeComponent === "Notifications" && <NotificationsSettings setActiveComponent={setActiveComponent} payload={payload} />}
           {activeComponent === "ID Verification" && <IDVerificationSettings setId_card={setId_card} handleContinue={handleContinue} />}
           {activeComponent === "Membership" && <MembershipSettings  />}

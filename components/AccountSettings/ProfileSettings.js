@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import useAuth from "@/contexts/auth.contexts";
 import { Im } from 'react-flags-select';
 
-const Profile = ({setBio,avatar,setAvatar,setLanguages,setActiveComponent,Username,setUsername,payload}) => {
+const Profile = ({setBio,avatar,setAvatar,setLanguages,setActiveComponent,Username,setUsername,languages,bio,payload}) => {
     const [file, setFile] = useState(null)
     const { user } = useAuth();
     const handleFileUpload = e => {
@@ -60,14 +60,14 @@ const Profile = ({setBio,avatar,setAvatar,setLanguages,setActiveComponent,Userna
           </div>
           <div>
             <label htmlFor="last-name">Languages</label>
-            <input type="text" id="Languages" onChange={(e)=>setLanguages(e.currentTarget.value)} />
+            <input type="text" id="Languages" value={languages} onChange={(e)=>setLanguages(e.currentTarget.value)} />
           </div>
 
         </div>
       </div>
       <div className="form-group">
       <label htmlFor="last-name" className='mb-8'>Biography</label>
-        <textarea id="Biography" onChange={(e)=>setBio(e.currentTarget.value)}/>
+        <textarea id="Biography" value={bio} onChange={(e)=>setBio(e.currentTarget.value)}/>
       </div>
       <div className='p-33'>
 
