@@ -25,7 +25,7 @@ const AccountSettings = () => {
   const [state, setState] = useState("Giza");
   const [zip_code, setZip_code] = useState("0022");
   const [phone, setPhone] = useState("123123");
-  const [languages, setLanguages] = useState("arabic");
+  const [languages, setLanguages] = useState("arabic"); 
   const [bio, setBio] = useState(
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s"
   );
@@ -115,6 +115,17 @@ const AccountSettings = () => {
           console.log(data);
           setSettings(data);
           setEmail(data.user.email)
+          setFirstname(data.firstname)
+          setLastname (data.lastname)
+          setCountry(data.country) 
+          setCity(data.city)
+          setAddress(data.address) 
+          setState(data.state)
+          setPhone(data.phone) 
+          setZip_code(data.zip_code)
+          setLanguages(data.languages)
+          setBio(data.bio)
+          setAvatar(data.avatar)
         })
         .catch((error) => console.error(error));
     }
