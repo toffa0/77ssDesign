@@ -124,8 +124,8 @@ const AccountSettings = () => {
           setPhone(data.phone) 
           setZip_code(data.zip_code)
           setLanguages(data.languages)
-          setBio(data.bio)
-          setAvatar(data.avatar)
+          // setBio(data.bio)
+          // setAvatar(data.avatar)
         })
         .catch((error) => console.error(error));
     }
