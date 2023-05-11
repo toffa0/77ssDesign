@@ -122,7 +122,14 @@ const Login = () => {
         <div className="bottom-row3 ">
           <input type="text" placeholder="Email" id="email1" />
           <div style={{position:"relative"}}>
-          <input type={passwordShown ? "text" : "password"} placeholder="Password" id="password1" />
+          <input 
+            type={passwordShown ? "text" : "password"} 
+            placeholder="Password" 
+            id="password1" 
+            pattern="[a-z0-9]{1,15}"
+            title="Password should be digits (0 to 9) or alphabets (a to z)."
+            minlength="10"
+          />
           <button className='show_hide_Pass2' onClick={togglePassword}>{!passwordShown?"Show":"Hide"}</button>
 
           </div>
@@ -255,7 +262,14 @@ const SignUp = () => {
         </div>
 
         <input type="email" placeholder="Email" id="email" />
-        <input type="password" placeholder="Password" id="password" />
+        <input 
+          type="password" 
+          placeholder="Password" 
+          id="password" 
+          pattern="[a-z0-9]{1,15}"
+          title="Password should be digits (0 to 9) or alphabets (a to z)."
+          minlength="10"
+          />
 
         <div className="lldiv">
           <p id="ll" className="mb-11">
