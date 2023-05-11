@@ -1011,6 +1011,9 @@ color: #3D3D3F;
 .form-group-sett textarea{
   height: 250px;
   border-radius: 10px;
+  padding: 10px;
+  color: #545457;
+  font-size: 20px;
 }
 .form-group-sett p{
   font-size: 24px;
