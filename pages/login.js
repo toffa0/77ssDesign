@@ -282,7 +282,7 @@ const SignUp = ({setActiveComponent}) => {
       </div>
       <div className="fl jst-SB">
         <button className="w-40 signupbtn">Sign Up</button>
-        <button className="w-40 signupbtn bg-wh" onClick={()=>setActiveComponent("login")}>Log in</button>
+        <button type="button" className="w-40 signupbtn bg-wh" onClick={()=>setActiveComponent("login")}>Log in</button>
       </div>
     </form>
   );
