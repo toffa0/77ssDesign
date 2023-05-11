@@ -282,7 +282,7 @@ const SignUp = ({setActiveComponent}) => {
       </div>
       <div className="fl jst-SB">
         <button className="w-40 signupbtn">Sign Up</button>
-        <button type="button" className="w-40 signupbtn bg-wh" onClick={()=>setActiveComponent("login")}>Log in</button>
+        <button type="button" className="w-40 signupbtn bg-wh" onClick={()=>setShowLogin(true)}>Log in</button>
       </div>
     </form>
   );
@@ -352,7 +352,7 @@ const LoginSignUp = () => {
                 Log in
               </button>
             </div>
-            {showLogin ? <Login csrfToken /> : <SignUp csrfToken setActiveComponent={setActiveComponent} />}
+            {showLogin ? <Login csrfToken /> : <SignUp csrfToken setShowLogin={setShowLogin} />}
           </div>
         </div>
       </div>
