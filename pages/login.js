@@ -149,7 +149,7 @@ const Login = () => {
   );
 };
 
-const SignUp = ({setActiveComponent}) => {
+const SignUp = ({setShowLogin}) => {
   const [userType, setUserType] = useState("client");
   const { setUser } = useAuth();
 
