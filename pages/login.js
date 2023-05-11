@@ -67,7 +67,7 @@ const Login = () => {
         setUser();
         router.push("/");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {console.error(error);alert(error)});
   };
 
   useInitFacebook({
@@ -120,7 +120,7 @@ const Login = () => {
           <p id="Fs-16">or Login with your 77S design account</p>
         </div>
         <div className="bottom-row3 ">
-          <input type="text" placeholder="Email" id="email1" />
+          <input type="text" placeholder="Email" id="email1" required/>
           <div style={{position:"relative"}}>
           <input 
             type={passwordShown ? "text" : "password"} 
@@ -129,6 +129,7 @@ const Login = () => {
             pattern="[a-z0-9]{1,15}"
             title="Password should be digits (0 to 9) or alphabets (a to z)."
             minlength="10"
+            required
           />
           <button className='show_hide_Pass2' onClick={togglePassword}>{!passwordShown?"Show":"Hide"}</button>
 
