@@ -31,7 +31,7 @@ const Profile = ({setBio,avatar,setAvatar,setLanguages,setActiveComponent,Userna
                         className='uploadedImage'
                         alt="not found"
                         width={"250px"}
-                        src={URL.createObjectURL(avatar)}
+                        src={avatar}
                       />
               :
                 <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"absolute",}}>
