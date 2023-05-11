@@ -128,7 +128,6 @@ const Login = () => {
             id="password1" 
             pattern="[a-z0-9]{1,15}"
             title="Password should be digits (0 to 9) or alphabets (a to z)."
-            minlength="10"
             required
           />
           <button className='show_hide_Pass2' onClick={togglePassword}>{!passwordShown?"Show":"Hide"}</button>
