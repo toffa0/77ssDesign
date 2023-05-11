@@ -114,7 +114,7 @@ const AccountSettings = () => {
         .then((data) => {
           console.log(data);
           setSettings(data);
-          
+          setEmail(data.user.email)
         })
         .catch((error) => console.error(error));
     }
@@ -122,7 +122,7 @@ const AccountSettings = () => {
   console.log(settings)
   if(settings!=={}){
     console.log("settings:",settings.user)
-    setEmail(settings.user.email)
+   
   }
   return (
     <div className="settings-container ">
