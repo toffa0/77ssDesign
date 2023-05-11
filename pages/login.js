@@ -149,7 +149,7 @@ const Login = () => {
   );
 };
 
-const SignUp = ({setShowLogin}) => {
+const SignUp = ({setShowLogin,setActiveComponent}) => {
   const [userType, setUserType] = useState("client");
   const { setUser } = useAuth();
 
@@ -282,7 +282,7 @@ const SignUp = ({setShowLogin}) => {
       </div>
       <div className="fl jst-SB">
         <button className="w-40 signupbtn">Sign Up</button>
-        <button type="button" className="w-40 signupbtn bg-wh" onClick={()=>setShowLogin(true)}>Log in</button>
+        <button type="button" className="w-40 signupbtn bg-wh" onClick={()=>{setShowLogin(true);setActiveComponent("login")}}>Log in</button>
       </div>
     </form>
   );
@@ -352,7 +352,7 @@ const LoginSignUp = () => {
                 Log in
               </button>
             </div>
-            {showLogin ? <Login csrfToken /> : <SignUp csrfToken setShowLogin={setShowLogin} />}
+            {showLogin ? <Login csrfToken /> : <SignUp csrfToken setShowLogin={setShowLogin} setActiveComponent={setActiveComponent} />}
           </div>
         </div>
       </div>
