@@ -48,7 +48,7 @@ const Profile = ({setBio,avatar,setAvatar,setLanguages,setActiveComponent,Userna
                     className="inputfileupload2"
                     onChange={(event) => {
                     console.log(event.target.files[0]);
-                    setAvatar(event.target.files[0]);
+                    setAvatar(URL.createObjectURL(event.target.files[0]));
             }}
           />
             </div>
