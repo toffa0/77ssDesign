@@ -77,22 +77,29 @@ const Oneto1breif = ()=>{
       console.log(csrfToken);
       const formData = { ...callback  };
       console.log(formData);
-      fetch(`${BASE_URL}/${API_VERSION}/project/client/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRFToken': csrfToken,
-        },
-        credentials:"include",
-        body: JSON.stringify(formData)
+      // fetch(`${BASE_URL}/${API_VERSION}/project/client/`, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'X-CSRFToken': csrfToken,
+      //   },
+      //   credentials:"include",
+      //   body: JSON.stringify(formData)
+      // })
+      // .then(response => response.json())
+      // .then(data => console.log(data))
+      // .catch(error => console.error(error));
+      axiosInstance
+      .post(`${BASE_URL}/${API_VERSION}/project/client/`, formData)
+      .then((res) => {
+        console.log(res)
       })
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.error(error));
+      .catch((error) => {console.error(error);alert(error)});
+
+
     };
 
-
-
+   
     return(
 
 <div>
