@@ -1,6 +1,6 @@
 import Footer from '@/components/footer';
 import Navbar from '@/components/navbar';
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Portfolio from '@/components/portfolio';
 import Reviews from '@/components/Reviews';
 import Image from 'next/image';
@@ -11,6 +11,22 @@ function ProfilePage() {
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
+
+  useEffect(() => {
+    axiosInstance
+    .get(`${BASE_URL}/${API_VERSION}/user/profile/client/${user.id}/`, {
+    })
+    .then((res) => {
+      const data = res.data;
+      console.log('res:',res);
+      console.log('data:',data);
+    })
+    .catch((err) => {
+      console.error(err);
+      console.log(error.response.data)
+    });
+  });
+
   const [activeComponent, setActiveComponent] = useState("Portfolio");
   return (
     <div className="ProfilePage">
