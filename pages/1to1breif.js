@@ -24,8 +24,8 @@ const Oneto1breif = ()=>{
     const [reference, setReference] = useState("https://www.google.com/"); 
     const [logo, setLogo] = useState("logo"); 
 
-    const [budget_from, setBudget_from] = useState(4075);  
-    const [budget_to, setBudget_to] = useState(9946639.61); 
+    const [budget_from, setBudget_from] = useState('4075');  
+    const [budget_to, setBudget_to] = useState('9946639.61'); 
     const [timeline, setTimeline] = useState("timeline");
     const [portfolio_allowed, setPortfolio_allowed] = useState(true); 
 
