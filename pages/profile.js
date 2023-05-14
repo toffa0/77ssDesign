@@ -6,6 +6,7 @@ import Reviews from '@/components/Reviews';
 import Image from 'next/image';
 import axiosInstance from "@/helpers/axios";
 import { BASE_URL, API_VERSION } from "@/config";
+import useAuth from "@/contexts/auth.contexts";
 
 function ProfilePage() {
   const [selectedTab, setSelectedTab] = useState('portfolio');
@@ -13,7 +14,7 @@ function ProfilePage() {
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
-
+  const { setUser } = useAuth();
   useEffect(() => {
     
     axiosInstance
