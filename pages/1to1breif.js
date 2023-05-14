@@ -37,7 +37,15 @@ const Oneto1breif = ()=>{
     const [category, setCategory] = useState(1); 
     
     const [color_palette, setColor_palette] = useState(1); 
-    
+
+    const [classic_to_modern, setclassic_to_modern] = useState(0);
+    const [playful_to_serious, setplayful_to_serious] = useState(0);
+    const [geometrical_to_organic, setgeometrical_to_organic] = useState(0);
+    const [feminine_to_masculine, setfeminine_to_masculine] = useState(0);
+    const [economical_to_luxurious, seteconomical_to_luxurious] = useState(0);
+    const [mature_to_youthful, setmature_to_youthful] = useState(0);
+    const [handcrafted_to_minimalist, sethandcrafted_to_minimalist] = useState(0);
+
     const callback = {
       name: name,
       languages: languages,
@@ -51,13 +59,13 @@ const Oneto1breif = ()=>{
       portfolio_allowed: portfolio_allowed,
       size: size,
       feature_text: feature_text,
-      classic_to_modern: 10,
-      playful_to_serious: 10,
-      geometrical_to_organic: 10,
-      feminine_to_masculine: 10,
-      economical_to_luxurious: 10,
-      mature_to_youthful: 10,
-      handcrafted_to_minimalist: 10,
+      classic_to_modern:classic_to_modern,
+      playful_to_serious: playful_to_serious,
+      geometrical_to_organic: geometrical_to_organic,
+      feminine_to_masculine: feminine_to_masculine,
+      economical_to_luxurious: economical_to_luxurious,
+      mature_to_youthful: mature_to_youthful,
+      handcrafted_to_minimalist: handcrafted_to_minimalist,
       guarentee: guarentee,
       deadline: deadline,
       budget: "-1718",
@@ -155,7 +163,11 @@ const Oneto1breif = ()=>{
    {activeside === "Time" && <Time  setBudget_from={setBudget_from} setBudget_to={setBudget_to} setTimeline={setTimeline} setPortfolio_allowed={setPortfolio_allowed} cosn={cosn}/>}
    {activeside === "Size" && <Size setFeature_text={setFeature_text} setSize={setSize}/>}
     
-   {activeside === "Brand" && <Brand/>}
+   {activeside === "Brand" && <Brand classic_to_modern={classic_to_modern} setclassic_to_modern={setclassic_to_modern} playful_to_serious={playful_to_serious} setplayful_to_serious={setplayful_to_serious} 
+   geometrical_to_organic={geometrical_to_organic} setgeometrical_to_organic={setgeometrical_to_organic} feminine_to_masculine={feminine_to_masculine} setfeminine_to_masculine={setfeminine_to_masculine}
+   economical_to_luxurious={economical_to_luxurious} seteconomical_to_luxurious={seteconomical_to_luxurious} mature_to_youthful={mature_to_youthful} setmature_to_youthful={setmature_to_youthful}
+   handcrafted_to_minimalist={handcrafted_to_minimalist} sethandcrafted_to_minimalist={sethandcrafted_to_minimalist}
+   />}
    {activeside === "Colors" && <Colors/>}
    {activeside === "Checkout" && <Checkout handleDataCheckout={handleDataCheckout}/>}
  </div>
@@ -169,4 +181,4 @@ const Oneto1breif = ()=>{
  
     )
 }
-export default Oneto1breif;
+export default Oneto1breif;    
