@@ -120,7 +120,7 @@ const Login = () => {
           <p id="Fs-16">or Login with your 77S design account</p>
         </div>
         <div className="bottom-row3 ">
-          <input type="text" placeholder="Email" id="email1" required/>
+          <input type="email" placeholder="Email" id="email1" required/>
           <div style={{position:"relative"}}>
           <input 
             type={passwordShown ? "text" : "password"} 
