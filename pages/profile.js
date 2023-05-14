@@ -14,6 +14,7 @@ function ProfilePage() {
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
+  const router = useRouter();
   if(Router.ready){
     const { user_id } = router.query;
   }
