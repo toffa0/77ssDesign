@@ -44,7 +44,7 @@ const Oneto1breif = ()=>{
       description: description,
       url: url,
       reference: reference,
-      // logo: logo,
+      logo: logo,
       budget_from: budget_from,
       budget_to: budget_to,
       timeline:timeline,
