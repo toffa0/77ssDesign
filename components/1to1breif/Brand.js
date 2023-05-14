@@ -17,7 +17,7 @@ const Brand= ({classic_to_modern,setclassic_to_modern,playful_to_serious,setplay
        <span id='nobtn2' >Classic</span>
        <span id='nobtn2' >Modern</span> 
        </div>
-       <input type="range" min="-100" max="100" value={classic_to_modern}  onChange={(e)=> setclassic_to_modern(e.target.value)} id="valueSlider" />
+       <input type="range" min="-10" max="10" value={classic_to_modern}  onChange={(e)=> setclassic_to_modern(e.target.value)} id="valueSlider" />
      </div>
 {/* first filter end*/}
      <div className='choose2 '>
