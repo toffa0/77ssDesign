@@ -10,6 +10,7 @@ import Colors from "@/components/1to1breif/Colors";
 import Checkout from "@/components/1to1breif/Checkout";
 import { BASE_URL ,API_VERSION } from '@/config';
 import Cookies from 'js-cookie';
+import axiosInstance from "@/helpers/axios";
 
 const Oneto1breif = ()=>{
     const [activeside, setActiveside] = useState("About");
