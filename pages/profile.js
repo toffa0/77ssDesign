@@ -13,6 +13,7 @@ function ProfilePage() {
   };
 
   useEffect(() => {
+    
     axiosInstance
     .get(`${BASE_URL}/${API_VERSION}/user/profile/client/${user.id}/`, {
     })
