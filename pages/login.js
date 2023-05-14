@@ -267,7 +267,7 @@ const SignUp = ({setShowLogin,setActiveComponent}) => {
           placeholder="Password" 
           id="password" 
           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
-          title="Password should be digits (0 to 9) or alphabets (a to z)."
+          title="Password must contain uppercase, lowercase, and a number."
           minlength="8"
           />
 
