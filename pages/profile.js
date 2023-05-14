@@ -6,7 +6,7 @@ import Reviews from '@/components/Reviews';
 import Image from 'next/image';
 import axiosInstance from "@/helpers/axios";
 import { BASE_URL, API_VERSION } from "@/config";
-import useAuth from "@/contexts/auth.contexts";
+import { useRouter } from 'next/router';
 
 function ProfilePage() {
   const [selectedTab, setSelectedTab] = useState('portfolio');
@@ -14,11 +14,13 @@ function ProfilePage() {
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
-  const { setUser } = useAuth();
+  if(Router.ready){
+    const { user_id } = router.query;
+  }
   useEffect(() => {
     
     axiosInstance
-    .get(`${BASE_URL}/${API_VERSION}/user/profile/client/${user.id}/`, {
+    .get(`${BASE_URL}/${API_VERSION}/user/profile/client/${user_id}/`, {
     })
     .then((res) => {
       const data = res.data;

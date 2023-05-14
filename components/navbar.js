@@ -152,7 +152,8 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li className="menu-item">
-                      <Link href="/profile">Profile</Link>
+                      <Link href={{pathname: '/profile',query: { user_id: user.id },}}>Profile</Link>
+                      {/* <Link href="/profile" query={user_id:user.id}>Profile</Link> */}
                     </li>
                     <li className="menu-item">
                       <Link href="/balance">Balance</Link>
