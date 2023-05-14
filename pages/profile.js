@@ -5,6 +5,7 @@ import Portfolio from '@/components/portfolio';
 import Reviews from '@/components/Reviews';
 import Image from 'next/image';
 import axiosInstance from "@/helpers/axios";
+import { BASE_URL, API_VERSION } from "@/config";
 
 function ProfilePage() {
   const [selectedTab, setSelectedTab] = useState('portfolio');
