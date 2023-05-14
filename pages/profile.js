@@ -4,6 +4,7 @@ import React, { useState,useEffect } from 'react';
 import Portfolio from '@/components/portfolio';
 import Reviews from '@/components/Reviews';
 import Image from 'next/image';
+import axiosInstance from "@/helpers/axios";
 
 function ProfilePage() {
   const [selectedTab, setSelectedTab] = useState('portfolio');
