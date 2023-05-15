@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from "@/components/profcard"
+import moment from 'moment';
 
 const cardsData = [
     {
@@ -72,7 +73,9 @@ useEffect(() => {
 
     
     <div className="tab-content">
-        <p>Member since: March 14, 2021</p>
+        <p>{moment(new Date(userProfile.user.date_joined)).fromNow()}</p>
+        {/* <p>Member since: March 14, 2021</p> */}
+
       <div className="stat-box stat-boxpad">
         <div className="stat-num">32</div>
         <div className="stat-text">Contests Won</div>
