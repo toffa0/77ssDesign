@@ -18,7 +18,7 @@ function ProfilePage() {
   const router = useRouter();
 
   useEffect(() => {
-    if(router.ready){
+    if(router.isReady){
       const { user_id } = router.query;
     
     axiosInstance
@@ -35,7 +35,7 @@ function ProfilePage() {
     });
 
   }
-  });
+},[router.isReady]);
 
   const [activeComponent, setActiveComponent] = useState("Portfolio");
   return (
