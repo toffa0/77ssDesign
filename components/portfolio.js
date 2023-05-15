@@ -46,7 +46,7 @@ const cardsData = [
     }
     ]
 
-const Portfolio = () => {
+const Portfolio = ({userProfile}) => {
 
 const [cards, setCards] = useState(cardsData);
 const [currentDate, setCurrentDate] = useState('');
@@ -87,7 +87,7 @@ useEffect(() => {
       </div>
       <div className="stat-box2">
         <div className="stat-text2">Languages</div>
-        <div className="stat-text">German - English</div>
+        <div className="stat-text">{userProfile?userProfile.languages:''}</div>
       </div>
       <div className="stat-box3">
         <div className="stat-text3">Local Time: {currentDate}</div>

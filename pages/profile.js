@@ -89,7 +89,7 @@ function ProfilePage() {
 
    
        <div className='max'>
-       {activeComponent === "Portfolio" && <Portfolio />}
+       {activeComponent === "Portfolio" && <Portfolio userProfile={userProfile} />}
        {activeComponent === "Reviews" && <Reviews />}
        </div>
  
