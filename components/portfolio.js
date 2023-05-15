@@ -63,6 +63,7 @@ useEffect(() => {
   }, 1000);
 
 },[] );
+var options = {year: 'numeric', month: 'long', day: 'numeric' };
 
   return ( <div className='  fl jst-SB'>
 
@@ -73,8 +74,9 @@ useEffect(() => {
 
     
     <div className="tab-content">
-        <p>{userProfile?"member since: "+new Date(userProfile.user.date_joined):""}</p>
+        {/* <p>{userProfile?"member since: "+new Date(userProfile.user.date_joined):""}</p> */}
         {/* <p>Member since: March 14, 2021</p> */}
+        <p>{userProfile?"member since: "+new Date(userProfile.user.date_joined).toLocaleDateString("en-US", options):""}</p>
 
       <div className="stat-box stat-boxpad">
         <div className="stat-num">32</div>
