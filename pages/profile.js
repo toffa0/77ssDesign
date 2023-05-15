@@ -10,20 +10,19 @@ import { useRouter } from 'next/router';
 
 function ProfilePage() {
   const [selectedTab, setSelectedTab] = useState('portfolio');
-  const [userID, setUserID] = useState(null);
+  
 
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
   const router = useRouter();
-  if(router.ready){
-    const { user_id } = router.query;
-    setUserID(user_id);
-  }
+
   useEffect(() => {
+    if(router.ready){
+      const { user_id } = router.query;
     
     axiosInstance
-    .get(`${BASE_URL}/${API_VERSION}/user/profile/client/${userID}/`, {
+    .get(`${BASE_URL}/${API_VERSION}/user/profile/client/${user_id}/`, {
     })
     .then((res) => {
       const data = res.data;
@@ -34,6 +33,8 @@ function ProfilePage() {
       console.error(err);
       console.log(error.response.data)
     });
+
+  }
   });
 
   const [activeComponent, setActiveComponent] = useState("Portfolio");
