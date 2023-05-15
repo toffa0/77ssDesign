@@ -73,7 +73,7 @@ useEffect(() => {
 
     
     <div className="tab-content">
-        <p>{moment(new Date(userProfile.user.date_joined)).fromNow()}</p>
+        <p>{userProfile?moment(new Date(userProfile.user.date_joined)).fromNow():""}</p>
         {/* <p>Member since: March 14, 2021</p> */}
 
       <div className="stat-box stat-boxpad">
