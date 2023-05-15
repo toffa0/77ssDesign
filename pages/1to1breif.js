@@ -68,7 +68,7 @@ const Oneto1breif = ()=>{
       handcrafted_to_minimalist: parseInt(handcrafted_to_minimalist),
       guarentee: guarentee,
       deadline: deadline,
-      budget: "-1718",
+      budget: "-1710",
       industry: industry,
       category: category,
       color_palette: color_palette,
