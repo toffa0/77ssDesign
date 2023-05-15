@@ -16,7 +16,7 @@ function ProfilePage() {
     setSelectedTab(tab);
   };
   const router = useRouter();
-
+  const[userProfile,setUserProfile]=useState(null);
   useEffect(() => {
     if(router.isReady){
       const { user_id } = router.query;
@@ -28,6 +28,8 @@ function ProfilePage() {
       const data = res.data;
       console.log('res:',res);
       console.log('data:',data);
+      setUserProfile(data);
+    
     })
     .catch((err) => {
       console.error(err);
@@ -58,7 +60,7 @@ function ProfilePage() {
         <div className='prof-nav'>
 
         <div className='fl fl-gapp16 pp'> 
-          <p>Full Name</p>
+          <p>{userProfile.firstname} {userProfile.lastname}</p>
           <span>online 15 minutes ago</span>
         </div>
        
