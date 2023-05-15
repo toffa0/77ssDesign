@@ -38,13 +38,13 @@ const Oneto1breif = ()=>{
     
     const [color_palette, setColor_palette] = useState(1); 
 
-    const [classic_to_modern, setclassic_to_modern] = useState(10);
-    const [playful_to_serious, setplayful_to_serious] = useState(1);
+    const [classic_to_modern, setclassic_to_modern] = useState(5);
+    const [playful_to_serious, setplayful_to_serious] = useState(5);
     const [geometrical_to_organic, setgeometrical_to_organic] = useState(5);
-    const [feminine_to_masculine, setfeminine_to_masculine] = useState(10);
-    const [economical_to_luxurious, seteconomical_to_luxurious] = useState(3);
-    const [mature_to_youthful, setmature_to_youthful] = useState(4);
-    const [handcrafted_to_minimalist, sethandcrafted_to_minimalist] = useState(10);
+    const [feminine_to_masculine, setfeminine_to_masculine] = useState(5);
+    const [economical_to_luxurious, seteconomical_to_luxurious] = useState(5);
+    const [mature_to_youthful, setmature_to_youthful] = useState(5);
+    const [handcrafted_to_minimalist, sethandcrafted_to_minimalist] = useState(5);
 
     const callback = {
       name: name,
