@@ -34,7 +34,7 @@ return(
        <span id='nobtn2' >Classic</span>
        <span id='nobtn2' >Modern</span>
        </div>
-       <input type="range" min="-100" max="100" value={Slidervalue1} id="valueSlider" />
+       <input type="range" min="0" max="10" value={Slidervalue1} id="valueSlider" />
      </div>
 {/* first filter end*/}
      <div className='choose2 '>
@@ -42,7 +42,7 @@ return(
        <span id='nobtn2'>Playful</span>
        <span id='nobtn2'>Serious</span>
        </div>
-       <input type="range" min="-100" max="100" value={Slidervalue2}   id="valueSlider" />
+       <input type="range" min="0" max="10" value={Slidervalue2}   id="valueSlider" />
      </div>   
      {/* first filter end*/} 
      <div className='choose2 '>
@@ -50,7 +50,7 @@ return(
        <span id='nobtn2' >Geometrical</span>
        <span id='nobtn2' >Organic</span>
        </div>
-       <input type="range" min="-100" max="100" value={Slidervalue3}   id="valueSlider" />
+       <input type="range" min="0" max="10" value={Slidervalue3}   id="valueSlider" />
      </div> 
      {/* first filter end*/}
      <div className='choose2 '>
@@ -58,7 +58,7 @@ return(
        <span id='nobtn2' >Feminine</span>
        <span id='nobtn2' >Masculine</span>
        </div>
-       <input type="range" min="-100" max="100" value={Slidervalue4}  id="valueSlider" />
+       <input type="range" min="0" max="10" value={Slidervalue4}  id="valueSlider" />
      </div> 
      {/* first filter end*/}
      <div className='choose2 '>
@@ -66,21 +66,21 @@ return(
        <span id='nobtn2'>Economical</span>
        <span id='nobtn2'>Luxurios</span>
        </div>
-       <input type="range" min="-100" max="100" value={Slidervalue5}   id="valueSlider" />
+       <input type="range" min="0" max="10" value={Slidervalue5}   id="valueSlider" />
      </div> 
      <div className='choose2 '>
        <div className='fl jst-SB'>
        <span id='nobtn2' >Mature</span>
        <span id='nobtn2' >Youthful</span>
        </div>
-       <input type="range" min="-100" max="100" value={Slidervalue6}   id="valueSlider" />
+       <input type="range" min="0" max="10" value={Slidervalue6}   id="valueSlider" />
      </div> 
      <div className='choose2 '>
        <div className='fl jst-SB'>
        <span id='nobtn2' >Handcrafted</span>
        <span id='nobtn2' >Minimalist</span>
        </div>
-       <input type="range" min="-100" max="100" value={Slidervalue7}   id="valueSlider" />
+       <input type="range" min="0" max="10" value={Slidervalue7}   id="valueSlider" />
 
      </div>  
 
