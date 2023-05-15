@@ -22,7 +22,7 @@ function ProfilePage() {
       const { user_id } = router.query;
     
     axiosInstance
-    .get(`${BASE_URL}/${API_VERSION}/user/profile/client/${user_id}/`, {
+    .get(`${BASE_URL}/${API_VERSION}/user/profile/client/${user_id}`, {
     })
     .then((res) => {
       const data = res.data;
