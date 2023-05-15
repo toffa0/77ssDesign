@@ -60,7 +60,7 @@ function ProfilePage() {
         <div className='prof-nav'>
 
         <div className='fl fl-gapp16 pp'> 
-          <p>{userProfile.firstname} {userProfile.lastname}</p>
+          <p>{userProfile?userProfile.firstname+" "+userProfile.lastname:''}</p>
           <span>online 15 minutes ago</span>
         </div>
        
