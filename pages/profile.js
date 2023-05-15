@@ -15,7 +15,7 @@ function ProfilePage() {
     setSelectedTab(tab);
   };
   const router = useRouter();
-  if(Router.ready){
+  if(router.ready){
     const { user_id } = router.query;
   }
   useEffect(() => {
