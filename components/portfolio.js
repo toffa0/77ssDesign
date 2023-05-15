@@ -76,18 +76,18 @@ var options = {year: 'numeric', month: 'long', day: 'numeric' };
     <div className="tab-content">
         {/* <p>{userProfile?"member since: "+new Date(userProfile.user.date_joined):""}</p> */}
         {/* <p>Member since: March 14, 2021</p> */}
-        <p>{userProfile?"member since: "+new Date(userProfile.user.date_joined).toLocaleDateString("en-US", options):""}</p>
+        <p>{userProfile?"Member since: "+new Date(userProfile.user.date_joined).toLocaleDateString("en-US", options):""}</p>
 
       <div className="stat-box stat-boxpad">
-        <div className="stat-num">32</div>
+        <div className="stat-num">0</div>
         <div className="stat-text">Contests Won</div>
       </div>
       <div className="stat-box">
-        <div className="stat-num">23</div>
+        <div className="stat-num">0</div>
         <div className="stat-text">1 to 1 Projects</div>
       </div>
       <div className="stat-box">
-        <div className="stat-num">12</div>
+        <div className="stat-num">0</div>
         <div className="stat-text">client/s repeated</div>
       </div>
       <div className="stat-box2">
