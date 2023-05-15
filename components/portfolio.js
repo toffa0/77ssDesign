@@ -101,7 +101,7 @@ useEffect(() => {
    
     </div>
     <div className="text-area-cont">
-    <textarea className="text-area"/>
+    <textarea className="text-area" value={userProfile?userProfile.bio:''} style={{paddingInline:"10px"}}/>
     </div>
     <div className="tab-buttons">
     <select>
