@@ -56,8 +56,8 @@ const Projects = ()=>{
 
 
 <div className="mywork-ex">
-    {Data?Data.map((job,index)=>(
-      <WorkCard key={index} Data={job}/>
+    {Data?Data.map((job)=>(
+      <WorkCard  Data={job}/>
 
     ))
     :
