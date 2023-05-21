@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import Image from 'next/image';
 import axiosInstance from "@/helpers/axios";
 import { BASE_URL, API_VERSION } from "@/config";
