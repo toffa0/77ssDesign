@@ -14,8 +14,8 @@ const Projects = ()=>{
       .then((res) => {
         const data = res.data;
         console.log('res:',res);
-        console.log('data:',data);
-        setData(data.results);
+        console.log('data:',data.results);
+        setData(data);
       
       })
       .catch((err) => {
