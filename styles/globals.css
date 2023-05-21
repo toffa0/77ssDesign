@@ -5965,6 +5965,14 @@ input[type="password"]::-ms-reveal { display: none; }
 .show_hide_Pass2:hover{
   color:#ff5f6b !important;
 }
+.WORKCARD_DESCR{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+
 #DF{
   display: flex;
 }

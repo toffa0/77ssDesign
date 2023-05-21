@@ -17,7 +17,7 @@ const WorkCard = ({Data})=>{
       <h3>{Data.name}</h3>
 
       {/* <p>mkoba is mobile app mkoba is mobile app mkoba is mobile app mkoba is mobile app</p> */}
-      <p>{Data.description}</p>
+      <p className="WORKCARD_DESCR">{Data.description}</p>
 
       <span>by xmokla</span>
 
