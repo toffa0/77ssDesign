@@ -15,7 +15,7 @@ const Projects = ()=>{
         const data = res.data;
         console.log('res:',res);
         console.log('data:',data);
-        setData(data);
+        setData(data.results);
       
       })
       .catch((err) => {
@@ -56,7 +56,10 @@ const Projects = ()=>{
 
 
 <div className="mywork-ex">
-<Image src="/ex1.png" alt="" width={669} height={125}/>
+    {Data.map((job)=>(
+      <WorkCard Data={job}/>
+
+    ))}
  </div>
 
  </div>

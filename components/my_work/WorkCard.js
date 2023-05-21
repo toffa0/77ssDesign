@@ -1,7 +1,7 @@
 
 
 
-const WorkCard = ()=>{
+const WorkCard = ({Data})=>{
 
 
     return(
