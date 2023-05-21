@@ -4,6 +4,28 @@ import Image from 'next/image';
 
 const Projects = ()=>{
     const [activeside, setActiveside] = useState("Active");
+    const [Data, setData] = useState(null);
+    useEffect(() => {
+      
+      axiosInstance
+      .get(`${BASE_URL}/${API_VERSION}/project/client/`, {
+      })
+      .then((res) => {
+        const data = res.data;
+        console.log('res:',res);
+        console.log('data:',data);
+        setData(data);
+      
+      })
+      .catch((err) => {
+        console.error(err);
+        console.log(error.response.data)
+      });
+  
+    
+  },[]);
+
+
     return(
         <div className=" h-60v fl jst-SB">
 
