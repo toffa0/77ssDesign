@@ -25,9 +25,9 @@ const WorkCard = ()=>{
         </div>
      </div>
      <div className="work-w3">
-      <div><Image alt=""/> <span>3D designs</span></div>
-      <div><Image alt=""/> <span>3 Days, 13 hours</span></div>
-      <div><Image alt=""/> <span>7% feedback(1)</span></div>
+      <div> <span>3D designs</span></div>
+      <div> <span>3 Days, 13 hours</span></div>
+      <div> <span>7% feedback(1)</span></div>
       <div><button>Watch</button></div>
      </div>
      </div>
