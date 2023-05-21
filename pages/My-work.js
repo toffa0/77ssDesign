@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Contests from "@/components/contests-mywork"
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import Projects from "@/components/projects-mywork";
-import Designer from "@/components/designer-mywork";
-import Ndas from "@/components/ndas-mywork";
+import Contests from "@/components/my_work/contests-mywork"
+import Navbar from "@/components/my_work/navbar";
+import Footer from "@/components/my_work/footer";
+import Projects from "@/components/my_work/projects-mywork";
+import Designer from "@/components/my_work/designer-mywork";
+import Ndas from "@/components/my_work/ndas-mywork";
 const Mywork = () => {
   const [activeComponent, setActiveComponent] = useState("contests");
 
