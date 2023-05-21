@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Contests from "@/components/my_work/contests-mywork"
-import Navbar from "@/components/my_work/navbar";
-import Footer from "@/components/my_work/footer";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import Projects from "@/components/my_work/projects-mywork";
 import Designer from "@/components/my_work/designer-mywork";
 import Ndas from "@/components/my_work/ndas-mywork";
