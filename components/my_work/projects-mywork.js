@@ -56,10 +56,13 @@ const Projects = ()=>{
 
 
 <div className="mywork-ex">
-    {Data&&Data.map((job,index)=>(
+    {Data?Data.map((job,index)=>(
       <WorkCard key={index} Data={job}/>
 
-    ))}
+    ))
+    :
+    <p>no data</p>
+    }
  </div>
 
  </div>
