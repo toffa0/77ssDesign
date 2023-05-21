@@ -39,3 +39,4 @@ const WorkCard = ({Data})=>{
  </div>
     )
 }
+export default WorkCard;
