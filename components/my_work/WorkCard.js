@@ -6,10 +6,10 @@ const WorkCard = ()=>{
 
     return(
         <div className="mywork-ex">
-     <Image src="/ex1.png" alt="" width={669} height={125}/>
+     {/* <Image src="/ex1.png" alt="" width={669} height={125}/> */}
      <div className="work-cont">
       <div className="work-w2">
-      <Image src="/ex12.png" alt="" width={100} height={112}/>
+      {/* <Image src="/ex12.png" alt="" width={100} height={112}/> */}
       </div>
      
      <div className="work-w work-text">
