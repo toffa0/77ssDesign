@@ -2,7 +2,7 @@ import React, { useState , useEffect } from "react";
 import Image from 'next/image';
 import axiosInstance from "@/helpers/axios";
 import { BASE_URL, API_VERSION } from "@/config";
-
+import WorkCard from '@/components/my_work/WorkCard';
 const Projects = ()=>{
     const [activeside, setActiveside] = useState("Active");
     const [Data, setData] = useState(null);
@@ -56,8 +56,8 @@ const Projects = ()=>{
 
 
 <div className="mywork-ex">
-    {Data.map((job)=>(
-      <WorkCard Data={job}/>
+    {Data.map((job,index)=>(
+      <WorkCard key={index} Data={job}/>
 
     ))}
  </div>
