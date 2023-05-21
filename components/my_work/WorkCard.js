@@ -13,8 +13,12 @@ const WorkCard = ({Data})=>{
       </div>
      
      <div className="work-w work-text">
-      <h3>Mkoba-Design Eye</h3>
-      <p>mkoba is mobile app mkoba is mobile app mkoba is mobile app mkoba is mobile app</p>
+      {/* <h3>Mkoba-Design Eye</h3> */}
+      <h3>{Data.name}</h3>
+
+      {/* <p>mkoba is mobile app mkoba is mobile app mkoba is mobile app mkoba is mobile app</p> */}
+      <p>{Data.description}</p>
+
       <span>by xmokla</span>
 
         <div className="workflex">
