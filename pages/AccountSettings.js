@@ -73,7 +73,7 @@ const AccountSettings = () => {
     form_data.append("rating", rating);
     console.log(form_data);
     axiosInstance
-      .post(`${BASE_URL}/${API_VERSION}/user/profile/client/`, formData)
+      .post(`${BASE_URL}/${API_VERSION}/user/profile/client/`, form_data)
       .then((res) => {
         router.reload();
       })
