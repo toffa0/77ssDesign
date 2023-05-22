@@ -57,7 +57,6 @@ const AccountSettings = () => {
   const handleContinue = () => {
     console.log(payload);
     let form_data = new FormData();
-    form_data.append("avatar", avatar);
     form_data.append("firstname", firstname);
     form_data.append("lastname", lastname);
     form_data.append("country", country);
@@ -69,25 +68,31 @@ const AccountSettings = () => {
     form_data.append("phone", phone);
     form_data.append("languages", languages);
     form_data.append("bio", bio);
+    form_data.append("avatar", avatar);
     form_data.append("id_card", avatar);
     form_data.append("rating", rating);
     console.log(form_data);
-
-    fetch(`${BASE_URL}/${API_VERSION}/user/profile/client/`, {
-      method: "POST",
-      headers: {
-        "X-CSRFToken": csrfToken,
-      },
-      credentials: "include",
-      body: form_data,
-    })
-      .then((response) => {
-        return response.json();
+    axiosInstance
+      .post(`${BASE_URL}/${API_VERSION}/user/profile/client/`, formData)
+      .then((res) => {
+        router.reload();
       })
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => console.error(error));
+      .catch((error) => {console.error(error);alert(error)});
+    // fetch(`${BASE_URL}/${API_VERSION}/user/profile/client/`, {
+    //   method: "POST",
+    //   headers: {
+    //     "X-CSRFToken": csrfToken,
+    //   },
+    //   credentials: "include",
+    //   body: form_data,
+    // })
+    //   .then((response) => {
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     console.log(data);
+    //   })
+    //   .catch((error) => console.error(error));
   };
 
  

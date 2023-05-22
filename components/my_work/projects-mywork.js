@@ -57,6 +57,7 @@ const Projects = ()=>{
 
 <div className="mywork-ex">
     {Data?Data.map((job,index)=>(
+      
       <WorkCard key={index} Data={job}/>
 
     ))
