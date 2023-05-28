@@ -126,8 +126,8 @@ const Login = () => {
             type={passwordShown ? "text" : "password"} 
             placeholder="Password" 
             id="password1" 
-            pattern="[a-z0-9]{1,15}"
-            title="Password should be digits (0 to 9) or alphabets (a to z)."
+            // pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+            title="That email and password combination is incorrect."
             required
           />
           <button className='show_hide_Pass2' onClick={togglePassword}>{!passwordShown?"Show":"Hide"}</button>
@@ -267,7 +267,7 @@ const SignUp = ({setShowLogin,setActiveComponent}) => {
           placeholder="Password" 
           id="password" 
           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
-          title="Password must contain uppercase, lowercase, and a number."
+          title="Use 8 or more characters with a mix of letters, numbers and symbols."
           minlength="8"
           />
 
