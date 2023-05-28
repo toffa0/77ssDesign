@@ -120,7 +120,7 @@ export default function Home() {
                     <option value="CONTEST">CONTEST </option>
                     <option value="HIRING">HIRING</option>
                   </select>
-                  <input type="submit" name="" value="Start" onClick={()=>projectType()}/>
+                  <input type="button" name="" value="Start" onClick={()=>projectType()}/>
                 </form>
 
               </div>
