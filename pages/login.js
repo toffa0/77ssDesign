@@ -1,9 +1,6 @@
 /* eslint-disable @next/next/no-before-interactive-script-outside-document */
 import Link from "next/link";
-import { Redirect } from "next";
-import React, { useEffect, useState, useContext } from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import Cookies from "js-cookie";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { BASE_URL, API_VERSION } from "@/config";
 import { useRouter } from "next/router";
@@ -11,8 +8,6 @@ import axiosInstance from "@/helpers/axios";
 import useAuth from "@/contexts/auth.contexts";
 import Script from "next/script";
 import { Sdk, useInitFacebook } from "@nixjs23n6/facebook-login";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from "@fortawesome/free-solid-svg-icons";
 const Login = () => {
   const router = useRouter();
   const { setUser } = useAuth();
@@ -151,7 +146,7 @@ const Login = () => {
 
 const SignUp = ({setShowLogin,setActiveComponent}) => {
   const [userType, setUserType] = useState("client");
-  const { setUser } = useAuth();
+  
 
   const router = useRouter();
   const googleRegister = async (response) => {

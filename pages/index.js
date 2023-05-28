@@ -47,7 +47,11 @@ export default function Home() {
     
     console.log(cates);
   }
-
+  function projectType(){
+    var select = document.getElementById('project_type');
+    var value = select.options[select.selectedIndex].value;
+    console.log(value)
+  }
 
 
   return (
@@ -112,11 +116,11 @@ export default function Home() {
                       </ul>
                     </div>
                   </div>
-                  <select name="test">
-                    <option value="CONTESTPROJECT">CONTEST </option>
-                    <option value="CONTESTPROJECT">HIRING</option>
+                  <select name="test" id="project_type">
+                    <option value="CONTEST">CONTEST </option>
+                    <option value="HIRING">HIRING</option>
                   </select>
-                  <input type="submit" name="" value="Start" />
+                  <button type="submit" name="" value="Start" onClick={()=>projectType()} />
                 </form>
 
               </div>
