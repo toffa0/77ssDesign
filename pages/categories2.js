@@ -6,10 +6,10 @@ import Link from 'next/link'
 import Footer2 from "@/components/footer2";
 import { BASE_URL ,API_VERSION } from '@/config';
 import {listItems,listItems2,listItems3,listItems4,listItems5} from "../components/consts"
+import CatmenuSelector from "@/components/CatmenuSelector";
 
 const Categories2 = ()=>{
 
-    const [ChooseCat, SetChooseCat] = useState("");
     const [chatboxOpen, SetchatboxOpen] = useState(false);
 
     useEffect(()=>{
@@ -108,14 +108,7 @@ const Categories2 = ()=>{
         <div className="mb-20">
             <h1 className='DiffTitle-'  id="title">Categories</h1>
         </div>
-        <form className="sr-div2 fl jst" >
-                <input type="text" name='' placeholder="Logo, Brand identity, Packaging..." />
-                <select name="test">
-                  <option value="CONTESTPROJECT">CONTEST </option>
-                  <option value="CONTESTPROJECT">PROJECT</option>
-                </select>
-                <input type="submit" name=''  value="Start" /> 
-            </form>
+        <CatmenuSelector/>
         </div>
         </div>
         </div>
@@ -215,8 +208,8 @@ const Categories2 = ()=>{
             </div>
             </div>
             <div className="cat2-btns max">
-                <Link href="Contestbreif" >Start contest</Link>
-                <Link href="1to1breif" id="cyan">Hiring (1 to1)</Link>
+                <Link href={FirstCat?"Logobreif":"Contestbreif"} >Start contest</Link>
+                <Link href={FirstCat?"Logobreif":"1to1breif"} id="cyan">Hiring (1 to1)</Link>
             </div>
             </div>
             <Footer2/>

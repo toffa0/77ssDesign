@@ -2,9 +2,8 @@
 
 import axiosInstance from "@/helpers/axios";
 import Cookies from "js-cookie";
-import { createContext, useState } from "react";
+import { createContext,useContext} from "react";
 import { API_VERSION, BASE_URL } from "@/config";
-import { useContext } from "react";
 
 export const AuthContext = createContext({
   user: undefined,

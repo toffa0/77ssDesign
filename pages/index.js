@@ -1,58 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
 import Navbar from "@/components/navbar";
-import ImageSlider from "@/components/LogoSlider";
 import Link from "next/link";
 import Footer2 from "@/components/footer2";
 import Footer from "@/components/footer";
-import React, { useEffect, useMemo, useState, useContext } from "react";
-import {
-  Logoidentity,
-  Webdesign,
-  ClothingMerchandise,
-  ArtIllustration,
-  Businessadvertising,
-  industriesMenu,
-  AllCategoriesItems,
-  AllCategoriesAll,
-} from "../components/consts";
+import React, {useState } from "react";
 import useAuth from "@/contexts/auth.contexts";
+import CatmenuSelector from "@/components/CatmenuSelector";
 
-// const inter = Inter({ subsets: ['latin'] })
+
 export default function Home() {
-  const { user, setUser } = useAuth();
+  const { user } = useAuth();
   const [isOpen, setOpen] = useState(false);
-
-  const [AllCategories, setAllCategories] = useState("");
-  const [AllCategoriesisOpen, setAllCategoriesOpen] = useState(false);
-  function CategoryClick(item) {
-    setSearch(item);
-    setAllCategoriesOpen(false);
-  }
-  const [search, setSearch] = useState("");
-  const cates = useMemo(() => {
-    if (!search) return AllCategoriesAll;
-
-    return AllCategoriesAll.filter((Category) => {
-      if (Category.text) {
-        if (Category.text.toLowerCase().includes(search.toLowerCase())) {
-          return Category.text.toLowerCase().includes(search.toLowerCase());
-        }
-      }
-    });
-  }, [search]);
-
-  function CategoryTyping(item) {
-    setSearch(item);
-    
-    console.log(cates);
-  }
-  function projectType(){
-    var select = document.getElementById('project_type');
-    var value = select.options[select.selectedIndex].value;
-    console.log(value)
-  }
-
+  
 
   return (
     <>
@@ -79,49 +39,7 @@ export default function Home() {
                 </h2>
               </div>
               <div>
-                <form className="sr-div2 fl jst">
-                  <div className="SelectCat" id="SelectAcat"  onClick={()=>setAllCategoriesOpen(!AllCategoriesisOpen)}>
-                    <input
-                      type="text"
-                      value={search}
-                      onChange={(e) => CategoryTyping(e.target.value)}
-                      name=""
-                      placeholder="Logo, Brand Identity, Packaging . . ."
-                    />
-                    <div
-                      className="SelectMenu"
-                      id={AllCategoriesisOpen ? "" : "DN"}
-                      
-                    >
-                      <ul id="CatesSelect">
-                        {cates.length > 0 ? (
-                          cates.map((item) => (
-                            <div key={item.id}>
-                              <h4 type="button" className="CatH4">
-                                {item.header}
-                              </h4>
-                              <button
-                                type="button"
-                                onClick={() => CategoryClick(item.text)}
-                              >
-                                {item.text}
-                              </button>
-                            </div>
-                          ))
-                        ) : (
-                          <h4 type="button" className="CatH4">
-                            Item not found.
-                          </h4>
-                        )}
-                      </ul>
-                    </div>
-                  </div>
-                  <select name="test" id="project_type">
-                    <option value="CONTEST">CONTEST </option>
-                    <option value="HIRING">HIRING</option>
-                  </select>
-                  <input type="button" name="" value="Start" onClick={()=>projectType()}/>
-                </form>
+              <CatmenuSelector/>
 
               </div>
             </div>

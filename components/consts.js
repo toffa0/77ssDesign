@@ -246,14 +246,14 @@ export      const industriesMenu =[
 
 
 export const AllCategoriesAll = [
-  { id: 110, header: "Logo & identity" },
-  { id: 111, text: "Logo design" },
-  { id: 112, text: "Logo & brand identity pack" },
-  { id: 113, text: "Logo & social media pack" },
-  { id: 114, text: "Logo & website Design" },
-  { id: 5, text: "Logo & business card" },
-  { id: 6, text: "Logo & Brand guide" },
-  { id: 46, text: "Logo & product packaging" },
+  { id: 110, header: "Logo & identity" ,cat:'LOGO'},
+  { id: 111, text: "Logo design",cat:'LOGO' },
+  { id: 112, text: "Logo & brand identity pack",cat:'LOGO' },
+  { id: 113, text: "Logo & social media pack",cat:'LOGO' },
+  { id: 114, text: "Logo & website Design" ,cat:'LOGO'},
+  { id: 5, text: "Logo & business card" ,cat:'LOGO'},
+  { id: 6, text: "Logo & Brand guide" ,cat:'LOGO'},
+  { id: 46, text: "Logo & product packaging",cat:'LOGO'},
   { id: 7, text: "Business card" },
   { id: 8, text: "Stationery" },
   { id: 9, header: "Web - UI/UX design" },

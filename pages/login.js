@@ -12,6 +12,7 @@ const Login = () => {
   const router = useRouter();
   const { setUser } = useAuth();
   const [passwordShown, setPasswordShown] = useState(false);
+  const [Errorr, setErrorr]=useState(false)
   const googleLogin = async (response) => {
     axiosInstance
       .post(`${BASE_URL}/${API_VERSION}/user/auth/google/`, {
@@ -62,7 +63,7 @@ const Login = () => {
         setUser();
         router.push("/");
       })
-      .catch((error) => {console.error(error);alert(error)});
+      .catch((error) => {console.error(error);setErrorr(true)});
   };
 
   useInitFacebook({
@@ -128,6 +129,7 @@ const Login = () => {
           <button className='show_hide_Pass2' onClick={togglePassword}>{!passwordShown?"Show":"Hide"}</button>
 
           </div>
+          <p className={Errorr?"":"DN"} style={{textAlign:"left",color:"red"}} >The email and password combination is incorrect</p>
         </div>
         <div className="bottom-row4">
           <div>
