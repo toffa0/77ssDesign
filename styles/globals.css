@@ -63,7 +63,9 @@ input{
     font-size: 20px;
     font-family: "Rotunda-medium";
 }
-
+select{
+  background:url('../public/selectarrow.svg') white no-repeat 90% !important;
+}
 .section {
   display: flex;
   flex-wrap: wrap;
@@ -3799,7 +3801,7 @@ right: 0;
   font-family: 'Rotunda';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 17px;
   color: #3D3D3F;
   padding: 0 10px;
