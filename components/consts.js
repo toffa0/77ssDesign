@@ -362,3 +362,9 @@ export const BusinessadvertisingCat={
   ]
 } 
 
+export const Others={
+  image:"CatImage5.svg",
+  data:[
+
+  ]
+} 

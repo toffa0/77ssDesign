@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Footer2 from "@/components/footer2";
 import { BASE_URL ,API_VERSION } from '@/config';
-import {LogoidentityCat,WebdesignCat,ClothingMerchandiseCat,ArtIllustrationCat,BusinessadvertisingCat} from "../components/consts"
+import {LogoidentityCat,WebdesignCat,ClothingMerchandiseCat,ArtIllustrationCat,BusinessadvertisingCat,Others} from "../components/consts"
 import CatmenuSelector from "@/components/CatmenuSelector";
   
 const Categories2 = ()=>{
@@ -52,7 +52,7 @@ const Categories2 = ()=>{
             <Image src='catlogo3.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(ClothingMerchandiseCat)}} className={CatData=== ClothingMerchandiseCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
             <Image src='catlogo4.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(ArtIllustrationCat)}} className={CatData=== ArtIllustrationCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
             <Image src='catlogo5.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(BusinessadvertisingCat)}} className={CatData=== BusinessadvertisingCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
-            <Image src='catlogo5.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(LogoidentityCat)}} className={CatData=== LogoidentityCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
+            <Image src='catlogo6.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(Others)}} className={CatData=== Others?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
             </div>
         </div>
 
