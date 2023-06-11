@@ -23,6 +23,7 @@ export function MyComponent() {
         onPointerLeave={onPointerLeave}
         onPointerMove={onPointerMove}
         fillColor="#00C8C8"
+        size={15}
         /* Available Props */
       />
     </div>

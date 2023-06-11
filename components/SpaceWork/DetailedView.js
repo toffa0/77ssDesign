@@ -11,7 +11,7 @@ const DetailedView = ({cardData})=>{
  
   useEffect(() => {
     const fetchData = async () => {
-      setData(cardData.cardData2);
+      setData(cardData.cardDataProject);
       console.log(data)
     };
     fetchData();
@@ -75,13 +75,13 @@ useEffect(() => {
       ))}
       </div>
     </div>
-    <div className="pagenumb">
+    {/* <div className="pagenumb">
         {Array.from({ length: totalPages }).map((_, index) => (
           <button key={index} onClick={() => handlePageClick(index + 1)}>
             {index + 1}
           </button>
         ))}
-    </div>
+    </div> */}
 </div>
   );
 }

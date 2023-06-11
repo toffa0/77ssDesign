@@ -7,8 +7,9 @@ import Footer2 from "@/components/footer2";
 import {Contacts, designerLevel, industries, Languages, lastActivity, Logoidentity,Businessadvertising,Webdesign,ClothingMerchandise,ArtIllustration} from "../components/consts"
 import Designerswork from "@/components/designerswork";
 import { useEffect } from "react";
+import DesignersCard from "@/components/DesignersCard";
 
-const Designers = ()=>{
+const InviteDesigner = ()=>{
 
     const [Indst, setIndst] = useState(industries.slice(0,6));
     function handleShowMore(){
@@ -96,6 +97,11 @@ const Designers = ()=>{
            { id:3,text:"3"},
             {id:4,text:"4"},
             {id:5,text:"5"},
+            { id:6,text:"6"},
+            {id:7,text:"7"},
+           { id:8,text:"8"},
+            {id:9,text:"9"},
+            {id:10,text:"10"},
         
     ]
     return(
@@ -104,16 +110,32 @@ const Designers = ()=>{
         <Navbar/>
         
             
-        <div className="mt-133 max">
+        <div className="mt-107 max">
         <div className="mb-20">
-            <h1 className='DiffTitle-' id="title" >Designers</h1>
+            <h1 className='DiffTitle-' id="title" >Invite Designers To quote</h1>
         </div>
+        
         <form className="sr-div" id="mxw-540">
                 <input type="text" id="FM" name='' placeholder="Search keywords" />
                 <button type="submit"><Image src="SearchLogo.svg" alt="" width={37} height={36} /></button> 
+                
         </form>
+        <p style={{margin:"10px 0",color:"#9E9EA3",fontSize:"20px",fontFamily:"Rotunda-light"}}>You can select up to 5 designers</p>
         </div>
+        
         </div>
+        
+            <div className="InvDes_header">
+                
+                <div className="max InvDes_body ">
+                    <div className="InvDes_img">
+                        <Image src="cat2logo2.svg" alt="" width={64} height={64}/>
+                        <button className="InvDes_btn">X</button>
+                    </div>
+                <button>Confirm Designers<br/> and continue</button>
+                </div>
+            </div>
+        
             <div className="mainscr ">
                 <div className="fl  pt-64 max">
                     
@@ -286,12 +308,12 @@ const Designers = ()=>{
             </div>
             {/*///////////////////////// 5 filter box end ////////////////////////////  */}                
             </div>
-            <div className="fl-all4 fl-gap3 w-70 ">
+            <div className="flwrap  w-70 ">
             {/* <Image src="/image8.svg" width={742} height={191} /> */}
             
             {listnew.map((item) => (
                     
-                    <Designerswork key={item.id} />
+                    <DesignersCard key={item.id} />
                 
                         ))} 
              
@@ -303,10 +325,14 @@ const Designers = ()=>{
                 <a href="#">3</a>
                 <a href="#">4</a>
             </div>
+            <div className="max" style={{display:"flex",justifyContent:"right",marginBottom:"160px",marginTop:"160px"}}>
+
+            <button className="skip">Skip</button>
+            </div>
             </div>
             <Footer2/>
             <Footer/>
         </div>
     )
 }
-export default Designers;
+export default InviteDesigner;

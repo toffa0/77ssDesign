@@ -294,4 +294,71 @@ export const AllCategoriesAll = [
   { id: 1145, text: "Album cover" },
 ];
 
+export const LogoidentityCat ={
+  image:'CatImage1.svg',
+  data: [
+    { id: 1, text: "Logo design" },
+    { id: 2, text: "Logo & brand identity pack" },
+    { id: 3, text: "Logo & social media pack" },
+    { id: 4, text: "Logo & website Design" },
+    { id: 5, text: "Logo & business card" },
+    { id: 6, text: "Logo & Brand guide" },
+    { id: 9, text: "Logo & product packaging" },
+    { id: 7, text: "Business card" },
+    { id: 8, text: "Stationery" },
+  ]
+}
+ 
+export const WebdesignCat ={
+  image:"CatImage2.svg",
+  data:[
+    { id: 1, text: "Web design" },
+    { id: 2, text: "WordPress theme design" },
+    { id: 3, text: "Landing page design" },
+    { id: 4, text: "App design" },
+    { id: 5, text: "Facebook cover / Post" },
+    { id: 6, text: "Social media page" },
+    { id: 7, text: "Banner ad" },
+    { id: 8, text: "Email" },
+    { id: 9, text: "Animated GIFs" },
+    { id: 10, text: "Logo animation" },
+    { id: 11, text: "Power Point template" },
+  ],
+} 
+export const ClothingMerchandiseCat={
+  image:"CatImage3.svg",
+  data: [
+    { id: 1, text: "T-shirt clothing / apparel" },
+    { id: 2, text: "Merchandise" },
+    { id: 3, text: "Cup / Mug" },
+    { id: 4, text: "Sticker" },
+  ]
+}
+export const ArtIllustrationCat ={
+  image:"CatImage4.svg",
+  data: [
+    { id: 1, text: "Illustration / Graphics" },
+    { id: 2, text: "Infographic" },
+    { id: 3, text: "Character / Mascot" },
+    { id: 4, text: "Icon / Botton" },
+    { id: 5, text: "3D modeling / Animation" },
+    { id: 7, text: "Store branding" },
+  ]
+}
+export const BusinessadvertisingCat={
+  image:"CatImage5.svg",
+  data:[
+    { id: 1, text: "Product packaging" },
+    { id: 2, text: "Product label" },
+    { id: 3, text: "Book / Magazine cover" },
+    { id: 4, text: "Flyer / Print Poster" },
+    { id: 5, text: "Card / Invitation" },
+    { id: 6, text: "Brochure" },
+    { id: 7, text: "Pag" },
+    { id: 8, text: "Car / truck / Van wrap" },
+    { id: 9, text: "Signage" },
+    { id: 11, text: "Menu" },
+    { id: 10, text: "Album cover" },
+  ]
+} 
 

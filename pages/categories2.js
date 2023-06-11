@@ -5,9 +5,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Footer2 from "@/components/footer2";
 import { BASE_URL ,API_VERSION } from '@/config';
-import {listItems,listItems2,listItems3,listItems4,listItems5} from "../components/consts"
+import {LogoidentityCat,WebdesignCat,ClothingMerchandiseCat,ArtIllustrationCat,BusinessadvertisingCat} from "../components/consts"
 import CatmenuSelector from "@/components/CatmenuSelector";
-
+  
 const Categories2 = ()=>{
 
     const [chatboxOpen, SetchatboxOpen] = useState(false);
@@ -31,186 +31,71 @@ const Categories2 = ()=>{
         
     },[])
 
-    const [GeneralCat, setGeneralCat] = useState('');
-    const [FirstCat, setFirstCat] = useState('');
-    const [FirstCatIsOpen, setFirstCatIsOpen] = useState(false); 
-    const [SecondCat, setSecondCat] = useState('');
-    const [SecondCatIsOpen, setSecondCatIsOpen] = useState(false); 
-    const [ThirdCat, setThirdCat] = useState('');
-    const [ThirdCatIsOpen, setThirdCatIsOpen] = useState(false);
-    const [ForthCat, setForthCat] = useState('');
-    const [ForthCatIsOpen, setForthCatIsOpen] = useState(false);
-    const [FifthCat, setFifthCat] = useState('');
-    const [FifthCatIsOpen, setFifthCatIsOpen] = useState(false);
-    function handleFirstCat(e){
-        setFirstCat(e)
-        setGeneralCat(e)
-        setSecondCat('')
-        setThirdCat('')
-        setForthCat('')
-        setFifthCat('')
-        setFirstCatIsOpen(false)
-    }
-    function handleSecondCat(e){
-        setSecondCat(e)
-        setGeneralCat(e)
-        setFirstCat('')
-        setThirdCat('')
-        setForthCat('')
-        setFifthCat('')
-        setSecondCatIsOpen(false)
-    }
+    const [isLogo, setIsLogo] = useState(false);
 
-    function handleThirdCat(e){
-        
-        setThirdCat(e)
-        setGeneralCat(e)
-        setFirstCat('')
-        setSecondCat('')
-        setForthCat('')
-        setFifthCat('')
-        setThirdCatIsOpen(false) 
-    }
 
-    function handleForthCat(e){
-        setForthCat(e)
-        setGeneralCat(e)
-        setFirstCat('')
-        setSecondCat('')
-        setThirdCat('')
-        setFifthCat('')
-        setForthCatIsOpen(false) 
-    }
-
-    function handleFifthCat(e){
-        setFifthCat(e)
-        setGeneralCat(e)
-        setFirstCat('')
-        setSecondCat('')
-        setThirdCat('')
-        setForthCat('')
-        setFifthCatIsOpen(false)
-    }
-    function handleCatClick(){
-        setFirstCatIsOpen(false)
-        setSecondCatIsOpen(false)
-        setThirdCatIsOpen(false) 
-        setForthCatIsOpen(false) 
-        setFifthCatIsOpen(false)
-    }
+    const [CatData, setCatData] = useState(LogoidentityCat);
+    const [selectedCat, setSelectedCat] = useState('Logo design');
     return(
         <div>
-               <div className="home_section  ">
+               <div className="home_section  " style={{height:"480px"}}>
         <div className=" max">
                <Navbar/>
-        <div className="pb-64 mt-110  ">
-        
+        <div className="pb-64 mt-140  ">
+        <div>
         <div className="mb-20">
-            <h1 className='DiffTitle-'  id="title">Categories</h1>
+            <h1 className='DiffTitle-'  id="title">All Categories</h1>
         </div>
-        <CatmenuSelector/>
+        <div className="fl jst-SB" style={{marginTop:"12px"}}>
+            <Image src='catlogo1.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(LogoidentityCat)}} className={CatData=== LogoidentityCat?"catImageHeader activeCatImageHeader ":"catImageHeader"} />
+            <Image src='catlogo2.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(WebdesignCat)}} className={CatData=== WebdesignCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
+            <Image src='catlogo3.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(ClothingMerchandiseCat)}} className={CatData=== ClothingMerchandiseCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
+            <Image src='catlogo4.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(ArtIllustrationCat)}} className={CatData=== ArtIllustrationCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
+            <Image src='catlogo5.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(BusinessadvertisingCat)}} className={CatData=== BusinessadvertisingCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
+            <Image src='catlogo5.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(LogoidentityCat)}} className={CatData=== LogoidentityCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
+            </div>
+        </div>
+
+        
         </div>
         </div>
         </div>
-            <div className=" cat2-bg">
-                <div className="fl max">
-                    
-                
-            <div className="fl-all4 w-30 fl-gap32 pos">
-            <div class="dropdown" >
-                <div className="Cat2" onClick={()=>{handleCatClick();setFirstCatIsOpen(!FirstCatIsOpen)}}>
-                <Image src="cat2logo1.svg" alt="" width={160} height={160}/>
-                </div>
-                <div class="dropdown-content2" id={FirstCatIsOpen?"":"DN"}>
+                <div className="max "> 
+                <div className="fl  mt-60 jst-SB ali-cen mb-250"> 
+                <div class="dropdown-content10" >
                     <ul>
-                        {listItems.map((item) => (
-                            <li key={item.id} className="cat-menu-links"><button onClick={()=>handleFirstCat(item.text)}>{item.text}</button></li>
+                        {CatData.data.map((item) => (
+                            <li key={item.id} className="cat-menu-links"><button onClick={()=>
+                                {   if(CatData===LogoidentityCat){
+                                    setIsLogo(true)
+                                }else{
+                                    setIsLogo(false)
+                                }
+                                setSelectedCat(item.text)}}>{item.text}</button></li>
                             ))}
                     </ul>
                 </div>
-                <div  className={FirstCatIsOpen?"CategResult CategResultRedBG ":"CategResult CategResultRedBG DN"} id={FirstCat!=""&&"DF"} onClick={()=>{handleCatClick();setFirstCatIsOpen(!FirstCatIsOpen)}}>
-                            <p>{FirstCat===""?"Select from category":FirstCat}</p>
+                <Image src={CatData.image} alt="" width={525.53} height={487.65}/>
+            
                 </div>
-            </div>
-            <div class="dropdown">
-            <div className="Cat2" onClick={()=>{handleCatClick();setSecondCatIsOpen(!SecondCatIsOpen)}}>
-                <Image src="cat2logo2.svg" alt="" width={160} height={160}/> 
+                <div style={{maxWidth:"768px"}}>
+                    <div className="fl ali-cen jst-SB catcontentend" >
+                    <h2>{selectedCat}</h2>
+                    <Link href="pricing">Pricing</Link>
+                    </div>
+                    <p className="categText">Start and see your project transform into reality in ways that exceed your imagination, With multiple designs created just for you</p>
+                    <div className="guarantee fl-col fl-gap20">
+                        <p>Dozens of unique, editable designs in digital, print, and web file formats</p>
+                        <p>Customer support to assist you throughout the process</p>
+                        <p>Full-copyright ownership of designs and ready-to-use files</p>
+                        <p>All designers have undergone screening and review processes for top-quality work</p>
+                        <p>Money-back guarantee*</p>
+                    </div>
                 </div>
-                <div class="dropdown-content2"  id={SecondCatIsOpen?"":"DN"}>
-                    <ul>
-                        {listItems2.map((item) => (
-                            <li key={item.id} className="cat-menu-links"><button onClick={()=>handleSecondCat(item.text)}>{item.text}</button></li>
-                            ))}
-                </ul>
-                </div>
-                <div  className={SecondCatIsOpen?"CategResult CategResultBlueBG ":"CategResult CategResultBlueBG DN"} id={SecondCat!=""&&"DF"} onClick={()=>{handleCatClick();setSecondCatIsOpen(!SecondCatIsOpen)}}> 
-                            <p>{SecondCat===""?"Select from category":SecondCat}</p>
-                </div>
-            </div>
-            <div class="dropdown">
-                <div className="Cat2" onClick={()=>{handleCatClick();setThirdCatIsOpen(!ThirdCatIsOpen)}}>
-                    <Image src="cat2logo3.svg" alt="" width={160} height={160}/>  
-                </div>
-                <div class="dropdown-content2" id={ThirdCatIsOpen?"":"DN"}>
-                    <ul>
-                        {listItems3.map((item) => (
-                            <li key={item.id} className="cat-menu-links"><button onClick={()=>handleThirdCat(item.text)}>{item.text}</button></li>
-                            ))}
-                </ul>
-                </div>
-                <div  className={ThirdCatIsOpen?"CategResult CategResultCyanBG ":"CategResult CategResultCyanBG DN"} id={ThirdCat!=""&&"DF"} onClick={()=>{handleCatClick();setThirdCatIsOpen(!ThirdCatIsOpen)}}>
-                            <p>{ThirdCat===""?"Select from category":ThirdCat}</p>
-                </div>
-            </div>
-            <div class="dropdown">
-                <div className="Cat2" onClick={()=>{handleCatClick();setForthCatIsOpen(!ForthCatIsOpen)}}>
-                <Image src="cat2logo4.svg" alt="" width={160} height={160}/>  
-                </div>
-                <div class="dropdown-content2" id={ForthCatIsOpen?"":"DN"}>
-                    <ul>
-                        {listItems4.map((item) => (
-                            <li key={item.id} className="cat-menu-links"><button onClick={()=>handleForthCat(item.text)}>{item.text}</button></li>
-                        ))}
-                </ul>
-                </div>
-                <div  className={ForthCatIsOpen?"CategResult CategResultDarkBG ":"CategResult CategResultDarkBG DN"} id={ForthCat!=""&&"DF"} onClick={()=>{handleCatClick();setForthCatIsOpen(!ForthCatIsOpen)}}>
-                            <p>{ForthCat===""?"Select from category":ForthCat}</p>
-
-                </div>
-            </div>
-            <div class="dropdown">
-                <div className="Cat2" onClick={()=>{handleCatClick();setFifthCatIsOpen(!FifthCatIsOpen)}}>
-                <Image src="cat2logo5.svg" alt="" width={160} height={160}/>
-                </div>
-                <div class="dropdown-content2" id={FifthCatIsOpen?"":"DN"}>
-                    <ul>
-                        {listItems5.map((item) => (
-                            <li key={item.id} className="cat-menu-links"><button onClick={()=>handleFifthCat(item.text)}>{item.text}</button></li>
-                            ))}
-                </ul>
-                </div>
-                <div  className={FifthCatIsOpen?"CategResult CategResultblackBG ":"CategResult CategResultblackBG DN"} id={FifthCat!=""&&"DF"} onClick={()=>{handleCatClick();setFifthCatIsOpen(!FifthCatIsOpen)}}>
-                            <p>{FifthCat===""?"Select from category":FifthCat}</p>
-                </div>
-            </div>
-
-            <div className="cat2-chatbox">
-            <button id="catbtn" onClick={()=>SetchatboxOpen(!chatboxOpen)}>Others</button>
-            <Link href="#" className={chatboxOpen?"":"DN"}>           
-                <Image src="chatbox.svg" alt="" width={74.15} height={74.15} />
-            </Link>
-
-            </div>
-         
-            </div>
-            <div className="fl-all4 w-70 prel">
-                <Image src="cat2img.svg" alt="" width={700} height={633.8} className="cat2img"/>
-            </div>
             </div>
             <div className="cat2-btns max">
-                <Link href={FirstCat?"Logobreif":"Contestbreif"} >Start contest</Link>
-                <Link href={FirstCat?"Logobreif":"1to1breif"} id="cyan">Hiring (1 to1)</Link>
-            </div>
+                <Link href={isLogo?"Logobreif":"Contestbreif"} >Start contest</Link>
+                <Link href={isLogo?"Logobreif":"1to1breif"} id="cyan">Hiring (1 to1)</Link>
             </div>
             <Footer2/>
             <Footer/>
