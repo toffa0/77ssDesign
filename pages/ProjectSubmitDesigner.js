@@ -30,7 +30,7 @@ const ProjectSubmitDesigner = ()=>{
     }
   return (
     <div className="ProfilePage">
-        <div className='mainscr '>
+        <div className='max '>
         <Navbar/>
       
         </div>
