@@ -101,7 +101,10 @@ const Designers = ()=>{
     return(
         <div>
                <div className="home_section mainscr pb-64">
+        <div className="max">
+
         <Navbar/>
+        </div>
         
             
         <div className="mt-133 max">

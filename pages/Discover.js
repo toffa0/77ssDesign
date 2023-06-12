@@ -52,7 +52,7 @@ const Discover = ()=>{
     console.log(industriesMenustrAscending);
   return (
     <div className="ProfilePage">
-        <div className='mainscr '>
+        <div className='max '>
         <Navbar/>
       
         </div>
