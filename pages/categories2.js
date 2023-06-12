@@ -64,7 +64,18 @@ const Categories2 = ()=>{
                 <div className="fl  mt-60 jst-SB ali-cen mb-250"> 
                 <div class="dropdown-content10" >
                     <ul>
-                        {CatData.data.map((item) => (
+                        {CatData=== Others?
+                           <li className="cat-menu-links"><button className="contact" onClick={()=>
+                                                        {   if(CatData===LogoidentityCat){
+                                                            setIsLogo(true)
+                                                        }else{
+                                                            setIsLogo(false)
+                                                        }
+                             setSelectedCat("Contact us")}}><Image src="ContactUs.svg" alt="" width={58.03} height={45.59} /> Contact us</button>
+                             </li>
+
+                        :
+                        CatData.data.map((item) => (
                             <li key={item.id} className="cat-menu-links"><button onClick={()=>
                                 {   if(CatData===LogoidentityCat){
                                     setIsLogo(true)
@@ -75,7 +86,7 @@ const Categories2 = ()=>{
                             ))}
                     </ul>
                 </div>
-                <Image src={CatData.image} alt="" width={525.53} height={487.65}/>
+                <Image src={CatData.image} alt="" width={525.53} height={487.65} id={CatData=== Others?"DN":""} />
             
                 </div>
                 <div style={{maxWidth:"768px"}}>
