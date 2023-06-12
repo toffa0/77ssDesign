@@ -2801,12 +2801,9 @@ margin-top:15px ;
 }
 
 .catImageHeader{
-  filter: grayscale();
+  
   cursor: pointer;
 } 
-.activeCatImageHeader{
-  filter: none;
-}
 
 .CategResult{
   width: 353px;

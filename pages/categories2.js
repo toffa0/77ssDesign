@@ -47,12 +47,12 @@ const Categories2 = ()=>{
             <h1 className='DiffTitle-'  id="title">All Categories</h1>
         </div>
         <div className="fl jst-SB" style={{marginTop:"12px"}}>
-            <Image src='catlogo1.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(LogoidentityCat)}} className={CatData=== LogoidentityCat?"catImageHeader activeCatImageHeader ":"catImageHeader"} />
-            <Image src='catlogo2.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(WebdesignCat)}} className={CatData=== WebdesignCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
-            <Image src='catlogo3.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(ClothingMerchandiseCat)}} className={CatData=== ClothingMerchandiseCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
-            <Image src='catlogo4.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(ArtIllustrationCat)}} className={CatData=== ArtIllustrationCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
-            <Image src='catlogo5.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(BusinessadvertisingCat)}} className={CatData=== BusinessadvertisingCat?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
-            <Image src='catlogo6.svg' alt="" width={137.03} height={137.03} onClick={()=>{setCatData(Others)}} className={CatData=== Others?"catImageHeader activeCatImageHeader ":"catImageHeader"}/>
+            <Image src={CatData=== LogoidentityCat?'catlogo1.svg':'catlogo1Grey.svg'} alt="" width={137.03} height={137.03} onClick={()=>{setCatData(LogoidentityCat)}} className="catImageHeader"/>
+            <Image src={CatData=== BusinessadvertisingCat?'catlogo2.svg':'catlogo2Grey.svg'} alt="" width={137.03} height={137.03} onClick={()=>{setCatData(BusinessadvertisingCat)}} className="catImageHeader"/>
+            <Image src={CatData=== ArtIllustrationCat?'catlogo5.svg':'catlogo5Grey.svg'} alt="" width={137.03} height={137.03} onClick={()=>{setCatData(ArtIllustrationCat)}} className="catImageHeader"/>
+            <Image src={CatData=== WebdesignCat?'catlogo3.svg':'catlogo3Grey.svg'} alt="" width={137.03} height={137.03} onClick={()=>{setCatData(WebdesignCat)}} className="catImageHeader"/>
+            <Image src={CatData=== ClothingMerchandiseCat?'catlogo4.svg':'catlogo4Grey.svg'} alt="" width={137.03} height={137.03} onClick={()=>{setCatData(ClothingMerchandiseCat)}} className="catImageHeader"/>
+            <Image src={CatData=== Others?'catlogo6.svg':'catlogo6.svg'} alt="" width={137.03} height={137.03} onClick={()=>{setCatData(Others)}} className="catImageHeader"/>
             </div>
         </div>
 

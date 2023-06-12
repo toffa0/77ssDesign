@@ -316,13 +316,13 @@ export const WebdesignCat ={
     { id: 2, text: "WordPress theme design" },
     { id: 3, text: "Landing page design" },
     { id: 4, text: "App design" },
-    { id: 5, text: "Facebook cover / Post" },
-    { id: 6, text: "Social media page" },
+    { id: 5, text: "Facebook cover " },
+    { id: 6, text: "Social media page / Post" },
     { id: 7, text: "Banner ad" },
-    { id: 8, text: "Email" },
-    { id: 9, text: "Animated GIFs" },
-    { id: 10, text: "Logo animation" },
-    { id: 11, text: "Power Point template" },
+    { id: 8, text: "Logo animation" },
+    { id: 9, text: "Power Point template" },
+    { id: 10, text: "Animated GIFs" },
+    { id: 11, text: "Email" },
   ],
 } 
 export const ClothingMerchandiseCat={
@@ -354,17 +354,17 @@ export const BusinessadvertisingCat={
     { id: 4, text: "Flyer / Print Poster" },
     { id: 5, text: "Card / Invitation" },
     { id: 6, text: "Brochure" },
-    { id: 7, text: "Pag" },
     { id: 8, text: "Car / truck / Van wrap" },
     { id: 9, text: "Signage" },
-    { id: 11, text: "Menu" },
-    { id: 10, text: "Album cover" },
+    { id: 10, text: "Menu" },
+    { id: 11, text: "Album cover" },
+    { id: 12, text: "Pag" },
   ]
 } 
 
 export const Others={
   image:"CatImage5.svg",
   data:[
-
+    { id: 1, text: "Chat Bot" },
   ]
 } 
