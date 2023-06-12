@@ -310,7 +310,7 @@ export const LogoidentityCat ={
 }
  
 export const WebdesignCat ={
-  image:"CatImage2.svg",
+  image:"CatImage4.svg",
   data:[
     { id: 1, text: "Web design" },
     { id: 2, text: "WordPress theme design" },
@@ -326,7 +326,7 @@ export const WebdesignCat ={
   ],
 } 
 export const ClothingMerchandiseCat={
-  image:"CatImage3.svg",
+  image:"CatImage5.svg",
   data: [
     { id: 1, text: "T-shirt clothing / apparel" },
     { id: 2, text: "Merchandise" },
@@ -335,7 +335,7 @@ export const ClothingMerchandiseCat={
   ]
 }
 export const ArtIllustrationCat ={
-  image:"CatImage4.svg",
+  image:"CatImage3.svg",
   data: [
     { id: 1, text: "Illustration / Graphics" },
     { id: 2, text: "Infographic" },
@@ -346,7 +346,7 @@ export const ArtIllustrationCat ={
   ]
 }
 export const BusinessadvertisingCat={
-  image:"CatImage5.svg",
+  image:"CatImage2.svg",
   data:[
     { id: 1, text: "Product packaging" },
     { id: 2, text: "Product label" },
@@ -363,7 +363,7 @@ export const BusinessadvertisingCat={
 } 
 
 export const Others={
-  image:"CatImage5.svg",
+  image:"",
   data:[
     { id: 1, text: "Chat Bot" },
   ]
