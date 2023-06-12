@@ -20,7 +20,9 @@ const Pricing = () => {
     return(
         <div>
             <div className="bg-gr mainscr">
-            <Navbar/>
+                <div className="max">
+                    <Navbar/>
+                </div>
             <div className="max">
             <h1 className="mt-133" id="title">Pricing</h1>
             <form className="sr-div" id="mxw-540">
