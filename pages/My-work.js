@@ -15,7 +15,10 @@ const Mywork = () => {
         
 
         <div className="home_section mainscr ">
+        <div className="max">
         <Navbar/>
+
+        </div>
       <div className="max mt-133">
         <div className="my-workkk  mb-46">
             <h1 id="title">My Work</h1>

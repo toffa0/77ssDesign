@@ -51,10 +51,12 @@ const BrowseContest = ()=>{
 
   return (
     <div className="ProfilePage">
-        <div className='mainscr '>
+        
+        <div className="max">
         <Navbar/>
-      
+
         </div>
+      
        
         <div className='mainscr  '>
         <div className=' w-101 pt-175 max'>
