@@ -6076,7 +6076,8 @@ input[type="password"]::-ms-reveal { display: none; }
   color: #EE6A6F !important;
 }
 .DesignersCard{
-  width: 210px;
+  width: 30%;
+  max-width: 210px;
   height: 512px;
   border: 1px solid #9E9EA3;
 }
@@ -6105,7 +6106,12 @@ input[type="password"]::-ms-reveal { display: none; }
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 42px;
+  gap:0 10%;
+}
+.flwrap::after{
+  content: "";
+  flex: auto;
+  max-width: 210px;
 }
 .inv_btn{
   width: 100%;

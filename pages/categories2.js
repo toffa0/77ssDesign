@@ -61,7 +61,7 @@ const Categories2 = ()=>{
         </div>
         </div>
                 <div className="max "> 
-                <div className="fl  mt-60 jst-SB ali-cen mb-250"> 
+                <div className="fl  mt-60 jst-SB ali-cen mb-250" style={{height:"487px"}}> 
                 <div class="dropdown-content10" >
                     <ul>
                         {CatData=== Others?

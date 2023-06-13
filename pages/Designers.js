@@ -7,6 +7,7 @@ import Footer2 from "@/components/footer2";
 import {Contacts, designerLevel, industries, Languages, lastActivity, Logoidentity,Businessadvertising,Webdesign,ClothingMerchandise,ArtIllustration} from "../components/consts"
 import Designerswork from "@/components/designerswork";
 import { useEffect } from "react";
+import DesignersCard from "@/components/DesignersCard";
 
 const Designers = ()=>{
 
@@ -94,6 +95,9 @@ const Designers = ()=>{
            { id:1,text:"1"},
             {id:2,text:"2"},
            { id:3,text:"3"},
+            {id:4,text:"4"},
+            {id:5,text:"5"},
+            { id:3,text:"3"},
             {id:4,text:"4"},
             {id:5,text:"5"},
         
@@ -289,12 +293,12 @@ const Designers = ()=>{
             </div>
             {/*///////////////////////// 5 filter box end ////////////////////////////  */}                
             </div>
-            <div className="fl-all4 fl-gap3 w-70 ">
+            <div className="flwrap  w-70 ">
             {/* <Image src="/image8.svg" width={742} height={191} /> */}
             
             {listnew.map((item) => (
                     
-                    <Designerswork key={item.id} />
+                    <DesignersCard key={item.id} />
                 
                         ))} 
              
