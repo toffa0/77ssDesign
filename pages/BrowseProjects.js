@@ -68,10 +68,10 @@ const BrowseProjects = ()=>{
     );
   return (
     <div className="ProfilePage">
-        <div className="max">
+
         <Navbar/>
 
-        </div>
+
       
        
         <div className='mainscr  '>

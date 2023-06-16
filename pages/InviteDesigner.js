@@ -308,7 +308,7 @@ const InviteDesigner = ()=>{
             </div>
             {/*///////////////////////// 5 filter box end ////////////////////////////  */}                
             </div>
-            <div className="flwrap  w-70 ">
+            <div className="flwrap2  w-70 ">
             {/* <Image src="/image8.svg" width={742} height={191} /> */}
             
             {listnew.map((item) => (

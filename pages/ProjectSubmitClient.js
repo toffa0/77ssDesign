@@ -14,7 +14,10 @@ import { useEffect } from 'react';
 import { BASE_URL ,API_VERSION } from '@/config';
 import Cookies from 'js-cookie';
 import ProjectDetails from "@/components/projectDetails/ProjectDetails"
-const ProjectSubmitDesigner = ()=>{
+
+
+const ProjectSubmitClient = ()=>{
+    const [CPMisOpen, setCPMOpen] = useState(false);
     const [isOpen, setOpen] = useState(false);
     const [Filter1, setFilter1] = useState("All");
     const [Filter2, setFilter2] = useState("Rated");
@@ -81,12 +84,19 @@ const ProjectSubmitDesigner = ()=>{
                         <p className='cn3'>Client Name</p>
                         <div className='fl-col jst-FE h-90'>
                             <div className='fl fl-gapp3 cpm'>
-                                <button id='ProjectSubmitDesignerButton'>Invite Designer</button>
-                                {/* <button id='cpm2'>...</button> */}
-                                {/* <select>
-                                    <option>...</option>
-                                    <option>Invite Designer</option>
-                                </select> */}
+                                <Link href="InviteDesigner" id='ProjectSubmitDesignerButton'>Invite Designer</Link>
+                                <div style={{position:"relative"}}>
+                                <button id='cpm2' onClick={()=>{setCPMOpen(!CPMisOpen)}}>...</button>
+                                <div className='cpmDropDown' id={CPMisOpen?'':'DN'}>
+                                    <button className='clearbtn' onClick={()=>{setCPMOpen(!CPMisOpen)}}>Edit In Brief</button>
+                                    <button className='clearbtn' onClick={()=>{setCPMOpen(!CPMisOpen)}}>Guarantee prize</button>
+                                    <button className='clearbtn' onClick={()=>{setCPMOpen(!CPMisOpen)}}>Promote </button>
+                                    <button className='clearbtn' onClick={()=>{setCPMOpen(!CPMisOpen)}}>Go to final round</button>
+                                    <button className='clearbtn' onClick={()=>{setCPMOpen(!CPMisOpen)}}>Extended time</button>
+
+                                </div>
+                                </div>
+                         
                             </div>
 
                         </div>
@@ -130,7 +140,8 @@ const ProjectSubmitDesigner = ()=>{
                         </div>
                     </div>
                 </div>
-                
+                    <button className='AccpetReject Accpet'>Accpet</button>
+                    <button className='AccpetReject Reject'>Reject</button>
                 </div>
 
             <div className='disc-head4 fl jst-SB'>
@@ -227,7 +238,7 @@ const ProjectSubmitDesigner = ()=>{
             {activeComponent === "Design" && 
             <div className='disc-card-cont'>
                 {
-                    ViewType === "Normal"?<NormalView className="animate" projectID={itemID} cardData={{cardDataProject}} />:<DetailedView className="animate" cardData={{cardData2}}/>
+                    ViewType === "Normal"?<NormalView className="animate" projectID={itemID} cardData={{cardDataProject}} />:<DetailedView className="animate" cardData={{cardDataProject}}/>
                 }
             
             </div>
@@ -255,7 +266,7 @@ const ProjectSubmitDesigner = ()=>{
   );
 }
 
-export default ProjectSubmitDesigner;
+export default ProjectSubmitClient;
 
 
 

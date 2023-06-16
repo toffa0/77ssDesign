@@ -39,8 +39,8 @@ const Categories2 = ()=>{
     return(
         <div>
                <div className="home_section  " style={{height:"480px"}}>
-        <div className=" max">
                <Navbar/>
+        <div className=" max">
         <div className="pb-64 mt-140  ">
         <div>
         <div className="mb-20">

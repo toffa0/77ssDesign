@@ -26,8 +26,8 @@ export default function Home() {
       </Head>
       <main className="">
         <div className="home_section3 mainscr">
-          <section className="section ">
             <Navbar user={user}></Navbar>
+          <section className="section ">
             <div className="home_text">
               <div>
                 <h2 className="home_text_st">

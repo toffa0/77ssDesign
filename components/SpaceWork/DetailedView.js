@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'
+import { Rating } from 'react-simple-star-rating'
 
 
 
 const DetailedView = ({cardData})=>{
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(4);
+  const itemsPerPage = 4;
  
   useEffect(() => {
     const fetchData = async () => {
       setData(cardData.cardDataProject);
-      console.log(data)
     };
     fetchData();
   });
@@ -20,7 +20,6 @@ const DetailedView = ({cardData})=>{
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-//   const currentData = [0,1,2,3,4];
   const currentData = data.slice(startIndex, endIndex);
 
   const handlePageClick = (pageNumber) => {
@@ -31,9 +30,9 @@ const DetailedView = ({cardData})=>{
 useEffect(() => {
 
   const interval = setInterval(() => {
-    var hours = new Date().getHours(); //Current Hours
-    var min = new Date().getMinutes(); //Current Minutes
-    var sec = new Date().getSeconds(); //Current Seconds
+    let hours = new Date().getHours(); //Current Hours
+    let min = new Date().getMinutes(); //Current Minutes
+    let sec = new Date().getSeconds(); //Current Seconds
     setCurrentDate(
     hours + ':' + min + ':' + sec
     );
@@ -48,7 +47,7 @@ useEffect(() => {
         <button>Eliminate</button>
         </div>
             
-            <Image src="greycircle.svg" width={78.65} height={78.65} alt="" />
+            <Image src="greycircle.svg" width={122} height={122} alt="" />
             <p>Designer name</p>
             <span>Local Time: {currentDate}</span>
             <div className='fl ali-cen gap3'>
@@ -59,19 +58,21 @@ useEffect(() => {
         </div>
         <div className='fl gap19'>
       {currentData.map((item) => (
-            <div key={item.id} className='disc-card3 ' id=''><a href='#'>
-                {console.log(item)}
-                <div className='fl jst-SB cc'>
-                <p>#34</p>
-                <button>Decline</button>
-                </div>
-                
-                <Image src={item.img} id='ds-img2' alt="" width={400} height={400}/>
+            <div key={item.id} className='disc-card2 ' id='h-220' style={{width:"100%"}}>
+            <span className='card-text'>#1 by osama</span>
+            {/* <Link href={{ pathname: `/commentdesign2`, query: { id: projectID } }}> */}
+              
+              <Image src={item.img} id='ds-img' alt="" width={400} height={400}/>
 
-             
-             
-             </a>
+           
+           
+           {/* </Link> */}
+           <div className='fl ali-cen jst-SB'>
+           <Rating fillColor="#00C8C8" size={30}  />
+           <button className='clearbtn'><Image src="Trash.svg" id='' alt="" width={19} height={22}/></button>
+           
             </div>
+          </div>
       ))}
       </div>
     </div>

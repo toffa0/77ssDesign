@@ -9,7 +9,11 @@ import Link from 'next/link';
 import {cardDataProject} from "../components/consts"
 import NormalView from '@/components/SpaceWork/NormalView';
 import DetailedView from '@/components/SpaceWork/DetailedView';
-
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import { BASE_URL ,API_VERSION } from '@/config';
+import Cookies from 'js-cookie';
+import ProjectDetails from "@/components/projectDetails/ProjectDetails"
 const ProjectSubmitDesigner = ()=>{
     const [isOpen, setOpen] = useState(false);
     const [Filter1, setFilter1] = useState("All");
@@ -28,9 +32,35 @@ const ProjectSubmitDesigner = ()=>{
     function handleViewTypeDetailed(){
         setViewType("Detailed");
     }
+    const csrfToken = Cookies.get('csrfToken');
+    const router = useRouter();
+    const [ProjectData, setProjectData] = useState([]);
+    const [itemID,setitemID]= useState(null)
+    useEffect(() => {
+        if(router.isReady){
+            const { projectID } = router.query;
+            setitemID(projectID);
+            if (!projectID) return null;
+            fetch(`${BASE_URL}/${API_VERSION}/project/${router.query.projectID}/`, {
+            
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken,
+                  },
+                  credentials:"include",
+                  
+            })
+          .then(response => {return response.json()})
+          .then(data => {console.log(data);setProjectData(data)})
+          .catch(error => console.error(error));
+         }
+    }, [router.isReady]);
+
+
+
   return (
     <div className="ProfilePage">
-        <div className='max '>
+        <div className='mainscr '>
         <Navbar/>
       
         </div>
@@ -44,19 +74,14 @@ const ProjectSubmitDesigner = ()=>{
         <div className='max '>
             <div>
                 <div>
-                <h1>Name of the brief Name of the </h1>
-                <h1>brief Name of the</h1>
+                <h1>{ProjectData.name} </h1>
+                
                 <div className='fl jst-SB w-101 hi mtop30'>
                     <div>
                         <p className='cn3'>Client Name</p>
                         <div className='fl-col jst-FE h-90'>
                             <div className='fl fl-gapp3 cpm'>
-                                <Link href="/UploadAndDisplayImage" id='ProjectSubmitDesignerButton'>Submit Design</Link>
-                                {/* <button id='cpm2'>...</button> */}
-                                {/* <select>
-                                    <option>...</option>
-                                    <option>Invite Designer</option>
-                                </select> */}
+                                <button id='ProjectSubmitDesignerButton'>Submit Design</button>
                             </div>
 
                         </div>
@@ -102,20 +127,7 @@ const ProjectSubmitDesigner = ()=>{
                 </div>
                 
                 </div>
-            <div className='disc-head10 fl jst-SB'>
-                <div id='SD-header' className='fl'>
-                    <h1 >Please submit logo design only (4 days)</h1>
-                </div> 
-                <div id='SD-header' className='fl'>
-                    <h1 > Selection of qualified designers (4 days)</h1>
-                </div> 
-                <div id='SD-header' className='fl'>
-                    <h1 >Finalists (3 days)</h1>
-                </div> 
-                <div id='SD-header' className='fl'>
-                    <h1 >Winner selection (7 days)</h1>
-                </div> 
-            </div>
+
             <div className='disc-head4 fl jst-SB'>
                 <div className='fl w-68 fl-gapp16'>
                 <div  className='fl slct-cpm w-191'>
@@ -203,14 +215,14 @@ const ProjectSubmitDesigner = ()=>{
             </div>
 
             <div className=' '> 
-            {/* {activeComponent === "Brief" && 
-            <ProjectsMessage3comp cardData={{cardData2}}/>
+            {activeComponent === "Brief" && 
+            <ProjectDetails  projectID={itemID}/>
 
-            } */}
+            }
             {activeComponent === "Design" && 
             <div className='disc-card-cont'>
                 {
-                    ViewType === "Normal"?<NormalView className="animate" cardData={{cardDataProject}} />:<DetailedView className="animate" cardData={{cardDataProject}}/>
+                    ViewType === "Normal"?<NormalView className="animate" projectID={itemID} cardData={{cardDataProject}} />:<DetailedView className="animate" cardData={{cardDataProject}}/>
                 }
             
             </div>
