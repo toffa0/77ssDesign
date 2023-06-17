@@ -43,20 +43,21 @@ useEffect(() => {
 <div>
     <div className='disc-card-cont2 fl-gap25'>
     <div className='fl-col PMC jst-SB'>
-        <div className='w-101'>
-        <button>Eliminate</button>
+        <div className='w-101 cardControl'>
+        <button><Image src="Eliminate.svg" width={32} height={32}/></button>
+        <button><Image src="ChatBtn.svg" width={38.4} height={32}/></button>
         </div>
             
             <Image src="greycircle.svg" width={122} height={122} alt="" />
             <p>Designer name</p>
             <span>Local Time: {currentDate}</span>
             <div className='fl ali-cen gap3'>
-            <input type="checkbox"/>
+            <input type="checkbox" style={{width:"24px",height:"24px"}}/>
             <label>Select for final round</label>
             </div>
             
         </div>
-        <div className='fl gap19'>
+        <div className='fl fl-gap47'>
       {currentData.map((item) => (
             <div key={item.id} className='disc-card2 ' id='h-220' style={{width:"100%"}}>
             <span className='card-text'>#1 by osama</span>

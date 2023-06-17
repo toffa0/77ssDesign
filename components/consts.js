@@ -201,6 +201,7 @@ export const cardData2=[
 ];
 export const cardDataProject=[
   { id: 1, img:"subex1.svg"},
+  { id: 2, img:"subex1.svg"},
 ];
 export const AllCategoriesItems=[
   { id: 1, Text:"Logo-brand identity"},

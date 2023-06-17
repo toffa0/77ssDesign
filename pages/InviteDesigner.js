@@ -8,6 +8,7 @@ import {Contacts, designerLevel, industries, Languages, lastActivity, Logoidenti
 import Designerswork from "@/components/designerswork";
 import { useEffect } from "react";
 import DesignersCard from "@/components/DesignersCard";
+import SelectedDesigners from '../components/selectedDesigners'
 
 const InviteDesigner = ()=>{
 
@@ -125,16 +126,7 @@ const InviteDesigner = ()=>{
         
         </div>
         
-            <div className="InvDes_header">
-                
-                <div className="max InvDes_body ">
-                    <div className="InvDes_img">
-                        <Image src="cat2logo2.svg" alt="" width={64} height={64}/>
-                        <button className="InvDes_btn">X</button>
-                    </div>
-                <button>Confirm Designers<br/> and continue</button>
-                </div>
-            </div>
+        <SelectedDesigners/>
         
             <div className="mainscr ">
                 <div className="fl  pt-64 max">
@@ -142,7 +134,7 @@ const InviteDesigner = ()=>{
                 
             <div className="fl-all4 w-30 gap60 pos">
             <div className="fl-col ">
-            <div class="dropdown">
+            <div className="dropdown">
                 <div className="fl jst jst-SB DeCat Redbackground" onClick={()=>{handleCatClick();setFirstCatIsOpen(!FirstCatIsOpen)}}>
                     <Image src="DeLogo.svg" alt="" width={54.23} height={29.09}/>
                     <p>Logo-brand identity</p>

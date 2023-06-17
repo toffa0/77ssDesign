@@ -1816,7 +1816,11 @@ padding: 100px 0;
   margin: 15px 0;
 
 }
-
+.cardControl button{
+  background-color: transparent !important;
+  border: none;
+  cursor: pointer;
+}
 .prof-img{
   width: 85px;
   height: 85px;
@@ -1954,7 +1958,11 @@ height: 73px;
 .disc-card-cont2{
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 46px;
+  margin-bottom: 65px;
+}
+.disc-card-cont2::after{
+  content: "";
+  width: 24%;
 }
 .disc-card2{
   width: 24%;
@@ -1964,6 +1972,7 @@ height: 73px;
     background-color: #ffffff;
     /* border: 1px solid gray; */
     margin-bottom: 80px;
+    position: relative;
   }
 .disc-card{
 width: 22%;
@@ -1985,7 +1994,8 @@ width: 22%;
   width: 100%;
   height: 80%;
   object-fit: cover;
-  border-radius: 17px;
+  border-radius: 0;
+  margin-bottom: 20px;
 }
 #ds-img2{
   width: 100%;
@@ -1997,8 +2007,12 @@ width: 22%;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 17px;
  
+}
+.SelectedDesign{
+  position: absolute;
+  top: -5%;
+  right: 0;
 }
 .ds-text{
   height: 15%;
@@ -3320,7 +3334,7 @@ width: 98px;
   background: #545457;
   position: relative;
   overflow: visible;
-  padding: 0 12px 0 6px;
+  padding: 0 9px 0 12px;
   border-radius: 7px 0 0 0;
   justify-content: space-between;
 }
@@ -3400,9 +3414,21 @@ width: 98px;
   width: 228px;
   height: 71px;
   background: #F5F7FA;
-  padding: 12px 4px 0 12px;
+  padding: 12px 9px 0 12px;
   border-radius: 0 0 0 7px;
 
+}
+.BR1{
+  border-radius: 7px 0 0 7px;
+}
+.BR2{
+  border-radius:0;
+}
+.BR3{
+  border-radius: 0 7px   7px 0;
+}
+.BR4{
+  border-radius: 7px;
 }
 #w-300{
   width: 298.26px;
@@ -3550,6 +3576,7 @@ padding: 0;
 }
 #cpm2{
   width: 56.1px;
+  height: 48px;
   background: #CACAD1;
   font-family: 'Rotunda';
   font-style: normal;
@@ -3577,9 +3604,24 @@ padding: 0;
   position: absolute;
   padding: 10px 0;
   background: #F5F7FA;
-  top: -20px;
-  left: 10px;
+  top: -100%;
+  left: 150%;
   z-index: 999;
+  filter: drop-shadow(7px 7px 7px rgba(71, 75, 192, 0.2));
+ 
+}
+.cpmDropDown::after{
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background: #F5F7FA;
+  transform: rotate(45deg);
+  left: -5%;
+  top: 38%;
+  /* filter: drop-shadow(2px 7px 7px rgba(71, 75, 192, 0.2)); */
+  z-index: 990;
+  
 }
 .cpmDropDown button{
   background-color: transparent;
@@ -3592,6 +3634,8 @@ padding: 0;
   color: #545457;
   width: 100%;
   height:32px;
+  text-align: left;
+  padding: 0 20px;
 }
 .AccpetReject{
   font-family: 'Rotunda';
@@ -3712,7 +3756,6 @@ right: 0;
   color: #3D3D3F;
   text-align: center;
   border: none;
-  border-radius: 7px;
   cursor: pointer;
 }
 
@@ -5957,16 +6000,18 @@ button[disabled]{
   display: block;
 }
 #ProjectSubmitDesignerButton{
-  width: 256px;
-  height: 64px;
-  border-radius: 7px;
+  width: 191.9px;
+  height: 48px;
+  border-radius: 7px 0 0 7px;
   cursor: pointer;
-  font-family: 'Rotunda';
+  font-family: 'Rotunda',sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 14px;
+  line-height: 48px;
+  text-align: center;
   color: #FFFFFF;
+  padding-right: 0;
 }
 .inputfileupload{
   width: 90%;
@@ -6075,6 +6120,12 @@ input[type="password"]::-ms-reveal { display: none; }
 .InvDes_header{
   background: #CACAD1;
   height: 128px;
+
+} 
+.headerpos{
+  position: absolute;
+  left: 0;
+  width: 100vw;
 }
 .InvDes_body{
   height: 100%;

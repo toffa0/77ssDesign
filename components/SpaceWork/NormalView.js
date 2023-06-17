@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'
 import { Rating } from 'react-simple-star-rating'
+import SelectedDesigners from '../selectedDesigners';
 
 
 const NormalView = ({cardData,projectID})=>{
@@ -17,6 +18,21 @@ const NormalView = ({cardData,projectID})=>{
     fetchData();
   });
 
+  const handleItemClick = (itemId) => {
+    setSelectedCard((prevSelectedItems) => {
+      if (prevSelectedItems.includes(itemId)) {
+        // If item is already selected, remove it from selected items
+        return prevSelectedItems.filter((id) => id !== itemId);
+      } else {
+        // If item is not selected, add it to selected items
+        return [...prevSelectedItems, itemId];
+      }
+    });
+  };
+
+
+
+
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -27,14 +43,14 @@ const NormalView = ({cardData,projectID})=>{
   };
 ////////////////////////////////
 
-
+  const [SelectedCard, setSelectedCard] = useState([]);
 
   return (
 <div>
-    <div className='disc-card-cont2 jst-SB'>
+    <div className='disc-card-cont2 jst-SB max'>
 
       {currentData.map((item) => (
-            <div key={item.id} className='disc-card2 ' id='h-220'>
+            <div key={item.id} className='disc-card2 ' id='h-220' >
               <span className='card-text'>#1 by osama</span>
               <Link href={{ pathname: `/commentdesign2`, query: { id: projectID } }} style={{ marginBottom: "12px"}}>
                 
@@ -48,9 +64,18 @@ const NormalView = ({cardData,projectID})=>{
              <button className='clearbtn'><Image src="Trash.svg" id='' alt="" width={19} height={22}/></button>
              
               </div>
+              <div onClick={()=>{handleItemClick(item.id)}} className='SelectedDesign' style={{cursor:"pointer"}} >
+              <Image src={SelectedCard.includes(item.id)?"GreenSelect.svg":"GreySelect.svg"}  alt="" width={26} height={26} />
+              </div>
             </div>
       ))}
 
+    </div>
+    <div style={{height:"175px"}}>
+    <div className='headerpos'>
+    <SelectedDesigners className="headerpos" />
+
+    </div>
     </div>
     <div className="pagenumb">
         {Array.from({ length: totalPages }).map((_, index) => (
