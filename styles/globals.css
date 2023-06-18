@@ -3191,12 +3191,30 @@ color: #545457;
   line-height: 28px;
   color: #545457;  
 }
-.chtbxbtn button{
-  width: 160px;
+.chtbxbtn{
+  background: #F5F7FA;
+  border-radius: 0px 0px 10px 10px;
   height: 64px;
-  background: #CACAD1;
+  display: flex;
+  align-items: center;
+}
+.chtbxbtn button{
+  /* width: 160px; */
+ 
+  background: transparent;
   border: none;
   border-radius: 0px 0px 10px 0px;
+  border-left: 1px solid #545457;
+  padding: 0 27px;
+  height: 60%;
+}
+.chtbxbtn input{   
+  width: 90%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  padding: 0 40px;
+  outline: none;
 }
 .cn{
   margin: 30px 0 10px 0;
@@ -3289,9 +3307,37 @@ color: #545457;
 .projchat2{
   width: 68%;
   border: 1px solid #3D3D3F;
-  border-radius: 15px;
+  border-radius: 10px;
+
+  /* overflow: hidden; */
+  position: relative;
+}
+.pd40{
   padding: 40px 0 0 40px ;
-  overflow: hidden;
+}
+.propDetailBtn{
+  position: absolute;
+  background: #F5F7FA;
+  border: none;
+  border-radius: 7px 7px 0px 0px;
+  cursor: pointer;
+  height: 32px;
+  padding: 6px 32px;
+  top: -7.5%;
+  left: 40px;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3D3D3F;
+
+  
+}
+.propDetailBtn span{
+  border-right:1px solid #545457;
+  padding-right: 39px;
+  margin-right: 22px;
 }
 .pgbtn{
   margin: 100px 0;
@@ -3307,7 +3353,7 @@ color: #545457;
   line-height: 34px;
   color: #FFFFFF;
   border: none;
-  border-radius: 15px;
+  border-radius: 7px;
 }
 .messpart{
 height: 132px;
@@ -5389,18 +5435,29 @@ align-items: center;
 .milestone1 {
   border: 1px solid #3D3D3F;
   border-radius: 7px;
-  height: 64px;
-  width: 512px;
+  height: 48px;
+  width: 70%;
+  max-width: 736px;
   display: flex;
   align-items: center;
-  padding: 0 32px;
+  /* padding: 0 32px; */
 }
 .milestone1 input{
   border: none;
   height: 100%;
   width: 89%;
-  padding: 20px;
+  padding: 12px;
   font-size: 20px;
+  border-radius: 7px;
+}
+.milestone1 input::placeholder{
+  font-family: 'Rotunda',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #9E9EA3;
+  
 }
 .milestone1 input:focus{
   outline: none;
@@ -5409,12 +5466,67 @@ align-items: center;
   content: "$";
 
 }
-.inpPrice input{
-  height: 64px;
-  width: 129px;
-  padding: 20px;
+.addNewMileston{
+  font-family: 'Rotunda',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #9E9EA3;
+  border: none;
+  border-bottom: 1px solid #545457;
+  background-color: transparent;
+  cursor: pointer;
+}
+.total{
+  position: relative;
+}
+.total::after{
+  content: "Total";
+  position: absolute;
+  left: -30%;
+  top: 25%;
+  font-family: 'Rotunda',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  
+  color: #707070;
+}
+.inpPrice {
+  height: 48px;
+  width: 225px;
   border: 1px solid #3D3D3F;
   border-radius: 7px;
+}
+.inpPrice input{
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  border: none;
+  background: transparent;
+  border-right:  1px solid #9E9E9F;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  color: #545457;
+}
+.inpPrice select{
+  width: 50%;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  font-family: 'Rotunda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #707070;
 }
 .inpPrice input:focus{
   outline: none;
@@ -5422,7 +5534,7 @@ align-items: center;
 .milestone{
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   
 }
 .milestone-part{
@@ -5440,6 +5552,7 @@ align-items: center;
 }
 .proposalprice2 input{
   border: 3px solid #545457;
+  width: 25px;
 }
 .DeCat{
   height: 64px;

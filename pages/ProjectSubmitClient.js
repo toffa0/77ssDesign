@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 import { BASE_URL ,API_VERSION } from '@/config';
 import Cookies from 'js-cookie';
 import ProjectDetails from "@/components/projectDetails/ProjectDetails"
-import ProposalDescription from '@/components/proposalDescription';
+import ProposalDescription from '@/components/ProposalDescription';
 
 
 const ProjectSubmitClient = ()=>{
