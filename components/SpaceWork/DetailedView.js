@@ -54,7 +54,7 @@ const DetailedView = ({ cardData }) => {
             <label>Select for final round</label>
           </div>
         </div>
-        <div className="fl fl-gap47" style={{ width: "922px", gap: "17px" }}>
+        <div className="fl fl-gap47" style={{ width: "812px", gap: "17px" }}>
           {currentData.map((item) => (
             <div
               key={item.id}
