@@ -137,8 +137,9 @@ const Categories2 = () => {
       </div>
       <div className="max ">
         <div
+          // 625px
           className="fl  mt-60 jst-SB ali-cen mb-250"
-          style={{ height: "625px" }}
+          style={{ height: "fit-content" }}
         >
           <div class="dropdown-content10">
             <ul>
