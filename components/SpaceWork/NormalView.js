@@ -62,7 +62,7 @@ const NormalView = ({ cardData, projectID }) => {
             <div className="fl ali-cen jst-SB">
               <Rating fillColor="#00C8C8" size={30} />
               <button className="clearbtn">
-                <Image src="Trash.svg" id="" alt="" width={19} height={22} />
+                <Image src="trash.svg" id="" alt="" width={19} height={22} />
               </button>
             </div>
             <div
