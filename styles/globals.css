@@ -113,7 +113,7 @@ select{
 
   width: 100%;
   max-width: 1280px;
-  padding-inline: 82px 64px;
+  padding-inline:128px 128px;
   margin: auto;
 }
 
@@ -6326,7 +6326,7 @@ input[type="password"]::-ms-reveal { display: none; }
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap:55px 10%;
+  gap:55px 5%;
   height: fit-content;
 }
 .flwrap2::after{
