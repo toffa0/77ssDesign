@@ -1,16 +1,12 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-import React, { useState } from "react";
-import Card from "@/components/profcard";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaThumbsUp } from "react-icons/fa";
-import Footer2 from "@/components/footer2";
 import Link from "next/link";
 import { cardDataProject } from "../components/consts";
 import NormalView from "@/components/SpaceWork/NormalView";
 import DetailedView from "@/components/SpaceWork/DetailedView";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 import { BASE_URL, API_VERSION } from "@/config";
 import Cookies from "js-cookie";
 import ProjectDetails from "@/components/projectDetails/ProjectDetails";
@@ -19,7 +15,6 @@ import SelectedDesigners from "@/components/selectedDesigners";
 
 const ProjectSubmitClient = () => {
   const [CPMisOpen, setCPMOpen] = useState(false);
-  const [isOpen, setOpen] = useState(false);
   const [Filter1, setFilter1] = useState("All");
   const [Filter2, setFilter2] = useState("Rated");
   const [Filter3, setFilter3] = useState("All designers");
