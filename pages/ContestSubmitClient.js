@@ -15,6 +15,7 @@ import { BASE_URL, API_VERSION } from "@/config";
 import Cookies from "js-cookie";
 import ProjectDetails from "@/components/projectDetails/ProjectDetails";
 import ProposalDescription from "@/components/ProposalDescription";
+import SelectedDesigners from "@/components/selectedDesigners";
 
 const ProjectSubmitClient = () => {
   const [CPMisOpen, setCPMOpen] = useState(false);
