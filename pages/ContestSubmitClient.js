@@ -556,26 +556,25 @@ const ProjectSubmitClient = () => {
                 {activeComponent === "Messages" && <ProposalDescription />}
                 {activeComponent === "Design" && (
                   <div className="disc-card-cont">
-                    {
-                      <div>
-                        ViewType === "Normal"?
+                    <div>
+                      {ViewType === "Normal" ? (
                         <NormalView
                           className="animate"
                           projectID={itemID}
                           cardData={{ cardDataProject }}
                         />
-                        :
+                      ) : (
                         <DetailedView
                           className="animate"
                           cardData={{ cardDataProject }}
                         />
-                        <div style={{ height: "175px" }}>
-                          <div className="headerpos">
-                            <SelectedDesigners className="headerpos" />
-                          </div>
+                      )}
+                      <div style={{ height: "175px" }}>
+                        <div className="headerpos">
+                          <SelectedDesigners className="headerpos" />
                         </div>
                       </div>
-                    }
+                    </div>
                   </div>
                 )}
               </div>
