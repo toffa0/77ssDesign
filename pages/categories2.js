@@ -15,7 +15,7 @@ import {
 } from "../components/consts";
 import CatmenuSelector from "@/components/CatmenuSelector";
 
-const Categories2 = () => {
+const Categories2 = ({ VSelectedCat }) => {
   const [chatboxOpen, SetchatboxOpen] = useState(false);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Categories2 = () => {
 
   const [isLogo, setIsLogo] = useState(false);
 
-  const [CatData, setCatData] = useState(LogoidentityCat);
+  const [CatData, setCatData] = useState(VSelectedCat || LogoidentityCat);
   const [selectedCat, setSelectedCat] = useState("Logo design");
   return (
     <div>
@@ -137,8 +137,8 @@ const Categories2 = () => {
       </div>
       <div className="max ">
         <div
-          // 625px
           className="fl  mt-60 jst-SB ali-cen mb-250"
+          //   487px
           style={{ height: "fit-content" }}
         >
           <div class="dropdown-content10">

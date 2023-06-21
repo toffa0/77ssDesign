@@ -4,15 +4,20 @@ import Navbar from "@/components/navbar";
 import Link from "next/link";
 import Footer2 from "@/components/footer2";
 import Footer from "@/components/footer";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import useAuth from "@/contexts/auth.contexts";
 import CatmenuSelector from "@/components/CatmenuSelector";
-
-
+import {
+  LogoidentityCat,
+  WebdesignCat,
+  ClothingMerchandiseCat,
+  ArtIllustrationCat,
+  BusinessadvertisingCat,
+  Others,
+} from "../components/consts";
 export default function Home() {
   const { user } = useAuth();
   const [isOpen, setOpen] = useState(false);
-  
 
   return (
     <>
@@ -26,7 +31,7 @@ export default function Home() {
       </Head>
       <main className="">
         <div className="home_section3 mainscr">
-            <Navbar user={user}></Navbar>
+          <Navbar user={user}></Navbar>
           <section className="section ">
             <div className="home_text">
               <div>
@@ -39,8 +44,7 @@ export default function Home() {
                 </h2>
               </div>
               <div>
-              <CatmenuSelector/>
-
+                <CatmenuSelector />
               </div>
             </div>
             <div className="home_img">
@@ -68,7 +72,10 @@ export default function Home() {
           <div className="max">
             <div className="cat-card-cont mb-32">
               <Link
-                href="/categories2"
+                href={{
+                  pathname: "/categories2",
+                  query: LogoidentityCat,
+                }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
               >
@@ -80,21 +87,30 @@ export default function Home() {
                 />
               </Link>
               <Link
-                href="/categories2"
+                href={{
+                  pathname: "/categories2",
+                  query: BusinessadvertisingCat,
+                }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
               >
                 <Image src="catlogo2.svg" alt="" width={219.72} height={195} />
               </Link>
               <Link
-                href="/categories2"
+                href={{
+                  pathname: "/categories2",
+                  query: ArtIllustrationCat,
+                }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
               >
                 <Image src="catlogo5.svg" alt="" width={67.05} height={64.46} />
               </Link>
               <Link
-                href="/categories2"
+                href={{
+                  pathname: "/categories2",
+                  query: WebdesignCat,
+                }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
               >
@@ -102,7 +118,10 @@ export default function Home() {
               </Link>
 
               <Link
-                href="/categories2"
+                href={{
+                  pathname: "/categories2",
+                  query: ClothingMerchandiseCat,
+                }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
               >
@@ -115,7 +134,10 @@ export default function Home() {
               </Link>
 
               <Link
-                href="/categories2"
+                href={{
+                  pathname: "/categories2",
+                  query: Others,
+                }}
                 className={`cat-card drop-down-menu ${isOpen ? "open" : ""}`}
                 onClick={() => setOpen(!isOpen)}
               >
