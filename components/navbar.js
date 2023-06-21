@@ -1,15 +1,12 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import PIcon from "@/public/PI.svg";
 import { BASE_URL, API_VERSION } from "@/config";
 import { useRouter } from "next/router";
 import useAuth from "@/contexts/auth.contexts";
 
 const Navbar = () => {
-  const { user, setUser } = useAuth();
+  const { user } = useAuth();
   const router = useRouter();
   if (typeof window !== "undefined") {
     window.addEventListener("click", function (e) {
@@ -32,7 +29,6 @@ const Navbar = () => {
   const [user_details, setUser_details] = useState(null);
   useEffect(() => {
     setUser_details(user);
-    console.log("userDetails", user_details);
   }, [user]);
   const [showMenu, setShowMenu] = useState(true);
   const [showWorkMenu, setShowWorkMenu] = useState(true);
@@ -103,7 +99,7 @@ const Navbar = () => {
           )}
         </div>
 
-        {user ? (
+        {user_details ? (
           <div className="fl fl-gap5">
             <Link href="/">
               <Image

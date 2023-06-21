@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Footer2 from "@/components/footer2";

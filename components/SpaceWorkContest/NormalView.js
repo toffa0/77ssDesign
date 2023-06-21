@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Rating } from "react-simple-star-rating";
-import SelectedDesigners from "../selectedDesigners";
 
 const NormalView = ({ cardData, projectID }) => {
   const [data, setData] = useState([]);
