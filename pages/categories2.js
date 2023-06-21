@@ -153,7 +153,7 @@ const Categories2 = () => {
       </div>
       <div className="max ">
         <div
-          className="fl  mt-60 jst-SB ali-cen mb-250"
+          className="fl  mt-60 jst-SB mb-250"
           //   487px
           style={{ height: "fit-content" }}
         >
