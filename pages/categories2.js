@@ -14,29 +14,45 @@ import {
   Others,
 } from "../components/consts";
 import CatmenuSelector from "@/components/CatmenuSelector";
+import { useRouter } from "next/router";
 
-const Categories2 = ({ VSelectedCat }) => {
+const Categories2 = () => {
   const [chatboxOpen, SetchatboxOpen] = useState(false);
-
-  useEffect(() => {
-    fetch(`${BASE_URL}/${API_VERSION}/core/categories/`, {})
-      .then((response) => {
-        //   if(response.ok){
-        //     console.log(response.json());
-        //   } else {
-        //     throw new Error('Something went wrong');
-        //   }
-        return response.json();
-      })
-      .then((data) => console.log(data))
-
-      .catch((error) => console.error(error));
-  }, []);
-
   const [isLogo, setIsLogo] = useState(false);
 
-  const [CatData, setCatData] = useState(VSelectedCat || LogoidentityCat);
   const [selectedCat, setSelectedCat] = useState("Logo design");
+
+  const router = useRouter();
+  const VSelectedCat = router.query;
+  const [CatData, setCatData] = useState(LogoidentityCat);
+  useEffect(() => {
+    console.log(VSelectedCat);
+    console.log(LogoidentityCat);
+    console.log(CatData);
+    switch (VSelectedCat.cat) {
+      case "LogoidentityCat":
+        setCatData(LogoidentityCat);
+        break;
+      case "WebdesignCat":
+        setCatData(WebdesignCat);
+        break;
+      case "ClothingMerchandiseCat":
+        setCatData(ClothingMerchandiseCat);
+        break;
+      case "ArtIllustrationCat":
+        setCatData(ArtIllustrationCat);
+        break;
+      case "BusinessadvertisingCat":
+        setCatData(BusinessadvertisingCat);
+        break;
+      case "Others":
+        setCatData(Others);
+        break;
+      default:
+        setCatData(LogoidentityCat);
+    }
+  }, []);
+
   return (
     <div>
       <div className="home_section  " style={{ height: "480px" }}>

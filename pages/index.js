@@ -7,14 +7,7 @@ import Footer from "@/components/footer";
 import React, { useState } from "react";
 import useAuth from "@/contexts/auth.contexts";
 import CatmenuSelector from "@/components/CatmenuSelector";
-import {
-  LogoidentityCat,
-  WebdesignCat,
-  ClothingMerchandiseCat,
-  ArtIllustrationCat,
-  BusinessadvertisingCat,
-  Others,
-} from "../components/consts";
+
 export default function Home() {
   const { user } = useAuth();
   const [isOpen, setOpen] = useState(false);
@@ -74,7 +67,7 @@ export default function Home() {
               <Link
                 href={{
                   pathname: "/categories2",
-                  query: LogoidentityCat,
+                  query: { cat: "LogoidentityCat" },
                 }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
@@ -89,7 +82,7 @@ export default function Home() {
               <Link
                 href={{
                   pathname: "/categories2",
-                  query: BusinessadvertisingCat,
+                  query: { cat: "BusinessadvertisingCat" },
                 }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
@@ -99,7 +92,7 @@ export default function Home() {
               <Link
                 href={{
                   pathname: "/categories2",
-                  query: ArtIllustrationCat,
+                  query: { cat: "ArtIllustrationCat" },
                 }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
@@ -109,7 +102,7 @@ export default function Home() {
               <Link
                 href={{
                   pathname: "/categories2",
-                  query: WebdesignCat,
+                  query: { cat: "WebdesignCat" },
                 }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
@@ -120,7 +113,7 @@ export default function Home() {
               <Link
                 href={{
                   pathname: "/categories2",
-                  query: ClothingMerchandiseCat,
+                  query: { cat: "ClothingMerchandiseCat" },
                 }}
                 className="cat-card"
                 onClick={() => setOpen(!isOpen)}
@@ -136,7 +129,7 @@ export default function Home() {
               <Link
                 href={{
                   pathname: "/categories2",
-                  query: Others,
+                  query: { cat: "Others" },
                 }}
                 className={`cat-card drop-down-menu ${isOpen ? "open" : ""}`}
                 onClick={() => setOpen(!isOpen)}
