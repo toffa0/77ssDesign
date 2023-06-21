@@ -39,10 +39,10 @@ const DetailedView = ({ cardData }) => {
         <div className="fl-col PMC jst-SB">
           <div className="w-101 cardControl">
             <button>
-              <Image src="Eliminate.svg" width={32} height={32} />
+              <Image alt="" src="Eliminate.svg" width={32} height={32} />
             </button>
             <button>
-              <Image src="ChatBtn.svg" width={38.4} height={32} />
+              <Image alt="" src="ChatBtn.svg" width={38.4} height={32} />
             </button>
           </div>
 

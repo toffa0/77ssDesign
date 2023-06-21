@@ -232,8 +232,6 @@ const ProjectSubmitClient = () => {
                     </div>
                   </div>
                 </div>
-                <button className="AccpetReject Accpet">Accpet</button>
-                <button className="AccpetReject Reject">Reject</button>
               </div>
 
               <div className="disc-head4 fl jst-SB">
