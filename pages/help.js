@@ -7,7 +7,7 @@ const Help = () => {
   return (
     <div className="ProfilePage">
       <Navbar />
-      <div></div>
+      <div style={{ height: "1000px" }}></div>
 
       <Footer2 />
       <Footer />
