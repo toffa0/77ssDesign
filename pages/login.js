@@ -58,7 +58,7 @@ const Login = () => {
 
     const credentials = { email, password };
     console.log(credentials);
-    axiosInstance
+    axios
       .post(`${API_VERSION}/user/login/`, credentials)
       .then((res) => {
         console.log(res.data);
@@ -201,7 +201,7 @@ const SignUp = ({setShowLogin,setActiveComponent}) => {
 
     const formData = { email, password, user_type: userType };
 
-    axiosInstance
+    axios
       .post(`${API_VERSION}/user/register/`, formData)
       .then((res) => console.log(res.data))
       .catch((error) => console.error(error));
