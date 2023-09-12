@@ -83,9 +83,9 @@ const AccountSettings = () => {
  
 
   useEffect(() => {
-    if (user.user_type === "designer") {
-      window.location.href = "/AccountSettings-designer";
-    }
+    // if (user.user_type === "designer") {
+    //   window.location.href = "/AccountSettings-designer";
+    // }
     if (user) {
       axiosInstance(`${BASE_URL}/${API_VERSION}/user/csrf/`);
       axiosInstance(`${BASE_URL}/${API_VERSION}/user/profile/client/${user.id}`)

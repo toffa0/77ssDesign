@@ -33,7 +33,6 @@ function ProfilePage() {
     })
     .catch((err) => {
       console.error(err);
-      console.log(error.response.data)
     });
 
   }

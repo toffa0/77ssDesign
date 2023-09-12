@@ -124,9 +124,9 @@ const Navbar = () => {
                     <li className="menu-item">
                       <Link
                         href={
-                          user.user_type === "designer"
-                            ? "/AccountSettings-designer"
-                            : "/AccountSettings/"
+                          // user.user_type === "designer"
+                          //   ? "/AccountSettings-designer"
+                            "/AccountSettings/"
                         }
                       >
                         Account Settings
@@ -136,7 +136,7 @@ const Navbar = () => {
                       <Link
                         href={{
                           pathname: "/profile",
-                          query: { user_id: user.id },
+                          query: { user_id: 1 },
                         }}
                       >
                         Profile
