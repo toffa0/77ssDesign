@@ -28,7 +28,7 @@ const Navbar = () => {
   }
   const [user_details, setUser_details] = useState(null);
   useEffect(() => {
-    setUser_details(user);
+    setUser_details({});
   }, [user]);
   const [showMenu, setShowMenu] = useState(true);
   const [showWorkMenu, setShowWorkMenu] = useState(true);
