@@ -41,22 +41,10 @@ const Navbar = () => {
   };
 
   const handleLogout = () => {
-    fetch(`${BASE_URL}/${API_VERSION}/user/logout/`, {
-      credentials: "include",
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log(response);
-          localStorage.removeItem("user");
-          router.reload();
-        } else {
-          throw new Error("Something went wrong");
-        }
-      })
-
-      .catch((error) => console.error(error));
+    localStorage.removeItem("refresh_token");
+    localStorage.removeItem("access_token");
+    router.reload();
   };
-  console.log(user);
 
   return (
     <nav className="navbar">

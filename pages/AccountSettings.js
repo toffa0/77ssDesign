@@ -78,21 +78,6 @@ const AccountSettings = () => {
         router.reload();
       })
       .catch((error) => {console.error(error);alert(error)});
-    // fetch(`${BASE_URL}/${API_VERSION}/user/profile/client/`, {
-    //   method: "POST",
-    //   headers: {
-    //     "X-CSRFToken": csrfToken,
-    //   },
-    //   credentials: "include",
-    //   body: form_data,
-    // })
-    //   .then((response) => {
-    //     return response.json();
-    //   })
-    //   .then((data) => {
-    //     console.log(data);
-    //   })
-    //   .catch((error) => console.error(error));
   };
 
  
@@ -101,19 +86,9 @@ const AccountSettings = () => {
     if (user.user_type === "designer") {
       window.location.href = "/AccountSettings-designer";
     }
-    console.log(user.id)
     if (user) {
       axiosInstance(`${BASE_URL}/${API_VERSION}/user/csrf/`);
-      fetch(`${BASE_URL}/${API_VERSION}/user/profile/client/${user.id}`, {
-        headers: {
-          // 'Content-Type': 'application/json',
-          "X-CSRFToken": csrfToken,
-        },
-        credentials: "include",
-      })
-        .then((response) => {
-          return response.json();
-        })
+      axiosInstance(`${BASE_URL}/${API_VERSION}/user/profile/client/${user.id}`)
         .then((data) => {
           console.log(data);
           setSettings(data);

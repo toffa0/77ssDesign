@@ -1,8 +1,7 @@
 "use client";
 
 import axiosInstance from "@/helpers/axios";
-import Cookies from "js-cookie";
-import { createContext,useContext} from "react";
+import { createContext,useContext, useState, useEffect} from "react";
 import { API_VERSION, BASE_URL } from "@/config";
 
 export const AuthContext = createContext({
@@ -11,22 +10,18 @@ export const AuthContext = createContext({
 });
 
 export const AuthProvider = ({ children }) => {
+    const [user, setUser] = useState(undefined);
+
   const storeUser = () => {
-    axiosInstance(`${BASE_URL}/${API_VERSION}/user/details/`);
+    axiosInstance(`${API_VERSION}/user/details/`).then((res) => {
+        setUser(res.data);
+    }).catch((err) => {
+        setUser(undefined);
+    });
   };
-  let user = undefined;
-  if (
-    Cookies.get("77SDESIGN_USER_TYPE") &&
-    Cookies.get("77SDESIGN_UID") &&
-    Cookies.get("77SDESIGN_USERNAME")
-  ) {
-    user =
-      {
-        user_type: Cookies.get("77SDESIGN_USER_TYPE"),
-        id: Cookies.get("77SDESIGN_UID"),
-        username: Cookies.get("77SDESIGN_USERNAME"),
-      } || undefined;
-  }
+    useEffect(() => {
+        storeUser();
+    }, []);
   return (
     <AuthContext.Provider
       value={{

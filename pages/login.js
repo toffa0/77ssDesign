@@ -8,9 +8,12 @@ import axiosInstance from "@/helpers/axios";
 import useAuth from "@/contexts/auth.contexts";
 import Script from "next/script";
 import { Sdk, useInitFacebook } from "@nixjs23n6/facebook-login";
+import axios from "axios";
 const Login = () => {
   const router = useRouter();
   const { setUser } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
   const [Errorr, setErrorr]=useState(false)
   const googleLogin = async (response) => {
@@ -53,14 +56,15 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const email = document.getElementById("email1").value;
-    const password = document.getElementById("password1").value;
-
-    const formData = { email, password };
+    const credentials = { email, password };
+    console.log(credentials);
     axiosInstance
-      .post(`${BASE_URL}/${API_VERSION}/user/login/`, formData)
+      .post(`${API_VERSION}/user/login/`, credentials)
       .then((res) => {
-        setUser();
+        console.log(res.data);
+        localStorage.setItem("access_token", res.data.access);
+        localStorage.setItem("refresh_token", res.data.refresh);
+        setUser(res.data.user);
         router.push("/");
       })
       .catch((error) => {console.error(error);setErrorr(true)});
@@ -116,7 +120,8 @@ const Login = () => {
           <p id="Fs-16">or Login with your 77S design account</p>
         </div>
         <div className="bottom-row3 ">
-          <input type="email" placeholder="Email" id="email1" required/>
+          <input type="email" placeholder="Email" id="email1" required
+                 onChange={(e) => {setEmail(e.target.value)}}/>
           <div style={{position:"relative"}}>
           <input 
             type={passwordShown ? "text" : "password"} 
@@ -125,6 +130,7 @@ const Login = () => {
             // pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
             title="That email and password combination is incorrect."
             required
+            onChange={(e)=>{setPassword(e.target.value)}}
           />
           <button className='show_hide_Pass2' onClick={togglePassword}>{!passwordShown?"Show":"Hide"}</button>
 
@@ -196,7 +202,7 @@ const SignUp = ({setShowLogin,setActiveComponent}) => {
     const formData = { email, password, user_type: userType };
 
     axiosInstance
-      .post(`${BASE_URL}/${API_VERSION}/user/register/`, formData)
+      .post(`${API_VERSION}/user/register/`, formData)
       .then((res) => console.log(res.data))
       .catch((error) => console.error(error));
   };
@@ -263,8 +269,8 @@ const SignUp = ({setShowLogin,setActiveComponent}) => {
           type="password" 
           placeholder="Password" 
           id="password" 
-          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
-          title="Use 8 or more characters with a mix of letters, numbers and symbols."
+          // pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+          // title="Use 8 or more characters with a mix of letters, numbers and symbols."
           minlength="8"
           />
 
@@ -290,11 +296,6 @@ const LoginSignUp = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [activeComponent, setActiveComponent] = useState("signup");
   const router = useRouter();
-
-  useEffect(() => {
-    axiosInstance(`${BASE_URL}/${API_VERSION}/user/csrf/`);
-    if (user) router.push("/");
-  }, []);
 
   return (
     <>
